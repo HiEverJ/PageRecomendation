@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap");
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+  /* Tema Base / Default (colores pastel, moderno) */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --color-bg: #F0F4F8; /* Fondo muy suave, gris azulado claro */
+  --color-surface: #FFFFFF; /* Blanco puro para tarjetas y elementos */
+  --color-text: #334155; /* Azul oscuro para texto */
+  --color-text-muted: #64748B; /* Gris medio para texto secundario */
+  --color-accent: #6EE7B7; /* Verde menta pastel para acentos */
+  --color-accent-hover: #34D399; /* Verde más intenso al hover */
+  --color-primary-light: #A7F3D0; /* Verde más claro para detalles */
+  --color-secondary-pastel: #B799FF; /* Violeta pastel para contraste */
+  --color-link: #4A90E2; /* Azul para enlaces */
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
+.theme-hogar {
+  --color-bg: #FDF9F6; /* Fondo crema suave */
+  --color-surface: #FFFFFF;
+  --color-text: #5A4E4E;
+  --color-text-muted: #8A7F7F;
+  --color-accent: #FFD166; /* Amarillo pastel cálido */
+  --color-accent-hover: #FFBF00;
+  --color-primary-light: #FFECA3;
+  --color-secondary-pastel: #B7E4C7; /* Verde suave */
+  --color-link: #C07040;
+}
+
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer, con toques futuristas) --- */
+.theme-tecnologia {
+  --font-headings: "Orbitron", sans-serif; /* Mantenemos Orbitron aquí si quieres */
+  --color-bg: #1A1A2E; /* Fondo oscuro tech */
+  --color-surface: #2A2A4E;
+  --color-text: #EFEFEF;
+  --color-text-muted: #B0B0D0;
+  --color-accent: #F900FF; /* Acento (Magenta vibrante) */
+  --color-accent-hover: #FF80FF;
+  --color-border: #404070;
+  --shadow-small: 0 2px 8px rgba(249, 0, 255, 0.15);
+  --shadow-medium: 0 4px 12px rgba(249, 0, 255, 0.2);
+  --color-primary-light: #CC33FF;
+  --color-secondary-pastel: #00FFFF; /* Cyan */
+  --color-link: #00FFFF;
+}
+
+/* Añade más temas aquí según necesites... */
+/* Importa las variables y temas */
+/* --- RESET BÁSICO Y GLOBALES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-link); /* Usamos --color-link para enlaces */
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--color-accent-hover); /* o un color específico para hover de link */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Botones (CTA) --- */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cta-button.primary {
+  background-color: var(--color-accent);
+  color: var(--color-surface); /* Texto en blanco para botones primarios */
+  box-shadow: var(--shadow-small);
+}
+.cta-button.primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+.cta-button.secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  transform: translateY(-1px);
+}
+
+/* --- Header y Navegación Mejorados --- */
+.main-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.8rem 0;
+  position: sticky; /* Header pegajoso */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: var(--shadow-small);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en móvil */
+}
+
+.logo {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text); /* El logo ahora es más integrado */
+  /* Puedes acentuar una parte */
+  transition: color var(--transition-speed);
+}
+.logo span {
+  color: var(--color-accent);
+}
+
+/* Navegación Mobile-First */
+.main-nav {
+  display: none; /* Oculto por defecto en móvil */
+  width: 100%; /* Toma todo el ancho en móvil */
+  margin-top: 1rem;
+}
+.main-nav.is-active {
+  display: block; /* Visible cuando está activo */
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Lista vertical en móvil */
+  gap: 0.8rem;
+}
+.main-nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+.main-nav a.active, .main-nav a:hover {
+  color: var(--color-accent-hover);
+  background-color: var(--color-primary-light); /* Fondo suave al hover */
+}
+
+/* Botón Hamburguesa */
+.hamburger-btn {
+  display: block; /* Visible en móvil */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  padding: 10px;
+  position: relative; /* Para la animación de la X */
+  width: 40px; /* Tamaño más consistente */
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* Animación a 'X' */
+}
+.hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-speed);
+}
+.hamburger-btn.is-active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Contenido Principal (con padding para header fijo) */
+main {
+  padding-top: 60px; /* Ajustar al alto del header */
+}
+
+/* --- Footer --- */
+.main-footer {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  box-shadow: inset 0 8px 12px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+.main-footer .footer-links {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre enlaces */
+}
+.main-footer .footer-links a {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+.main-footer .footer-links a:hover {
+  color: var(--color-accent);
+}
+.main-footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.main-footer .affiliate-disclaimer {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+/* --- MEDIA QUERIES (ADAPTACIÓN A DESKTOP) --- */
+@media (min-width: 768px) {
+  /* Ocultar hamburguesa y mostrar nav */
+  .hamburger-btn {
+    display: none;
+  }
+  .main-nav {
+    display: block; /* Visible en desktop */
+    width: auto;
+    margin-top: 0;
+  }
+  .main-nav ul {
+    flex-direction: row; /* Horizontal en desktop */
+    gap: 2rem;
+  }
+  .main-nav a {
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    background: none;
+  }
+  .main-nav a.active, .main-nav a:hover {
+    color: var(--color-accent);
+    background: none;
+  }
+  .main-header .container {
+    flex-wrap: nowrap;
+  }
+}/*# sourceMappingURL=base.css.map */

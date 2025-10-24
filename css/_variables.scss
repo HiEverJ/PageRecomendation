@@ -1,0 +1,56 @@
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+    /* Tema Base / Default (colores pastel, moderno) */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+
+    --color-bg: #F0F4F8;         /* Fondo muy suave, gris azulado claro */
+    --color-surface: #FFFFFF;    /* Blanco puro para tarjetas y elementos */
+    --color-text: #334155;       /* Azul oscuro para texto */
+    --color-text-muted: #64748B; /* Gris medio para texto secundario */
+    --color-accent: #6EE7B7;     /* Verde menta pastel para acentos */
+    --color-accent-hover: #34D399; /* Verde más intenso al hover */
+    --color-primary-light: #A7F3D0; /* Verde más claro para detalles */
+    --color-secondary-pastel: #B799FF; /* Violeta pastel para contraste */
+    --color-link: #4A90E2;       /* Azul para enlaces */
+
+    --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --border-radius: 12px;
+    --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
+.theme-hogar {
+    --color-bg: #FDF9F6;         /* Fondo crema suave */
+    --color-surface: #FFFFFF;
+    --color-text: #5A4E4E;
+    --color-text-muted: #8A7F7F;
+    --color-accent: #FFD166;     /* Amarillo pastel cálido */
+    --color-accent-hover: #FFBF00;
+    --color-primary-light: #FFECA3;
+    --color-secondary-pastel: #B7E4C7; /* Verde suave */
+    --color-link: #C07040;
+}
+
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer, con toques futuristas) --- */
+.theme-tecnologia {
+    --font-headings: 'Orbitron', sans-serif; /* Mantenemos Orbitron aquí si quieres */
+    --color-bg: #1A1A2E;         /* Fondo oscuro tech */
+    --color-surface: #2A2A4E;    
+    --color-text: #EFEFEF;
+    --color-text-muted: #B0B0D0;
+    --color-accent: #F900FF;     /* Acento (Magenta vibrante) */
+    --color-accent-hover: #FF80FF;
+    --color-border: #404070;
+    --shadow-small: 0 2px 8px rgba(249, 0, 255, 0.15);
+    --shadow-medium: 0 4px 12px rgba(249, 0, 255, 0.2);
+    --color-primary-light: #CC33FF;
+    --color-secondary-pastel: #00FFFF; /* Cyan */
+    --color-link: #00FFFF;
+}
+
+/* Añade más temas aquí según necesites... */

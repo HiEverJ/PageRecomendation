@@ -4,66 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página Principal - Recomendaciones Top</title>
-    <meta name="description" content="Descubre el producto de la semana y las mejores recomendaciones en tecnología, hogar y más.">
+    <title>Inicio - Recomienda[Top] | Tus Mejores Productos</title>
+    <meta name="description" content="Descubre las mejores recomendaciones de productos de Amazon y otras plataformas. Análisis expertos en hogar, tecnología y salud.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/estilos.css">
-    
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/base.css">    <link rel="stylesheet" href="css/index.css">   <script src="js/main.js" defer></script>
 </head>
-<body class="theme-base"> <header class="main-header">
+<body class="theme-base">
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">Recomienda[Top]</a>
+            <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="hogar.html">Hogar</a></li>
                     <li><a href="tecnologia.html">Tecnología</a></li>
                     <li><a href="salud.html">Salud</a></li>
+                    <li><a href="limpieza.html">Limpieza</a></li>
+                    <li><a href="decoracion.html">Decoración</a></li>
                 </ul>
             </nav>
-            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
-                <h2>Producto de la Semana</h2>
-                <h1>El Gadget Futurista que Necesitas</h1>
-                <p>Análisis profundo del nuevo [Nombre del Producto] que está revolucionando el mercado.</p>
-                <a href="#" class="cta-button primary">Ver Análisis y Oferta</a>
+                <h2>Tu Fuente Confiable de Recomendaciones</h2>
+                <h1>Encuentra lo Mejor, Sin Esfuerzo.</h1>
+                <p>En Recomienda[Top], simplificamos tu búsqueda. Descubre productos excepcionales cuidadosamente seleccionados de Amazon y otras plataformas, con análisis honestos y enlaces directos para ayudarte a tomar la mejor decisión.</p>
+                <a href="#productos-destacados" class="cta-button primary">Explorar Recomendaciones</a>
             </div>
         </section>
 
-        <section class="product-grid container">
-            <h2>Más Recomendaciones</h2>
-            <div class="grid-container">
+        <section id="productos-destacados" class="featured-products container">
+            <h2>Nuestras Top 3 Recomendaciones del Momento</h2>
+            <div class="product-list">
                 
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
-                        <span class="category-tag">Tecnología</span>
+                <article class="product-card-hover">
+                    <div class="card-main-info">
+                        <div class="card-image">
+                            <img src="img/producto-placeholder-1.jpg" alt="Cafetera Inteligente">
+                        </div>
+                        <div class="card-details">
+                            <h3>Cafetera Inteligente Conectada</h3>
+                            <div class="price">€129.99</div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Título del Producto Recomendado</h3>
-                        <p>Una descripción breve que engancha y resalta el valor principal del producto.</p>
+                    <div class="card-description">
+                        <p>Despierta con el aroma perfecto. Esta cafetera de última generación se conecta a tu smartphone, permitiéndote programar tu café desde la cama. Con molinillo integrado y ajustes personalizables, cada taza es una experiencia.</p>
                         <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    </article>
-                <article class="product-card">
-                    </article>
+                <article class="product-card-hover">
+                    <div class="card-main-info">
+                        <div class="card-image">
+                            <img src="img/producto-placeholder-2.jpg" alt="Set de Sartenes Antiadherentes Premium">
+                        </div>
+                        <div class="card-details">
+                            <h3>Set de Sartenes Antiadherentes Premium</h3>
+                            <div class="price">€79.95</div>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <p>Cocina sin preocupaciones con este set de sartenes de alta calidad. Fabricadas con material antiadherente libre de PFOA, distribuyen el calor de manera uniforme y son increíblemente fáciles de limpiar. ¡Imprescindibles en cualquier cocina moderna\!</p>
+                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card-hover">
+                    <div class="card-main-info">
+                        <div class="card-image">
+                            <img src="img/producto-placeholder-3.jpg" alt="Auriculares Inalámbricos con Cancelación de Ruido">
+                        </div>
+                        <div class="card-details">
+                            <h3>Auriculares Inalámbricos Pro-Sound</h3>
+                            <div class="price">€99.00</div>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <p>Sumérgete en tu música o podcasts favoritos con estos auriculares de vanguardia. Ofrecen una cancelación de ruido activa superior y una calidad de sonido cristalina. Ideales para viajes, trabajo o simplemente disfrutar de tu espacio.</p>
+                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                    </div>
+                </article>
 
             </div>
         </section>
