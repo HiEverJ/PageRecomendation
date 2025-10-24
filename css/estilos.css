@@ -1,0 +1,365 @@
+@charset "UTF-8";
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- 
+   Aquí definimos el look & feel.
+*/
+:root {
+  /* Tema Base: Futurista / Minimalista */
+  --font-primary: "Roboto", sans-serif;
+  --font-headings: "Orbitron", sans-serif; /* Fuente futurista para títulos */
+  --color-bg: #0F0F1A; /* Fondo oscuro (casi negro espacial) */
+  --color-surface: #1C1C2E; /* Color para tarjetas y header */
+  --color-text: #E0E0E0; /* Texto principal (blanco suave) */
+  --color-text-muted: #A0A0B0; /* Texto secundario */
+  --color-accent: #00F0FF; /* Acento (Cyan eléctrico) */
+  --color-accent-hover: #90F8FF;
+  --color-border: #303050;
+  --shadow-small: 0 2px 8px rgba(0, 240, 255, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 240, 255, 0.15);
+  --border-radius: 8px;
+  --transition-speed: 0.3s ease;
+}
+
+/* --- TEMA: HOGAR (Limpio, Neutro) --- */
+/* Simplemente añade <body class="theme-hogar"> en hogar.html */
+.theme-hogar {
+  --color-bg: #F8F9FA; /* Fondo blanco limpio */
+  --color-surface: #FFFFFF; /* Tarjetas blancas */
+  --color-text: #343A40; /* Texto oscuro */
+  --color-text-muted: #6C757D;
+  --color-accent: #4CAF50; /* Acento verde (naturaleza, limpio) */
+  --color-accent-hover: #81C784;
+  --color-border: #E0E0E0;
+  --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
+/* Añade <body class="theme-tecnologia"> en tecnologia.html */
+.theme-tecnologia {
+  --font-headings: "Orbitron", sans-serif;
+  --color-bg: #1A1A2E; /* Fondo oscuro tech */
+  --color-surface: #2A2A4E;
+  --color-text: #EFEFEF;
+  --color-text-muted: #B0B0D0;
+  --color-accent: #F900FF; /* Acento (Magenta vibrante) */
+  --color-accent-hover: #FF80FF;
+  --color-border: #404070;
+  --shadow-small: 0 2px 8px rgba(249, 0, 255, 0.15);
+  --shadow-medium: 0 4px 12px rgba(249, 0, 255, 0.2);
+}
+
+/* --- RESET BÁSICO Y GLOBALES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- ENFOQUE MOBILE-FIRST --- */
+/* --- Header y Navegación --- */
+.main-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  position: fixed; /* Header fijo moderno */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-small);
+}
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Menú (Oculto en móvil) */
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  padding-top: 5rem;
+  transform: translateX(100%); /* Oculto fuera de pantalla */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Animación fluida */
+  z-index: 998;
+}
+.main-nav.is-active {
+  transform: translateX(0); /* Visible */
+}
+.main-nav ul {
+  list-style: none;
+}
+.main-nav li {
+  margin-bottom: 1rem;
+}
+.main-nav a {
+  display: block;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.main-nav a.active, .main-nav a:hover {
+  color: var(--color-accent-hover);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Hamburguesa */
+.hamburger-btn {
+  display: block; /* Visible en móvil */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  padding: 10px;
+  /* Animación a 'X' */
+}
+.hamburger-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  margin: 5px 0;
+  transition: all var(--transition-speed);
+}
+.hamburger-btn.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Contenido Principal (con padding para header fijo) */
+main {
+  padding-top: 80px; /* Ajustar al alto del header */
+}
+
+/* --- Botones (CTA) --- */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  transition: all var(--transition-speed);
+}
+.cta-button.primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+.cta-button.primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+.cta-button.secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* --- Sección Hero --- */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+}
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* --- Grid de Productos --- */
+.product-grid {
+  padding: 3rem 0;
+}
+.product-grid h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+}
+
+/* --- Tarjeta de Producto (El componente clave) --- */
+.product-card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  /* Animación profesional al pasar el mouse */
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+.product-card .card-image {
+  position: relative;
+}
+.product-card .card-image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-card .card-image .category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.product-card .card-content {
+  padding: 1.5rem;
+}
+.product-card .card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.product-card .card-content p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+.product-card .card-content .cta-button {
+  width: 100%;
+}
+
+/* --- Footer --- */
+.main-footer {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+.main-footer .footer-links {
+  margin-bottom: 1rem;
+}
+.main-footer .footer-links a {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+.main-footer .affiliate-disclaimer {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* --- MEDIA QUERIES (ADAPTACIÓN A DESKTOP) --- */
+@media (min-width: 768px) {
+  /* Ocultar hamburguesa y mostrar nav */
+  .hamburger-btn {
+    display: none;
+  }
+  .main-nav {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    border: none;
+    padding: 0;
+    transform: none; /* Visible */
+  }
+  .main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav li {
+    margin-bottom: 0;
+  }
+  .main-nav a {
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .main-nav a.active, .main-nav a:hover {
+    color: var(--color-accent);
+    background: none;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  /* Grid de 2 columnas para tablets */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  /* Grid de 3 columnas para desktop */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=estilos.css.map */
