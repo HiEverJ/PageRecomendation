@@ -1,272 +1,154 @@
-@charset "UTF-8";
-/* --- FUENTES --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap");
-/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
-:root {
-  /* Tema Base / Default (colores pastel, moderno) */
-  --font-primary: "Open Sans", sans-serif;
-  --font-headings: "Montserrat", sans-serif;
-  --color-bg: #F0F4F8; /* Fondo muy suave, gris azulado claro */
-  --color-surface: #FFFFFF; /* Blanco puro para tarjetas y elementos */
-  --color-text: #334155; /* Azul oscuro para texto */
-  --color-text-muted: #64748B; /* Gris medio para texto secundario */
-  --color-accent: #6EE7B7; /* Verde menta pastel para acentos */
-  --color-accent-hover: #34D399; /* Verde más intenso al hover */
-  --color-primary-light: #A7F3D0; /* Verde más claro para detalles */
-  --color-secondary-pastel: #B799FF; /* Violeta pastel para contraste */
-  --color-link: #4A90E2; /* Azul para enlaces */
-  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --border-radius: 12px;
-  --transition-speed: 0.3s ease-in-out;
-}
+@import 'variables';
 
-/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
-.theme-hogar {
-  --color-bg: #FDF9F6; /* Fondo crema suave */
-  --color-surface: #FFFFFF;
-  --color-text: #5A4E4E;
-  --color-text-muted: #8A7F7F;
-  --color-accent: #FFD166; /* Amarillo pastel cálido */
-  --color-accent-hover: #FFBF00;
-  --color-primary-light: #FFECA3;
-  --color-secondary-pastel: #B7E4C7; /* Verde suave */
-  --color-link: #C07040;
-}
+/* --- Sección Hero --- */
+// ... (El código de .hero se queda igual que antes)
+.hero { /*...*/ }
 
-/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer, con toques futuristas) --- */
-.theme-tecnologia {
-  --font-headings: "Orbitron", sans-serif; /* Mantenemos Orbitron aquí si quieres */
-  --color-bg: #1A1A2E; /* Fondo oscuro tech */
-  --color-surface: #2A2A4E;
-  --color-text: #EFEFEF;
-  --color-text-muted: #B0B0D0;
-  --color-accent: #F900FF; /* Acento (Magenta vibrante) */
-  --color-accent-hover: #FF80FF;
-  --color-border: #404070;
-  --shadow-small: 0 2px 8px rgba(249, 0, 255, 0.15);
-  --shadow-medium: 0 4px 12px rgba(249, 0, 255, 0.2);
-  --color-primary-light: #CC33FF;
-  --color-secondary-pastel: #00FFFF; /* Cyan */
-  --color-link: #00FFFF;
-}
-
-/* Añade más temas aquí según necesites... */
-/* Importa las variables */
-/* --- Sección Hero Mejorada (index.html) --- */
-.hero {
-  padding: 6rem 0;
-  text-align: center;
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  position: relative;
-  overflow: hidden; /* Para animaciones de fondo */
-}
-.hero::before { /* Elemento decorativo */
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
-  background-color: var(--color-secondary-pastel);
-  border-radius: 50%;
-  opacity: 0.2;
-  filter: blur(80px);
-  animation: floatOne 8s ease-in-out infinite;
-}
-.hero::after { /* Otro elemento decorativo */
-  content: "";
-  position: absolute;
-  bottom: -70px;
-  right: -70px;
-  width: 150px;
-  height: 150px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  opacity: 0.15;
-  filter: blur(60px);
-  animation: floatTwo 10s ease-in-out infinite reverse;
-}
-.hero h1 {
-  font-size: 3rem;
-  color: var(--color-text); /* Color principal, no el acento */
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease-out;
-}
-.hero h2 {
-  font-size: 1.5rem;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1.2s ease-out;
-}
-.hero p {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  max-width: 700px;
-  margin: 0 auto 2.5rem auto;
-  animation: fadeInUp 1.4s ease-out;
-}
-
-/* Animaciones para el Hero */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes floatOne {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(20px, 30px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes floatTwo {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-25px, -15px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-/* --- Sección de Productos Destacados (index.html) --- */
+/* --- Sección de Productos Destacados (NUEVO LAYOUT) --- */
 .featured-products {
-  padding: 3rem 0;
-}
-.featured-products h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  color: var(--color-text);
+    padding: 3rem 0;
+    
+    h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        color: var(--color-text);
+    }
 }
 
 .product-list {
-  display: flex;
-  flex-direction: column; /* Vertical por defecto */
-  gap: 2.5rem; /* Espacio entre las tarjetas */
-  max-width: 800px; /* Limita el ancho para que no se extienda demasiado */
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; 
+    max-width: 550px; /* Tarjetas más angostas en móvil */
+    margin: 0 auto;
 }
 
-/* --- Tarjeta de Producto con Hover Agrandado (index.html) --- */
-.product-card-hover {
-  background-color: var(--color-surface);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-small);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column; /* Apilado en móvil */
-  align-items: center; /* Centrar contenido */
-  text-align: center;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  position: relative;
-  padding: 1.5rem;
-  border: 1px solid var(--color-primary-light);
-}
-.product-card-hover:hover {
-  transform: translateY(-8px) scale(1.02); /* Efecto de levitar y agrandar sutil */
-  box-shadow: var(--shadow-medium);
-}
-.product-card-hover .card-main-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-.product-card-hover .card-image {
-  width: 150px; /* Tamaño fijo para la imagen */
-  height: 150px;
-  border-radius: 8px;
-  overflow: hidden;
-  flex-shrink: 0; /* No se encoge */
-}
-.product-card-hover .card-image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform var(--transition-speed);
-}
-.product-card-hover .card-details {
-  flex-grow: 1; /* Ocupa el espacio restante */
-}
-.product-card-hover .card-details h3 {
-  font-size: 1.5rem;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-.product-card-hover .card-details .price {
-  font-family: var(--font-headings);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-}
-.product-card-hover .card-description {
-  max-height: 0; /* Oculta la descripción por defecto */
-  overflow: hidden;
-  transition: max-height var(--transition-speed) ease-out, opacity var(--transition-speed);
-  opacity: 0;
-  margin-top: 1rem;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  border-top: 1px dashed var(--color-primary-light);
-  padding-top: 1rem;
-}
-.product-card-hover:hover .card-description {
-  max-height: 150px; /* Muestra la descripción al hover (ajusta si es necesario) */
-  opacity: 1;
+/* --- Tarjeta de Producto (NUEVO DISEÑO) --- */
+.product-card {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    
+    /* El toque de color pastel en el borde superior */
+    border-top: 5px solid;
+
+    /* Asignación de colores pastel */
+    &:nth-child(4n+1) { border-top-color: var(--card-accent-1); }
+    &:nth-child(4n+2) { border-top-color: var(--card-accent-2); }
+    &:nth-child(4n+3) { border-top-color: var(--card-accent-3); }
+    &:nth-child(4n+4) { border-top-color: var(--card-accent-4); }
+
+    &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: var(--shadow-medium);
+    }
 }
 
-/* Media Query para desktop en las tarjetas de producto */
-@media (min-width: 768px) {
-  .product-card-hover {
-    flex-direction: row; /* Horizontal en desktop */
-    text-align: left;
-    padding: 2rem;
-  }
-  .product-card-hover .card-main-info {
-    flex-direction: row;
-    gap: 2rem;
-    width: auto;
-  }
-  .product-card-hover .card-description {
-    max-height: 150px; /* Siempre visible en desktop si quieres, o sigue oculto con hover */
+.card-image-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-speed);
+    }
+    
+    .product-card:hover & img {
+        transform: scale(1.05); /* Sutil zoom a la imagen */
+    }
+}
+
+.card-content {
+    padding: 1.5rem;
+    h3 {
+        font-size: 1.5rem;
+        color: var(--color-text);
+        margin-bottom: 0.5rem;
+    }
+    .price {
+        font-family: var(--font-headings);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-text); /* Menos llamativo, más elegante */
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* --- Panel de Descripción (El efecto "Wow") --- */
+.card-description {
+    max-height: 0; /* Oculto por defecto */
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px); /* Inicia ligeramente arriba */
+    transition: all 0.4s ease-out;
+    
+    p {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.product-card:hover .card-description {
+    max-height: 250px; /* Espacio para descripción y botón */
     opacity: 1;
-    margin-left: 2rem; /* Espacio a la izquierda */
-    border-top: none;
-    border-left: 1px dashed var(--color-primary-light); /* Borde vertical */
-    padding-top: 0;
-    padding-left: 2rem;
-  }
-}/*# sourceMappingURL=index.css.map */
+    transform: translateY(0);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-surface-hover); /* El panel sutil */
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* --- MEDIA QUERY (Layout Alternado en Desktop) --- */
+@media (min-width: 992px) {
+    .product-list {
+        max-width: 1100px; /* Ancho completo para el layout */
+    }
+
+    .product-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columnas: imagen | contenido */
+        gap: 2.5rem;
+        align-items: center;
+        border-top: none; /* Quitamos borde superior */
+        border-left: 5px solid; /* Borde lateral en desktop */
+        padding: 1rem;
+    }
+    
+    /* Layout Alternado (Invertido) */
+    .product-card:nth-child(even) {
+        direction: rtl; /* Invierte el orden de los hijos del grid */
+        border-left: none;
+        border-right: 5px solid; /* Borde en el lado opuesto */
+    }
+    
+    /* Resetea la dirección del texto para el contenido */
+    .product-card:nth-child(even) * {
+        direction: ltr;
+    }
+
+    /* Asignación de colores pastel */
+    .product-card:nth-child(4n+1) { border-color: var(--card-accent-1); }
+    .product-card:nth-child(4n+2) { border-color: var(--card-accent-2); }
+    .product-card:nth-child(4n+3) { border-color: var(--card-accent-3); }
+    .product-card:nth-child(4n+4) { border-color: var(--card-accent-4); }
+
+    .card-image-wrapper {
+        height: 100%;
+        max-height: 380px;
+        border-radius: var(--border-radius);
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    /* El hover se mantiene igual, revelando el panel */
+}

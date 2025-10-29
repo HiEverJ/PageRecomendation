@@ -7,10 +7,12 @@
     <title>Inicio - Recomienda[Top] | Tus Mejores Productos</title>
     <meta name="description" content="Descubre las mejores recomendaciones de productos de Amazon y otras plataformas. Análisis expertos en hogar, tecnología y salud.">
 
-    <link rel="stylesheet" href="css/base.css">    <link rel="stylesheet" href="css/index.css">   <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body class="theme-base">
-    <header class="main-header">
+    <header class="main-header glassmorphism">
         <div class="container">
             <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
@@ -32,6 +34,7 @@
     </header>
 
     <main>
+        
         <section class="hero">
             <div class="container">
                 <h2>Tu Fuente Confiable de Recomendaciones</h2>
@@ -41,55 +44,65 @@
             </div>
         </section>
 
+        
         <section id="productos-destacados" class="featured-products container">
-            <h2>Nuestras Top 3 Recomendaciones del Momento</h2>
+            <h2>Productos de la Semana</h2>
+            
             <div class="product-list">
                 
-                <article class="product-card-hover">
-                    <div class="card-main-info">
-                        <div class="card-image">
-                            <img src="img/producto-placeholder-1.jpg" alt="Cafetera Inteligente">
-                        </div>
-                        <div class="card-details">
-                            <h3>Cafetera Inteligente Conectada</h3>
-                            <div class="price">€129.99</div>
-                        </div>
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="img/producto-placeholder-1.jpg" alt="Cafetera Inteligente">
                     </div>
-                    <div class="card-description">
-                        <p>Despierta con el aroma perfecto. Esta cafetera de última generación se conecta a tu smartphone, permitiéndote programar tu café desde la cama. Con molinillo integrado y ajustes personalizables, cada taza es una experiencia.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                    <div class="card-content">
+                        <h3>Cafetera Inteligente Conectada</h3>
+                        <div class="price">€129.99</div>
+                        <div class="card-description">
+                            <p>Despierta con el aroma perfecto. Esta cafetera de última generación se conecta a tu smartphone, permitiéndote programar tu café desde la cama.</p>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card-hover">
-                    <div class="card-main-info">
-                        <div class="card-image">
-                            <img src="img/producto-placeholder-2.jpg" alt="Set de Sartenes Antiadherentes Premium">
-                        </div>
-                        <div class="card-details">
-                            <h3>Set de Sartenes Antiadherentes Premium</h3>
-                            <div class="price">€79.95</div>
-                        </div>
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="img/producto-placeholder-2.jpg" alt="Set de Sartenes Antiadherentes">
                     </div>
-                    <div class="card-description">
-                        <p>Cocina sin preocupaciones con este set de sartenes de alta calidad. Fabricadas con material antiadherente libre de PFOA, distribuyen el calor de manera uniforme y son increíblemente fáciles de limpiar. ¡Imprescindibles en cualquier cocina moderna\!</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                    <div class="card-content">
+                        <h3>Set de Sartenes Antiadherentes Premium</h3>
+                        <div class="price">€79.95</div>
+                        <div class="card-description">
+                            <p>Cocina sin preocupaciones con este set de sartenes de alta calidad. Libres de PFOA, distribuyen el calor de manera uniforme y son fáciles de limpiar.</p>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card-hover">
-                    <div class="card-main-info">
-                        <div class="card-image">
-                            <img src="img/producto-placeholder-3.jpg" alt="Auriculares Inalámbricos con Cancelación de Ruido">
-                        </div>
-                        <div class="card-details">
-                            <h3>Auriculares Inalámbricos Pro-Sound</h3>
-                            <div class="price">€99.00</div>
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="img/producto-placeholder-3.jpg" alt="Auriculares Inalámbricos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Auriculares Inalámbricos Pro-Sound</h3>
+                        <div class="price">€99.00</div>
+                        <div class="card-description">
+                            <p>Sumérgete en tu música con cancelación de ruido activa superior y una calidad de sonido cristalina. Ideales para viajes, trabajo o simplemente disfrutar.</p>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
                         </div>
                     </div>
-                    <div class="card-description">
-                        <p>Sumérgete en tu música o podcasts favoritos con estos auriculares de vanguardia. Ofrecen una cancelación de ruido activa superior y una calidad de sonido cristalina. Ideales para viajes, trabajo o simplemente disfrutar de tu espacio.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                </article>
+
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="img/producto-placeholder-4.jpg" alt="Robot Aspirador">
+                    </div>
+                    <div class="card-content">
+                        <h3>Robot Aspirador Mapeo Láser</h3>
+                        <div class="price">€249.00</div>
+                        <div class="card-description">
+                            <p>El futuro de la limpieza. Este robot utiliza mapeo láser para navegar tu hogar eficientemente, aspirando y fregando. Contrólalo todo desde tu app.</p>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
                     </div>
                 </article>
 
@@ -98,17 +111,7 @@
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
-                <a href="#">Contacto</a>
-            </div>
-            <p>&copy; 2025 Recomienda[Top]. Todos los derechos reservados.</p>
-            <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
-        </div>
-    </footer>
+        </footer>
 
 </body>
 </html>

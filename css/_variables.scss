@@ -7,15 +7,22 @@
     --font-primary: 'Open Sans', sans-serif;
     --font-headings: 'Montserrat', sans-serif;
 
-    --color-bg: #F0F4F8;         /* Fondo muy suave, gris azulado claro */
-    --color-surface: #FFFFFF;    /* Blanco puro para tarjetas y elementos */
-    --color-text: #334155;       /* Azul oscuro para texto */
-    --color-text-muted: #64748B; /* Gris medio para texto secundario */
-    --color-accent: #6EE7B7;     /* Verde menta pastel para acentos */
-    --color-accent-hover: #34D399; /* Verde más intenso al hover */
-    --color-primary-light: #A7F3D0; /* Verde más claro para detalles */
-    --color-secondary-pastel: #B799FF; /* Violeta pastel para contraste */
-    --color-link: #4A90E2;       /* Azul para enlaces */
+    --color-bg: #F0F4F8;         
+    --color-surface: #FFFFFF;    
+    --color-surface-transparent: rgba(255, 255, 255, 0.7); /* Para Glassmorphism */
+    --color-surface-hover: #F8FBFD; /* Fondo sutil para descripción */
+    --color-text: #334155;       
+    --color-text-muted: #64748B; 
+    --color-accent: #6EE7B7;     /* Verde menta pastel */
+    --color-accent-hover: #34D399; 
+    --color-primary-light: #A7F3D0; 
+    --color-link: #4A90E2;       
+
+    /* Paleta de 4 colores pastel para las tarjetas */
+    --card-accent-1: #A7F3D0; /* Menta */
+    --card-accent-2: #B799FF; /* Violeta */
+    --card-accent-3: #FFB7B2; /* Rosa/Salmón */
+    --card-accent-4: #AEEEEE; /* Turquesa */
 
     --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -25,32 +32,39 @@
 
 /* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
 .theme-hogar {
-    --color-bg: #FDF9F6;         /* Fondo crema suave */
+    --color-bg: #FDF9F6;         
     --color-surface: #FFFFFF;
+    --color-surface-transparent: rgba(255, 255, 255, 0.7);
+    --color-surface-hover: #FFFDFB;
     --color-text: #5A4E4E;
     --color-text-muted: #8A7F7F;
-    --color-accent: #FFD166;     /* Amarillo pastel cálido */
+    --color-accent: #FFD166;     
     --color-accent-hover: #FFBF00;
     --color-primary-light: #FFECA3;
-    --color-secondary-pastel: #B7E4C7; /* Verde suave */
     --color-link: #C07040;
+
+    --card-accent-1: #FFD166;
+    --card-accent-2: #B7E4C7;
+    --card-accent-3: #FDBF6F;
+    --card-accent-4: #F4A261;
 }
 
-/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer, con toques futuristas) --- */
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
 .theme-tecnologia {
-    --font-headings: 'Orbitron', sans-serif; /* Mantenemos Orbitron aquí si quieres */
-    --color-bg: #1A1A2E;         /* Fondo oscuro tech */
-    --color-surface: #2A2A4E;    
+    --font-headings: 'Orbitron', sans-serif;
+    --color-bg: #1A1A2E;         
+    --color-surface: #2A2A4E;
+    --color-surface-transparent: rgba(42, 42, 78, 0.6); /* Glassmorphism oscuro */
+    --color-surface-hover: #2F2F5A;
     --color-text: #EFEFEF;
     --color-text-muted: #B0B0D0;
-    --color-accent: #F900FF;     /* Acento (Magenta vibrante) */
+    --color-accent: #F900FF;     
     --color-accent-hover: #FF80FF;
-    --color-border: #404070;
-    --shadow-small: 0 2px 8px rgba(249, 0, 255, 0.15);
-    --shadow-medium: 0 4px 12px rgba(249, 0, 255, 0.2);
-    --color-primary-light: #CC33FF;
-    --color-secondary-pastel: #00FFFF; /* Cyan */
     --color-link: #00FFFF;
-}
+    --color-primary-light: #CC33FF;
 
-/* Añade más temas aquí según necesites... */
+    --card-accent-1: #F900FF;
+    --card-accent-2: #00FFFF;
+    --card-accent-3: #3FFF00;
+    --card-accent-4: #FFD700;
+}
