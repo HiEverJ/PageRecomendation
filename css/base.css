@@ -1,26 +1,34 @@
 @charset "UTF-8";
 /* --- FUENTES --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
 /* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
 :root {
   /* Tema Base / Default (colores pastel, moderno) */
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
   --color-bg: #F0F4F8;
   --color-surface: #FFFFFF;
-  --color-surface-transparent: rgba(255, 255, 255, 0.7); /* Para Glassmorphism */
-  --color-surface-hover: #F8FBFD; /* Fondo sutil para descripción */
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #F8FBFD;
   --color-text: #334155;
+  --color-text-rgb: 51, 65, 85;
   --color-text-muted: #64748B;
-  --color-accent: #6EE7B7; /* Verde menta pastel */
+  --color-accent: #6EE7B7;
   --color-accent-hover: #34D399;
   --color-primary-light: #A7F3D0;
   --color-link: #4A90E2;
-  /* Paleta de 4 colores pastel para las tarjetas */
-  --card-accent-1: #A7F3D0; /* Menta */
-  --card-accent-2: #B799FF; /* Violeta */
-  --card-accent-3: #FFB7B2; /* Rosa/Salmón */
-  --card-accent-4: #AEEEEE; /* Turquesa */
+  /* ... (Variables de tarjetas) ... */
+  --card-accent-1: #A7F3D0;
+  --card-accent-2: #B799FF;
+  --card-accent-3: #FFB7B2;
+  --card-accent-4: #AEEEEE;
+  /* ... (Variables de Navegación) ... */
+  --header-height: 80px;
+  --nav-pill-bg: rgba(var(--color-text-rgb), 0.05);
+  --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6); /* Menta semi-transparente */
+  --nav-pill-border-radius: 999px;
+  --nav-font-size-desktop: 0.9rem;
   --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
   --border-radius: 12px;
@@ -29,16 +37,20 @@
 
 /* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
 .theme-hogar {
-  --color-bg: #FDF9F6;
+  --color-bg: #FDF9F6; /* Fondo crema suave */
   --color-surface: #FFFFFF;
-  --color-surface-transparent: rgba(255, 255, 255, 0.7);
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
   --color-surface-hover: #FFFDFB;
   --color-text: #5A4E4E;
+  --color-text-rgb: 90, 78, 78;
   --color-text-muted: #8A7F7F;
-  --color-accent: #FFD166;
+  --color-accent: #FFD166; /* Amarillo pastel cálido */
   --color-accent-hover: #FFBF00;
   --color-primary-light: #FFECA3;
   --color-link: #C07040;
+  /* AÑADIDO: Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6); /* Amarillo-crema semi-transparente */
+  /* Tarjetas (si se usan) heredarán colores cálidos */
   --card-accent-1: #FFD166;
   --card-accent-2: #B7E4C7;
   --card-accent-3: #FDBF6F;
@@ -48,20 +60,20 @@
 /* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
 .theme-tecnologia {
   --font-headings: "Orbitron", sans-serif;
+  --font-display: "Orbitron", sans-serif;
   --color-bg: #1A1A2E;
   --color-surface: #2A2A4E;
-  --color-surface-transparent: rgba(42, 42, 78, 0.6); /* Glassmorphism oscuro */
+  --color-surface-transparent: rgba(42, 42, 78, 0.4);
   --color-surface-hover: #2F2F5A;
   --color-text: #EFEFEF;
+  --color-text-rgb: 239, 239, 239;
   --color-text-muted: #B0B0D0;
   --color-accent: #F900FF;
   --color-accent-hover: #FF80FF;
   --color-link: #00FFFF;
   --color-primary-light: #CC33FF;
-  --card-accent-1: #F900FF;
-  --card-accent-2: #00FFFF;
-  --card-accent-3: #3FFF00;
-  --card-accent-4: #FFD700;
+  /* Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(299, 100%, 70%, 0.6); /* Magenta semi-transparente */
 }
 
 /* --- RESET BÁSICO Y GLOBALES --- */
@@ -80,6 +92,10 @@ body {
   color: var(--color-text);
   font-family: var(--font-primary);
   line-height: 1.6;
+  /* --- CAMBIO AQUÍ: Aurora más intensa --- */
+  /* Aumentamos la opacidad de 0.4 a 0.7 y la saturación */
+  background-image: radial-gradient(at 10% 20%, hsla(160, 60%, 85%, 0.7) 0px, transparent 55%), radial-gradient(at 80% 80%, hsla(220, 60%, 85%, 0.6) 0px, transparent 60%);
+  background-attachment: fixed;
 }
 
 .container {
@@ -112,26 +128,57 @@ img {
 }
 
 main {
-  padding-top: 20px;
+  padding-top: 0;
 }
 
 /* --- Botones (CTA) --- */
-.cta-button { /*...*/ }
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  transition: all var(--transition-speed);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cta-button.primary {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  box-shadow: var(--shadow-small);
+}
+.cta-button.primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+.cta-button.secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  transform: translateY(-1px);
+}
 
-/* --- Header "Wow" (Glassmorphism) --- */
+/* --- Header "iOS" (Flotante y Transparente) --- */
 .main-header {
-  background-color: var(--color-surface-transparent); /* Fondo semi-transparente */
-  -webkit-backdrop-filter: blur(12px); /* desenfoque para Safari */
-  backdrop-filter: blur(12px); /* desenfoque estándar */
-  padding: 0.8rem 0;
-  position: sticky; /* Header pegajoso */
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: var(--header-height);
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra más suave */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-  /* Fallback para navegadores que no soportan backdrop-filter */
+  box-shadow: none;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .main-header {
@@ -140,86 +187,141 @@ main {
 }
 .main-header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* CAMBIADO de space-between */
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Previene el salto de línea en móvil */
 }
 
 .logo {
-  font-family: var(--font-headings);
+  font-family: var(--font-display);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text);
   transition: color var(--transition-speed);
+  /* --- ¡ASEGÚRATE DE QUE ESTA LÍNEA ESTÉ AQUÍ! --- */
+  /* Esta línea empuja la navegación a la derecha. */
+  margin-right: 10;
 }
 .logo span {
   color: var(--color-accent);
 }
 
-/* --- Navegación "Wow" (Píldora animada) --- */
+/* --- Navegación "Píldoras iOS" --- */
 .main-nav {
   display: none;
   width: 100%;
-  margin-top: 1rem;
 }
 .main-nav.is-active {
   display: block;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-medium);
 }
 .main-nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 .main-nav a {
   display: block;
-  padding: 0.6rem 1rem; /* Padding para la píldora */
-  font-size: 1.1rem;
+  padding: 0.4rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
-  border-radius: var(--border-radius);
-  transition: color var(--transition-speed);
-  position: relative; /* Clave para la animación */
-  z-index: 1;
-  overflow: hidden; /* Clave para la animación */
-  /* La "Píldora" (elemento pseudo ::before) */
-  /* Hover y Activo */
-  /* El 'active' es instantáneo, el 'hover' es animado */
-}
-.main-nav a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-primary-light);
-  border-radius: var(--border-radius);
-  transform: scaleX(0); /* Inicia escalado a 0 */
-  transform-origin: left; /* Crecerá desde la izquierda */
-  transition: transform var(--transition-speed);
-  z-index: -1;
+  border-radius: var(--nav-pill-border-radius);
+  background-color: var(--nav-pill-bg);
+  /* --- CAMBIO AQUÍ: Añadimos 'transform' a la transición --- */
+  transition: background-color var(--transition-speed), color var(--transition-speed), transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .main-nav a.active, .main-nav a:hover {
+  background-color: var(--nav-pill-bg-hover);
   color: var(--color-accent-hover);
-  background-color: transparent; /* El fondo lo da la píldora */
-}
-.main-nav a.active::before, .main-nav a:hover::before {
-  transform: scaleX(1); /* Crece al 100% en hover */
-}
-.main-nav a.active::before {
-  transform: scaleX(1);
-  transition: none; /* Sin animación para el estado activo */
 }
 
 /* --- Botón Hamburguesa --- */
-.hamburger-btn { /*...*/ }
+.hamburger-btn {
+  display: block;
+  background: var(--nav-pill-bg);
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  padding: 10px;
+  border-radius: var(--nav-pill-border-radius);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: background-color var(--transition-speed);
+  /* AÑADIDO: Margen para que no se pegue al borde */
+  margin-left: 1rem;
+}
+.hamburger-btn:hover {
+  background-color: rgba(var(--color-text-rgb), 0.1);
+}
+.hamburger-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-speed);
+}
+.hamburger-btn.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 /* --- Footer --- */
-.main-footer { /*...*/ }
+.main-footer {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  box-shadow: inset 0 8px 12px rgba(0, 0, 0, 0.05);
+}
+.main-footer .footer-links {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-footer .footer-links a {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+.main-footer .footer-links a:hover {
+  color: var(--color-accent);
+}
+.main-footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.main-footer .affiliate-disclaimer {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
 
 /* --- MEDIA QUERIES (ADAPTACIÓN A DESKTOP) --- */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .hamburger-btn {
     display: none;
   }
@@ -227,27 +329,34 @@ main {
     display: block;
     width: auto;
     margin-top: 0;
+    position: static;
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    padding: 0;
+    box-shadow: none;
   }
   .main-nav ul {
     flex-direction: row;
-    gap: 1rem; /* Un poco menos de espacio */
+    gap: 0.75rem;
   }
   .main-nav a {
-    padding: 0.6rem 1.2rem; /* Padding para la píldora */
-    font-size: 1rem;
+    /* CAMBIADO: Píldora más estilizada (menos alta) */
+    padding: 0.4rem 1.25rem;
+    /* CAMBIADO: Fuente más pequeña */
+    font-size: var(--nav-font-size-desktop);
     font-weight: 600;
   }
-  .main-nav a::before {
-    transform-origin: center; /* Crece desde el centro en desktop */
-    transform: scale(0);
-  }
-  .main-nav a.active::before, .main-nav a:hover::before {
-    transform: scale(1);
-  }
-  .main-nav a.active::before {
-    transition: transform var(--transition-speed); /* Animado también en desktop */
-  }
   .main-header .container {
+    display: flex;
+    justify-content: flex-start; /* Logo a la izquierda */
+    align-items: center;
     flex-wrap: nowrap;
+    /* --- CAMBIOS AQUÍ --- */
+    /* 1. Anulamos el max-width para que ocupe el 100% de la pantalla */
+    max-width: 100%;
+    /* 2. Añadimos padding a los lados de la PANTALLA, no del contenedor */
+    /* (Puedes cambiar 2rem a 2.5rem si quieres aún más espacio) */
+    padding: 0 2rem;
   }
 }/*# sourceMappingURL=base.css.map */

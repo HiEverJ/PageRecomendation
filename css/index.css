@@ -1,154 +1,432 @@
-@import 'variables';
+@charset "UTF-8";
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+  /* Tema Base / Default (colores pastel, moderno) */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #F8FBFD;
+  --color-text: #334155;
+  --color-text-rgb: 51, 65, 85;
+  --color-text-muted: #64748B;
+  --color-accent: #6EE7B7;
+  --color-accent-hover: #34D399;
+  --color-primary-light: #A7F3D0;
+  --color-link: #4A90E2;
+  /* ... (Variables de tarjetas) ... */
+  --card-accent-1: #A7F3D0;
+  --card-accent-2: #B799FF;
+  --card-accent-3: #FFB7B2;
+  --card-accent-4: #AEEEEE;
+  /* ... (Variables de Navegación) ... */
+  --header-height: 80px;
+  --nav-pill-bg: rgba(var(--color-text-rgb), 0.05);
+  --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6); /* Menta semi-transparente */
+  --nav-pill-border-radius: 999px;
+  --nav-font-size-desktop: 0.9rem;
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+}
 
-/* --- Sección Hero --- */
-// ... (El código de .hero se queda igual que antes)
-.hero { /*...*/ }
+/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
+.theme-hogar {
+  --color-bg: #FDF9F6; /* Fondo crema suave */
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #FFFDFB;
+  --color-text: #5A4E4E;
+  --color-text-rgb: 90, 78, 78;
+  --color-text-muted: #8A7F7F;
+  --color-accent: #FFD166; /* Amarillo pastel cálido */
+  --color-accent-hover: #FFBF00;
+  --color-primary-light: #FFECA3;
+  --color-link: #C07040;
+  /* AÑADIDO: Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6); /* Amarillo-crema semi-transparente */
+  /* Tarjetas (si se usan) heredarán colores cálidos */
+  --card-accent-1: #FFD166;
+  --card-accent-2: #B7E4C7;
+  --card-accent-3: #FDBF6F;
+  --card-accent-4: #F4A261;
+}
 
-/* --- Sección de Productos Destacados (NUEVO LAYOUT) --- */
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
+.theme-tecnologia {
+  --font-headings: "Orbitron", sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --color-bg: #1A1A2E;
+  --color-surface: #2A2A4E;
+  --color-surface-transparent: rgba(42, 42, 78, 0.4);
+  --color-surface-hover: #2F2F5A;
+  --color-text: #EFEFEF;
+  --color-text-rgb: 239, 239, 239;
+  --color-text-muted: #B0B0D0;
+  --color-accent: #F900FF;
+  --color-accent-hover: #FF80FF;
+  --color-link: #00FFFF;
+  --color-primary-light: #CC33FF;
+  /* Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(299, 100%, 70%, 0.6); /* Magenta semi-transparente */
+}
+
+/* --- Sección Hero Mejorada (index.html) --- */
+.hero {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  position: relative;
+  overflow: hidden;
+  /* El hero ahora se posiciona debajo del body (que está en 0,0) */
+  /* por lo que está naturalmente detrás del header */
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  /* Decoración de fondo 1 (existente) */
+  /* Decoración de fondo 2 (existente) */
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--color-secondary-pastel);
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(80px);
+  animation: floatOne 8s ease-in-out infinite;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  right: -70px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(60px);
+  animation: floatTwo 10s ease-in-out infinite reverse;
+}
+.hero .container {
+  position: relative; /* Para posicionar las nuevas decoraciones */
+  z-index: 1;
+  /* AÑADIDO: Decoración sutil 1 (anillo) */
+  /* AÑADIDO: Decoración sutil 2 (cruz) */
+}
+.hero .container::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(var(--color-text-rgb), 0.1);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: spin 20s linear infinite;
+}
+.hero .container::after {
+  content: "+";
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(var(--color-text-rgb), 0.1);
+  opacity: 0.8;
+  animation: floatTwo 6s ease-in-out infinite;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+  text-shadow: 0 2px 10px rgba(var(--color-text-rgb), 0.1);
+}
+.hero h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--color-accent-hover);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.2s ease-out;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+/* Animaciones para el Hero */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floatOne {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes floatTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-25px, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* --- Sección de Productos Destacados --- */
 .featured-products {
-    padding: 3rem 0;
-    
-    h2 {
-        text-align: center;
-        font-size: 2.2rem;
-        margin-bottom: 3rem;
-        color: var(--color-text);
-    }
+  padding: 3rem 0;
+  /* --- ELIMINADOS --- */
+  /* margin-top: -60px; (quitado) */
+  /* position: relative; (quitado) */
+  /* z-index: 2; (quitado) */
+  /* --- AÑADIDO --- */
+  /* Un pequeño margen para que respire después del difuminado */
+  margin-top: 1rem;
+}
+.featured-products h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--color-text);
 }
 
 .product-list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem; 
-    max-width: 550px; /* Tarjetas más angostas en móvil */
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
-/* --- Tarjeta de Producto (NUEVO DISEÑO) --- */
 .product-card {
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-small);
-    overflow: hidden;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    
-    /* El toque de color pastel en el borde superior */
-    border-top: 5px solid;
-
-    /* Asignación de colores pastel */
-    &:nth-child(4n+1) { border-top-color: var(--card-accent-1); }
-    &:nth-child(4n+2) { border-top-color: var(--card-accent-2); }
-    &:nth-child(4n+3) { border-top-color: var(--card-accent-3); }
-    &:nth-child(4n+4) { border-top-color: var(--card-accent-4); }
-
-    &:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: var(--shadow-medium);
-    }
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border-top: 5px solid;
+  /* AÑADIDO: Definición de variable de color por tarjeta */
+}
+.product-card:nth-child(4n+1) {
+  border-top-color: var(--card-accent-1);
+  --current-card-accent: var(--card-accent-1);
+}
+.product-card:nth-child(4n+2) {
+  border-top-color: var(--card-accent-2);
+  --current-card-accent: var(--card-accent-2);
+}
+.product-card:nth-child(4n+3) {
+  border-top-color: var(--card-accent-3);
+  --current-card-accent: var(--card-accent-3);
+}
+.product-card:nth-child(4n+4) {
+  border-top-color: var(--card-accent-4);
+  --current-card-accent: var(--card-accent-4);
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-medium);
 }
 
 .card-image-wrapper {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform var(--transition-speed);
-    }
-    
-    .product-card:hover & img {
-        transform: scale(1.05); /* Sutil zoom a la imagen */
-    }
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+.product-card:hover .card-image-wrapper img {
+  transform: scale(1.05);
 }
 
 .card-content {
-    padding: 1.5rem;
-    h3 {
-        font-size: 1.5rem;
-        color: var(--color-text);
-        margin-bottom: 0.5rem;
-    }
-    .price {
-        font-family: var(--font-headings);
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--color-text); /* Menos llamativo, más elegante */
-        margin-bottom: 1.5rem;
-    }
+  padding: 1.5rem;
+}
+.card-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+.card-content .price {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
 }
 
-/* --- Panel de Descripción (El efecto "Wow") --- */
 .card-description {
-    max-height: 0; /* Oculto por defecto */
-    opacity: 0;
-    overflow: hidden;
-    transform: translateY(-10px); /* Inicia ligeramente arriba */
-    transition: all 0.4s ease-out;
-    
-    p {
-        color: var(--color-text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-    }
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s ease-out;
+}
+.card-description p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
 }
 
+/* REEMPLAZA esta regla en css/index.scss */
 .product-card:hover .card-description {
-    max-height: 250px; /* Espacio para descripción y botón */
-    opacity: 1;
-    transform: translateY(0);
-    margin-top: 1.5rem;
-    padding: 1.5rem;
-    background-color: var(--color-surface-hover); /* El panel sutil */
-    border-radius: var(--border-radius);
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-height: 250px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  /* --- CAMBIOS AQUÍ --- */
+  /* 1. Fondo sutil (color texto al 4% de opacidad) */
+  /* Esto SÍ se verá sobre el fondo blanco de la tarjeta */
+  background-color: rgba(var(--color-text-rgb), 0.04);
+  /* 2. Mantenemos el "glassmorphism" para cuando esté en producción */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.04);
+  /* 3. El borde de color que ya tenías */
+  border-top: 4px solid var(--current-card-accent);
+  /* 4. El fallback (fondo sólido) si el "glass" falla */
+  /* Usamos un color más visible que el blanco puro */
+}
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .product-card:hover .card-description {
+    background-color: var(--color-surface-hover);
+  }
 }
 
+/* AÑADIDO: Estilos para el grupo de botones */
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Para que los botones salten de línea si no caben */
+  gap: 0.75rem; /* Espacio entre botones */
+}
+
+/* AÑADIDO: Estilos para los botones dentro de la tarjeta */
+.card-description .cta-button.secondary {
+  /* Usamos la variable de color de la tarjeta */
+  border-color: var(--current-card-accent);
+  color: var(--current-card-accent);
+  /* Hacemos los botones más pequeños */
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.card-description .cta-button.secondary:hover {
+  background-color: var(--current-card-accent);
+  color: var(--color-surface); /* Texto blanco/claro al hover */
+  border-color: var(--current-card-accent);
+}
 
 /* --- MEDIA QUERY (Layout Alternado en Desktop) --- */
 @media (min-width: 992px) {
-    .product-list {
-        max-width: 1100px; /* Ancho completo para el layout */
-    }
-
-    .product-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 columnas: imagen | contenido */
-        gap: 2.5rem;
-        align-items: center;
-        border-top: none; /* Quitamos borde superior */
-        border-left: 5px solid; /* Borde lateral en desktop */
-        padding: 1rem;
-    }
-    
-    /* Layout Alternado (Invertido) */
-    .product-card:nth-child(even) {
-        direction: rtl; /* Invierte el orden de los hijos del grid */
-        border-left: none;
-        border-right: 5px solid; /* Borde en el lado opuesto */
-    }
-    
-    /* Resetea la dirección del texto para el contenido */
-    .product-card:nth-child(even) * {
-        direction: ltr;
-    }
-
-    /* Asignación de colores pastel */
-    .product-card:nth-child(4n+1) { border-color: var(--card-accent-1); }
-    .product-card:nth-child(4n+2) { border-color: var(--card-accent-2); }
-    .product-card:nth-child(4n+3) { border-color: var(--card-accent-3); }
-    .product-card:nth-child(4n+4) { border-color: var(--card-accent-4); }
-
-    .card-image-wrapper {
-        height: 100%;
-        max-height: 380px;
-        border-radius: var(--border-radius);
-    }
-    
-    .card-content {
-        padding: 1.5rem;
-    }
-
-    /* El hover se mantiene igual, revelando el panel */
-}
+  .product-list {
+    max-width: 1100px;
+  }
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    border-top: none;
+    border-left: 5px solid;
+    padding: 1rem;
+  }
+  .product-card:nth-child(even) {
+    direction: rtl;
+    border-left: none;
+    border-right: 5px solid;
+  }
+  .product-card:nth-child(even) * {
+    direction: ltr;
+  }
+  /* AÑADIDO: Asignación de variable de color también en desktop */
+  .product-card:nth-child(4n+1) {
+    border-color: var(--card-accent-1);
+    --current-card-accent: var(--card-accent-1);
+  }
+  .product-card:nth-child(4n+2) {
+    border-color: var(--card-accent-2);
+    --current-card-accent: var(--card-accent-2);
+  }
+  .product-card:nth-child(4n+3) {
+    border-color: var(--card-accent-3);
+    --current-card-accent: var(--card-accent-3);
+  }
+  .product-card:nth-child(4n+4) {
+    border-color: var(--card-accent-4);
+    --current-card-accent: var(--card-accent-4);
+  }
+  .card-image-wrapper {
+    height: 100%;
+    max-height: 380px;
+    border-radius: var(--border-radius);
+  }
+  .card-content {
+    padding: 1.5rem;
+  }
+}/*# sourceMappingURL=index.css.map */

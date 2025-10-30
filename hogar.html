@@ -4,71 +4,430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página Principal - Recomendaciones Top</title>
-    <meta name="description" content="Descubre el producto de la semana y las mejores recomendaciones en tecnología, hogar y más.">
+    <title>Hogar - Recomienda[Top] | Transforma tu Espacio</title>
+    <meta name="description" content="Descubre productos únicos para convertir tu casa en un verdadero santuario. Recomendaciones de decoración, organización y confort.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/hogar.css">
     
     <script src="js/main.js" defer></script>
 </head>
-<body class="theme-hogar"> <header class="main-header">
+<body class="theme-hogar">
+    
+    <header class="main-header glassmorphism">
         <div class="container">
-            <a href="index.html" class="logo">Recomienda[Top]</a>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="hogar.html">Hogar</a></li>
-                    <li><a href="tecnologia.html">Tecnología</a></li>
-                    <li><a href="salud.html">Salud</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hogar.html" class="active">Hogar</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="salud.html">Salud</a></li>
+                    <li><a href="limpieza.html">Limpieza</a></li>
+                    <li><a href="decoracion.html">Decoración</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Producto de la Semana</h2>
-                <h1>El Gadget Futurista que Necesitas</h1>
-                <p>Análisis profundo del nuevo [Nombre del Producto] que está revolucionando el mercado.</p>
-                <a href="#" class="cta-button primary">Ver Análisis y Oferta</a>
+    <main class="scrolling-story">
+
+        <section class="story-block story-image-bg" style="--bg-image: url('../img/hogar/hero-bg.jpg');">
+            <div class="story-intro container">
+                <h1>Convierte tu Casa en un Santuario</h1>
+                <p class="subtitle">Más que cuatro paredes, tu hogar es tu refugio.</p>
+                <p>Tu espacio personal debe inspirarte y recargarte. Hemos seleccionado 28 productos excepcionales que no solo decoran, sino que *funcionan*, ayudándote a crear un espacio que se siente verdaderamente tuyo, desde la calma de tu dormitorio hasta la energía de tu cocina.</p>
             </div>
         </section>
 
-        <section class="product-grid container">
-            <h2>Más Recomendaciones</h2>
-            <div class="grid-container">
-                
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
-                        <span class="category-tag">Tecnología</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Título del Producto Recomendado</h3>
-                        <p>Una descripción breve que engancha y resalta el valor principal del producto.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <h2>Creando Ambientes</h2>
+                <p class="section-subtitle">Pequeños toques, gran impacto. Iluminación, aromas y texturas que invitan a la calma.</p>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-01.jpg" alt="Difusor Ultrasónico"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Aromaterapia</span>
+                        <h3>Difusor Ultrasónico de Madera</h3>
+                        <p>Cambia el ambiente de tu hogar con solo presionar un botón. Este difusor ultrasónico es silencioso, tiene luces LED sutiles y convierte tus aceites esenciales favoritos en una niebla relajante.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    </article>
-                <article class="product-card">
-                    </article>
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-02.jpg" alt="Lámpara de Sal"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Iluminación</span>
+                        <h3>Lámpara de Sal del Himalaya</h3>
+                        <p>Crea una atmósfera ámbar y relajante. Perfecta para tu mesa de noche o un rincón de lectura, purifica el aire y añade un toque orgánico y sereno a cualquier espacio.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-03.jpg" alt="Manta Tejida"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Textiles</span>
+                        <h3>Manta de Tejido Waffle</h3>
+                        <p>Textura y confort en una sola pieza. Esta manta ligera es ideal para cualquier estación, añadiendo un toque de diseño y calidez a tu sofá o cama.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h4 class="grid-divider"><span>Más ideas para tu ambiente</span></h4>
+
+                <div class="product-grid-small">
+                    <article class="product-card-small" data-index="1">
+                        <div class="card-image"><img src="img/hogar/prod-04.jpg" alt="Velas de Soya"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Aromas</span>
+                            <h3>Velas de Soya (Set de 3)</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Set de 3 velas con aromas a lavanda, vainilla y sándalo. Cera de soya 100% natural.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="2">
+                        <div class="card-image"><img src="img/hogar/prod-05.jpg" alt="Luces LED"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Iluminación</span>
+                            <h3>Tira de Luces LED Cálidas</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>5 metros de luces cálidas tipo "hada" con control remoto y alimentación USB. Perfectas para espejos.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="3">
+                        <div class="card-image"><img src="img/hogar/prod-06.jpg" alt="Cojines Decorativos"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Textiles</span>
+                            <h3>Fundas de Cojín de Lino</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Set de 2 fundas de cojín de 45x45cm en tela de lino rústico, disponibles en 12 colores.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="4">
+                        <div class="card-image"><img src="img/hogar/prod-07.jpg" alt="Jardín Zen"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Decoración</span>
+                            <h3>Mini Jardín Zen de Escritorio</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Un pequeño oasis de calma para tu escritorio. Incluye arena, rastrillo de bambú y piedras.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-    </main>
 
+        <section class="story-block story-image-bg" style="--bg-image: url('../img/hogar/organize-bg.jpg');">
+            <div class="container">
+                <h2>Organización Inteligente</h2>
+                <p class="section-subtitle">Encuentra la calma en el orden. Soluciones que ahorran espacio y hacen tu vida más fácil.</p>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-08.jpg" alt="Contenedores Herméticos"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Cocina y Despensa</span>
+                        <h3>Contenedores Herméticos Apilables (12 Pzs)</h3>
+                        <p>Di adiós al desorden en la despensa. Este set de contenedores herméticos mantiene tus alimentos frescos por más tiempo y su diseño apilable maximiza cada centímetro de tu alacena.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-09.jpg" alt="Carrito Organizador"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Multiuso</span>
+                        <h3>Carrito Organizador de 3 Niveles</h3>
+                        <p>El ayudante perfecto. Úsalo en la cocina para especias, en el baño para toallas o en tu oficina para arte. Sus ruedas te permiten moverlo a donde lo necesites.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-10.jpg" alt="Organizador de Sartenes"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Cocina</span>
+                        <h3>Organizador de Sartenes de Metal</h3>
+                        <p>Deja de apilar tus sartenes. Este rack de metal te permite almacenarlas de forma vertical u horizontal, protegiendo el teflón y facilitando el acceso.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h4 class="grid-divider"><span>Soluciones para el orden</span></h4>
+
+                <div class="product-grid-small">
+                    <article class="product-card-small" data-index="1">
+                        <div class="card-image"><img src="img/hogar/prod-11.jpg" alt="Cajas de Tela"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Clóset</span>
+                            <h3>Cajas de Tela Plegables (Set de 6)</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Organiza tu clóset o estanterías. Set de 6 cubos de tela plegables con asa.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="2">
+                        <div class="card-image"><img src="img/hogar/prod-12.jpg" alt="Repisa Esquinera"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Paredes</span>
+                            <h3>Repisa Flotante Esquinera (5 Niveles)</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Aprovecha cada esquina. Repisa flotante de 5 niveles en madera, fácil de instalar.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="3">
+                        <div class="card-image"><img src="img/hogar/prod-13.jpg" alt="Organizador de Zapatos"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Entrada</span>
+                            <h3>Organizador de Zapatos para Puerta</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Libera espacio en el suelo. Organizador para colgar tras la puerta con 24 bolsillos.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="4">
+                        <div class="card-image"><img src="img/hogar/prod-14.jpg" alt="Ganchos Adhesivos"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Multiuso</span>
+                            <h3>Ganchos Adhesivos de Acero (Pack 10)</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Ganchos de acero inoxidable ultra resistentes. Soportan hasta 5kg sin taladrar.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <h2>Cocina & Comedor</h2>
+                <p class="section-subtitle">Gadgets que inspiran y utensilios que duran. Eleva tu experiencia culinaria.</p>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-15.jpg" alt="Mini Aspiradora de Mesa"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Gadgets</span>
+                        <h3>Mini Aspiradora de Mesa Recargable</h3>
+                        <p>Perfecta para limpiar migas, polvo de café o restos de manualidades. Es pequeña, potente y se recarga por USB. Una de esas compras que te preguntas cómo vivías sin ella.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-16.jpg" alt="Prensa Francesa"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Café</span>
+                        <h3>Prensa Francesa de Acero Inoxidable</h3>
+                        <p>Para los amantes del café. Su filtro de doble malla asegura una bebida limpia y su construcción de acero de doble pared mantiene tu café caliente por más tiempo.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-17.jpg" alt="Tazas Doble Pared"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Bebidas</span>
+                        <h3>Tazas de Vidrio Doble Pared (Set de 2)</h3>
+                        <p>Tus bebidas calientes se mantienen calientes (y frías las frías) sin quemar o mojar tus manos. Un diseño elegante que además es increíblemente funcional.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h4 class="grid-divider"><span>Esenciales de cocina</span></h4>
+
+                <div class="product-grid-small">
+                    <article class="product-card-small" data-index="1">
+                        <div class="card-image"><img src="img/hogar/prod-18.jpg" alt="Set de Utensilios"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Utensilios</span>
+                            <h3>Set de Utensilios de Silicón (12 Pzs)</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>No rayes tus sartenes. Set completo de silicón resistente al calor con mangos de madera.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="2">
+                        <div class="card-image"><img src="img/hogar/prod-19.jpg" alt="Tabla de Cortar"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Preparación</span>
+                            <h3>Tabla de Cortar de Bambú con Surcos</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Grande, robusta y con un surco para jugos. El bambú es duradero y antibacterial.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="3">
+                        <div class="card-image"><img src="img/hogar/prod-20.jpg" alt="Batidora de Inmersión"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Gadgets</span>
+                            <h3>Batidora de Inmersión 4-en-1</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Una herramienta para todo: batir, picar, mezclar y espumar. Ahorra espacio y tiempo.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="4">
+                        <div class="card-image"><img src="img/hogar/prod-21.jpg" alt="Especiero Giratorio"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Organización</span>
+                            <h3>Especiero Giratorio de Acero</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Mantén tus 16 especias principales a la vista y al alcance de la mano. Gira 360°.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-block story-image-bg" style="--bg-image: url('../img/hogar/descanso-bg.jpg');">
+            <div class="container">
+                <h2>Descanso & Bienestar</h2>
+                <p class="section-subtitle">Crea tu propio oasis personal. Lo esencial para un sueño reparador y un baño relajante.</p>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-22.jpg" alt="Almohada Viscoelástica"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Dormitorio</span>
+                        <h3>Almohada de Espuma Viscoelástica Cervical</h3>
+                        <p>Diseñada ergonómicamente para alinear tu cuello y espalda. Su espuma de alta densidad se adapta a ti, ayudando a reducir dolores y mejorar la calidad de tu sueño.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-23.jpg" alt="Soporte para Bañera"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Baño</span>
+                        <h3>Soporte de Bambú Extensible para Bañera</h3>
+                        <p>El accesorio definitivo para un baño relajante. Sostiene tu libro, tablet, copa de vino y velas mientras te sumerges. Se extiende para adaptarse a cualquier bañera.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image"><img src="img/hogar/prod-24.jpg" alt="Set de Sábanas"></div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Dormitorio</span>
+                        <h3>Set de Sábanas de Microfibra Premium</h3>
+                        <p>Increíblemente suaves y resistentes a las arrugas. Este set de sábanas se siente lujoso sin el precio elevado, y viene en una enorme variedad de colores.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h4 class="grid-divider"><span>Tu spa en casa</span></h4>
+
+                <div class="product-grid-small">
+                    <article class="product-card-small" data-index="1">
+                        <div class="card-image"><img src="img/hogar/prod-25.jpg" alt="Toallas Algodón"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Baño</span>
+                            <h3>Juego de Toallas de Algodón Egipcio</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Set de 6 piezas ultra absorbentes y suaves. Calidad de hotel en tu propio baño.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="2">
+                        <div class="card-image"><img src="img/hogar/prod-26.jpg" alt="Antifaz de Seda"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Bienestar</span>
+                            <h3>Antifaz para Dormir 100% Seda</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Bloquea 100% la luz. La seda natural es hipoalergénica y cuida la piel de tus ojos.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="3">
+                        <div class="card-image"><img src="img/hogar/prod-27.jpg" alt="Dispensador de Jabón"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Baño</span>
+                            <h3>Dispensador de Jabón Automático</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Más higiénico y elegante. Sensor infrarrojo que dispensa la cantidad perfecta de espuma.</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                    <article class="product-card-small" data-index="4">
+                        <div class="card-image"><img src="img/hogar/prod-28.jpg" alt="Máquina de Ruido Blanco"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Bienestar</span>
+                            <h3>Máquina de Ruido Blanco</h3>
+                        </div>
+                        <div class="card-reveal-content">
+                            <p>Bloquea ruidos molestos y duerme mejor. 20 sonidos relajantes (lluvia, olas, ventilador).</p>
+                            <a href="#" class="cta-button secondary small" target="_blank">Ver Opción</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="story-block story-color-bg story-outro">
+             <div class="container">
+                <h2>Tu hogar, tu historia.</h2>
+                <p>Sigue explorando nuestras categorías para encontrar más herramientas que te ayuden a escribirla.</p>
+                <a href="tecnologia.html" class="cta-button primary">Ver Tecnología</a>
+             </div>
+        </section>
+
+    </main>
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
@@ -81,6 +440,8 @@
             <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
         </div>
     </footer>
+
+    <script src="js/hogar.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+  /* Tema Base / Default (colores pastel, moderno) */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #F8FBFD;
+  --color-text: #334155;
+  --color-text-rgb: 51, 65, 85;
+  --color-text-muted: #64748B;
+  --color-accent: #6EE7B7;
+  --color-accent-hover: #34D399;
+  --color-primary-light: #A7F3D0;
+  --color-link: #4A90E2;
+  /* ... (Variables de tarjetas) ... */
+  --card-accent-1: #A7F3D0;
+  --card-accent-2: #B799FF;
+  --card-accent-3: #FFB7B2;
+  --card-accent-4: #AEEEEE;
+  /* ... (Variables de Navegación) ... */
+  --header-height: 80px;
+  --nav-pill-bg: rgba(var(--color-text-rgb), 0.05);
+  --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6); /* Menta semi-transparente */
+  --nav-pill-border-radius: 999px;
+  --nav-font-size-desktop: 0.9rem;
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
+.theme-hogar {
+  --color-bg: #FDF9F6; /* Fondo crema suave */
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #FFFDFB;
+  --color-text: #5A4E4E;
+  --color-text-rgb: 90, 78, 78;
+  --color-text-muted: #8A7F7F;
+  --color-accent: #FFD166; /* Amarillo pastel cálido */
+  --color-accent-hover: #FFBF00;
+  --color-primary-light: #FFECA3;
+  --color-link: #C07040;
+  /* AÑADIDO: Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6); /* Amarillo-crema semi-transparente */
+  /* Tarjetas (si se usan) heredarán colores cálidos */
+  --card-accent-1: #FFD166;
+  --card-accent-2: #B7E4C7;
+  --card-accent-3: #FDBF6F;
+  --card-accent-4: #F4A261;
+}
+
+/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
+.theme-tecnologia {
+  --font-headings: "Orbitron", sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --color-bg: #1A1A2E;
+  --color-surface: #2A2A4E;
+  --color-surface-transparent: rgba(42, 42, 78, 0.4);
+  --color-surface-hover: #2F2F5A;
+  --color-text: #EFEFEF;
+  --color-text-rgb: 239, 239, 239;
+  --color-text-muted: #B0B0D0;
+  --color-accent: #F900FF;
+  --color-accent-hover: #FF80FF;
+  --color-link: #00FFFF;
+  --color-primary-light: #CC33FF;
+  /* Override de la píldora de hover para que combine */
+  --nav-pill-bg-hover: hsla(299, 100%, 70%, 0.6); /* Magenta semi-transparente */
+}
+
+/* --- Override de Fondo Global --- */
+body.theme-hogar {
+  background-image: none;
+  background-color: var(--color-bg);
+}
+
+/* --- Estructura de la Historia (Scrolling Story) --- */
+.scrolling-story {
+  overflow-x: hidden;
+}
+
+.story-block {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.story-block:first-child {
+  padding-top: calc(var(--header-height) + 4rem);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.story-block:last-child {
+  padding-bottom: 5rem;
+  -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+  mask-image: linear-gradient(to top, black 90%, transparent 100%);
+}
+
+/* --- Fondos de Sección (Imagen vs Color) --- */
+.story-image-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+}
+.story-image-bg h1, .story-image-bg h2, .story-image-bg h3, .story-image-bg p, .story-image-bg .featurette-tag {
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.story-image-bg .grid-divider {
+  color: rgba(255, 255, 255, 0.8);
+}
+.story-image-bg .cta-button.secondary {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.story-image-bg .cta-button.secondary:hover {
+  background-color: #FFFFFF;
+  color: var(--color-text);
+}
+
+.story-color-bg {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+.story-color-bg h1, .story-color-bg h2, .story-color-bg h3 {
+  color: var(--color-text);
+  text-shadow: none;
+}
+.story-color-bg p {
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+.story-color-bg .featurette-tag {
+  color: var(--color-accent-hover);
+  text-shadow: none;
+}
+.story-color-bg .grid-divider {
+  color: var(--color-text-muted);
+}
+.story-color-bg .cta-button.secondary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-shadow: none;
+}
+.story-color-bg .cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* --- Contenido de Introducción y Secciones --- */
+.story-intro, .story-outro {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-intro h1, .story-outro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+}
+.story-intro .subtitle, .story-outro .subtitle {
+  font-size: 1.5rem;
+  font-family: var(--font-headings);
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+.story-intro p, .story-outro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.story-outro {
+  padding: 5rem 0;
+}
+.story-outro h2 {
+  text-shadow: none;
+  color: var(--color-text);
+}
+.story-outro p {
+  text-shadow: none;
+  color: var(--color-text-muted);
+}
+.story-outro .cta-button {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 5rem auto;
+}
+
+/* --- Layout de Producto (Featurette) --- */
+.product-featurette {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.featurette-image {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-speed);
+}
+.featurette-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featurette-image:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-medium);
+}
+
+.featurette-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.featurette-content .featurette-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.featurette-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- ESTILOS ACTUALIZADOS: Cuadrícula Pequeña Interactiva --- */
+.grid-divider {
+  text-align: center;
+  font-family: var(--font-headings);
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 6rem 0 2.5rem 0;
+  position: relative;
+  z-index: 1; /* Detrás de las tarjetas activas */
+}
+.grid-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--color-accent) 50%, transparent 100%);
+  opacity: 0.3;
+  z-index: -1;
+}
+.grid-divider span {
+  background-color: var(--color-bg);
+  padding: 0 1rem;
+}
+.story-image-bg .grid-divider span {
+  background: none;
+}
+.story-image-bg .grid-divider::before {
+  background: linear-gradient(to right, transparent 0%, #FFF 50%, transparent 100%);
+  opacity: 0.4;
+}
+
+.product-grid-small {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 3; /* Por encima del divisor */
+}
+
+.product-card-small {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  /* --- CAMBIO: Transición más compleja --- */
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative; /* Para el panel de revelado */
+  cursor: pointer;
+  z-index: 5; /* Nivel base de las tarjetas */
+}
+.product-card-small .card-image {
+  height: 180px;
+}
+.product-card-small .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card-small .card-content {
+  padding: 1.25rem;
+  transition: opacity 0.3s ease;
+}
+.product-card-small .card-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text);
+  text-shadow: none;
+}
+.product-card-small .card-content .card-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent-hover);
+  text-transform: uppercase;
+}
+
+/* --- AÑADIDO: Panel de Descripción Oculto --- */
+.card-reveal-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: var(--color-surface-hover);
+  /* Efecto "Glassmorphism" sutil */
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* Oculto por defecto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-out;
+  border-top: 2px solid var(--color-accent);
+}
+.card-reveal-content p {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  text-shadow: none;
+}
+.card-reveal-content .cta-button.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+/* --- AÑADIDO: Estilos de la Cuadrícula Activa --- */
+.product-grid-small.grid-is-active {
+  /* Cuando una tarjeta está activa, atenúa las demás */
+}
+.product-grid-small.grid-is-active .product-card-small:not(.is-active) {
+  transform: scale(0.9);
+  opacity: 0.5;
+  filter: blur(2px);
+  z-index: 4;
+}
+
+.product-card-small.is-active {
+  transform: scale(1.05); /* La tarjeta activa resalta */
+  box-shadow: var(--shadow-medium);
+  z-index: 10; /* Se pone por encima de todo */
+}
+.product-card-small.is-active .card-content {
+  opacity: 0; /* Oculta el contenido original */
+  visibility: hidden;
+}
+.product-card-small.is-active .card-reveal-content {
+  opacity: 1; /* Muestra el contenido de revelado */
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Estilo de las tarjetas pequeñas sobre fondos de imagen */
+.story-image-bg .product-card-small {
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .story-image-bg .product-card-small {
+    background-color: var(--color-surface-hover);
+  }
+}
+.story-image-bg .product-card-small .card-content h3 {
+  color: var(--color-text);
+}
+.story-image-bg .product-card-small .card-content .card-tag {
+  color: var(--color-accent-hover);
+}
+.story-image-bg .product-card-small .card-reveal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.story-image-bg .product-card-small .card-reveal-content p {
+  color: var(--color-text);
+}
+.story-image-bg .product-card-small .card-reveal-content .cta-button {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-shadow: none;
+}
+.story-image-bg .product-card-small .card-reveal-content .cta-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* --- Media Query (Desktop) --- */
+@media (min-width: 768px) {
+  .product-featurette {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .product-featurette:nth-child(even) .featurette-image {
+    order: 2;
+  }
+  .product-featurette:nth-child(even) .featurette-content {
+    order: 1;
+  }
+}
+@media (min-width: 992px) {
+  /* Cuadrícula pequeña de 4 columnas en desktop */
+  .product-grid-small {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .product-card-small .card-image {
+    height: 220px;
+  }
+}/*# sourceMappingURL=hogar.css.map */
