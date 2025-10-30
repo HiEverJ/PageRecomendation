@@ -1,0 +1,207 @@
+@import 'variables';
+
+/* --- Override de Fondo Global --- */
+body.theme-tecnologia {
+    background-image: none; // Quitamos aurora de base.css
+    background-color: var(--color-bg); // Color de fondo base más neutro
+}
+
+/* --- Hero Statement (Sin cambios importantes) --- */
+.hero-statement {
+    text-align: center;
+    padding: var(--header-height) 0 4rem; // Añadir padding-top para el header
+    
+    .hero-tagline {
+        font-family: var(--font-headings);
+        font-weight: 600;
+        color: var(--color-accent-secondary); // Acento más vibrante
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    h1 {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        font-weight: 700;
+        color: var(--color-headings);
+        margin: 0.5rem 0 1.5rem 0;
+        line-height: 1.1;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* --- Sección Story-Block (similar a decoración) --- */
+.scrolling-story {
+    overflow-x: hidden; 
+}
+
+.story-block {
+    padding: clamp(4rem, 10vw, 6rem) 0;
+    position: relative;
+}
+
+/* Fondos de Sección (Imagen vs Color) */
+.story-image-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Efecto parallax */
+    color: #FFFFFF; 
+    
+    min-height: 400px;
+    
+    h1, h2, h3, p {
+        color: #FFFFFF;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .featurette-tag { color: var(--color-accent-secondary); text-shadow: none; }
+    
+    .cta-button.secondary {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #FFFFFF;
+            color: var(--color-text); 
+        }
+    }
+}
+
+.story-color-bg {
+    background-color: var(--color-bg); 
+    color: var(--color-text);
+    h1, h2, h3 { color: var(--color-text); text-shadow: none; }
+    p { color: var(--color-text-muted); text-shadow: none; }
+    .featurette-tag { color: var(--color-accent); text-shadow: none; } 
+
+    .cta-button.secondary {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+        text-shadow: none;
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+        }
+    }
+}
+
+/* Introducción de Sección */
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    
+    h2 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        text-shadow: none; 
+        
+        .story-image-bg & {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+    }
+}
+
+.story-outro {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+    h2 { text-shadow: none; color: var(--color-text); }
+    p { text-shadow: none; color: var(--color-text-muted); }
+    .cta-button { margin-top: 2rem; }
+}
+
+
+/* --- Reutilización del Product Featurette de Hogar/Decoracion --- */
+.product-featurette {
+    display: grid;
+    grid-template-columns: 1fr; // 1 columna en móvil
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 5rem; // Espacio entre cada producto
+    position: relative;
+    z-index: 2;
+}
+
+.featurette-image {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-speed);
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-hover);
+    }
+}
+
+.featurette-content {
+    h3 {
+        font-family: var(--font-headings);
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    .featurette-tag {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--color-accent); // Azul tecnológico
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+
+/* --- Media Query (Desktop) para Featurettes --- */
+@media (min-width: 768px) {
+    .product-featurette {
+        grid-template-columns: 1fr 1fr; // 2 columnas en desktop
+        gap: 4rem;
+    }
+
+    /* Layout Alternado (Estilo Editorial) */
+    .product-featurette:nth-of-type(even) { /* Afecta a los pares dentro de su contenedor */
+        .featurette-image {
+            order: 2;
+        }
+        .featurette-content {
+            order: 1;
+        }
+    }
+}
+
+
+// ELIMINADO: todo lo relacionado con .cover-grid, .cover-card, .product-expander

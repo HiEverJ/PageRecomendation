@@ -4,71 +4,601 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página Principal - Recomendaciones Top</title>
-    <meta name="description" content="Descubre el producto de la semana y las mejores recomendaciones en tecnología, hogar y más.">
+    <title>Limpieza - Recomienda[Top] | Hogar Brillante y Fresco</title>
+    <meta name="description" content="Descubre productos de limpieza eficientes y soluciones para mantener tu hogar impecable con facilidad.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/estilos.css">
-    
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/limpieza.css"> 
 </head>
-<body class="theme-limpieza"> <header class="main-header">
+<body class="theme-limpieza"> 
+
+    <header class="main-header glassmorphism">
         <div class="container">
-            <a href="index.html" class="logo">Recomienda[Top]</a>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="hogar.html">Hogar</a></li>
-                    <li><a href="tecnologia.html">Tecnología</a></li>
-                    <li><a href="salud.html">Salud</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hogar.html">Hogar</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="limpieza.html" class="active">Limpieza</a></li> 
+                    <li><a href="decoracion.html">Decoración</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Producto de la Semana</h2>
-                <h1>El Gadget Futurista que Necesitas</h1>
-                <p>Análisis profundo del nuevo [Nombre del Producto] que está revolucionando el mercado.</p>
-                <a href="#" class="cta-button primary">Ver Análisis y Oferta</a>
+    <main class="main-limpieza">
+
+        <section class="magazine-hero container">
+            <div class="hero-text-content">
+                <span class="hero-tagline">Hogar Impecable</span>
+                <h1>El Arte de la Limpieza Inteligente</h1>
+                <p>Menos esfuerzo, más brillo. Descubre productos que transforman tu rutina, creando un espacio fresco y gratificante sin esfuerzo.</p>
+            </div>
+            <div class="hero-image-content">
+                <img src="img/limpieza/hero-main.jpg" alt="Espacio de limpieza minimalista">
             </div>
         </section>
 
-        <section class="product-grid container">
-            <h2>Más Recomendaciones</h2>
-            <div class="grid-container">
+        <div class="sticky-layout-wrapper container">
+            
+            <aside class="sticky-nav">
+                <ul>
+                    <li><a href="#lim-cocina" class="is-active">Cocina</a></li>
+                    <li><a href="#lim-suelos">Suelos</a></li>
+                    <li><a href="#lim-bano">Baño</a></li>
+                    <li><a href="#lim-multiusos">Multiusos</a></li>
+                </ul>
+            </aside>
+
+            <div class="scrolling-content">
                 
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
-                        <span class="category-tag">Tecnología</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Título del Producto Recomendado</h3>
-                        <p>Una descripción breve que engancha y resalta el valor principal del producto.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
-                    </div>
-                </article>
-
-                <article class="product-card">
+                <section id="lim-cocina" class="content-section">
+                    <h2>Cocina</h2>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-01.jpg" alt="Desengrasante Potente"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Esencial</span>
+                                <h3>Desengrasante de Cocina Profesional</h3>
+                                <p>Elimina la grasa y la suciedad incrustada sin esfuerzo en fogones y campanas.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Fórmula concentrada que disuelve la grasa quemada. Ideal para hornos, parrillas, campanas extractoras y azulejos. Deja un aroma a cítricos fresco.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
                     </article>
-                <article class="product-card">
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-02.jpg" alt="Limpiador de Acero"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Acabados</span>
+                                <h3>Limpiador de Acero Inoxidable</h3>
+                                <p>Deja superficies de acero brillantes y sin marcas de dedos ni manchas de agua.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Fórmula en spray que limpia, pule y protege en un solo paso. Crea una barrera protectora que repele el polvo y las huellas dactilares.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-03.jpg" alt="Estropajos de Acero"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Utensilios</span>
+                                <h3>Estropajos de Acero Inoxidable (Pack 6)</h3>
+                                <p>Perfectos para ollas y sartenes rebeldes, sin rayar. Duraderos y muy eficaces.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Fabricados con acero inoxidable de alta calidad que no se oxida ni se deshace. Ideales para hierro fundido, parrillas y utensilios sin recubrimiento antiadherente.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-04.jpg" alt="Limpiador de Lavavajillas"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Electrodomésticos</span>
+                                <h3>Limpiador de Lavavajillas Intensivo</h3>
+                                <p>Elimina grasa y cal del interior, dejando tu lavavajillas como nuevo y sin olores.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Tratamiento de 1 mes. Se usa en un ciclo vacío para limpiar filtros, tuberías y brazos rociadores, asegurando una limpieza higiénica de tus platos.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-05.jpg" alt="Esponjas Biodegradables"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Eco-friendly</span>
+                                <h3>Esponjas de Celulosa Biodegradables</h3>
+                                <p>Alternativa sostenible para la limpieza diaria. Suaves pero resistentes.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Hechas de pulpa de madera 100% natural, son compostables y no rayan tus sartenes. Vienen comprimidas para ahorrar espacio.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
                     </article>
 
-            </div>
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-06.jpg" alt="Guantes de Silicona"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Protección</span>
+                                <h3>Guantes de Silicona Reutilizables</h3>
+                                <p>Protege tus manos de químicos y agua caliente. Diseño ergonómico.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Resistentes al calor y con un forro interior suave para mayor comodidad. El agarre texturizado evita que los platos resbalen.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-26.jpg" alt="Triturador de Desperdicios"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Fregadero</span>
+                                <h3>Triturador de Desperdicios de Alimentos</h3>
+                                <p>Elimina los residuos de comida antes de que lleguen a la basura. Evita malos olores.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Motor potente y silencioso que tritura cáscaras, huesos pequeños y más. Una solución higiénica para la cocina moderna.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-27.jpg" alt="Rack Escurridor Plegable"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Organización</span>
+                                <h3>Rack Escurridor Plegable sobre Fregadero</h3>
+                                <p>Ahorra espacio en la encimera. Escurre platos, lava verduras o úsalo como salvamanteles.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Fabricado en acero inoxidable recubierto de silicona antideslizante, se enrolla fácilmente para guardarlo cuando no se usa.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="lim-suelos" class="content-section">
+                    <h2>Suelos</h2>
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-07.jpg" alt="Aspiradora sin Cable"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Versátil</span>
+                                <h3>Aspiradora sin Cable Ligera 25KPa</h3>
+                                <p>Potencia y versatilidad para una limpieza rápida y profunda de todo tipo de suelos.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Esta aspiradora cuenta con un motor digital de 120W, batería de litio extraíble y múltiples accesorios para rincones y tapicería. Pesa solo 2.1kg, ideal para limpiar del suelo al techo.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-08.jpg" alt="Mopa de Vapor"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Desinfección</span>
+                                <h3>Mopa de Vapor Multifunción 12-en-1</h3>
+                                <p>Limpia y desinfecta suelos, alfombras y ventanas sin químicos, solo con vapor.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Mata el 99.9% de gérmenes. Se convierte en un vaporizador de mano para limpiar azulejos, juntas, hornos y más. Lista en 30 segundos.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-09.jpg" alt="Robot Aspirador"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Automatización</span>
+                                <h3>Robot Aspirador y Fregasuelos</h3>
+                                <p>Mapeo láser inteligente para una limpieza eficiente mientras tú descansas.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Configura zonas prohibidas, programa limpiezas y controla todo desde la app. Su sistema de fregado sónico vibra para eliminar manchas difíciles.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-10.jpg" alt="Cubo Fregona Giratorio"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Clásico</span>
+                                <h3>Cubo con Fregona Giratoria y Escurridor</h3>
+                                <p>Sistema de escurrido fácil sin esfuerzo. Mopa de microfibra lavable.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Incluye dos cabezales de mopa de microfibra súper absorbentes que atrapan el polvo y la suciedad. El cubo tiene dos compartimentos para agua limpia y sucia.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-11.jpg" alt="Limpiador de Alfombras"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Textiles</span>
+                                <h3>Limpiador de Alfombras y Tapicerías</h3>
+                                <p>Máquina portátil para manchas profundas en alfombras, sofás y coches.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Utiliza una potente succión y una fórmula limpiadora para eliminar manchas de mascotas, vino y café de forma permanente. Depósitos de agua limpia y sucia separados.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-28.jpg" alt="Zapatillas de Mopa"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Divertido</span>
+                                <h3>Zapatillas de Mopa de Microfibra</h3>
+                                <p>Limpia el polvo del suelo mientras caminas por casa. Divertido y funcional.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Pack de 5 pares de fundas lavables y reutilizables. Aptas para cualquier tamaño de pie. Ideal para una limpieza de mantenimiento rápida.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </section>
+
+                <section id="lim-bano" class="content-section">
+                    <h2>Baño</h2>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-12.jpg" alt="Limpiador Antimoho"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Intensivo</span>
+                                <h3>Limpiador de Azulejos y Antimoho</h3>
+                                <p>Fórmula potente que elimina moho y suciedad de juntas, dejando el baño impecable.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Actúa en minutos para blanquear juntas y eliminar manchas de moho difíciles en duchas, bañeras y azulejos. Fórmula en gel que se adhiere a superficies verticales.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-13.jpg" alt="Cepillo de Baño Silicona"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Higiénico</span>
+                                <h3>Cepillo de Baño de Silicona Flexible</h3>
+                                <p>No atrapa bacterias y se limpia fácilmente. Llega a todos los rincones del inodoro.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Cerdas de silicona suaves que no rayan la porcelana pero limpian eficazmente. El soporte tiene ventilación para un secado rápido y sin goteos.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-14.jpg" alt="Desatascador Natural"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Tuberías</span>
+                                <h3>Desatascador de Drenajes Natural</h3>
+                                <p>Enzimas naturales que disuelven atascos sin químicos corrosivos. Seguro para tuberías.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Ideal para prevenir y tratar atascos lentos causados por cabello y jabón. Seguro para fosas sépticas y el medio ambiente.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-15.jpg" alt="Pastillas Limpiadoras Inodoro"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Mantenimiento</span>
+                                <h3>Pastillas Limpiadoras Efervescentes</h3>
+                                <p>Limpian y desinfectan el tanque y la taza del inodoro sin necesidad de frotar.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Simplemente deja caer una pastilla en el tanque o la taza. Su acción efervescente elimina sarro, óxido y malos olores.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-16.jpg" alt="Secador de Ducha"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Mamparas</span>
+                                <h3>Secador de Ducha de Silicona</h3>
+                                <p>Ideal para secar mamparas y azulejos después de la ducha. Previene la cal.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Hoja de silicona flexible que no deja rayas y se adapta a las superficies. Incluye un gancho adhesivo para colgarlo en la ducha.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-17.jpg" alt="Organizador de Ducha"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Organización</span>
+                                <h3>Organizador de Ducha Adhesivo (Acero)</h3>
+                                <p>Mantiene tus productos organizados y al alcance en la ducha. Sin taladros.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Fabricado en acero inoxidable SUS304 que no se oxida. Los adhesivos de alta potencia soportan hasta 10kg de peso.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-18.jpg" alt="Dispensador Automático"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Higiénico</span>
+                                <h3>Dispensador de Jabón Automático</h3>
+                                <p>Sensor infrarrojo que dispensa la cantidad perfecta de espuma. Sin contacto.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Diseño minimalista y recargable por USB. Ayuda a reducir la propagación de gérmenes y ahorra jabón al convertirlo en espuma.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-29.jpg" alt="Cepillo Eléctrico Giratorio"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Intensivo</span>
+                                <h3>Cepillo Eléctrico Giratorio de Limpieza</h3>
+                                <p>Ahorra esfuerzo en el tallado. Ideal para azulejos, bañeras y rincones.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Viene con 4 cabezales intercambiables para diferentes superficies. Batería recargable de larga duración y mango extensible.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+
+                <section id="lim-multiusos" class="content-section">
+                    <h2>Multiusos y Eco</h2>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-19.jpg" alt="Set de Microfibras"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Eco-friendly</span>
+                                <h3>Set de Microfibras Premium (12 Pack)</h3>
+                                <p>Atrapa el polvo y la suciedad sin dejar pelusas. Reutilizables y lavables.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Paños ultra suaves y absorbentes, perfectos para cualquier superficie: vidrio, madera, acero inoxidable. No rayan y se pueden lavar a máquina cientos de veces.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-20.jpg" alt="Limpiacristales Magnético"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Ventanas</span>
+                                <h3>Limpiacristales Magnético Doble Cara</h3>
+                                <p>Consigue cristales impecables por dentro y por fuera de forma segura y sencilla.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Ideal para ventanas de difícil acceso. Sus potentes imanes y paños de microfibra limpian ambos lados del cristal simultáneamente.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-21.jpg" alt="Purificador de Aire"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Aire</span>
+                                <h3>Purificador de Aire HEPA Silencioso</h3>
+                                <p>Elimina alérgenos, polvo y olores, mejorando la calidad del aire interior.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Filtro HEPA verdadero H13 que captura el 99.97% de las partículas. Modo nocturno ultra silencioso y recordatorio de cambio de filtro.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-22.jpg" alt="Pastillas Limpiadoras"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Eco-friendly</span>
+                                <h3>Pastillas Limpiadoras Multiusos</h3>
+                                <p>Disuelve una pastilla en agua para crear tu propio limpiador. Menos envases.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Reduce drásticamente el desperdicio de plástico. Cada pastilla se disuelve en tu propia botella reutilizable para crear un limpiador de superficies eficaz.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-23.jpg" alt="Cepillo para Juntas"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Detalle</span>
+                                <h3>Cepillo para Juntas y Ranuras (Set 3)</h3>
+                                <p>Cerda rígida para eliminar la suciedad más incrustada en espacios difíciles.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Set de 3 cepillos con diferentes formas para llegar a rieles de ventanas, juntas de azulejos y cualquier rincón complicado.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-24.jpg" alt="Borrador Mágico"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Paredes</span>
+                                <h3>Esponjas de Borrador Mágico (Pack 20)</h3>
+                                <p>Elimina marcas de rozaduras, crayones y manchas de las paredes solo con agua.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Esponjas de melamina extra densas. No necesitan jabón ni químicos, solo humedecer con agua y frotar suavemente.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-25.jpg" alt="Pastillas Limpiadoras Lavadora"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Lavandería</span>
+                                <h3>Pastillas Limpiadoras de Lavadora</h3>
+                                <p>Mantén tu lavadora libre de residuos y malos olores. Ropa más limpia.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Elimina la acumulación de detergente y cal en el tambor y las tuberías. Usar una vez al mes para un mantenimiento óptimo.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="product-entry" data-accordion-trigger>
+                        <div class="entry-trigger">
+                            <div class="entry-image"><img src="img/limpieza/prod-30.jpg" alt="Mini Aspiradora de Mano"></div>
+                            <div class="entry-content">
+                                <span class="entry-tag">Detalle</span>
+                                <h3>Mini Aspiradora de Mano Recargable</h3>
+                                <p>Para limpiezas rápidas en el escritorio, coche o sofá. Diseño compacto y potente.</p>
+                            </div>
+                        </div>
+                        <div class="product-full-details">
+                            <p>Recargable por USB-C, con filtro HEPA lavable y boquillas para rincones y cepillado. Perfecta para migas y polvo.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div> 
+            </div> 
         </section>
-    </main>
-
+        
+    </div> 
+</main>
+    
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
@@ -78,9 +608,10 @@
                 <a href="#">Contacto</a>
             </div>
             <p>&copy; 2025 Recomienda[Top]. Todos los derechos reservados.</p>
-            <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
         </div>
     </footer>
 
+    <script src="js/main.js" defer></script>
+    <script src="js/limpieza.js" defer></script> 
 </body>
 </html>

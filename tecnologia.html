@@ -4,69 +4,468 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página Principal - Recomendaciones Top</title>
-    <meta name="description" content="Descubre el producto de la semana y las mejores recomendaciones en tecnología, hogar y más.">
+    <title>Tecnología - Recomienda[Top] | Gadgets que Inspiran</title>
+    <meta name="description" content="Descubre gadgets innovadores y tecnología diseñada para simplificar y enriquecer tu vida diaria.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/estilos.css">
-    
-    <script src="js/main.js" defer></script>
-</head>
-<body class="theme-tecnologia"> <header class="main-header">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tecnologia.css"> 
+    </head>
+<body class="theme-tecnologia"> 
+    <header class="main-header glassmorphism">
         <div class="container">
-            <a href="index.html" class="logo">Recomienda[Top]</a>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="hogar.html">Hogar</a></li>
-                    <li><a href="tecnologia.html">Tecnología</a></li>
-                    <li><a href="salud.html">Salud</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hogar.html">Hogar</a></li>
+                    <li><a href="tecnologia.html" class="active">Tecnología</a></li>
+                    <li><a href="limpieza.html">Limpieza</a></li>
+                    <li><a href="decoracion.html">Decoración</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Producto de la Semana</h2>
-                <h1>El Gadget Futurista que Necesitas</h1>
-                <p>Análisis profundo del nuevo [Nombre del Producto] que está revolucionando el mercado.</p>
-                <a href="#" class="cta-button primary">Ver Análisis y Oferta</a>
-            </div>
+    <main class="main-tecnologia">
+
+        <section class="hero-statement container">
+            <span class="hero-tagline">Tecnología & Diseño</span>
+            <h1>Innovación que Simplifica</h1>
+            <p>La mejor tecnología es la que se siente invisible. Dispositivos que ahorran tiempo, mejoran tu concentración y se integran perfectamente en tu vida.</p>
         </section>
 
-        <section class="product-grid container">
-            <h2>Más Recomendaciones</h2>
-            <div class="grid-container">
-                
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
-                        <span class="category-tag">Tecnología</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Título del Producto Recomendado</h3>
-                        <p>Una descripción breve que engancha y resalta el valor principal del producto.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
-                    </div>
-                </article>
+        <div class="scrolling-story">
 
-                <article class="product-card">
-                    </article>
-                <article class="product-card">
+            <section id="section-destacados" class="story-block story-color-bg">
+                <div class="container">
+                    <div class="section-intro">
+                        <h2>Nuestros Destacados del Mes</h2>
+                        <p>Los gadgets que están cambiando la forma en que trabajas y te diviertes.</p>
+                    </div>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-01.jpg" alt="Monitor Ultrawide">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Escritorio</span>
+                            <h3>Monitor Ultrawide Curvo 34"</h3>
+                            <p>Expande tu espacio de trabajo digital con este impresionante monitor 2K. Su diseño curvo y sin bordes te permite tener múltiples ventanas abiertas sin sacrificar la comodidad visual. Ideal para multitarea y sumergirte en tus proyectos.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda X</a>
+                            </div>
+                        </div>
                     </article>
 
-            </div>
-        </section>
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-15.jpg" alt="Audífonos Cancelación de Ruido">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Audio</span>
+                            <h3>Audífonos con Cancelación de Ruido Premium</h3>
+                            <p>Crea tu burbuja de silencio personal. Sumérgete en tu música, podcasts o llamadas sin distracciones gracias a una cancelación de ruido activa líder en su clase. Confort excepcional para largas horas de uso.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda Y</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-08.jpg" alt="Altavoz Inteligente con Asistente">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Smart Home</span>
+                            <h3>Altavoz Inteligente con Asistente Virtual</h3>
+                            <p>El centro neurálgico de tu hogar conectado. Controla luces, pide tu música favorita, revisa el clima o configura alarmas, todo con el poder de tu voz. Ofrece una calidad de sonido rica y que llena la habitación.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda Z</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="section-productividad" class="story-block story-color-bg">
+                <div class="container">
+                    <div class="section-intro">
+                        <h2>Productividad sin Fricción</h2>
+                        <p>Tu escritorio es tu centro de comando. Equípalo con herramientas precisas y elegantes.</p>
+                    </div>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-02.jpg" alt="Teclado Mecánico Low-Profile">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Periféricos</span>
+                            <h3>Teclado Mecánico Low-Profile Delgado</h3>
+                            <p>Experimenta una escritura táctil y receptiva sin el volumen de los teclados mecánicos tradicionales. Con un cuerpo de aluminio, conectividad Bluetooth y switches silenciosos, es la herramienta de escritura definitiva para profesionales.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-03.jpg" alt="Smart Notebook Reutilizable">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Organización</span>
+                            <h3>Smart Notebook Reutilizable y Conectado</h3>
+                            <p>Toma notas a mano y digitalízalas instantáneamente a tu nube favorita (Drive, Dropbox, Evernote). Cuando termines, simplemente borra las páginas con un paño húmedo y vuelve a usarlo. ¡Adiós al papel!</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-04.jpg" alt="Mouse Ergonómico Vertical">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Periféricos</span>
+                            <h3>Mouse Ergonómico Vertical</h3>
+                            <p>Dile adiós a la tensión de la muñeca. Su diseño vertical promueve una postura natural de la mano y el antebrazo, reduciendo la fatiga durante largas sesiones de trabajo. Precisión y confort, mano a mano.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-05.jpg" alt="Lámpara LED con Carga Qi">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Iluminación</span>
+                            <h3>Lámpara LED de Escritorio con Carga Qi</h3>
+                            <p>Una solución dos en uno para tu espacio de trabajo. Ofrece luz ajustable (desde cálida a fría) para adaptarse a cualquier tarea, y una conveniente base de carga inalámbrica Qi en su base para tu smartphone.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-22.jpg" alt="Hub USB-C Multipuerto">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Conectividad</span>
+                            <h3>Hub USB-C Multipuerto 8 en 1</h3>
+                            <p>Expande las capacidades de tu laptop con un solo cable. Incluye puertos HDMI 4K, USB 3.0, lector de tarjetas SD/TF, Ethernet y carga PD, todo en un diseño compacto y elegante.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-23.jpg" alt="Soporte para Laptop Ergonómico">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Accesorios</span>
+                            <h3>Soporte para Laptop Ergonómico Ajustable</h3>
+                            <p>Eleva tu laptop a la altura perfecta para mejorar tu postura y reducir la tensión en el cuello. Fabricado en aluminio, es plegable y portátil, ideal para trabajar desde cualquier lugar.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-24.jpg" alt="Webcam 4K con Micrófono Estéreo">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Video Conferencia</span>
+                            <h3>Webcam 4K con Micrófono Estéreo</h3>
+                            <p>Para videollamadas con una claridad cristalina. Captura video en ultra alta definición y sonido nítido, ideal para reuniones profesionales o streaming.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda X</a>
+                            </div>
+                        </article>
+                </div>
+            </section>
+
+            <section class="story-block story-image-bg" style="--bg-image: url('../img/tech/smart-home-bg.jpg');">
+                <div class="container">
+                    <div class="section-intro">
+                        <h2>El Hogar que Responde</h2>
+                        <p>Tecnología que se anticipa a tus necesidades, creando un hogar más seguro y eficiente.</p>
+                    </div>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-09.jpg" alt="Kit de Luces Inteligentes">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Iluminación</span>
+                            <h3>Kit de Luces LED Inteligentes Multicolores</h3>
+                            <p>Transforma el ambiente de cualquier habitación con solo un toque o tu voz. Crea escenas personalizadas para cada momento: "cine", "lectura" o "atardecer". Compatible con asistentes de voz.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-10.jpg" alt="Robot Aspirador con Mapeo Láser">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Limpieza</span>
+                            <h3>Robot Aspirador con Mapeo Láser y Fregado</h3>
+                            <p>Mantiene tus suelos impecables sin esfuerzo. Su avanzada navegación LiDAR mapea tu casa para una limpieza eficiente y metódica, incluso fregando para un acabado perfecto. Programa y olvídate.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-11.jpg" alt="Enchufe Inteligente (Pack 2)">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Control</span>
+                            <h3>Enchufe Inteligente Wi-Fi (Pack de 2)</h3>
+                            <p>Convierte cualquier aparato tradicional en un dispositivo inteligente. Programa tu cafetera para que se encienda por la mañana, o controla tus lámparas desde el móvil. Fácil de configurar y compatible con asistentes de voz.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-12.jpg" alt="Cámara de Seguridad Interior 2K">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Seguridad</span>
+                            <h3>Cámara de Seguridad Interior con IA 2K</h3>
+                            <p>Vigila tu hogar desde cualquier lugar con tu móvil. Ofrece video en resolución 2K, detección de movimiento con IA (para distinguir personas de mascotas) y visión nocturna avanzada. Paz mental garantizada.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-25.jpg" alt="Termostato Inteligente">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Climatización</span>
+                            <h3>Termostato Inteligente con Ahorro de Energía</h3>
+                            <p>Controla la temperatura de tu hogar desde tu smartphone, estés donde estés. Aprende tus hábitos y optimiza el consumo para ahorrar energía. Compatible con los principales asistentes de voz.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-26.jpg" alt="Timbre Inteligente con Video">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Seguridad</span>
+                            <h3>Timbre Inteligente con Video HD y Comunicación Bidireccional</h3>
+                            <p>Ve, escucha y habla con quien esté en tu puerta desde tu móvil, incluso cuando no estés en casa. Visión nocturna y detección de movimiento para mayor seguridad.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda X</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-27.jpg" alt="Cerradura Inteligente">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Seguridad</span>
+                            <h3>Cerradura Inteligente con Huella y Código</h3>
+                            <p>Despídete de las llaves. Abre tu puerta con tu huella digital, un código PIN o desde tu smartphone. Ideal para hogares modernos y alquileres vacacionales.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+                </div>
+            </section>
+
+            <section class="story-block story-color-bg">
+                <div class="container">
+                    <div class="section-intro">
+                        <h2>Gadgets Personales Esenciales</h2>
+                        <p>Tecnología que te acompaña en cada paso. Audio inmersivo, lectura sin límites y energía para llevar.</p>
+                    </div>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-16.jpg" alt="Lector de E-books con Luz Cálida">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Lectura</span>
+                            <h3>Lector de E-books con Luz Frontal Cálida</h3>
+                            <p>Una biblioteca completa en la palma de tu mano. Su pantalla de tinta electrónica se lee como papel real, y la luz cálida ajustable te permite leer cómodamente de día o de noche, sin fatiga visual.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-17.jpg" alt="Auriculares Inalámbricos TWS">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Audio</span>
+                            <h3>Auriculares Inalámbricos TWS con Estuche de Carga</h3>
+                            <p>Libertad total de movimiento con una calidad de sonido sorprendente. Compactos, con ajuste seguro y batería de larga duración gracias a su estuche de carga. Ideales para el día a día y el deporte.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-18.jpg" alt="Smartwatch Fitness con GPS">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Salud & Fitness</span>
+                            <h3>Smartwatch Fitness con GPS y Monitor de Ritmo Cardíaco</h3>
+                            <p>Registra cada entrenamiento, monitorea tu salud y recibe notificaciones en tu muñeca. Con GPS integrado, es el compañero perfecto para corredores y entusiastas del fitness.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda Y</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-19.jpg" alt="Batería Portátil Magnética">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Energía</span>
+                            <h3>Batería Portátil Magnética Inalámbrica</h3>
+                            <p>Carga tu móvil sobre la marcha de forma cómoda. Se adhiere magnéticamente a tu smartphone (compatible con MagSafe) para cargar sin cables ni interrupciones. Diseño compacto y gran capacidad.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-20.jpg" alt="Localizador Bluetooth">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Accesorios</span>
+                            <h3>Localizador Bluetooth Ultra-Fino</h3>
+                            <p>Nunca más pierdas tus llaves, cartera o mochila. Colócalo en tus objetos de valor y encuéntralos desde tu móvil. Pequeño, discreto y con una batería de larga duración.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-21.jpg" alt="Altavoz Bluetooth (a prueba de agua)">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Audio</span>
+                            <h3>Altavoz Bluetooth Portátil a prueba de agua</h3>
+                            <p>Lleva tu música a todas partes. Sonido potente y claro en un cuerpo compacto y resistente al agua. Ideal para la ducha, la alberca, la playa o tus aventuras al aire libre.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+                    
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-28.jpg" alt="Gimbal para Smartphone">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Fotografía Móvil</span>
+                            <h3>Gimbal Estabilizador para Smartphone con Seguimiento Facial</h3>
+                            <p>Graba videos fluidos y profesionales con tu móvil. Este gimbal de 3 ejes elimina temblores y ofrece seguimiento facial automático para que siempre estés en el encuadre.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda X</a>
+                            </div>
+                        </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-29.jpg" alt="Mini Proyector Portátil">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Entretenimiento</span>
+                            <h3>Mini Proyector Portátil Full HD</h3>
+                            <p>Transforma cualquier pared en una pantalla de cine. Compacto y fácil de llevar, ideal para noches de películas improvisadas o presentaciones.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </article>
+
+                    <article class="product-featurette">
+                        <div class="featurette-image">
+                            <img src="img/tech/prod-30.jpg" alt="Cargador Inalámbrico Rápido 3 en 1">
+                        </div>
+                        <div class="featurette-content">
+                            <span class="featurette-tag">Energía</span>
+                            <h3>Cargador Inalámbrico Rápido 3 en 1</h3>
+                            <p>Simplifica tu mesa de noche. Carga simultáneamente tu smartphone, smartwatch y auriculares inalámbricos con un solo cable y estación.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </article>
+                </div>
+            </section>
+            
+            <section class="story-block story-color-bg story-outro">
+                 <div class="container">
+                    <h2>Diseño Inteligente. Vida Simple.</h2>
+                    <p>La tecnología correcta debe sentirse como una extensión de ti mismo. Esperamos que esta selección te inspire.</p>
+                    <a href="index.html" class="cta-button primary">Volver al Inicio</a>
+                 </div>
+            </section>
+
+        </div> 
     </main>
 
     <footer class="main-footer">
@@ -78,9 +477,9 @@
                 <a href="#">Contacto</a>
             </div>
             <p>&copy; 2025 Recomienda[Top]. Todos los derechos reservados.</p>
-            <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
         </div>
     </footer>
 
-</body>
+    <script src="js/main.js" defer></script>
+    </body>
 </html>

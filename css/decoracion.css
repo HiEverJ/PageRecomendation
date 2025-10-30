@@ -1,0 +1,371 @@
+@charset "UTF-8";
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+  /* ... (Tema Base sin cambios) ... */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #F8FBFD;
+  --color-text: #334155;
+  --color-text-rgb: 51, 65, 85;
+  --color-text-muted: #64748B;
+  --color-accent: #6EE7B7;
+  --color-accent-hover: #34D399;
+  --color-primary-light: #A7F3D0;
+  --color-link: #4A90E2;
+  --card-accent-1: #A7F3D0;
+  --card-accent-2: #B799FF;
+  --card-accent-3: #FFB7B2;
+  --card-accent-4: #AEEEEE;
+  --header-height: 80px;
+  --nav-pill-bg: rgba(var(--color-text-rgb), 0.05);
+  --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6);
+  --nav-pill-border-radius: 999px;
+  --nav-font-size-desktop: 0.9rem;
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- TEMA: HOGAR --- */
+.theme-hogar {
+  /* ... (Tema Hogar sin cambios) ... */
+  --color-bg: #FDF9F6;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #FFFDFB;
+  --color-text: #5A4E4E;
+  --color-text-rgb: 90, 78, 78;
+  --color-text-muted: #8A7F7F;
+  --color-accent: #FFD166;
+  --color-accent-hover: #FFBF00;
+  --color-primary-light: #FFECA3;
+  --color-link: #C07040;
+  --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6);
+}
+
+/* --- TEMA: TECNOLOGÍA --- */
+.theme-tecnologia {
+  /* ... (Tema Tecnología sin cambios) ... */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.5);
+  --color-surface-hover: #FFFFFF;
+  --color-text: #2C3E50;
+  --color-text-rgb: 44, 62, 80;
+  --color-text-muted: #566573;
+  --color-accent: #0062FF;
+  --color-accent-hover: #004ECC;
+  --color-primary-light: #E6F0FF;
+  --color-link: #0062FF;
+  --nav-pill-bg-hover: hsla(217, 100%, 95%, 0.7);
+}
+
+/* --- TEMA: LIMPIEZA --- */
+.theme-limpieza {
+  /* ... (Tema Limpieza sin cambios) ... */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0FDFB;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.6);
+  --color-surface-hover: #F0FBFD;
+  --color-text: #042F2E;
+  --color-text-rgb: 4, 47, 46;
+  --color-text-muted: #3D6463;
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-primary-light: #D1FAE5;
+  --color-link: #10B981;
+  --color-accent-secondary: #F59E0B;
+  --nav-pill-bg-hover: hsla(158, 80%, 90%, 0.7);
+}
+
+/* --- ¡NUEVO TEMA: DECORACIÓN (Cálido, Sofisticado, Terracota) --- */
+.theme-decoracion {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #FFFBF7; /* Beige/Crema muy pálido */
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.5);
+  --color-surface-hover: #FFFBF7;
+  --color-text: #4E423F; /* Marrón oscuro/Casi negro */
+  --color-text-rgb: 78, 66, 63;
+  --color-text-muted: #7A6C68;
+  --color-accent: #E57373; /* Terracota/Rosa Viejo */
+  --color-accent-hover: #D35D5D;
+  --color-primary-light: #FCEBEB; /* Rosa pálido para fondos */
+  --color-link: #E57373;
+  --color-accent-secondary: #D4AF37; /* Oro/Cobre como acento */
+  --nav-pill-bg-hover: hsla(0, 50%, 92%, 0.7); /* Rosa pálido semi-transparente */
+}
+
+/* --- Override de Fondo Global --- */
+body.theme-decoracion {
+  background-image: none; /* Quitamos aurora de base.css */
+  background-color: var(--color-bg); /* Color crema pálido */
+}
+
+/* --- 1. Nuevo Hero "de Portada" --- */
+.hero-image-full {
+  padding-top: var(--header-height); /* Espacio para el header fijo */
+  height: 90vh; /* Ocupa casi toda la pantalla */
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--bg-image);
+  background-size: cover;
+  background-position: center 70%; /* Enfoca un poco más abajo */
+}
+.hero-image-full .hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2.5rem;
+  /* Contenedor "glass" para el texto */
+  background-color: rgba(var(--color-text-rgb), 0.1); /* Fondo oscuro sutil */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hero-image-full .hero-content .hero-tagline {
+  font-family: var(--font-headings);
+  font-weight: 600;
+  color: var(--color-accent-secondary); /* Acento Oro */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.hero-image-full .hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0.5rem 0 1.5rem 0;
+  line-height: 1.1;
+}
+.hero-image-full .hero-content p {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- 2. Estructura de "Scrolling Story" --- */
+.scrolling-story {
+  overflow-x: hidden;
+}
+
+.story-block {
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  position: relative;
+  /* Sin difuminado entre bloques, para un look más "cortado" de revista */
+}
+
+/* Ajuste de padding para el primer bloque */
+.scrolling-story .story-block:first-of-type {
+  padding-top: clamp(4rem, 10vw, 6rem);
+}
+
+/* Fondos de Sección (Imagen vs Color) */
+.story-image-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+  /* Para los bloques de solo imagen, altura mínima */
+  min-height: 400px;
+}
+.story-image-bg h1, .story-image-bg h2, .story-image-bg h3, .story-image-bg p {
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.story-image-bg .featurette-tag {
+  color: var(--color-accent-secondary);
+  text-shadow: none;
+}
+.story-image-bg .cta-button.secondary {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.story-image-bg .cta-button.secondary:hover {
+  background-color: #FFFFFF;
+  color: var(--color-text);
+}
+
+.story-color-bg {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+.story-color-bg h1, .story-color-bg h2, .story-color-bg h3 {
+  color: var(--color-text);
+  text-shadow: none;
+}
+.story-color-bg p {
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+.story-color-bg .featurette-tag {
+  color: var(--color-accent-hover);
+  text-shadow: none;
+}
+.story-color-bg .cta-button.secondary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-shadow: none;
+}
+.story-color-bg .cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* Introducción de Sección */
+.section-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+.section-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+.section-intro p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+.story-image-bg .section-intro p {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.story-outro {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 0;
+}
+.story-outro h2 {
+  text-shadow: none;
+  color: var(--color-text);
+}
+.story-outro p {
+  text-shadow: none;
+  color: var(--color-text-muted);
+}
+.story-outro .cta-button {
+  margin-top: 2rem;
+}
+
+/* --- 3. Layout de Producto (Featurette) --- */
+/* (Reutilizado de hogar.scss, adaptado al tema) */
+.product-featurette {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.featurette-image {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-speed);
+}
+.featurette-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featurette-image:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-medium);
+}
+
+.featurette-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.featurette-content .featurette-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent); /* Terracota */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.featurette-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- 4. Nuevo Layout de "Cita Inspiracional" --- */
+.inspo-quote {
+  text-align: center;
+  padding: 2rem 0;
+}
+.inspo-quote blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--color-accent-hover); /* Terracota oscuro */
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.inspo-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* --- Media Query (Desktop) --- */
+@media (min-width: 768px) {
+  .product-featurette {
+    /* 2 columnas en desktop */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  /* Layout Alternado (Estilo Editorial) */
+  .product-featurette:nth-child(even) {
+    /* Invierte el orden de las columnas */
+  }
+  .product-featurette:nth-child(even) .featurette-image {
+    order: 2;
+  }
+  .product-featurette:nth-child(even) .featurette-content {
+    order: 1;
+  }
+}/*# sourceMappingURL=decoracion.css.map */

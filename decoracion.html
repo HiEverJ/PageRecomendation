@@ -4,71 +4,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página Principal - Recomendaciones Top</title>
-    <meta name="description" content="Descubre el producto de la semana y las mejores recomendaciones en tecnología, hogar y más.">
+    <title>Decoración - Recomienda[Top] | Espacios con Alma</title>
+    <meta name="description" content="Encuentra piezas de decoración únicas e inspiración para darle vida y personalidad a cada rincón de tu hogar.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/estilos.css">
-    
-    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/decoracion.css"> <script src="js/main.js" defer></script>
 </head>
-<body class="theme-decoracion"> <header class="main-header">
+<body class="theme-decoracion"> <header class="main-header glassmorphism">
         <div class="container">
-            <a href="index.html" class="logo">Recomienda[Top]</a>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="hogar.html">Hogar</a></li>
-                    <li><a href="tecnologia.html">Tecnología</a></li>
-                    <li><a href="salud.html">Salud</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="logo">Recomienda<span>[Top]</span></a>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hogar.html">Hogar</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="limpieza.html">Limpieza</a></li>
+                    <li><a href="decoracion.html" class="active">Decoración</a></li> </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Producto de la Semana</h2>
-                <h1>El Gadget Futurista que Necesitas</h1>
-                <p>Análisis profundo del nuevo [Nombre del Producto] que está revolucionando el mercado.</p>
-                <a href="#" class="cta-button primary">Ver Análisis y Oferta</a>
-            </div>
-        </section>
+    <main class="main-decoracion">
 
-        <section class="product-grid container">
-            <h2>Más Recomendaciones</h2>
-            <div class="grid-container">
-                
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
-                        <span class="category-tag">Tecnología</span>
+    <section class="hero-image-full" style="--bg-image: url('../img/decor/hero-bg.jpg');">
+        <div class="hero-content">
+            <span class="hero-tagline">Inspiración & Estilo</span>
+            <h1>Espacios con Alma</h1>
+            <p>La decoración es el lenguaje silencioso de tu hogar. Descubre piezas que cuentan tu historia y transforman una simple casa en un verdadero hogar.</p>
+        </div>
+    </section>
+
+    <div class="scrolling-story">
+
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Textiles y Confort</h2>
+                    <p>La forma más fácil de añadir calidez y personalidad. Cojines, mantas y alfombras que invitan a quedarse.</p>
+                </div>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-01.jpg" alt="Fundas de Cojín de Lino Texturizado">
                     </div>
-                    <div class="card-content">
-                        <h3>Título del Producto Recomendado</h3>
-                        <p>Una descripción breve que engancha y resalta el valor principal del producto.</p>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Textiles</span>
+                        <h3>Fundas de Cojín de Lino Texturizado</h3>
+                        <p>Añade un toque rústico y elegante. Este set de dos fundas de lino lavado es increíblemente suave y viene en 15 colores tierra.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    </article>
-                <article class="product-card">
-                    </article>
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-02.jpg" alt="Manta de Punto Grueso (Chunky)">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Confort</span>
+                        <h3>Manta de Punto Grueso (Chunky)</h3>
+                        <p>La pieza de confort definitiva. Hecha a mano con lana merino sintética, es perfecta para acurrucarse en el sofá.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-03.jpg" alt="Alfombra Estilo Bereber">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Suelos</span>
+                        <h3>Alfombra Estilo Bereber</h3>
+                        <p>Un clásico del diseño bohemio. Esta alfombra de pelo suave con patrones geométricos define y da calidez a tu sala de estar.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-10.jpg" alt="Cortinas Opacas con Textura">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Ventanas</span>
+                        <h3>Cortinas Opacas con Textura de Lino</h3>
+                        <p>Bloquean la luz para un descanso perfecto y añaden una capa de textura sofisticada a tu habitación. Aislantes térmicas.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-11.jpg" alt="Camino de Mesa Macramé">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Comedor</span>
+                        <h3>Camino de Mesa Estilo Macramé</h3>
+                        <p>Añade un toque bohemio y artesanal a tu comedor. Hecho a mano con algodón natural, ideal para cenas especiales o uso diario.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-12.jpg" alt="Set de Toallas de Algodón Turco">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Baño</span>
+                        <h3>Set de Toallas de Algodón Turco</h3>
+                        <p>Lujo y absorción. Estas toallas de algodón turco son ligeras, increíblemente suaves y se secan más rápido que las toallas convencionales.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </section>
-    </main>
 
+        <section class="story-block story-color-bg">
+            <div class="inspo-quote container">
+                <blockquote>"Los detalles no son los detalles. Ellos hacen el diseño."</blockquote>
+                <cite>— Charles Eames</cite>
+            </div>
+        </section>
+
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Iluminación y Ambiente</h2>
+                    <p>Crea el ambiente perfecto. Lámparas y velas que actúan como piezas de escultura.</p>
+                </div>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-04.jpg" alt="Lámpara de Mesa Hongo">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Iluminación</span>
+                        <h3>Lámpara de Mesa "Hongo"</h3>
+                        <p>Un ícono del diseño de los 70 que vuelve con fuerza. Su luz suave y difusa crea un ambiente íntimo. Perfecta para burós.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-05.jpg" alt="Velas Esculturales">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Ambiente</span>
+                        <h3>Velas Esculturales (Set de 3)</h3>
+                        <p>Decoración pura. Este set de velas con formas abstractas (burbuja, nudo, torso) añade un toque de arte a cualquier repisa.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-06.jpg" alt="Guirnalda de Luces LED Cálidas">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Ambiente</span>
+                        <h3>Guirnalda de Luces LED Cálidas</h3>
+                        <p>La forma más sencilla de añadir "magia". Úsalas en la cabecera, alrededor de un espejo o en frascos de vidrio.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-13.jpg" alt="Lámpara de Pie Trípode">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Iluminación</span>
+                        <h3>Lámpara de Pie Trípode de Madera</h3>
+                        <p>Diseño escandinavo que ilumina con estilo. Patas de madera natural y pantalla de tela de lino que suaviza la luz.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-14.jpg" alt="Difusor de Aromas Eléctrico">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Ambiente</span>
+                        <h3>Difusor de Aceites Esenciales (Cerámica)</h3>
+                        <p>Diseño minimalista en cerámica que parece una pieza de arte. Humidifica y aromatiza tu espacio con aceites esenciales.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-15.jpg" alt="Luz de Neón LED Decorativa">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Iluminación</span>
+                        <h3>Luz de Neón LED Decorativa (Ej. "Good Vibes")</h3>
+                        <p>Un toque de color y personalidad para tu pared. Más seguras y eficientes que el neón tradicional, perfectas para un rincón especial.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="story-block story-image-bg" style="--bg-image: url('../img/decor/ambient-bg.jpg');" aria-hidden="true">
+            </section>
+
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Arte y Paredes</h2>
+                    <p>Viste tus paredes. Espejos, láminas y repisas que reflejan tu personalidad.</p>
+                </div>
+                
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-07.jpg" alt="Espejo Redondo con Marco Fino">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Espejos</span>
+                        <h3>Espejo Redondo con Marco Fino</h3>
+                        <p>Una pieza clave para entradas y baños. Este espejo de 60cm con marco de metal dorado (o negro) amplía visualmente el espacio.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-08.jpg" alt="Set de 3 Láminas Abstractas">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Arte Mural</span>
+                        <h3>Set de 3 Láminas Abstractas</h3>
+                        <p>Arte instantáneo. Un set de 3 pósters con diseños minimalistas y tonos neutros, listos para enmarcar y crear un punto focal.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-09.jpg" alt="Repisas Flotantes de Madera">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Almacenaje</span>
+                        <h3>Repisas Flotantes de Madera (Set de 3)</h3>
+                        <p>Exhibe tus tesoros. Set de 3 repisas invisibles de madera natural, perfectas para libros pequeños, plantas y fotos.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-16.jpg" alt="Reloj de Pared Minimalista">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Mural</span>
+                        <h3>Reloj de Pared Minimalista sin Marco</h3>
+                        <p>Una pieza funcional que es pura decoración. Diseño silencioso sin segundero, con manecillas de metal.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-17.jpg" alt="Espejo de Cuerpo Completo Arqueado">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Espejos</span>
+                        <h3>Espejo de Cuerpo Completo Arqueado</h3>
+                        <p>Elegante y atemporal. Este espejo de pie con forma de arco es una pieza central para cualquier dormitorio o vestidor.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-18.jpg" alt="Colgador de Pared de Macramé">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Arte Mural</span>
+                        <h3>Colgador de Pared de Macramé Grande</h3>
+                        <p>Añade textura y un toque bohemio instantáneo sobre tu cama o sofá. Hecho a mano con algodón.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        
+        <section class="story-block story-color-bg">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Pequeños Detalles, Gran Carácter</h2>
+                    <p>Accesorios y piezas que completan tu espacio y lo hacen único.</p>
+                </div>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-19.jpg" alt="Jarrones de Cerámica">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Accesorios</span>
+                        <h3>Set de 3 Jarrones de Cerámica (Donut)</h3>
+                        <p>Diseño nórdico que es tendencia. Perfectos para flores secas (pampas) o como esculturas por sí solos.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-20.jpg" alt="Bandeja Decorativa Dorada">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Organización</span>
+                        <h3>Bandeja Decorativa de Metal Dorada</h3>
+                        <p>Un toque de glamour para tu mesa de centro o tocador. Úsala para organizar perfumes, llaves o velas.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-21.jpg" alt="Plantas Colgantes Artificiales">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Verde</span>
+                        <h3>Plantas Colgantes Artificiales (Set de 2)</h3>
+                        <p>Verde todo el año sin mantenimiento. Este set de enredaderas artificiales de alta calidad se ve increíblemente real.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-featurette">
+                    <div class="featurette-image">
+                        <img src="img/decor/prod-22.jpg" alt="Sujetalibros de Metal">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Accesorios</span>
+                        <h3>Sujetalibros de Metal (Diseño Abstracto)</h3>
+                        <p>Organiza tus libros con piezas que son arte en sí mismas. Diseño geométrico y minimalista.</p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="story-block story-color-bg story-outro">
+             <div class="container">
+                <h2>Tu Hogar, Tu Lienzo.</h2>
+                <p>La decoración es un viaje, no un destino. Esperamos haberte inspirado a dar el siguiente paso.</p>
+                <a href="index.html" class="cta-button primary">Volver al Inicio</a>
+             </div>
+        </section>
+
+    </div> </main>
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
@@ -78,9 +422,8 @@
                 <a href="#">Contacto</a>
             </div>
             <p>&copy; 2025 Recomienda[Top]. Todos los derechos reservados.</p>
-            <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
         </div>
     </footer>
 
-</body>
+    </body>
 </html>

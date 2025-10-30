@@ -1,0 +1,265 @@
+@import 'variables';
+
+/* --- Override de Fondo Global --- */
+body.theme-decoracion {
+    background-image: none; /* Quitamos aurora de base.css */
+    background-color: var(--color-bg); /* Color crema pálido */
+}
+
+/* --- 1. Nuevo Hero "de Portada" --- */
+.hero-image-full {
+    padding-top: var(--header-height); /* Espacio para el header fijo */
+    height: 90vh; /* Ocupa casi toda la pantalla */
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), var(--bg-image);
+    background-size: cover;
+    background-position: center 70%; /* Enfoca un poco más abajo */
+    
+    .hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2.5rem;
+        
+        /* Contenedor "glass" para el texto */
+        background-color: rgba(var(--color-text-rgb), 0.1); /* Fondo oscuro sutil */
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        .hero-tagline {
+            font-family: var(--font-headings);
+            font-weight: 600;
+            color: var(--color-accent-secondary); /* Acento Oro */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            margin: 0.5rem 0 1.5rem 0;
+            line-height: 1.1;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            color: #FFFFFF;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* --- 2. Estructura de "Scrolling Story" --- */
+.scrolling-story {
+    overflow-x: hidden; 
+}
+
+.story-block {
+    padding: clamp(4rem, 10vw, 6rem) 0;
+    position: relative;
+    /* Sin difuminado entre bloques, para un look más "cortado" de revista */
+}
+
+/* Ajuste de padding para el primer bloque */
+.scrolling-story .story-block:first-of-type {
+    padding-top: clamp(4rem, 10vw, 6rem);
+}
+
+
+/* Fondos de Sección (Imagen vs Color) */
+.story-image-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+    color: #FFFFFF; 
+    
+    /* Para los bloques de solo imagen, altura mínima */
+    min-height: 400px;
+    
+    h1, h2, h3, p {
+        color: #FFFFFF;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .featurette-tag { color: var(--color-accent-secondary); text-shadow: none; }
+    
+    .cta-button.secondary {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #FFFFFF;
+            color: var(--color-text); 
+        }
+    }
+}
+
+.story-color-bg {
+    background-color: var(--color-bg); 
+    color: var(--color-text);
+    h1, h2, h3 { color: var(--color-text); text-shadow: none; }
+    p { color: var(--color-text-muted); text-shadow: none; }
+    .featurette-tag { color: var(--color-accent-hover); text-shadow: none; } 
+
+    .cta-button.secondary {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+        text-shadow: none;
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+        }
+    }
+}
+
+/* Introducción de Sección */
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    
+    h2 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        text-shadow: none; 
+        
+        .story-image-bg & {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+    }
+}
+
+.story-outro {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+    h2 { text-shadow: none; color: var(--color-text); }
+    p { text-shadow: none; color: var(--color-text-muted); }
+    .cta-button { margin-top: 2rem; }
+}
+
+
+/* --- 3. Layout de Producto (Featurette) --- */
+/* (Reutilizado de hogar.scss, adaptado al tema) */
+
+.product-featurette {
+    display: grid;
+    grid-template-columns: 1fr; // 1 columna en móvil
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 5rem; // Espacio entre cada producto
+    position: relative;
+    z-index: 2;
+}
+
+.featurette-image {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-speed);
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-medium);
+    }
+}
+
+.featurette-content {
+    h3 {
+        font-family: var(--font-headings);
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    .featurette-tag {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--color-accent); /* Terracota */
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* --- 4. Nuevo Layout de "Cita Inspiracional" --- */
+.inspo-quote {
+    text-align: center;
+    padding: 2rem 0;
+    
+    blockquote {
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        color: var(--color-accent-hover); /* Terracota oscuro */
+        line-height: 1.4;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    cite {
+        display: block;
+        margin-top: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        color: var(--color-text-muted);
+    }
+}
+
+
+/* --- Media Query (Desktop) --- */
+@media (min-width: 768px) {
+    .product-featurette {
+        /* 2 columnas en desktop */
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    /* Layout Alternado (Estilo Editorial) */
+    .product-featurette:nth-child(even) {
+        /* Invierte el orden de las columnas */
+        .featurette-image {
+            order: 2;
+        }
+        .featurette-content {
+            order: 1;
+        }
+    }
+}

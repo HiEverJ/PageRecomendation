@@ -3,11 +3,10 @@
 
 /* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
 :root {
-    /* Tema Base / Default (colores pastel, moderno) */
+    /* ... (Tema Base sin cambios) ... */
     --font-primary: 'Open Sans', sans-serif;
     --font-headings: 'Montserrat', sans-serif;
     --font-display: 'Poppins', sans-serif; 
-
     --color-bg: #F0F4F8;         
     --color-surface: #FFFFFF;    
     --color-surface-transparent: rgba(255, 255, 255, 0.4); 
@@ -19,66 +18,97 @@
     --color-accent-hover: #34D399; 
     --color-primary-light: #A7F3D0; 
     --color-link: #4A90E2;       
-
-    /* ... (Variables de tarjetas) ... */
     --card-accent-1: #A7F3D0; 
     --card-accent-2: #B799FF; 
     --card-accent-3: #FFB7B2; 
     --card-accent-4: #AEEEEE; 
-
-    /* ... (Variables de Navegación) ... */
     --header-height: 80px; 
     --nav-pill-bg: rgba(var(--color-text-rgb), 0.05); 
-    --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6); /* Menta semi-transparente */
+    --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6); 
     --nav-pill-border-radius: 999px; 
     --nav-font-size-desktop: 0.9rem; 
-
     --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
     --border-radius: 12px;
     --transition-speed: 0.3s ease-in-out;
 }
 
-/* --- TEMA: HOGAR (Limpio, Neutro, Cálido) --- */
+/* --- TEMA: HOGAR --- */
 .theme-hogar {
-    --color-bg: #FDF9F6;         /* Fondo crema suave */
+    /* ... (Tema Hogar sin cambios) ... */
+    --color-bg: #FDF9F6;         
     --color-surface: #FFFFFF;
     --color-surface-transparent: rgba(255, 255, 255, 0.4);
     --color-surface-hover: #FFFDFB;
     --color-text: #5A4E4E;
     --color-text-rgb: 90, 78, 78;
     --color-text-muted: #8A7F7F;
-    --color-accent: #FFD166;     /* Amarillo pastel cálido */
+    --color-accent: #FFD166;     
     --color-accent-hover: #FFBF00;
     --color-primary-light: #FFECA3;
     --color-link: #C07040;
-
-    /* AÑADIDO: Override de la píldora de hover para que combine */
-    --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6); /* Amarillo-crema semi-transparente */
-
-    /* Tarjetas (si se usan) heredarán colores cálidos */
-    --card-accent-1: #FFD166;
-    --card-accent-2: #B7E4C7;
-    --card-accent-3: #FDBF6F;
-    --card-accent-4: #F4A261;
+    --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6); 
 }
 
-/* --- TEMA: TECNOLOGÍA (Vibrante, Gamer) --- */
+/* --- TEMA: TECNOLOGÍA --- */
 .theme-tecnologia {
-    --font-headings: 'Orbitron', sans-serif;
-    --font-display: 'Orbitron', sans-serif; 
-    --color-bg: #1A1A2E;         
-    --color-surface: #2A2A4E;
-    --color-surface-transparent: rgba(42, 42, 78, 0.4); 
-    --color-surface-hover: #2F2F5A;
-    --color-text: #EFEFEF;
-    --color-text-rgb: 239, 239, 239;
-    --color-text-muted: #B0B0D0;
-    --color-accent: #F900FF;     
-    --color-accent-hover: #FF80FF;
-    --color-link: #00FFFF;
-    --color-primary-light: #CC33FF;
+    /* ... (Tema Tecnología sin cambios) ... */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-display: 'Poppins', sans-serif; 
+    --color-bg: #F5F7FA;         
+    --color-surface: #FFFFFF;
+    --color-surface-transparent: rgba(255, 255, 255, 0.5); 
+    --color-surface-hover: #FFFFFF;
+    --color-text: #2C3E50;       
+    --color-text-rgb: 44, 62, 80;
+    --color-text-muted: #566573;
+    --color-accent: #0062FF;     
+    --color-accent-hover: #004ECC;
+    --color-primary-light: #E6F0FF; 
+    --color-link: #0062FF;
+    --nav-pill-bg-hover: hsla(217, 100%, 95%, 0.7); 
+}
+
+/* --- TEMA: LIMPIEZA --- */
+.theme-limpieza {
+    /* ... (Tema Limpieza sin cambios) ... */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-display: 'Poppins', sans-serif;
+    --color-bg: #F0FDFB;         
+    --color-surface: #FFFFFF;
+    --color-surface-transparent: rgba(255, 255, 255, 0.6); 
+    --color-surface-hover: #F0FBFD;
+    --color-text: #042F2E;       
+    --color-text-rgb: 4, 47, 46;
+    --color-text-muted: #3D6463;
+    --color-accent: #10B981;     
+    --color-accent-hover: #059669;
+    --color-primary-light: #D1FAE5; 
+    --color-link: #10B981;
+    --color-accent-secondary: #F59E0B; 
+    --nav-pill-bg-hover: hsla(158, 80%, 90%, 0.7); 
+}
+
+/* --- ¡NUEVO TEMA: DECORACIÓN (Cálido, Sofisticado, Terracota) --- */
+.theme-decoracion {
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-display: 'Poppins', sans-serif;
     
-    /* Override de la píldora de hover para que combine */
-    --nav-pill-bg-hover: hsla(299, 100%, 70%, 0.6); /* Magenta semi-transparente */
+    --color-bg: #FFFBF7;         /* Beige/Crema muy pálido */
+    --color-surface: #FFFFFF;
+    --color-surface-transparent: rgba(255, 255, 255, 0.5);
+    --color-surface-hover: #FFFBF7;
+    --color-text: #4E423F;       /* Marrón oscuro/Casi negro */
+    --color-text-rgb: 78, 66, 63;
+    --color-text-muted: #7A6C68;
+    --color-accent: #E57373;     /* Terracota/Rosa Viejo */
+    --color-accent-hover: #D35D5D;
+    --color-primary-light: #FCEBEB; /* Rosa pálido para fondos */
+    --color-link: #E57373;
+    --color-accent-secondary: #D4AF37; /* Oro/Cobre como acento */
+    
+    --nav-pill-bg-hover: hsla(0, 50%, 92%, 0.7); /* Rosa pálido semi-transparente */
 }
