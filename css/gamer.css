@@ -110,81 +110,148 @@
 }
 
 /* --- ¡TEMA: GAMER (Corregido) --- */
+/* --- ¡TEMA: GAMER (Actualizado con todas las variables) --- */
 .theme-gamer {
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Chakra Petch", sans-serif; /* Fuente Gamer */
   --font-display: "Chakra Petch", sans-serif; /* Fuente Gamer */
-  --color-bg: #0A0A10; /* Azul casi negro */
-  --color-surface: #1A1A2B; /* Superficie azul/púrpura oscuro */
+  --color-bg: #0A0A10; /* Fondo base (fuera de los tabs) */
+  --color-surface: #1A1A2B; /* Superficie de tarjeta */
   --color-surface-transparent: rgba(26, 26, 43, 0.7); /* Glassmorphism oscuro */
   --color-surface-hover: #2A2A3F;
   --color-text: #E0E0FF; /* Texto blanco/azulado */
   --color-text-rgb: 224, 224, 255;
   --color-text-muted: #8A8AAF; /* Texto gris/azulado */
-  --color-accent: #00FFFF; /* Cian Eléctrico */
-  --color-accent-hover: #9FFFFF;
-  --color-primary-light: rgba(0, 255, 255, 0.1);
+  /* Variables de acento globales (usadas por el hero y el modal) */
+  --color-accent: #00FFFF; /* Cian Eléctrico (Default) */
+  --color-accent-secondary: #FF00FF; /* Magenta Vibrante (Default) */
   --color-link: #00FFFF;
-  --color-accent-secondary: #FF00FF; /* Magenta Vibrante */
   --nav-pill-bg-hover: hsla(180, 100%, 50%, 0.2); /* Cian semi-transparente */
+  /* === ¡AQUÍ ESTÁN LAS VARIABLES QUE FALTABAN! === */
+  /* PC (Cian) */
+  --gamer-accent-pc: #00FFFF;
+  --gamer-accent-pc-rgb: 0, 255, 255;
+  --gamer-bg-pc: #0A101A; /* Fondo tintado Cian */
+  /* Periféricos (Magenta) */
+  --gamer-accent-perifericos: #FF00FF;
+  --gamer-accent-perifericos-rgb: 255, 0, 255;
+  --gamer-bg-perifericos: #100A1A; /* Fondo tintado Magenta */
+  /* Consolas (Verde) */
+  --gamer-accent-consolas: #00FF00;
+  --gamer-accent-consolas-rgb: 0, 255, 0;
+  --gamer-bg-consolas: #0A1A0A; /* Fondo tintado Verde */
+  /* Streaming (Naranja) */
+  --gamer-accent-streaming: #FF9900;
+  --gamer-accent-streaming-rgb: 255, 153, 0;
+  --gamer-bg-streaming: #1A100A; /* Fondo tintado Naranja */
+  /* VR (Morado) */
+  --gamer-accent-vr: #9900FF;
+  --gamer-accent-vr-rgb: 153, 0, 255;
+  --gamer-bg-vr: #100A1F; /* Fondo tintado Morado */
+  /* Variable para el glitch (puedes cambiarla si quieres) */
+  --gamer-accent-alt-glitch: var(--gamer-accent-perifericos);
 }
 
 /* --- Override de Fondo Global --- */
 body.theme-gamer {
   background-color: var(--color-bg);
+  /* Fondo de "puntos" sutil */
   background-image: radial-gradient(circle at 1px 1px, rgba(var(--color-text-rgb), 0.05) 1px, transparent 0);
   background-size: 25px 25px;
 }
 
-/* --- 1. Hero "Glitch" --- */
-.hero-glitch {
-  padding-top: calc(var(--header-height) + 3rem);
-  padding-bottom: 2rem;
+/* --- 1. Nuevo Hero "Video Glitch" --- */
+.hero-gamer-v2 {
+  padding-top: var(--header-height);
+  height: 70vh;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-gamer-v2 .hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-gamer-v2 .hero-video-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente oscuro de abajo hacia arriba */
+  background: linear-gradient(180deg, rgba(10, 10, 16, 0.5) 0%, #0A0A10 95%);
+}
+.hero-gamer-v2 .hero-video-bg img, .hero-gamer-v2 .hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-gamer-v2 .hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
 }
-.hero-glitch h1 {
+.hero-gamer-v2 .hero-content h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 5rem);
+  font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 700;
   color: var(--color-text);
   text-transform: uppercase;
   position: relative;
   margin-bottom: 1.5rem;
 }
-.hero-glitch h1::before, .hero-glitch h1::after {
+.hero-gamer-v2 .hero-content h1::before, .hero-gamer-v2 .hero-content h1::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-bg);
+  background-color: transparent;
   overflow: hidden;
 }
-.hero-glitch h1::before {
+.hero-gamer-v2 .hero-content h1::before {
   left: 2px;
-  text-shadow: -2px 0 var(--color-accent);
+  /* Usa la variable --glitch-color-1 o el cian por defecto */
+  text-shadow: -2px 0 var(--glitch-color-1, var(--gamer-accent-pc));
   animation: glitch-anim-1 2s infinite linear alternate-reverse;
 }
-.hero-glitch h1::after {
+.hero-gamer-v2 .hero-content h1::after {
   left: -2px;
-  text-shadow: -2px 0 var(--color-accent-secondary);
+  /* Usa la variable --glitch-color-2 o el magenta por defecto */
+  text-shadow: -2px 0 var(--glitch-color-2, var(--gamer-accent-perifericos));
   animation: glitch-anim-2 2s infinite linear alternate-reverse;
 }
-.hero-glitch p {
+.hero-gamer-v2 .hero-content p {
   font-size: 1.2rem;
   color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* --- 2. Sistema de "Tabs" (Recuperado) --- */
+/* Contenedor principal para Tabs y Paneles */
+.gamer-content-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* --- 2. Sistema de "Tabs" con cambio de color --- */
+/* --- 2. Sistema de "Tabs" con cambio de color --- */
 .category-tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
 }
 .category-tabs .tab-link {
   padding: 0.75rem 1.75rem;
@@ -200,56 +267,306 @@ body.theme-gamer {
   overflow: hidden;
   transition: all var(--transition-speed);
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  /* --- ESTILOS DE COLOR ESPECÍFICOS POR PESTAÑA --- */
+  /* PC Master Race (Cian) */
+  /* Periféricos (Magenta) */
+  /* Consolas (Verde) */
+  /* Streaming (Naranja) */
+  /* VR (Morado) */
 }
 .category-tabs .tab-link .glitch-layer {
   display: none;
 }
-.category-tabs .tab-link:hover {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-accent);
+.category-tabs .tab-link[data-tab-target="#panel-pc"]:hover {
+  border-color: var(--gamer-accent-pc);
   color: var(--color-text);
-  text-shadow: 0 0 10px var(--color-accent);
+  background-color: rgba(var(--gamer-accent-pc-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-pc);
 }
-.category-tabs .tab-link.is-active {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  text-shadow: 0 0 10px var(--color-accent);
-  box-shadow: 0 0 15px var(--color-primary-light);
+.category-tabs .tab-link[data-tab-target="#panel-pc"].is-active {
+  border-color: var(--gamer-accent-pc);
+  color: var(--gamer-accent-pc);
+  background-color: rgba(var(--gamer-accent-pc-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-pc);
+  box-shadow: 0 0 15px rgba(var(--gamer-accent-pc-rgb), 0.2);
+}
+.category-tabs .tab-link[data-tab-target="#panel-perifericos"]:hover {
+  border-color: var(--gamer-accent-perifericos);
+  color: var(--color-text);
+  background-color: rgba(var(--gamer-accent-perifericos-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-perifericos);
+}
+.category-tabs .tab-link[data-tab-target="#panel-perifericos"].is-active {
+  border-color: var(--gamer-accent-perifericos);
+  color: var(--gamer-accent-perifericos);
+  background-color: rgba(var(--gamer-accent-perifericos-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-perifericos);
+  box-shadow: 0 0 15px rgba(var(--gamer-accent-perifericos-rgb), 0.2);
+}
+.category-tabs .tab-link[data-tab-target="#panel-consolas"]:hover {
+  border-color: var(--gamer-accent-consolas);
+  color: var(--color-text);
+  background-color: rgba(var(--gamer-accent-consolas-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-consolas);
+}
+.category-tabs .tab-link[data-tab-target="#panel-consolas"].is-active {
+  border-color: var(--gamer-accent-consolas);
+  color: var(--gamer-accent-consolas);
+  background-color: rgba(var(--gamer-accent-consolas-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-consolas);
+  box-shadow: 0 0 15px rgba(var(--gamer-accent-consolas-rgb), 0.2);
+}
+.category-tabs .tab-link[data-tab-target="#panel-streaming"]:hover {
+  border-color: var(--gamer-accent-streaming);
+  color: var(--color-text);
+  background-color: rgba(var(--gamer-accent-streaming-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-streaming);
+}
+.category-tabs .tab-link[data-tab-target="#panel-streaming"].is-active {
+  border-color: var(--gamer-accent-streaming);
+  color: var(--gamer-accent-streaming);
+  background-color: rgba(var(--gamer-accent-streaming-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-streaming);
+  box-shadow: 0 0 15px rgba(var(--gamer-accent-streaming-rgb), 0.2);
+}
+.category-tabs .tab-link[data-tab-target="#panel-vr"]:hover {
+  border-color: var(--gamer-accent-vr);
+  color: var(--color-text);
+  background-color: rgba(var(--gamer-accent-vr-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-vr);
+}
+.category-tabs .tab-link[data-tab-target="#panel-vr"].is-active {
+  border-color: var(--gamer-accent-vr);
+  color: var(--gamer-accent-vr);
+  background-color: rgba(var(--gamer-accent-vr-rgb), 0.1);
+  text-shadow: 0 0 10px var(--gamer-accent-vr);
+  box-shadow: 0 0 15px rgba(var(--gamer-accent-vr-rgb), 0.2);
 }
 
 /* --- 3. Paneles de Contenido (Tabs) --- */
 .tab-panel {
   display: none;
   animation: fadeIn 0.5s ease;
+  /* Variables de color de Acento por Pestaña */
+}
+.tab-panel#panel-pc {
+  --active-accent: var(--gamer-accent-pc);
+  --active-accent-rgb: var(--gamer-accent-pc-rgb);
+}
+.tab-panel#panel-perifericos {
+  --active-accent: var(--gamer-accent-perifericos);
+  --active-accent-rgb: var(--gamer-accent-perifericos-rgb);
+}
+.tab-panel#panel-consolas {
+  --active-accent: var(--gamer-accent-consolas);
+  --active-accent-rgb: var(--gamer-accent-consolas-rgb);
+}
+.tab-panel#panel-streaming {
+  --active-accent: var(--gamer-accent-streaming);
+  --active-accent-rgb: var(--gamer-accent-streaming-rgb);
+}
+.tab-panel#panel-vr {
+  --active-accent: var(--gamer-accent-vr);
+  --active-accent-rgb: var(--gamer-accent-vr-rgb);
 }
 .tab-panel.is-active {
   display: block;
 }
 
-/* --- 4. NUEVO Layout "Masonry Grid" --- */
-.product-grid-masonry {
-  /* Usamos column-count para un masonry simple */
-  -moz-column-count: 1;
-       column-count: 1;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
-  padding-bottom: 4rem;
+/* --- 4. Estructura de "Scrolling Story" (Adaptada) --- */
+.content-block {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  position: relative;
+}
+
+/* Fondos de Sección (Imagen vs Color) */
+.story-image-bg {
+  background-image: linear-gradient(rgba(10, 10, 16, 0.7), rgba(10, 10, 16, 0.7)), var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+  margin: 0 -2rem;
+  padding: clamp(4rem, 10vw, 6rem) 2rem;
+  border-radius: var(--border-radius);
+  /* Adaptar tarjetas a fondo oscuro */
+}
+.story-image-bg h1, .story-image-bg h2, .story-image-bg h3, .story-image-bg p {
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.story-image-bg .featurette-tag {
+  color: var(--active-accent);
+  text-shadow: none;
+}
+.story-image-bg .card-tag {
+  color: var(--active-accent);
+}
+.story-image-bg .cta-button.secondary {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.story-image-bg .cta-button.secondary:hover {
+  background-color: #FFFFFF;
+  color: var(--color-text);
+}
+.story-image-bg .product-featurette .featurette-image,
+.story-image-bg .product-card-masonry,
+.story-image-bg .product-entry {
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.story-image-bg .product-entry .entry-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.story-color-bg {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* Acento de la sección activa */
+}
+.story-color-bg h1, .story-color-bg h2, .story-color-bg h3 {
+  color: var(--color-text);
+  text-shadow: none;
+}
+.story-color-bg p {
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+.story-color-bg .featurette-tag {
+  color: var(--active-accent);
+  text-shadow: none;
+}
+.story-color-bg .card-tag {
+  color: var(--active-accent);
+}
+.story-color-bg .cta-button.secondary {
+  border-color: var(--active-accent);
+  color: var(--active-accent);
+  text-shadow: none;
+}
+.story-color-bg .cta-button.secondary:hover {
+  background-color: var(--active-accent);
+  color: var(--color-bg);
+}
+
+/* Introducción de Sub-Sección (Estilo Hogar) */
+.section-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+.section-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--active-accent); /* Títulos de sección con acento */
+  text-shadow: 0 0 10px rgba(var(--active-accent-rgb), 0.3);
+}
+.section-intro p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+.story-image-bg .section-intro p {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.divider-glitch {
+  height: 2px;
+  width: 100%;
+  background-color: var(--active-accent);
+  margin: 4rem 0;
+  position: relative;
+  box-shadow: 0 0 10px rgba(var(--active-accent-rgb), 0.3);
+}
+.divider-glitch::before, .divider-glitch::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+.divider-glitch::before {
+  left: 2px;
+  background-color: var(--active-accent);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.divider-glitch::after {
+  left: -2px;
+  background-color: var(--gamer-accent-alt-glitch); /* Un color alterno para el glitch */
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+/* --- 5. FUSIÓN DE LAYOUTS --- */
+/* --- 5A. Product Featurette (Estilo Hogar) --- */
+.product-featurette {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.product-featurette .featurette-image {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-small);
+  transition: all var(--transition-speed);
+}
+.product-featurette .featurette-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-featurette .featurette-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+.product-featurette .featurette-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.product-featurette .featurette-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+}
+.product-featurette .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- 5B. Grid de 2 y 3 (Estilo Gamer) --- */
+.product-grid-doublet, .product-grid-triplet {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .product-card-masonry {
-  display: inline-block; /* Requerido para column-count */
+  display: inline-block;
   width: 100%;
   background-color: var(--color-surface);
   border: 1px solid var(--color-surface-hover);
   border-radius: var(--border-radius);
-  margin-bottom: 1.5rem; /* Espacio vertical */
   overflow: hidden;
   cursor: pointer;
   position: relative;
   z-index: 5;
   transition: all var(--transition-speed);
-  /* Corte angular en la tarjeta */
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 .product-card-masonry .card-image {
@@ -265,36 +582,134 @@ body.theme-gamer {
 .product-card-masonry .card-content {
   padding: 1.25rem;
 }
-.product-card-masonry .card-content .card-tag {
-  font-family: var(--font-headings);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-accent-secondary); /* Magenta */
-  text-transform: uppercase;
-}
 .product-card-masonry .card-content h3 {
   font-family: var(--font-headings);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
   color: var(--color-text);
-  text-shadow: none;
   margin-top: 0.25rem;
 }
 .product-card-masonry .product-full-details {
-  display: none; /* Oculto, solo para JS */
+  display: none;
 }
 .product-card-masonry:hover {
   transform: translateY(-5px);
   z-index: 10;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 15px var(--color-primary-light);
+  border-color: var(--active-accent);
+  box-shadow: 0 0 15px rgba(var(--active-accent-rgb), 0.3);
 }
 .product-card-masonry:hover .card-image img {
   transform: scale(1.05);
 }
 
-/* --- 5. Modal "Quick View" (Sin cambios) --- */
+/* --- 5C. Product Entry (Estilo Acordeón de Limpieza) --- */
+.product-entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-entry {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-small);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  position: relative;
+  z-index: 5;
+}
+.product-entry.is-active {
+  box-shadow: var(--shadow-medium);
+}
+
+.entry-trigger {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+.entry-trigger:hover {
+  background-color: var(--color-surface-hover);
+}
+.entry-trigger .entry-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+.entry-trigger .entry-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.entry-trigger .entry-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+.entry-trigger .entry-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-full-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
+.product-full-details .details-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product-full-details .details-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-full-details .details-content p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.product-full-details .details-content .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.product-entry.is-active .product-full-details {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-primary-light);
+}
+
+/* --- 6. Modal "Quick View" --- */
 .modal-quick-view {
   position: fixed;
   top: 0;
@@ -329,8 +744,8 @@ body.theme-gamer {
   display: grid;
   grid-template-columns: 1fr;
   background-color: var(--color-surface-transparent);
-  border: 1px solid var(--color-accent);
-  box-shadow: 0 0 30px var(--color-primary-light);
+  border: 1px solid var(--active-accent); /* Borde con color de la pestaña */
+  box-shadow: 0 0 30px rgba(var(--active-accent-rgb), 0.3);
   border-radius: var(--border-radius);
   overflow: hidden;
   transform: scale(0.9);
@@ -354,7 +769,7 @@ body.theme-gamer {
 .modal-content .modal-details .modal-tag {
   font-family: var(--font-headings);
   font-weight: 700;
-  color: var(--color-accent-secondary); /* Magenta */
+  color: var(--active-accent); /* Acento de la pestaña */
   text-transform: uppercase;
 }
 .modal-content .modal-details h2 {
@@ -370,18 +785,6 @@ body.theme-gamer {
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
-.modal-content .modal-details .modal-buttons .button-group {
-  display: flex;
-  gap: 1rem;
-}
-.modal-content .modal-details .cta-button.secondary {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-.modal-content .modal-details .cta-button.secondary:hover {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-}
 
 .modal-close-btn {
   position: absolute;
@@ -390,7 +793,7 @@ body.theme-gamer {
   width: 45px;
   height: 45px;
   background-color: var(--nav-pill-bg);
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--active-accent);
   border-radius: 50%;
   cursor: pointer;
   z-index: 9999;
@@ -400,7 +803,7 @@ body.theme-gamer {
   transition: all var(--transition-speed);
 }
 .modal-close-btn:hover {
-  background-color: var(--color-primary-light);
+  background-color: rgba(var(--active-accent-rgb), 0.2);
   transform: rotate(90deg);
 }
 .modal-close-btn span {
@@ -417,7 +820,6 @@ body.theme-gamer {
   transform: rotate(-45deg);
 }
 
-/* --- Estados Activos del Modal --- */
 body.modal-active {
   overflow: hidden;
 }
@@ -431,12 +833,34 @@ body.modal-active .modal-content {
 
 /* --- Media Query (Desktop) --- */
 @media (min-width: 768px) {
-  .product-grid-masonry {
-    -moz-column-count: 2;
-         column-count: 2; /* 2 columnas en tablet */
+  .product-featurette {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .product-featurette:nth-child(even) .featurette-image {
+    order: 2;
+  }
+  .product-featurette:nth-child(even) .featurette-content {
+    order: 1;
+  }
+  .product-grid-doublet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-grid-triplet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-full-details {
+    grid-template-columns: 300px 1fr;
+    padding: 0 2rem;
+  }
+  .product-full-details .details-image {
+    max-width: 100%;
+  }
+  .product-entry.is-active .product-full-details {
+    padding: 2rem;
   }
   .modal-content {
-    grid-template-columns: 300px 1fr; /* 2 columnas en modal */
+    grid-template-columns: 300px 1fr;
   }
   .modal-image {
     height: 100%;
@@ -444,12 +868,6 @@ body.modal-active .modal-content {
   }
   .modal-details {
     padding: 3rem;
-  }
-}
-@media (min-width: 1024px) {
-  .product-grid-masonry {
-    -moz-column-count: 3;
-         column-count: 3; /* 3 columnas en desktop */
   }
 }
 /* --- Animaciones Glitch (Sin cambios) --- */

@@ -110,23 +110,46 @@
 }
 
 /* --- ¡TEMA: GAMER (Corregido) --- */
+/* --- ¡TEMA: GAMER (Actualizado con todas las variables) --- */
 .theme-gamer {
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Chakra Petch", sans-serif; /* Fuente Gamer */
   --font-display: "Chakra Petch", sans-serif; /* Fuente Gamer */
-  --color-bg: #0A0A10; /* Azul casi negro */
-  --color-surface: #1A1A2B; /* Superficie azul/púrpura oscuro */
+  --color-bg: #0A0A10; /* Fondo base (fuera de los tabs) */
+  --color-surface: #1A1A2B; /* Superficie de tarjeta */
   --color-surface-transparent: rgba(26, 26, 43, 0.7); /* Glassmorphism oscuro */
   --color-surface-hover: #2A2A3F;
   --color-text: #E0E0FF; /* Texto blanco/azulado */
   --color-text-rgb: 224, 224, 255;
   --color-text-muted: #8A8AAF; /* Texto gris/azulado */
-  --color-accent: #00FFFF; /* Cian Eléctrico */
-  --color-accent-hover: #9FFFFF;
-  --color-primary-light: rgba(0, 255, 255, 0.1);
+  /* Variables de acento globales (usadas por el hero y el modal) */
+  --color-accent: #00FFFF; /* Cian Eléctrico (Default) */
+  --color-accent-secondary: #FF00FF; /* Magenta Vibrante (Default) */
   --color-link: #00FFFF;
-  --color-accent-secondary: #FF00FF; /* Magenta Vibrante */
   --nav-pill-bg-hover: hsla(180, 100%, 50%, 0.2); /* Cian semi-transparente */
+  /* === ¡AQUÍ ESTÁN LAS VARIABLES QUE FALTABAN! === */
+  /* PC (Cian) */
+  --gamer-accent-pc: #00FFFF;
+  --gamer-accent-pc-rgb: 0, 255, 255;
+  --gamer-bg-pc: #0A101A; /* Fondo tintado Cian */
+  /* Periféricos (Magenta) */
+  --gamer-accent-perifericos: #FF00FF;
+  --gamer-accent-perifericos-rgb: 255, 0, 255;
+  --gamer-bg-perifericos: #100A1A; /* Fondo tintado Magenta */
+  /* Consolas (Verde) */
+  --gamer-accent-consolas: #00FF00;
+  --gamer-accent-consolas-rgb: 0, 255, 0;
+  --gamer-bg-consolas: #0A1A0A; /* Fondo tintado Verde */
+  /* Streaming (Naranja) */
+  --gamer-accent-streaming: #FF9900;
+  --gamer-accent-streaming-rgb: 255, 153, 0;
+  --gamer-bg-streaming: #1A100A; /* Fondo tintado Naranja */
+  /* VR (Morado) */
+  --gamer-accent-vr: #9900FF;
+  --gamer-accent-vr-rgb: 153, 0, 255;
+  --gamer-bg-vr: #100A1F; /* Fondo tintado Morado */
+  /* Variable para el glitch (puedes cambiarla si quieres) */
+  --gamer-accent-alt-glitch: var(--gamer-accent-perifericos);
 }
 
 /* --- Sección Hero Mejorada (index.html) --- */
