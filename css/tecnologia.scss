@@ -7,32 +7,58 @@ body.theme-tecnologia {
 }
 
 /* --- Hero Statement (Sin cambios importantes) --- */
-.hero-statement {
+/* --- 1. Nuevo Hero "Statement" con Fondo Parallax --- */
+/* 1.A. El CONTENEDOR del fondo parallax (FULL-WIDTH) */
+.hero-statement-wrapper {
+    /* Hereda 'story-image-bg' (parallax, bg-image) */
+    /* Le damos padding para centrar el contenido de "glass" */
+    padding: calc(var(--header-height) + 4rem) 2rem 4rem 2rem;
+    display: flex; /* Para centrar el .hero-statement-content */
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Altura mínima */
+}
+
+/* 1.B. El panel "Glassmorphism" con el texto (ANCHO LIMITADO) */
+.hero-statement-content {
     text-align: center;
-    padding: var(--header-height) 0 4rem; // Añadir padding-top para el header
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 2.5rem; /* Padding interno del panel */
     
+    /* El "Glassmorphism" */
+    background-color: rgba(var(--color-text-rgb), 0.1); /* Fondo oscuro sutil */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-medium); 
+
+    /* Estilos de texto (ahora blanco) */
     .hero-tagline {
         font-family: var(--font-headings);
         font-weight: 600;
-        color: var(--color-accent-secondary); // Acento más vibrante
+        color: var(--color-accent); /* Azul "inteligente" */
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
     
     h1 {
         font-family: var(--font-display);
-        font-size: clamp(3rem, 8vw, 4.5rem);
+        font-size: clamp(3rem, 8vw, 5rem); 
         font-weight: 700;
-        color: var(--color-headings);
+        color: #FFFFFF; /* Texto blanco */
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         margin: 0.5rem 0 1.5rem 0;
         line-height: 1.1;
     }
     
     p {
-        font-size: 1.2rem;
-        color: var(--color-text-muted);
-        max-width: 700px;
-        margin: 0 auto;
+        font-size: 1.25rem; 
+        color: #FFFFFF; /* Texto blanco */
+        text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        max-width: 600px;
+        margin: 0 auto; 
     }
 }
 

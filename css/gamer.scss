@@ -1,0 +1,354 @@
+@import 'variables';
+
+/* --- Override de Fondo Global --- */
+body.theme-gamer {
+    background-color: var(--color-bg); 
+    background-image: radial-gradient(circle at 1px 1px, rgba(var(--color-text-rgb), 0.05) 1px, transparent 0);
+    background-size: 25px 25px; 
+}
+
+/* --- 1. Hero "Glitch" --- */
+.hero-glitch {
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 2rem;
+    text-align: center;
+    
+    h1 {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 10vw, 5rem);
+        font-weight: 700;
+        color: var(--color-text);
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 1.5rem;
+        
+        &::before, &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-bg);
+            overflow: hidden;
+        }
+        &::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--color-accent);
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+        &::after {
+            left: -2px;
+            text-shadow: -2px 0 var(--color-accent-secondary);
+            animation: glitch-anim-2 2s infinite linear alternate-reverse;
+        }
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* --- 2. Sistema de "Tabs" (Recuperado) --- */
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    
+    .tab-link {
+        padding: 0.75rem 1.75rem;
+        font-family: var(--font-headings);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--color-text-muted);
+        background-color: transparent;
+        border: 2px solid var(--color-surface-hover);
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition-speed);
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        
+        .glitch-layer { display: none; }
+
+        &:hover {
+            background-color: var(--color-primary-light);
+            border-color: var(--color-accent);
+            color: var(--color-text);
+            text-shadow: 0 0 10px var(--color-accent);
+        }
+        
+        &.is-active {
+            background-color: var(--color-primary-light);
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            text-shadow: 0 0 10px var(--color-accent);
+            box-shadow: 0 0 15px var(--color-primary-light);
+        }
+    }
+}
+
+/* --- 3. Paneles de Contenido (Tabs) --- */
+.tab-panel {
+    display: none; 
+    animation: fadeIn 0.5s ease;
+    
+    &.is-active {
+        display: block; 
+    }
+}
+
+/* --- 4. NUEVO Layout "Masonry Grid" --- */
+.product-grid-masonry {
+    /* Usamos column-count para un masonry simple */
+    column-count: 1;
+    column-gap: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.product-card-masonry {
+    display: inline-block; /* Requerido para column-count */
+    width: 100%;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface-hover);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem; /* Espacio vertical */
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    transition: all var(--transition-speed);
+
+    /* Corte angular en la tarjeta */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    
+    .card-image {
+        height: 220px; 
+        img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.4s ease;
+        }
+    }
+
+    .card-content {
+        padding: 1.25rem;
+        
+        .card-tag {
+            font-family: var(--font-headings);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--color-accent-secondary); /* Magenta */
+            text-transform: uppercase;
+        }
+        h3 { 
+            font-family: var(--font-headings);
+            font-size: 1.25rem; 
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--color-text);
+            text-shadow: none;
+            margin-top: 0.25rem;
+        }
+    }
+    
+    .product-full-details {
+        display: none; /* Oculto, solo para JS */
+    }
+    
+    &:hover {
+        transform: translateY(-5px);
+        z-index: 10;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 15px var(--color-primary-light);
+        
+        .card-image img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+/* --- 5. Modal "Quick View" (Sin cambios) --- */
+.modal-quick-view {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(var(--color-text-rgb), 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--color-surface-transparent);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 30px var(--color-primary-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    .modal-image {
+        width: 100%;
+        height: 250px;
+        background-color: var(--color-bg);
+        img { width: 100%; height: 100%; object-fit: cover; }
+    }
+
+    .modal-details {
+        padding: 2rem;
+        overflow-y: auto;
+        
+        .modal-tag {
+            font-family: var(--font-headings);
+            font-weight: 700;
+            color: var(--color-accent-secondary); /* Magenta */
+            text-transform: uppercase;
+        }
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: 0.5rem 0 1.5rem 0;
+        }
+        p {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .modal-buttons .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .cta-button.secondary {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            &:hover {
+                background-color: var(--color-accent);
+                color: var(--color-bg);
+            }
+        }
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    background-color: var(--nav-pill-bg);
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed);
+
+    &:hover {
+        background-color: var(--color-primary-light);
+        transform: rotate(90deg);
+    }
+    
+    span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--color-text);
+        position: absolute;
+        
+        &:first-child { transform: rotate(45deg); }
+        &:last-child { transform: rotate(-45deg); }
+    }
+}
+
+/* --- Estados Activos del Modal --- */
+body.modal-active {
+    overflow: hidden; 
+    .modal-quick-view {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal-content {
+        transform: scale(1);
+    }
+}
+
+
+/* --- Media Query (Desktop) --- */
+@media (min-width: 768px) {
+    .product-grid-masonry {
+        column-count: 2; /* 2 columnas en tablet */
+    }
+
+    .modal-content {
+        grid-template-columns: 300px 1fr; /* 2 columnas en modal */
+    }
+    .modal-image {
+        height: 100%; 
+        max-height: 500px;
+    }
+    .modal-details { padding: 3rem; }
+}
+
+@media (min-width: 1024px) {
+    .product-grid-masonry {
+        column-count: 3; /* 3 columnas en desktop */
+    }
+}
+
+/* --- Animaciones Glitch (Sin cambios) --- */
+@keyframes glitch-anim-1 {
+    0% { clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%); }
+    10% { clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
+    20% { clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%); }
+    40% { clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%); }
+    60% { clip-path: polygon(0 10%, 100% 10%, 100% 25%, 0 25%); }
+    80% { clip-path: polygon(0 50%, 100% 50%, 100% 75%, 0 75%); }
+    100% { clip-path: polygon(0 30%, 100% 30%, 100% 40%, 0 40%); }
+}
+@keyframes glitch-anim-2 {
+    0% { clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%); }
+    15% { clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%); }
+    30% { clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%); }
+    50% { clip-path: polygon(0 20%, 100% 20%, 100% 35%, 0 35%); }
+    70% { clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
+    90% { clip-path: polygon(0 40%, 100% 40%, 100% 55%, 0 55%); }
+    100% { clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

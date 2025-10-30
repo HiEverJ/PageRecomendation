@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /* --- FUENTES --- */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap"); /* Fuente Gamer */
 /* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
 :root {
-  /* ... (Tema Base sin cambios) ... */
+  /* Tema Base / Default (colores pastel, moderno) */
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Montserrat", sans-serif;
   --font-display: "Poppins", sans-serif;
@@ -35,7 +36,6 @@
 
 /* --- TEMA: HOGAR --- */
 .theme-hogar {
-  /* ... (Tema Hogar sin cambios) ... */
   --color-bg: #FDF9F6;
   --color-surface: #FFFFFF;
   --color-surface-transparent: rgba(255, 255, 255, 0.4);
@@ -52,7 +52,6 @@
 
 /* --- TEMA: TECNOLOGÍA --- */
 .theme-tecnologia {
-  /* ... (Tema Tecnología sin cambios) ... */
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Montserrat", sans-serif;
   --font-display: "Poppins", sans-serif;
@@ -72,7 +71,6 @@
 
 /* --- TEMA: LIMPIEZA --- */
 .theme-limpieza {
-  /* ... (Tema Limpieza sin cambios) ... */
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Montserrat", sans-serif;
   --font-display: "Poppins", sans-serif;
@@ -91,24 +89,44 @@
   --nav-pill-bg-hover: hsla(158, 80%, 90%, 0.7);
 }
 
-/* --- ¡NUEVO TEMA: DECORACIÓN (Cálido, Sofisticado, Terracota) --- */
+/* --- TEMA: DECORACIÓN --- */
 .theme-decoracion {
   --font-primary: "Open Sans", sans-serif;
   --font-headings: "Montserrat", sans-serif;
   --font-display: "Poppins", sans-serif;
-  --color-bg: #FFFBF7; /* Beige/Crema muy pálido */
+  --color-bg: #FFFBF7;
   --color-surface: #FFFFFF;
   --color-surface-transparent: rgba(255, 255, 255, 0.5);
   --color-surface-hover: #FFFBF7;
-  --color-text: #4E423F; /* Marrón oscuro/Casi negro */
+  --color-text: #4E423F;
   --color-text-rgb: 78, 66, 63;
   --color-text-muted: #7A6C68;
-  --color-accent: #E57373; /* Terracota/Rosa Viejo */
+  --color-accent: #E57373;
   --color-accent-hover: #D35D5D;
-  --color-primary-light: #FCEBEB; /* Rosa pálido para fondos */
+  --color-primary-light: #FCEBEB;
   --color-link: #E57373;
-  --color-accent-secondary: #D4AF37; /* Oro/Cobre como acento */
-  --nav-pill-bg-hover: hsla(0, 50%, 92%, 0.7); /* Rosa pálido semi-transparente */
+  --color-accent-secondary: #D4AF37;
+  --nav-pill-bg-hover: hsla(0, 50%, 92%, 0.7);
+}
+
+/* --- ¡TEMA: GAMER (Corregido) --- */
+.theme-gamer {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Chakra Petch", sans-serif; /* Fuente Gamer */
+  --font-display: "Chakra Petch", sans-serif; /* Fuente Gamer */
+  --color-bg: #0A0A10; /* Azul casi negro */
+  --color-surface: #1A1A2B; /* Superficie azul/púrpura oscuro */
+  --color-surface-transparent: rgba(26, 26, 43, 0.7); /* Glassmorphism oscuro */
+  --color-surface-hover: #2A2A3F;
+  --color-text: #E0E0FF; /* Texto blanco/azulado */
+  --color-text-rgb: 224, 224, 255;
+  --color-text-muted: #8A8AAF; /* Texto gris/azulado */
+  --color-accent: #00FFFF; /* Cian Eléctrico */
+  --color-accent-hover: #9FFFFF;
+  --color-primary-light: rgba(0, 255, 255, 0.1);
+  --color-link: #00FFFF;
+  --color-accent-secondary: #FF00FF; /* Magenta Vibrante */
+  --nav-pill-bg-hover: hsla(180, 100%, 50%, 0.2); /* Cian semi-transparente */
 }
 
 /* --- Override de Fondo Global --- */
