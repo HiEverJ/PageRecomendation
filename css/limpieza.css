@@ -135,7 +135,7 @@ body.theme-limpieza {
   background-color: var(--color-bg);
 }
 
-/* --- 1. Estilos del "Magazine Hero" --- */
+/* --- 1. Estilos del "Magazine Hero" (Sin cambios) --- */
 .magazine-hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -175,7 +175,7 @@ body.theme-limpieza {
      object-fit: cover;
 }
 
-/* --- 2. Estilos del "Sticky Layout" --- */
+/* --- 2. Estilos del "Sticky Layout" (Sin cambios) --- */
 .sticky-layout-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -205,34 +205,255 @@ body.theme-limpieza {
   background-color: var(--color-accent);
 }
 
-.scrolling-content {
-  /* Contenedor de todas las secciones de productos */
-}
+.scrolling-content { /* Contenedor */ }
 
+/* --- 3. Estilos de Sección de Contenido (MODIFICADO) --- */
 .content-section {
-  padding-bottom: 4rem;
+  padding-bottom: 8rem; /* AUMENTADO para más espacio */
+  /* Título de Sección (Estilo Hogar) */
+  /* Subtítulo de Sección (Estilo Hogar) */
 }
 .content-section h2 {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 2.5rem;
-  border-bottom: 2px solid var(--color-accent-secondary);
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: none;
+}
+.content-section .section-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  text-shadow: none;
 }
 
-/* --- 3. Estilos del "Product Entry" (Modificados) --- */
+/* Fondos de Sección (Imagen vs Color) */
+.content-section.story-image-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+  padding: clamp(4rem, 10vw, 6rem) 2rem; /* Añadir padding para que el contenido no pegue */
+  margin: 0 -2rem 8rem -2rem; /* Expandir a los bordes */
+  border-radius: var(--border-radius);
+  /* Ajuste de botones para fondo oscuro */
+  /* Ajuste de tarjetas para fondo oscuro */
+}
+.content-section.story-image-bg h2, .content-section.story-image-bg h3, .content-section.story-image-bg p, .content-section.story-image-bg .featurette-tag, .content-section.story-image-bg .card-tag {
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.content-section.story-image-bg .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.content-section.story-image-bg .cta-button.secondary {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.content-section.story-image-bg .cta-button.secondary:hover {
+  background-color: #FFFFFF;
+  color: var(--color-text);
+}
+.content-section.story-image-bg .product-featurette .featurette-image,
+.content-section.story-image-bg .product-card-masonry,
+.content-section.story-image-bg .product-entry {
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.content-section.story-image-bg .product-entry .entry-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.content-section.story-image-bg .product-featurette .featurette-tag,
+.content-section.story-image-bg .product-card-masonry .card-tag {
+  color: var(--color-accent-secondary); /* Amarillo */
+}
+
+.content-section.story-color-bg h2 {
+  color: var(--color-text);
+}
+.content-section.story-color-bg .section-subtitle {
+  color: var(--color-text-muted);
+}
+.content-section.story-color-bg .featurette-tag {
+  color: var(--color-accent);
+}
+.content-section.story-color-bg .card-tag {
+  color: var(--color-accent-secondary);
+}
+.content-section.story-color-bg .cta-button.secondary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.content-section.story-color-bg .cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* --- 4. Product Featurette (Estilo Hogar) --- */
+.product-featurette {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.product-featurette .featurette-image {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-small);
+  transition: all var(--transition-speed);
+}
+.product-featurette .featurette-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-featurette .featurette-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+.product-featurette .featurette-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.product-featurette .featurette-content .featurette-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.product-featurette .featurette-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+}
+.product-featurette .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- 5. Grid de 3 y Tarjeta Masonry (Estilo Gamer) --- */
+.grid-divider {
+  text-align: center;
+  font-family: var(--font-headings);
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 4rem 0 2.5rem 0;
+  position: relative;
+  z-index: 1;
+  /* Texto sobre la línea */
+}
+.grid-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--color-accent) 50%, transparent 100%);
+  opacity: 0.3;
+  z-index: -1;
+}
+.grid-divider span {
+  background-color: var(--color-bg);
+  padding: 0 1rem;
+}
+.story-image-bg .grid-divider span {
+  background-color: transparent; /* Sin fondo sobre imagen */
+}
+
+/* NUEVO: Contenedor Grid Triplet (garantiza 3 en fila) */
+.product-grid-triplet {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.product-card-masonry {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  transition: all var(--transition-speed);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+.product-card-masonry .card-image {
+  height: 220px;
+}
+.product-card-masonry .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card-masonry .card-content {
+  padding: 1.25rem;
+}
+.product-card-masonry .card-content .card-tag {
+  font-family: var(--font-headings);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent-secondary); /* Acento Amarillo */
+  text-transform: uppercase;
+}
+.product-card-masonry .card-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+.product-card-masonry .product-full-details {
+  display: none;
+}
+.product-card-masonry:hover {
+  transform: translateY(-5px);
+  z-index: 10;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-medium);
+}
+.product-card-masonry:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* --- 6. Product Entry (Estilo Acordeón) (Sin cambios) --- */
+.product-entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .product-entry {
   background-color: var(--color-surface);
   box-shadow: var(--shadow-small);
   border-radius: var(--border-radius);
-  margin-bottom: 2rem;
   transition: all var(--transition-speed);
   position: relative;
   z-index: 5;
-  /* La sombra resalta cuando está activo */
 }
 .product-entry.is-active {
   box-shadow: var(--shadow-medium);
@@ -245,7 +466,7 @@ body.theme-limpieza {
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-  border-radius: var(--border-radius); /* Para que el hover se vea bien */
+  border-radius: var(--border-radius);
 }
 .entry-trigger:hover {
   background-color: var(--color-surface-hover);
@@ -285,45 +506,188 @@ body.theme-limpieza {
   overflow: hidden;
 }
 
-/* --- 4. Estilos del Panel Acordeón "product-full-details" (Nuevo) --- */
 .product-full-details {
-  /* Oculto por defecto */
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   visibility: hidden;
   transition: all 0.4s ease-out;
-  /* Estilos del contenido */
-  padding: 0 1.5rem; /* Padding horizontal */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
 }
-.product-full-details p {
+.product-full-details .details-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product-full-details .details-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-full-details .details-content p {
   font-size: 1rem;
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
-.product-full-details .button-group {
+.product-full-details .details-content .button-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: flex-start;
 }
-.product-full-details .cta-button.secondary {
+.product-full-details .details-content .cta-button.secondary {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
-.product-full-details .cta-button.secondary:hover {
+.product-full-details .details-content .cta-button.secondary:hover {
   background-color: var(--color-accent);
   color: var(--color-surface);
 }
 
-/* --- Estado Activo del Acordeón --- */
 .product-entry.is-active .product-full-details {
-  max-height: 1000px; /* Valor alto para permitir expansión */
+  max-height: 1000px;
   opacity: 1;
   visibility: visible;
-  padding: 1.5rem; /* Padding completo al expandir */
+  padding: 1.5rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--color-primary-light);
+}
+
+/* --- 7. Estilos del Modal (de Gamer) (Sin cambios) --- */
+.modal-quick-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-text-rgb), 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--color-surface-transparent);
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 0 30px var(--color-primary-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.modal-content .modal-image {
+  width: 100%;
+  height: 250px;
+  background-color: var(--color-bg);
+}
+.modal-content .modal-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-content .modal-details {
+  padding: 2rem;
+  overflow-y: auto;
+}
+.modal-content .modal-details .modal-tag {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--color-accent-secondary); /* Amarillo */
+  text-transform: uppercase;
+}
+.modal-content .modal-details h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0.5rem 0 1.5rem 0;
+}
+.modal-content .modal-details p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.modal-content .modal-details .cta-button.secondary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.modal-content .modal-details .cta-button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 45px;
+  height: 45px;
+  background-color: var(--nav-pill-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+}
+.modal-close-btn:hover {
+  background-color: var(--color-primary-light);
+  transform: rotate(90deg);
+}
+.modal-close-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  position: absolute;
+}
+.modal-close-btn span:first-child {
+  transform: rotate(45deg);
+}
+.modal-close-btn span:last-child {
+  transform: rotate(-45deg);
+}
+
+body.modal-active {
+  overflow: hidden;
+}
+body.modal-active .modal-quick-view {
+  opacity: 1;
+  visibility: visible;
+}
+body.modal-active .modal-content {
+  transform: scale(1);
 }
 
 /* --- Media Query (Desktop) --- */
@@ -354,6 +718,44 @@ body.theme-limpieza {
     background: none;
     transform: translateX(5px);
   }
-}
-/* --- ELIMINADO --- */
-/* Ya no hay estilos de .product-expander, .expander-content-wrapper, etc. *//*# sourceMappingURL=limpieza.css.map */
+  .section-intro.with-image {
+    grid-template-columns: 2fr 1fr;
+  }
+  .section-intro.with-image .intro-text {
+    padding-right: 1rem;
+  }
+  .product-featurette {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .product-featurette:nth-child(even) .featurette-image {
+    order: 2;
+  }
+  .product-featurette:nth-child(even) .featurette-content {
+    order: 1;
+  }
+  /* Garantiza 3 columnas para el grid triplet */
+  .product-grid-triplet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-full-details {
+    grid-template-columns: 300px 1fr;
+    padding: 0 2rem;
+  }
+  .product-full-details .details-image {
+    max-width: 100%;
+  }
+  .product-entry.is-active .product-full-details {
+    padding: 2rem;
+  }
+  .modal-content {
+    grid-template-columns: 300px 1fr;
+  }
+  .modal-image {
+    height: 100%;
+    max-height: 500px;
+  }
+  .modal-details {
+    padding: 3rem;
+  }
+}/*# sourceMappingURL=limpieza.css.map */

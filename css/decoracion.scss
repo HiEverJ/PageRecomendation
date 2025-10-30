@@ -6,7 +6,7 @@ body.theme-decoracion {
     background-color: var(--color-bg); /* Color crema pálido */
 }
 
-/* --- 1. Nuevo Hero "de Portada" --- */
+/* --- 1. Hero "de Portada" --- */
 .hero-image-full {
     padding-top: var(--header-height); /* Espacio para el header fijo */
     height: 90vh; /* Ocupa casi toda la pantalla */
@@ -87,7 +87,10 @@ body.theme-decoracion {
     color: #FFFFFF; 
     
     /* Para los bloques de solo imagen, altura mínima */
-    min-height: 400px;
+    &[aria-hidden="true"] {
+        min-height: 400px;
+        padding: 0;
+    }
     
     h1, h2, h3, p {
         color: #FFFFFF;
@@ -102,6 +105,33 @@ body.theme-decoracion {
             background-color: #FFFFFF;
             color: var(--color-text); 
         }
+    }
+    
+    /* MODIFICADO: Estilos de Intro sobre fondo de imagen */
+    .section-intro {
+        h2 {
+            color: #FFFFFF;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        p {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+    }
+    
+    /* MODIFICADO: Estilos de Featurette sobre fondo de imagen */
+    .product-featurette .featurette-image {
+        background-color: rgba(255, 255, 255, 0.85); /* Glassmorphism sutil */
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .product-featurette .featurette-content {
+        background-color: rgba(var(--color-text-rgb), 0.4);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: var(--border-radius);
     }
 }
 
@@ -123,7 +153,7 @@ body.theme-decoracion {
     }
 }
 
-/* Introducción de Sección */
+/* NUEVO: Introducción de Sección (Estilo Hogar) */
 .section-intro {
     text-align: center;
     max-width: 600px;
@@ -139,11 +169,6 @@ body.theme-decoracion {
         font-size: 1.1rem;
         color: var(--color-text-muted);
         text-shadow: none; 
-        
-        .story-image-bg & {
-            color: rgba(255,255,255,0.9);
-            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-        }
     }
 }
 
@@ -158,9 +183,7 @@ body.theme-decoracion {
 }
 
 
-/* --- 3. Layout de Producto (Featurette) --- */
-/* (Reutilizado de hogar.scss, adaptado al tema) */
-
+/* --- 3. Layout de Producto (Featurette) (Sin cambios) --- */
 .product-featurette {
     display: grid;
     grid-template-columns: 1fr; // 1 columna en móvil
@@ -169,57 +192,57 @@ body.theme-decoracion {
     margin-bottom: 5rem; // Espacio entre cada producto
     position: relative;
     z-index: 2;
-}
 
-.featurette-image {
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    transition: all var(--transition-speed);
-    
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    &:hover {
-        transform: scale(1.03);
+    .featurette-image {
+        background-color: var(--color-surface);
+        border-radius: var(--border-radius);
+        overflow: hidden;
         box-shadow: var(--shadow-medium);
+        transition: all var(--transition-speed);
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-medium);
+        }
+    }
+
+    .featurette-content {
+        h3 {
+            font-family: var(--font-headings);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .featurette-tag {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-accent); /* Terracota */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 1rem 0 2rem 0;
+        }
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
     }
 }
 
-.featurette-content {
-    h3 {
-        font-family: var(--font-headings);
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-    
-    .featurette-tag {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: var(--color-accent); /* Terracota */
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin: 1rem 0 2rem 0;
-    }
-}
-
-.button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-/* --- 4. Nuevo Layout de "Cita Inspiracional" --- */
+/* --- 4. Layout de "Cita Inspiracional" (Sin cambios) --- */
 .inspo-quote {
     text-align: center;
     padding: 2rem 0;

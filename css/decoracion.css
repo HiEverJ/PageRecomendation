@@ -135,7 +135,7 @@ body.theme-decoracion {
   background-color: var(--color-bg); /* Color crema pálido */
 }
 
-/* --- 1. Nuevo Hero "de Portada" --- */
+/* --- 1. Hero "de Portada" --- */
 .hero-image-full {
   padding-top: var(--header-height); /* Espacio para el header fijo */
   height: 90vh; /* Ocupa casi toda la pantalla */
@@ -208,7 +208,12 @@ body.theme-decoracion {
   background-attachment: fixed;
   color: #FFFFFF;
   /* Para los bloques de solo imagen, altura mínima */
+  /* MODIFICADO: Estilos de Intro sobre fondo de imagen */
+  /* MODIFICADO: Estilos de Featurette sobre fondo de imagen */
+}
+.story-image-bg[aria-hidden=true] {
   min-height: 400px;
+  padding: 0;
 }
 .story-image-bg h1, .story-image-bg h2, .story-image-bg h3, .story-image-bg p {
   color: #FFFFFF;
@@ -225,6 +230,27 @@ body.theme-decoracion {
 .story-image-bg .cta-button.secondary:hover {
   background-color: #FFFFFF;
   color: var(--color-text);
+}
+.story-image-bg .section-intro h2 {
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.story-image-bg .section-intro p {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.story-image-bg .product-featurette .featurette-image {
+  background-color: rgba(255, 255, 255, 0.85); /* Glassmorphism sutil */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.story-image-bg .product-featurette .featurette-content {
+  background-color: rgba(var(--color-text-rgb), 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: var(--border-radius);
 }
 
 .story-color-bg {
@@ -253,7 +279,7 @@ body.theme-decoracion {
   color: var(--color-surface);
 }
 
-/* Introducción de Sección */
+/* NUEVO: Introducción de Sección (Estilo Hogar) */
 .section-intro {
   text-align: center;
   max-width: 600px;
@@ -268,10 +294,6 @@ body.theme-decoracion {
   font-size: 1.1rem;
   color: var(--color-text-muted);
   text-shadow: none;
-}
-.story-image-bg .section-intro p {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .story-outro {
@@ -292,8 +314,7 @@ body.theme-decoracion {
   margin-top: 2rem;
 }
 
-/* --- 3. Layout de Producto (Featurette) --- */
-/* (Reutilizado de hogar.scss, adaptado al tema) */
+/* --- 3. Layout de Producto (Featurette) (Sin cambios) --- */
 .product-featurette {
   display: grid;
   grid-template-columns: 1fr;
@@ -303,51 +324,48 @@ body.theme-decoracion {
   position: relative;
   z-index: 2;
 }
-
-.featurette-image {
+.product-featurette .featurette-image {
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-medium);
   transition: all var(--transition-speed);
 }
-.featurette-image img {
+.product-featurette .featurette-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.featurette-image:hover {
+.product-featurette .featurette-image:hover {
   transform: scale(1.03);
   box-shadow: var(--shadow-medium);
 }
-
-.featurette-content h3 {
+.product-featurette .featurette-content h3 {
   font-family: var(--font-headings);
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.featurette-content .featurette-tag {
+.product-featurette .featurette-content .featurette-tag {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-accent); /* Terracota */
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.featurette-content p {
+.product-featurette .featurette-content p {
   font-size: 1rem;
   line-height: 1.7;
   margin: 1rem 0 2rem 0;
 }
-
-.button-group {
+.product-featurette .button-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-/* --- 4. Nuevo Layout de "Cita Inspiracional" --- */
+/* --- 4. Layout de "Cita Inspiracional" (Sin cambios) --- */
 .inspo-quote {
   text-align: center;
   padding: 2rem 0;
