@@ -152,6 +152,33 @@
   --gamer-accent-alt-glitch: var(--gamer-accent-perifericos);
 }
 
+/* --- Tema de Festividades (Navidad) --- */
+/* --- TEMA: FESTIVIDADES (NAVIDAD) --- */
+/* --- TEMA: FESTIVIDADES (Brillante y Mágico) --- */
+.theme-festividades {
+  /* Fondo degradado sutil (Blanco a Gris muy claro) */
+  --color-bg: linear-gradient(175deg, #fdfbfb 0%, #ebedee 100%);
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F0F0F0;
+  --color-surface-transparent: rgba(255, 255, 255, 0.7); /* "Liquid Glass" */
+  --color-text: #333333; /* Texto oscuro */
+  --color-text-muted: #666666;
+  --color-text-light: #F8F8F8; /* Para texto sobre el Hero oscuro */
+  /* Acentos Navideños */
+  --color-primary: #C1272D; /* Rojo vibrante */
+  --color-primary-dark: #9B1D21;
+  --color-secondary: #FFD700; /* Dorado brillante */
+  --color-secondary-dark: #CCAA00;
+  --festividades-color-red: var(--color-primary);
+  --festividades-color-red-rgb: 193, 39, 45;
+  --festividades-color-gold: var(--color-secondary);
+  --festividades-color-gold-rgb: 255, 215, 0;
+  --festividades-color-silver: #C0C0C0;
+  --festividades-color-silver-rgb: 192, 192, 192;
+  /* Imagen personalizable para el Hero */
+  --hero-bg-image: url("../img/festividades/portada.webp");
+}
+
 /* --- Sección Hero Mejorada (index.html) --- */
 .hero {
   padding: clamp(4rem, 10vw, 8rem) 0;

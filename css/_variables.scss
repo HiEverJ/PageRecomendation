@@ -165,3 +165,60 @@
     /* Variable para el glitch (puedes cambiarla si quieres) */
     --gamer-accent-alt-glitch: var(--gamer-accent-perifericos);
 }
+
+// =========================================================
+// VARIABLES GLOBALES Y TEMAS - _variables.scss
+// Contiene la definición de colores, fuentes, sombras y otros
+// valores reusables a lo largo de todo el sitio.
+// =========================================================
+
+// --- 1. Fuentes ---
+$font-body: 'Open Sans', sans-serif;
+$font-headings: 'Merriweather', serif; // Más clásico para Navidad
+$font-display: 'Great Vibes', cursive; // Para el título principal de Navidad
+
+// --- 2. Tamaños de pantalla ---
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+// --- 3. Sombras (box-shadow) ---
+$shadow-small: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.2);
+$shadow-large: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+// --- 4. Otros ---
+$border-radius: 8px;
+$transition-speed: 0.3s;
+
+/* --- Tema de Festividades (Navidad) --- */
+/* --- TEMA: FESTIVIDADES (NAVIDAD) --- */
+// --- Tema Festividades (Navidad: Brillante y Alegre) ---
+/* --- TEMA: FESTIVIDADES (Brillante y Mágico) --- */
+.theme-festividades {
+    /* Fondo degradado sutil (Blanco a Gris muy claro) */
+    --color-bg: linear-gradient(175deg, #fdfbfb 0%, #ebedee 100%);
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F0F0F0;
+    --color-surface-transparent: rgba(255, 255, 255, 0.7); /* "Liquid Glass" */
+    
+    --color-text: #333333; /* Texto oscuro */
+    --color-text-muted: #666666;
+    --color-text-light: #F8F8F8; /* Para texto sobre el Hero oscuro */
+
+    /* Acentos Navideños */
+    --color-primary: #C1272D; /* Rojo vibrante */
+    --color-primary-dark: #9B1D21;
+    --color-secondary: #FFD700; /* Dorado brillante */
+    --color-secondary-dark: #CCAA00;
+    
+    --festividades-color-red: var(--color-primary);
+    --festividades-color-red-rgb: 193, 39, 45;
+    --festividades-color-gold: var(--color-secondary);
+    --festividades-color-gold-rgb: 255, 215, 0;
+    --festividades-color-silver: #C0C0C0;
+    --festividades-color-silver-rgb: 192, 192, 192;
+
+    /* Imagen personalizable para el Hero */
+    --hero-bg-image: url('../img/festividades/portada.webp'); 
+}

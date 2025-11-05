@@ -1,0 +1,397 @@
+/* =========================================================
+   FESTIVIDADES.SCSS - Versión Definitiva 4.0
+   ========================================================= */
+
+/* --- 1. FONDO DE ÍCONOS ANIMADOS --- */
+@keyframes festive-float {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-150vh) translateX(15vw) rotate(360deg); opacity: 0; }
+}
+
+.festive-icons-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none; /* No interfiere con clics */
+  background: var(--color-bg); /* Aplica el fondo degradado aquí */
+}
+
+.festive-icons-bg span {
+  position: absolute;
+  bottom: -100px;
+  opacity: 0;
+  animation: festive-float 25s linear infinite;
+  font-size: 2rem;
+  
+  &:nth-child(1) { left: 10%; animation-delay: 0s; color: var(--festividades-color-red); content: '❆'; }
+  &:nth-child(2) { left: 20%; animation-delay: 5s; font-size: 1.5rem; color: var(--festividades-color-gold); content: '★'; }
+  &:nth-child(3) { left: 30%; animation-delay: 12s; color: var(--festividades-color-red); content: '🔔'; }
+  &:nth-child(4) { left: 40%; animation-delay: 17s; font-size: 2.5rem; color: var(--festividades-color-gold); content: '❆'; }
+  &:nth-child(5) { left: 50%; animation-delay: 3s; color: var(--festividades-color-red); content: '🎁'; }
+  &:nth-child(6) { left: 60%; animation-delay: 8s; font-size: 1.5rem; color: var(--festividades-color-gold); content: '★'; }
+  &:nth-child(7) { left: 70%; animation-delay: 14s; color: var(--festividades-color-red); content: '🔔'; }
+  &:nth-child(8) { left: 80%; animation-delay: 20s; font-size: 2.5rem; color: var(--festividades-color-gold); content: '❆'; }
+  &:nth-child(9) { left: 90%; animation-delay: 2s; color: var(--festividades-color-red); content: '🎁'; }
+}
+
+/* --- 2. HERO MÁGICO DE NAVIDAD --- */
+.christmas-hero {
+    position: relative;
+    height: 100vh; 
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-light);
+    padding: 0 1.5rem;
+    overflow: hidden;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                      var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .subtitle {
+        font-family: var(--font-headings); 
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--festividades-color-gold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px rgba(var(--festividades-color-gold-rgb), 0.7);
+    }
+
+    h1 {
+        font-family: var(--font-display); 
+        font-size: clamp(4rem, 12vw, 7rem); 
+        font-weight: 400;
+        color: var(--festividades-color-red);
+        text-shadow: 0 0 15px rgba(var(--festividades-color-red-rgb), 0.8),
+                     0 0 30px rgba(var(--festividades-color-red-rgb), 0.5);
+        margin: 0 0 1rem 0;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 1.15rem;
+        color: var(--color-text-light);
+        max-width: 550px;
+        margin: 0 auto 2.5rem auto;
+        line-height: 1.7;
+    }
+
+    p.intro-text {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--festividades-color-gold);
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+.snow-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAKdJREFUOI1jZGRgZEAFksm0/wOJoZhRjBQSZpr/jy7+M8IEs5ieMYz/D7aA8W82u8HBDoKZwQxmgAv/wYxNMMnEqv8Z4f8/s5me/w/FVL6BicmP0DSwYaAAmjMQeBBNGBiZ/jFjNKOBMUBIdA01gJkPYQaS6QZ4QDxYk8mAAmQ1AFgQzQ0sAYsYMnA01gJkPIBl8IADzQEVIMoFqEAJktoYADUiapsmbiKBAAAAAElFTkSuQmCC');
+    animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+/* --- 3. CONTENIDO PRINCIPAL --- */
+main.main-festividades {
+    /* El fondo ya está en .festive-icons-bg */
+}
+
+/* Títulos de Sección */
+.section-title {
+    font-family: var(--font-headings); 
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    text-align: center;
+    color: var(--festividades-color-red);
+    text-shadow: 0 0 5px rgba(var(--festividades-color-red-rgb), 0.3);
+    margin: 0 auto 1rem auto;
+}
+.section-title-gold {
+    @extend .section-title; 
+    color: var(--festividades-color-gold);
+    text-shadow: 0 0 5px rgba(var(--festividades-color-gold-rgb), 0.3);
+}
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Títulos para fondos "liquid glass" */
+.section-title-light {
+    @extend .section-title;
+    color: var(--color-text-light); /* CORRECCIÓN: Texto claro */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+.section-subtitle-light {
+    @extend .section-subtitle;
+    color: rgba(255, 255, 255, 0.9); /* CORRECCIÓN: Texto claro */
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* --- 4. CALENDARIO DE ADVIENTO (Estilo tarjeta pequeña) --- */
+.advent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Tarjetas un poco más grandes */
+    gap: 1.5rem;
+    position: relative; 
+}
+
+.advent-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    z-index: 5;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-small);
+    border: 1px solid rgba(var(--festividades-color-gold-rgb), 0.3);
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .advent-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea arriba */
+        text-align: left; /* Alinea a la izquierda */
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 120px; /* Más altura para la imagen */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: 0;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 0.9rem; /* Un poco más grande */
+            color: var(--color-text-muted);
+            margin: 0.25rem 0 0 0;
+        }
+    }
+}
+
+
+/* --- 5. ESTILOS DE PRODUCTO (TIPO HOGAR) --- */
+.story-block {
+    padding: clamp(4rem, 10vw, 6rem) 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Fondos con "Liquid Glass" */
+.story-image-bg {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+    position: relative;
+
+    /* Overlay "Liquid Glass" */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(255, 255, 255, 0.5); /* Overlay más claro */
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.story-color-bg {
+    /* El fondo ya está en .festive-icons-bg */
+    color: var(--color-text);
+}
+
+/* Tarjeta de Producto (Estilo Hogar) */
+.product-featurette {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; /* Menos gap */
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: var(--shadow-medium);
+        transform: translateY(-5px);
+    }
+
+    .featurette-image {
+        img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+    }
+    .featurette-content {
+        padding: 2rem;
+        
+        h3 { 
+            font-size: 1.8rem; 
+            font-weight: 600; 
+            margin: 0.5rem 0 0.5rem 0; 
+            color: var(--color-text);
+        }
+        .featurette-tag {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--festividades-color-red); 
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.05rem; /* Letra más grande, como pediste */
+            line-height: 1.7;
+            margin: 1rem 0 0 0; 
+            color: var(--color-text-muted);
+        }
+    }
+}
+
+/* Outro */
+.story-outro {
+    background-color: var(--color-surface);
+    text-align: center;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    box-shadow: var(--shadow-small);
+
+    h2 { margin-top: 0; }
+}
+
+
+/* --- 6. MEDIA QUERIES --- */
+@media (min-width: 768px) {
+    .product-featurette {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+        .featurette-content {
+            padding: 2.5rem;
+        }
+    }
+    .product-featurette:nth-child(even) {
+        .featurette-image { order: 2; }
+        .featurette-content { order: 1; }
+    }
+}
+
+
+/* --- 7. ESTILOS DEL MODAL (Quick View) --- */
+.theme-festividades .modal-quick-view {
+    
+    .modal-content {
+        background-color: var(--color-surface-transparent);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(var(--color-text-rgb), 0.1);
+        box-shadow: var(--shadow-large);
+        overflow: hidden;
+        
+        @media (max-width: 768px) {
+            max-height: 85vh;
+            width: 90%;
+        }
+    }
+
+    .modal-image {
+        background-color: rgba(255, 255, 255, 0.2); 
+    }
+
+    .modal-details {
+        padding: 2.5rem;
+        
+        @media (max-width: 768px) {
+            padding: 1.5rem;
+            max-height: 50vh; 
+            overflow-y: auto;
+        }
+
+        .modal-tag {
+            font-weight: 700;
+            color: var(--festividades-color-red);
+            background-color: rgba(var(--festividades-color-red-rgb), 0.1);
+            padding: 0.3em 0.8em;
+            border-radius: 99px;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            color: var(--color-text);
+            font-family: var(--font-headings);
+            font-size: 2.2rem;
+            margin: 1rem 0;
+        }
+
+        p {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .modal-close-btn {
+        &:hover span {
+            background-color: var(--festividades-color-red);
+        }
+    }
+}
