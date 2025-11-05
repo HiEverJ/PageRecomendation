@@ -1,0 +1,6 @@
+# Permite a todos los buscadores rastrear todo el sitio
+User-agent: *
+Allow: /
+
+# Indica la ubicación de tu sitemap
+Sitemap: https://www.recomiendatop.lat/sitemap.xml
