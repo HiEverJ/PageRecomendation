@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (Asumiendo que lo usas en todas las páginas) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -11,26 +11,28 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navidad - Recomienda[Top] | Magia y Regalos</title>
-    <meta name="description" content="Descubre las mejores ideas de regalos y decoraciones para vivir una Navidad mágica e inolvidable.">
+    
+    <title>Festividades - Recomienda[Top] | La Magia de la Navidad en tu Hogar</title>
+    <meta name="description" content="Descubre la selección [Top] de regalos, decoración y todo lo necesario para vivir una Navidad mágica.">
 
+    <!-- Fuentes (Ya cargadas en base.css, pero bueno tenerlas de referencia) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&family=Great+Vibes&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
-    
+    <!-- La fuente 'Great Vibes' la cargará el tema desde _variables.scss, aquí solo es referencia -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/festividades.css"> 
+    <link rel="stylesheet" href="css/festividades.css">
 </head>
-<body class="theme-festividades"> 
+<body class="theme-festividades">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4BPKXL4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-     
-    <div class="festive-icons-bg">
-        <span>❆</span><span>★</span><span>🔔</span><span>❆</span><span>🎁</span>
-        <span>★</span><span>🔔</span><span>❆</span><span>🎁</span>
-    </div>
+
+    <!-- Contenedor para el efecto de nieve (definido en SCSS) -->
+    <div class="snowfall-container"></div>
 
     <header class="main-header glassmorphism">
         <div class="container">
@@ -54,489 +56,641 @@
         </div>
     </header>
 
-    <section class="christmas-hero">
-        <div class="snow-animation"></div> 
-        <div class="hero-content">
-            <p class="subtitle">La temporada de dar</p>
-            <h1>Magia Navideña</h1>
-            <p class="intro-text">
-                ¡Bienvenido a nuestra guía festiva! <br>
-                Aquí encontrarás la inspiración que necesitas para hacer de esta Navidad la más especial.
-            </p>
-            <p>Descubre regalos inolvidables y la decoración que<br>convierte tu hogar en un refugio festivo.</p>
-            <a href="#calendario" class="cta-button primary">Descubrir Regalos</a>
-        </div>
-    </section>
-
     <main class="main-festividades">
 
-        <section id="calendario" class="story-block story-color-bg">
+        <!-- 1. HERO DE PRESENTACIÓN -->
+        <!-- La imagen de fondo para este hero se define en 'festividades.scss' -->
+        <!-- usando la variable --hero-bg-image de '_variables.scss' -->
+        <section class="festive-hero">
+            <div class="hero-content container">
+                <h1>La Magia de Regalar</h1>
+                <p class="subtitle">Bienvenido a nuestra selección exclusiva para una Navidad inolvidable. Encuentra la inspiración para decorar tu hogar y sorprender a los que más quieres.</p>
+            </div>
+        </section>
+
+        <!-- 2. NAVEGACIÓN DE CATEGORÍAS (STICKY) -->
+        <nav class="festive-nav-wrapper" id="festive-nav">
             <div class="container">
-                <h2 class="section-title">Calendario de Regalos Estrella</h2>
-                <p class="section-subtitle">Haz clic en cada regalo para revelar una idea brillante. Los 12 más buscados de la temporada.</p>
+                <ul>
+                    <li>
+                        <a href="#cat-decoracion" class="is-active">
+                            <!-- Icono SVG: Árbol de Navidad -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2zM12 5.89l-1.6 3.23-3.58.52 2.59 2.52-.61 3.56L12 13.6l3.2 1.68-.61-3.56 2.59-2.52-3.58-.52L12 5.89z"></path></svg>
+                            <span>Decoración</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cat-iluminacion">
+                            <!-- Icono SVG: Luces/Estrella -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27l5.18 3.73-1.64-5.82 4.46-3.9-6.18-.54L12 5l-2.82 5.74-6.18.54 4.46 3.9-1.64 5.82L12 17.27z"></path></svg>
+                            <span>Iluminación</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cat-regalos">
+                            <!-- Icono SVG: Regalo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12v10H4V12H2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V12h-2zM12 2C8.69 2 6 4.69 6 8H4c0-4.42 3.58-8 8-8s8 3.58 8 8h-2c0-3.31-2.69-6-6-6zm0 10c-1.1 0-2-.9-2-2 0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2z"></path></svg>
+                            <span>Regalos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cat-cocina">
+                            <!-- Icono SVG: Cena/Utensilios -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.21 1.79 4 4 4v9h2v-9c2.21 0 4-1.79 4-4V2h-2v7zM21 11.5c0-1.5-.92-2.75-2.15-3.3.43-.6.7-1.32.7-2.13 0-1.74-1.41-3.15-3.15-3.15-1.74 0-3.15 1.41-3.15 3.15 0 .81.27 1.53.7 2.13C12.92 8.75 12 10 12 11.5V19h8v-2h-2v-2h2v-2h-2v-1.5h2v-2h-2V11.5z"></path></svg>
+                            <span>Cena Festiva</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 3. CONTENIDO DE PRODUCTOS -->
+        <div class="festive-content container">
+
+            <!-- ========= SECCIÓN 1: DECORACIÓN (8 Productos) ========= -->
+            <!-- Cada sección tiene una clase 'style-' para personalizar su H2 y fondo si es necesario -->
+            <section id="cat-decoracion" class="category-section style-decoracion">
+                <h2>El Corazón de la Fiesta</h2>
+                <p class="section-subtitle">Viste tu hogar para la ocasión. Desde árboles frondosos hasta el último adorno, crea un ambiente que brille por sí mismo.</p>
                 
-                <div class="advent-grid">
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-1.webp"
-                        data-tag="Sonido Premium"
-                        data-title="Auriculares Sony WH-1000XM5"
-                        data-description="Sumérgete en un mundo de sonido puro con la mejor cancelación de ruido. Ligeros, cómodos y con una calidad de audio excepcional para el melómano más exigente."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-1.webp" alt="Auriculares">
-                            <h3>Para el Melómano</h3>
-                            <p>Auriculares Sony WH-1000XM5.</p>
+                <!-- PRODUCTO ESTRELLA (1.1) -->
+                <article class="festive-featurette">
+                    <div class="featurette-image">
+                        <img src="https://placehold.co/600x450/9B1D21/ffffff?text=Árbol+de+Navidad" 
+                             alt="Árbol de Navidad Frondoso - Reemplazar con img/festividades/arbol.webp">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">El Centro de Todo</span>
+                        <h3>Árbol de Navidad Frondoso (2.1m)</h3>
+                        <p>El centro de todas las miradas. Este árbol de 2.1 metros cuenta con tecnología "Feel Real" y más de 1500 puntas, creando una apariencia ultra frondosa y natural. Su base de metal reforzada garantiza estabilidad.</p>
+                        <p><strong>¡El más vendido! Perfecto para salas de estar amplias. Fácil de armar.</strong></p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Divisor para separar el producto estrella de los demás -->
+                <h3 class="grid-divider"><span>Más Decoraciones Mágicas</span></h3>
+
+                <!-- Grid con los productos "Caja de Regalo" (7 productos) -->
+                <div class="product-grid-gifts">
+                    <!-- Producto 1.2 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Set+Esferas" alt="Set de 100 Esferas - img/festividades/esferas.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set de 100 Esferas (Rojo y Dorado)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Viste tu árbol con este completo set de 100 esferas. Incluye múltiples acabados (brillante, mate, glitter) y tamaños, todos en la paleta clásica de rojo y dorado. Hechas de plástico resistente a caídas.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-2.webp"
-                        data-tag="Captura el Momento"
-                        data-title="Cámara Fujifilm Instax Mini 12"
-                        data-description="La magia de lo instantáneo vuelve. Captura recuerdos en el momento y tenlos físicamente en segundos. Diseño retro y fácil de usar, ideal para todas las edades."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-2.webp" alt="Cámara Instantánea">
-                            <h3>Magia Instantánea</h3>
-                            <p>Cámara Fujifilm Instax Mini 12.</p>
+
+                    <!-- Producto 1.3 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Corona+Piñas" alt="Corona de Puerta - img/festividades/corona.webp"></div>
+                            <div class="gift-content">
+                                <h3>Corona de Puerta Natural (50cm)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Da la bienvenida con estilo. Esta corona de 50cm está hecha con ramas artificiales de pino, piñas reales y frutos rojos. Es densa y su aspecto es increíblemente natural, ideal para puertas o chimeneas.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-3.webp"
-                        data-tag="Confort Tech"
-                        data-title="Taza Inteligente Ember Mug 2"
-                        data-description="Mantén tu café o té a la temperatura perfecta durante horas. Controla la temperatura desde tu smartphone. Un lujo para los amantes de las bebidas calientes."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-3.webp" alt="Taza Inteligente">
-                            <h3>Café Siempre Caliente</h3>
-                            <p>Taza inteligente Ember Mug 2.</p>
+
+                    <!-- Producto 1.4 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Villa+Navideña" alt="Villa Navideña Musical - img/festividades/villa.webp"></div>
+                            <div class="gift-content">
+                                <h3>Villa Navideña Musical con Tren</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>La pieza central que tus hijos amarán. Esta villa detallada incluye una pista de patinaje con movimiento, un tren que rodea la villa, luces LED multicolor y 8 melodías navideñas clásicas.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-4.webp"
-                        data-tag="Experiencia Gourmet"
-                        data-title="Kit de Coctelería de 12 Piezas"
-                        data-description="Para el aspirante a mixólogo. Todo lo necesario para crear cócteles de nivel profesional en casa. Elegante, duradero y fácil de limpiar."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-4.webp" alt="Kit de Cócteles">
-                            <h3>Para el Mixólogo</h3>
-                            <p>Kit de coctelería de 12 piezas.</p>
+                    
+                    <!-- Producto 1.5 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Pie+de+Árbol" alt="Pie de Árbol - img/festividades/pie-arbol.webp"></div>
+                            <div class="gift-content">
+                                <h3>Pie de Árbol Tejido (1.2m)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El toque final para tu árbol. Este pie de árbol de 1.2 metros de diámetro tiene un lujoso tejido de punto grueso, similar al de una bufanda, en color blanco hueso. Oculta la base de metal y es el lugar perfecto para los regalos.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-5.webp"
-                        data-tag="Creatividad"
-                        data-title="LEGO Ramo de Flores Silvestres"
-                        data-description="Un regalo original y relajante. Construye un hermoso ramo de flores que nunca se marchitará. Ideal para amantes de LEGO y la decoración floral."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-5.webp" alt="LEGO">
-                            <h3>Para Construir</h3>
-                            <p>LEGO Ramo de Flores Silvestres.</p>
+                    
+                    <!-- Producto 1.6 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Cascanueces" alt="Cascanueces - img/festividades/cascanueces.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set 4 Figuras Cascanueces (30cm)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Un clásico que no pasa de moda. Set de 4 soldados cascanueces de madera, pintados a mano con detalles en rojo, azul, verde y dorado. Con 30cm de altura, son perfectos para repisas o la entrada.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-6.webp"
-                        data-tag="Bienestar"
-                        data-title="Difusor de Aromas Ultrasónico"
-                        data-description="Crea una atmósfera de calma y bienestar con este elegante difusor. Iluminación ambiental y apagado automático. Incluye aceites esenciales."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-6.webp" alt="Difusor">
-                            <h3>Momento Zen</h3>
-                            <p>Difusor de aromas ultrasónico.</p>
+                    
+                    <!-- Producto 1.7 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Tren+Eléctrico" alt="Tren Eléctrico - img/festividades/tren.webp"></div>
+                            <div class="gift-content">
+                                <h3>Tren Eléctrico Clásico para Árbol</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>¡Todos a bordo! Este tren eléctrico clásico está diseñado para rodear la base de tu árbol. Incluye locomotora con luz y sonido de vapor, vagón de carbón y dos vagones de pasajeros. Fácil de ensamblar.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-7.webp"
-                        data-tag="Salud y Deporte"
-                        data-title="Smartwatch (Ej. Garmin o Apple Watch)"
-                        data-description="Un compañero perfecto para el día a día. Monitoriza actividad física, ritmo cardíaco, notificaciones y mucho más. El regalo ideal para quien cuida su salud."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-7.webp" alt="Smartwatch">
-                            <h3>Para el Activo</h3>
-                            <p>Smartwatch (Garmin o Apple).</p>
+
+                    <!-- Producto 1.8 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c1272d/ffffff?text=Medias+Chimenea" alt="Medias - img/festividades/medias.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set 4 Medias Navideñas Tejidas</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
                         </div>
-                    </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-8.webp"
-                        data-tag="Cuidado Personal"
-                        data-title="Kit de Spa y Bombas de Baño"
-                        data-description="Regala un momento de puro relax. Un set de lujo con bombas de baño efervescentes, sales minerales y lociones nutritivas para una experiencia de spa en casa."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-8.webp" alt="Kit de Spa">
-                            <h3>Relax Total</h3>
-                            <p>Kit de spa con sales y bombas.</p>
-                        </div>
-                    </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-9.webp"
-                        data-tag="Música y Estilo"
-                        data-title="Bocina Portátil Marshall Willen"
-                        data-description="Sonido potente en un formato compacto. Con el icónico diseño de Marshall, esta bocina es resistente al agua y perfecta para llevar la fiesta a cualquier lugar."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-9.webp" alt="Bocina Portátil">
-                            <h3>Música en Movimiento</h3>
-                            <p>Bocina portátil Marshall Willen.</p>
-                        </div>
-                    </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-10.webp"
-                        data-tag="Zona Gamer"
-                        data-title="Luces Govee Glide Hexa Pro"
-                        data-description="Transforma cualquier espacio gamer con estos paneles de luz modulares. Crea diseños personalizados y sincroniza con tu música o juegos para una inmersión total."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-10.webp" alt="Luces Govee">
-                            <h3>Ambiente Gamer</h3>
-                            <p>Luces Govee Glide Hexa Pro.</p>
-                        </div>
-                    </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-11.webp"
-                        data-tag="Café de Especialidad"
-                        data-title="Nespresso Vertuo Next"
-                        data-description="Disfruta de la mejor experiencia de café en casa. Prepara una gran variedad de cafés, desde espresso hasta tazas grandes, con solo tocar un botón."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-11.webp" alt="Nespresso">
-                            <h3>Café Perfecto</h3>
-                            <p>Nespresso Vertuo Next.</p>
-                        </div>
-                    </article>
-                    <article class="advent-card" data-modal-trigger
-                        data-image="img/festividades/grid-12.webp"
-                        data-tag="Ambiente Aromatizado"
-                        data-title="Vela de Lujo (Pino Navideño)"
-                        data-description="El aroma de la Navidad capturado en una vela. Con notas de pino fresco, cedro y un toque de especias, crea una atmósfera festiva instantánea en tu hogar."
-                        data-buttons='
-                            <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                        '>
-                        <div class="advent-content">
-                            <img src="img/festividades/grid-12.webp" alt="Vela de Lujo">
-                            <h3>Aroma Festivo</h3>
-                            <p>Vela de lujo (Pino Navideño).</p>
+                        <div class="gift-details">
+                            <p>Listas para rellenar de sorpresas. Set de 4 medias de 45cm de largo, hechas de tejido de punto grueso en color rojo vino y blanco. Tienen un lazo resistente para colgarlas en la chimenea o escaleras.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
                         </div>
                     </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="story-block story-image-bg" style="--bg-image: var(--hero-bg-image);">
-            <div class="container">
-                <h2 class="section-title-light">Regalos Inolvidables</h2>
-                <p class="section-subtitle-light">Esos regalos "wow" que se roban la Navidad. Opciones premium para sorprender a lo grande.</p>
+            <!-- ========= SECCIÓN 2: ILUMINACIÓN (7 Productos) ========= -->
+            <section id="cat-iluminacion" class="category-section style-iluminacion">
                 
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/feat-1.webp"
-                    data-tag="Bienestar"
-                    data-title="Manta con Peso Terapéutica"
-                    data-description="El regalo de un sueño reparador. Esta manta simula un abrazo, reduciendo la ansiedad y promoviendo un descanso profundo. Lujo y confort en uno."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/feat-1.webp" alt="Manta con peso"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Bienestar</span>
-                        <h3>Manta con Peso Terapéutica</h3>
-                        <p>El regalo de un sueño reparador. Esta manta de algodón simula un abrazo, reduciendo la ansiedad y promoviendo un descanso profundo. Lujo y confort en uno.</p>
-                        <p><strong>¡Ideal para las noches frías de invierno!</strong></p>
+                <!-- Bloque de intro con imagen -->
+                <div class="category-intro-wrapper">
+                    <div class="category-intro-text">
+                        <h2>Crea la Atmósfera</h2>
+                        <p class="section-subtitle">La Navidad es luz. Desde destellos cálidos hasta cascadas brillantes, ilumina cada rincón con un toque de magia.</p>
                     </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/feat-2.webp"
-                    data-tag="Tecnología Top"
-                    data-title="Meta Quest 3 (VR)"
-                    data-description="Realidad virtual y mixta como nunca antes. Para el gamer, el entusiasta de la tecnología o el creativo. El regalo más 'wow' de la temporada."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/feat-2.webp" alt="Meta Quest 3"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Tecnología Top</span>
-                        <h3>Meta Quest 3 (VR)</h3>
-                        <p>Realidad virtual y mixta como nunca antes. Para el gamer, el entusiasta de la tecnología o el creativo. El regalo más "wow" de la temporada.</p>
+                    <div class="category-intro-image">
+                        <img src="https://placehold.co/500x350/ffd700/333333?text=Ambiente+Luces" alt="Ambiente con luces navideñas - img/festividades/intro-luces.webp">
                     </div>
-                </article>
-            </div>
-        </section>
-        
-        <section class="story-block story-color-bg">
-            <div class="container">
-                <h2 class="section-title">Decora tu Hogar con Magia</h2>
-                <p class="section-subtitle">Transforma cada rincón en un paraíso invernal con adornos únicos y luces que susurran historias.</p>
+                </div>
 
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/feat-3.webp"
-                    data-tag="Iluminación Moderna"
-                    data-title="Luces Inteligentes Twinkly"
-                    data-description="Controla millones de colores y animaciones desde tu celular. Mapea tu árbol con la cámara y crea diseños de luz personalizados. Magia pura."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/feat-3.webp" alt="Luces Inteligentes Twinkly"></div>
+                <!-- PRODUCTO ESTRELLA (2.1) -->
+                <article class="festive-featurette alt-layout">
+                    <!-- 'alt-layout' invierte el orden (imagen a la derecha) -->
+                    <div class="featurette-image">
+                        <img src="https://placehold.co/600x450/ffd700/333333?text=Cascada+LED" 
+                             alt="Cortina de Luces LED Cascada - img/festividades/luces-cascada.webp">
+                    </div>
                     <div class="featurette-content">
-                        <span class="featurette-tag">Iluminación Moderna</span>
-                        <h3>Luces Inteligentes Twinkly</h3>
-                        <p>No son las luces de tu abuela. Controla millones de colores y animaciones desde tu celular. Mapea tu árbol con la cámara y crea diseños de luz personalizados. Magia pura.</p>
+                        <span class="featurette-tag">Magia Pura</span>
+                        <h3>Cortina de Luces LED Cascada (3x3m)</h3>
+                        <p>Transforma cualquier pared o ventana en una cascada de luz. Esta cortina de 3x3 metros cuenta con 300 LEDs en color blanco cálido. Incluye control remoto con 8 modos de iluminación (parpadeo, atenuación, etc.).</p>
+                        <p><strong>Perfecta para interiores y exteriores techados. Conexión USB.</strong></p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                        </div>
                     </div>
                 </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/feat-4.webp"
-                    data-tag="Tradición y Detalle"
-                    data-title="Villa Navideña Iluminada (Set)"
-                    data-description="Crea un centro de mesa mágico o decora la repisa de la chimenea. Este set de porcelana con luces LED internas es un clásico que nunca falla."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/feat-4.webp" alt="Villa Navideña de Porcelana"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Tradición y Detalle</span>
-                        <h3>Villa Navideña Iluminada (Set)</h3>
-                        <p>Crea un centro de mesa mágico o decora la repisa de la chimenea. Este set de porcelana con luces LED internas es un clásico que nunca falla.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-1.webp"
-                    data-tag="Mesa Festiva"
-                    data-title="Vajilla Festiva de Porcelana (16 Pzs)"
-                    data-description="Eleva tu cena de Nochebuena con esta vajilla que combina tradición y modernidad. Apta para lavavajillas, es tan práctica como hermosa."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-1.webp" alt="Vajilla Navideña"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Mesa Festiva</span>
-                        <h3>Vajilla Festiva de Porcelana</h3>
-                        <p>Set de 16 piezas con sutiles detalles dorados y motivo de acebo. Elegante y duradera para 4 personas.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-2.webp"
-                    data-tag="Brindis"
-                    data-title="Set de 4 Copas de Vino de Cristal"
-                    data-description="Hechas en cristal sin plomo (tipo Riedel o similar), estas copas tienen el balance perfecto entre delicadeza y resistencia. El regalo ideal para el anfitrión."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-2.webp" alt="Set de Copas"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Brindis</span>
-                        <h3>Set de 4 Copas de Vino de Cristal</h3>
-                        <p>El brindis merece un cristal de calidad. Diseño atemporal que resalta el sabor del vino.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
 
-        <section class="story-block story-image-bg" style="--bg-image: url('img/festividades/scroll-3.webp');">
-            <div class="container">
-                <h2 class="section-title-light">Ambiente y Detalles Festivos</h2>
-                <p class="section-subtitle-light">Esos extras que completan la atmósfera navideña.</p>
+                <h3 class="grid-divider"><span>Más Destellos</span></h3>
 
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-3.webp"
-                    data-tag="Para el Anfitrión"
-                    data-title="Abridor de Vino Eléctrico"
-                    data-description="Se acabaron los corchos rotos. Este abridor eléctrico recargable es elegante, rápido y un iniciador de conversación infalible en cualquier cena."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-3.webp" alt="Abridor de vino eléctrico"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Para el Anfitrión</span>
-                        <h3>Abridor de Vino Eléctrico</h3>
-                        <p>Abre cualquier botella en segundos sin esfuerzo. Incluye cortador de cápsulas y base de carga.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-4.webp"
-                    data-tag="Textiles"
-                    data-title="Camino de Mesa de Lino Bordado"
-                    data-description="Viste tu mesa para la ocasión. Este camino de mesa de alta calidad añade textura y un toque festivo sin sobrecargar la decoración."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-4.webp" alt="Camino de Mesa"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Textiles</span>
-                        <h3>Camino de Mesa de Lino Bordado</h3>
-                        <p>El toque final para tu mesa. Diseño de copos de nieve en hilo plateado sobre lino natural.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-5.webp"
-                    data-tag="Gourmet"
-                    data-title="Libro de Repostería Navideña"
-                    data-description="Un tesoro de recetas clásicas y modernas. Perfecto para una tarde de horneado en familia, creando aromas y recuerdos inolvidables."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-5.webp" alt="Libro de Recetas"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Gourmet</span>
-                        <h3>Libro de Repostería Navideña</h3>
-                        <p>Inspírate con galletas, pasteles y postres para compartir (o no).</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-6.webp"
-                    data-tag="Exteriores"
-                    data-title="Proyector de Luces para Exteriores"
-                    data-description="Olvida las escaleras y los enredos. Este proyector resistente al agua cubre toda tu casa con una mágica nevada de luz. Incluye control remoto."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-6.webp" alt="Proyector de luces"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Exteriores</span>
-                        <h3>Proyector de Luces</h3>
-                        <p>Decora tu fachada en 5 minutos. Patrones de copos de nieve y estrellas en movimiento.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-7.webp"
-                    data-tag="Tradición"
-                    data-title="Set de 4 Botas de Lujo para Chimenea"
-                    data-description="Un set coordinado de alta calidad que se ve increíble colgado en la chimenea o en la pared. Amplias y resistentes para todos los regalos."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-7.webp" alt="Botas Navideñas"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Tradición</span>
-                        <h3>Set de 4 Botas de Lujo</h3>
-                        <p>Tejido de punto grueso y personalizables. El toque clásico para esperar a Santa.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-8.webp"
-                    data-tag="Gourmet"
-                    data-title="Set de Chocolate Caliente Gourmet"
-                    data-description="Nada dice 'Navidad' como una taza de chocolate caliente. Este set gourmet es perfecto para regalar o para disfrutar en una tarde fría viendo películas."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-8.webp" alt="Chocolate Caliente"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Gourmet</span>
-                        <h3>Set de Chocolate Caliente</h3>
-                        <p>El combustible oficial de la temporada. Incluye chocolate oscuro, con menta y mini malvaviscos.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-9.webp"
-                    data-tag="Decoración Puerta"
-                    data-title="Corona de Pino Realista para Puerta"
-                    data-description="Da una primera impresión mágica. Esta corona frondosa y pre-iluminada (a baterías) se ve increíblemente real y añade un toque de elegancia instantáneo a tu puerta."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-9.webp" alt="Corona Navideña"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Decoración Puerta</span>
-                        <h3>Corona de Pino Realista</h3>
-                        <p>La bienvenida perfecta. Corona de 60cm con piñas reales, bayas rojas y luces LED.</p>
-                    </div>
-                </article>
-                <article class="product-featurette" data-modal-trigger
-                    data-image="img/festividades/list-10.webp"
-                    data-tag="Ambiente"
-                    data-title="Set de Velas Aromáticas (3 Pack)"
-                    data-description="Enciende el espíritu navideño con este set de velas de cera de soya. Larga duración y aromas que llenan la habitación de calidez y nostalgia."
-                    data-buttons='
-                        <a href="#" class="cta-button primary" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
-                        <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
-                    '>
-                    <div class="featurette-image"><img src="img/festividades/list-10.webp" alt="Set de Velas"></div>
-                    <div class="featurette-content">
-                        <span class="featurette-tag">Ambiente</span>
-                        <h3>Set de Velas Aromáticas</h3>
-                        <p>Aromas de Pino, Canela y Manzana Especiada. El trío perfecto para ambientar tu hogar.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+                <!-- Grid "Caja de Regalo" (6 productos) -->
+                <div class="product-grid-gifts">
+                    <!-- Producto 2.2 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Serie+Clásica" alt="Serie 1000 Luces - img/festividades/serie-1000.webp"></div>
+                            <div class="gift-content">
+                                <h3>Serie LED Clásica (1000 luces, 50m)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>La serie que no puede faltar. 50 metros de cable verde oscuro con 1000 micro-LEDs de color blanco cálido. Suficiente para rodear un árbol de 2.5 metros o decorar toda la fachada de tu casa.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <section class="story-block story-outro">
-           <div class="container">
-                <h2 class="section-title-gold">¡Felices Fiestas!</h2>
-                <p>Que tu hogar se llene de luz, risas y momentos inolvidables. Sigue explorando para más ideas.</p>
-                <a href="index.html" class="cta-button primary">Volver al Inicio</a>
-           </div>
-        </section>
+                    <!-- Producto 2.3 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Velas+LED" alt="Velas LED Cera Real - img/festividades/velas-led.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set 12 Velas LED de Cera Real</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>La calidez de las velas sin el peligro del fuego. Este set de 12 velas está hecho de cera real y tiene una "llama" parpadeante con tecnología 3D que parece auténtica. Incluye control remoto y temporizador.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2.4 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Proyector" alt="Proyector Copos de Nieve - img/festividades/proyector.webp"></div>
+                            <div class="gift-content">
+                                <h3>Proyector Láser de Copos de Nieve</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Crea una tormenta de nieve mágica en tu fachada. Este proyector resistente al agua (IP65) cubre hasta 50m² con un patrón dinámico de copos de nieve blancos en movimiento. Incluye estaca para jardín.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 2.5 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Red+Luces" alt="Red de Luces - img/festividades/luces-red.webp"></div>
+                            <div class="gift-content">
+                                <h3>Red de Luces LED para Arbustos (2x3m)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>La forma más fácil de decorar arbustos y setos. Esta red de 2x3 metros se instala en segundos y proporciona una cobertura de luz uniforme. Con 8 modos de iluminación y resistente al agua.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2.6 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Inflable+Santa" alt="Inflable Santa - img/festividades/inflable.webp"></div>
+                            <div class="gift-content">
+                                <h3>Inflable de Santa en Trineo (2.5m)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Una decoración espectacular para tu jardín. Este inflable de 2.5 metros de largo muestra a Santa en su trineo con dos renos. Se infla automáticamente en un minuto y tiene luces LED internas.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2.7 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/ffd700/333333?text=Carámbanos" alt="Luces Carámbanos - img/festividades/luces-icicle.webp"></div>
+                            <div class="gift-content">
+                                <h3>Luces de Carámbano (10m)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El look clásico para el tejado. Tira de 10 metros de luces que simulan ser carámbanos de hielo. Conecta hasta 3 series juntas. Efecto "goteo" y luz blanca fría para un look invernal.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- ========= SECCIÓN 3: REGALOS (8 Productos) ========= -->
+            <section id="cat-regalos" class="category-section style-regalos">
+                <h2>El Regalo Perfecto</h2>
+                <p class="section-subtitle">Encuentra ese detalle único. Ideas para sorprender, consentir y compartir alegría con todos en tu lista.</p>
+
+                <!-- PRODUCTO ESTRELLA (3.1) -->
+                <article class="festive-featurette">
+                    <div class="featurette-image">
+                        <img src="https://placehold.co/600x450/c0c0c0/333333?text=Manta+Tejida" 
+                             alt="Manta Tejida de Punto Grueso - img/festividades/manta-chunky.webp">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Puro Confort</span>
+                        <h3>Manta Tejida de Punto Grueso (Chunky)</h3>
+                        <p>El regalo de confort definitivo. Esta manta "chunky" está hecha a mano con lana merino sintética hipoalergénica. Es ultra suave, cálida y un acento de decoración lujoso para cualquier sofá o cama.</p>
+                        <p><strong>¡Un abrazo en forma de regalo! Disponible en 5 colores.</strong></p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 class="grid-divider"><span>Detalles para Sorprender</span></h3>
+                
+                <!-- Grid "Caja de Regalo" (7 productos) -->
+                <div class="product-grid-gifts">
+                    <!-- Producto 3.2 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Taza+Calentador" alt="Set de Taza con Calentador - img/festividades/taza-calentador.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set de Taza con Calentador Eléctrico</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Para el amante del café o té. Este set incluye una elegante taza de cerámica y una base eléctrica que mantiene la bebida a una temperatura perfecta (55°C) durante horas. Ideal para la oficina en casa.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3.3 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Kit+Barba" alt="Kit de Cuidado de Barba - img/festividades/kit-barba.webp"></div>
+                            <div class="gift-content">
+                                <h3>Kit Premium de Cuidado de Barba</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Un kit completo en estuche de lujo. Incluye shampoo para barba, aceite de sándalo, bálsamo, cepillo de cerdas de jabalí, peine de madera y tijeras de acero. Todo para una barba impecable.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3.4 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Difusor+Aromas" alt="Difusor de Aromas - img/festividades/difusor.webp"></div>
+                            <div class="gift-content">
+                                <h3>Humidificador Difusor de Aromas</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <!-- Esta es la descripción que me diste de ejemplo, adaptada -->
+                            <p>Más que un simple humidificador, es una pieza central para el bienestar. Este difusor ultrasónico combina un elegante diseño tipo madera con la funcionalidad que necesitas: apagado automático y luz nocturna.</p>
+                            <p><strong>¡Aprovecha ahora! Añade tus esencias favoritas y combate el estrés.</strong></p>
+                            <div class="button-group">
+                                <a href="https://mercadolibre.com/sec/1BQcwSe" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 3.5 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Bata+de+Baño" alt="Bata de Baño - img/festividades/bata.webp"></div>
+                            <div class="gift-content">
+                                <h3>Bata de Baño tipo Hotel (Unisex)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Regala una experiencia de spa. Esta bata de baño unisex está hecha de 100% algodón turco de alta densidad, ofreciendo máxima absorción y una suavidad incomparable. El lujo de un hotel 5 estrellas en casa.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3.6 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Bombas+Baño" alt="Bombas de Baño - img/festividades/bombas-baño.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set de 12 Bombas de Baño Artesanales</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Un regalo para la relajación. Set de 12 bombas de baño efervescentes, hechas con manteca de karité y aceites esenciales. Cada una tiene un aroma diferente (lavanda, menta, naranja, etc.).</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3.7 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Audífonos" alt="Audífonos - img/festividades/audifonos.webp"></div>
+                            <div class="gift-content">
+                                <h3>Audífonos Inalámbricos (Cancelación de Ruido)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El regalo tech perfecto. Audífonos Bluetooth 5.3 con cancelación activa de ruido (ANC). Batería de hasta 40 horas de reproducción y estuche de carga rápida USB-C. Sonido inmersivo y diseño ergonómico.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 3.8 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/c0c0c0/333333?text=Smartwatch" alt="Smartwatch - img/festividades/smartwatch.webp"></div>
+                            <div class="gift-content">
+                                <h3>Smartwatch Deportivo (Monitor de Salud)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Para empezar el año con todo. Reloj inteligente con pantalla AMOLED, monitor de ritmo cardíaco 24/7, oxímetro (SpO2), y más de 100 modos deportivos. Batería de 14 días y resistencia al agua 5ATM.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- ========= SECCIÓN 4: CENA FESTIVA (7 Productos) ========= -->
+            <section id="cat-cocina" class="category-section style-cocina">
+                
+                <!-- Intro con imagen y alineación derecha -->
+                <div class="category-intro-wrapper right-aligned">
+                    <div class="category-intro-text">
+                        <h2>El Sabor del Encuentro</h2>
+                        <p class="section-subtitle">La cena navideña es un evento. Equípate con utensilios elegantes y prácticos que hagan de la preparación y el servicio un verdadero placer.</p>
+                    </div>
+                    <div class="category-intro-image">
+                        <img src="https://placehold.co/500x350/9B1D21/ffffff?text=Cena+Navideña" alt="Mesa de cena navideña - img/festividades/intro-cena.webp">
+                    </div>
+                </div>
+                
+                <!-- PRODUCTO ESTRELLA (4.1) -->
+                <article class="festive-featurette">
+                    <div class="featurette-image">
+                        <img src="https://placehold.co/600x450/9B1D21/ffffff?text=Vajilla+16pzs" 
+                             alt="Vajilla de Cerámica Roja - img/festividades/vajilla.webp">
+                    </div>
+                    <div class="featurette-content">
+                        <span class="featurette-tag">Viste tu Mesa</span>
+                        <h3>Vajilla de Cerámica Esmaltada (16 pzs)</h3>
+                        <p>Viste tu mesa con elegancia. Este set para 4 personas incluye platos trinche, platos de ensalada, tazones y tazas en un impactante color rojo esmaltado. Apta para lavavajillas y microondas.</p>
+                        <p><strong>¡El color de la Navidad! Un toque de color y calidad para tu cena.</strong></p>
+                        <div class="button-group">
+                            <a href="#" class="cta-button secondary" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 class="grid-divider"><span>Esenciales de la Mesa</span></h3>
+                
+                <!-- Grid "Caja de Regalo" (6 productos) -->
+                <div class="product-grid-gifts">
+                    <!-- Producto 4.2 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Cubertería+Dorada" alt="Cubertería Dorada - img/festividades/cuberteria.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set de Cubertería Dorada (24 pzs)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El toque de lujo que tu mesa necesita. Set de 24 piezas (para 6 personas) en acero inoxidable con acabado dorado mate. Diseño minimalista y elegante que combina con todo.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4.3 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Copas+Vino" alt="Copas de Vino Borde Dorado - img/festividades/copas.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set 4 Copas de Vino de Cristal (Borde Dorado)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Brinda con estilo. Set de 4 copas de cristal de bohemia con un delicado borde dorado. Su diseño es atemporal y añade un toque de celebración instantáneo a cualquier bebida.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4.4 -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Tabla+Quesos" alt="Tabla de Quesos y Embutidos - img/festividades/tabla-quesos.webp"></div>
+                            <div class="gift-content">
+                                <h3>Tabla de Quesos Giratoria (con cuchillos)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Ideal para las botanas antes de la cena. Esta tabla de bambú tiene un diseño giratorio inteligente que revela un set completo de cuchillos y tenedores para quesos. Perfecta para presentar.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 4.5 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Moldes+Galletas" alt="Moldes Galletas - img/festividades/moldes-galletas.webp"></div>
+                            <div class="gift-content">
+                                <h3>Set 12 Cortadores de Galletas Navideños</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>Para hornear recuerdos. Set de 12 cortadores de acero inoxidable con formas clásicas: jengibre, copo de nieve, árbol, bastón de dulce, etc. Vienen en una lata de metal para fácil guardado.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en AliExpress</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 4.6 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Delantal" alt="Delantal - img/festividades/delantal.webp"></div>
+                            <div class="gift-content">
+                                <h3>Delantal de Cocina Navideño (con gorro)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El uniforme oficial del chef de Navidad. Este set de delantal y gorro de chef tiene un divertido diseño de "Ayudante de Santa". Hecho de lino de algodón grueso, es resistente y festivo.</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Tienda</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 4.7 (Nuevo) -->
+                    <article class="product-card-gift" data-gift-card>
+                        <div class="gift-preview">
+                            <div class="gift-image"><img src="https://placehold.co/400x400/9B1D21/ffffff?text=Batidora" alt="Batidora - img/festividades/batidora.webp"></div>
+                            <div class="gift-content">
+                                <h3>Batidora de Pedestal (Roja)</h3>
+                                <span class="gift-toggle-btn">Ver Detalles ▼</span>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <p>El regalo soñado para el repostero de la casa. Batidora de pedestal en color rojo festivo, con tazón de acero inoxidable de 5 litros, 10 velocidades y 3 accesorios (globo, pala, gancho).</p>
+                            <div class="button-group">
+                                <a href="#" class="cta-button secondary small" target="_blank" rel="noopener sponsored">Ver en Amazon</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div> <!-- .festive-content -->
+
     </main>
-
-    <div id="product-quick-view" class="modal-quick-view">
-        <div class="modal-backdrop"></div>
-        <div class="modal-content">
-            <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar">
-                <span></span>
-                <span></span>
-            </button>
-            <div class="modal-image">
-                <img src="" alt="Producto ampliado" id="modal-image">
-            </div>
-            <div class="modal-details">
-                <span class="modal-tag" id="modal-tag">Categoría</span>
-                <h2 id="modal-title">Nombre del Producto</h2>
-                <p id="modal-description">Descripción completa...</p>
-                <div class="modal-buttons" id="modal-buttons">
-                    </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="main-footer">
         <div class="container">
@@ -547,11 +701,13 @@
                 <a href="#">Contacto</a>
             </div>
             <p>&copy; 2025 Recomienda[Top]. Todos los derechos reservados.</p>
-            <p class="affiliate-disclaimer">Como Afiliado de Amazon, gano dinero con las compras que califican.</p>
+            <p class="affiliate-disclaimer">Como Afiliado de Amazon y otros programas, gano dinero con las compras que califican.</p>
         </div>
     </footer>
 
-    <script src="js/main.js" defer></script> 
-    <script src="js/festividades.js" defer></script> 
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/festividades.js" defer></script>
+
 </body>
 </html>

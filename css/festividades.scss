@@ -1,397 +1,566 @@
-/* =========================================================
-   FESTIVIDADES.SCSS - Versión Definitiva 4.0
-   ========================================================= */
+@import 'variables';
 
-/* --- 1. FONDO DE ÍCONOS ANIMADOS --- */
-@keyframes festive-float {
-  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-  20% { opacity: 0.5; }
-  80% { opacity: 0.5; }
-  100% { transform: translateY(-150vh) translateX(15vw) rotate(360deg); opacity: 0; }
+/* ---
+   ESTILOS DE FESTIVIDADES (NAVIDAD)
+   ---
+   Este archivo contiene los estilos para:
+   1. Efecto de Nieve
+   2. Hero Principal (con imagen de fondo de variables.scss)
+   3. Navegación Sticky de Categorías
+   4. Presentaciones de Categoría ÚNICAS (.style-decoracion, .style-iluminacion, etc.)
+   5. Introducción de Categoría con Imagen (.category-intro-wrapper)
+   6. Estilo de Producto 1: Featurette (.festive-featurette)
+   7. Estilo de Producto 2: Tarjeta-Regalo (.product-card-gift)
+--- */
+
+/* --- 1. General & Efecto de Nieve --- */
+body.theme-festividades {
+  /* Fondo de _variables.scss */
+  background: var(--color-bg); 
 }
 
-.festive-icons-bg {
+.snowfall-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  pointer-events: none;
+  z-index: 9990; /* Alto, pero debajo del header (1000) y modal */
   overflow: hidden;
-  pointer-events: none; /* No interfiere con clics */
-  background: var(--color-bg); /* Aplica el fondo degradado aquí */
-}
-
-.festive-icons-bg span {
-  position: absolute;
-  bottom: -100px;
-  opacity: 0;
-  animation: festive-float 25s linear infinite;
-  font-size: 2rem;
   
-  &:nth-child(1) { left: 10%; animation-delay: 0s; color: var(--festividades-color-red); content: '❆'; }
-  &:nth-child(2) { left: 20%; animation-delay: 5s; font-size: 1.5rem; color: var(--festividades-color-gold); content: '★'; }
-  &:nth-child(3) { left: 30%; animation-delay: 12s; color: var(--festividades-color-red); content: '🔔'; }
-  &:nth-child(4) { left: 40%; animation-delay: 17s; font-size: 2.5rem; color: var(--festividades-color-gold); content: '❆'; }
-  &:nth-child(5) { left: 50%; animation-delay: 3s; color: var(--festividades-color-red); content: '🎁'; }
-  &:nth-child(6) { left: 60%; animation-delay: 8s; font-size: 1.5rem; color: var(--festividades-color-gold); content: '★'; }
-  &:nth-child(7) { left: 70%; animation-delay: 14s; color: var(--festividades-color-red); content: '🔔'; }
-  &:nth-child(8) { left: 80%; animation-delay: 20s; font-size: 2.5rem; color: var(--festividades-color-gold); content: '❆'; }
-  &:nth-child(9) { left: 90%; animation-delay: 2s; color: var(--festividades-color-red); content: '🎁'; }
+  /* Usamos radial-gradients para crear los copos */
+  --snow-color: rgba(255, 255, 255, 0.7);
+  background-image: 
+    radial-gradient(circle, var(--snow-color) 1px, transparent 1px),
+    radial-gradient(circle, var(--snow-color) 2px, transparent 2px);
+  background-size: 
+    400px 400px, /* Copos pequeños */
+    500px 500px; /* Copos medianos */
+  background-position: 0 0, 0 0;
+  background-repeat: repeat;
+  
+  animation: snowfall 15s linear infinite;
 }
 
-/* --- 2. HERO MÁGICO DE NAVIDAD --- */
-.christmas-hero {
+@keyframes snowfall {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    /* Mover verticalmente a diferentes velocidades */
+    background-position: 0px 600px, 0px 400px;
+  }
+}
+
+/* --- 2. Hero Principal --- */
+.festive-hero {
+  /* ¡AQUÍ SE USA TU IMAGEN DE FONDO! */
+  /* Esta variable --hero-bg-image la defines en _variables.scss */
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), var(--hero-bg-image);
+  background-size: cover;
+  background-position: center 60%; /* Ajusta el centro de tu imagen */
+  background-attachment: fixed;
+  padding: clamp(6rem, 15vw, 10rem) 0;
+  text-align: center;
+  position: relative;
+  margin-top: var(--header-height);
+  color: var(--color-text-light);
+
+  /* Máscara para difuminar el borde inferior */
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  
+  .hero-content {
     position: relative;
-    height: 100vh; 
-    min-height: 600px;
+    z-index: 10;
+  }
+
+  h1 {
+    /* Fuente festiva de _variables.scss */
+    font-family: var(--font-display); 
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 400;
+    /* Color dorado de _variables.scss */
+    color: var(--festividades-color-gold); 
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-family: var(--font-headings);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.9;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  }
+}
+
+/* --- 3. Navegación Sticky de Categorías --- */
+.festive-nav-wrapper {
+  position: sticky;
+  /* Se pega justo debajo del header */
+  top: var(--header-height); 
+  z-index: 500;
+  background-color: var(--color-surface-transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* Usamos el color-rgb de _variables.scss para la transparencia */
+  border-bottom: 1px solid rgba(var(--festividades-color-red-rgb), 0.2);
+  box-shadow: var(--shadow-small);
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+    color: var(--color-text-muted);
+    border-bottom: 3px solid transparent;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      transition: all var(--transition-speed);
+    }
+
+    span {
+      font-family: var(--font-headings);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    &:hover {
+      color: var(--color-primary); /* Rojo al pasar el mouse */
+      background-color: rgba(var(--festividades-color-red-rgb), 0.05);
+    }
+
+    &.is-active {
+      color: var(--color-primary);
+      /* Una línea roja elegante para el item activo */
+      border-bottom-color: var(--color-primary); 
+    }
+  }
+}
+
+/* --- 4. Layout General del Contenido --- */
+.festive-content {
+  padding-top: 4rem;
+}
+
+.category-section {
+  padding-bottom: 6rem;
+  /* Espacio para el ancla del sticky nav */
+  padding-top: 2rem; 
+  margin-top: -2rem; /* Compensación del padding */
+
+  /* Estilo base para el subtítulo */
+  .section-subtitle {
+    font-family: var(--font-headings);
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* Divisor de productos */
+  .grid-divider {
+    font-family: var(--font-display); /* Fuente festiva */
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 400;
     text-align: center;
-    color: var(--color-text-light);
-    padding: 0 1.5rem;
-    overflow: hidden;
+    margin: 5rem 0 2rem 0;
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
-                      var(--hero-bg-image);
-    background-size: cover;
-    background-position: center;
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
+    /* Líneas decorativas */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    &::before, &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: rgba(var(--festividades-color-red-rgb), 0.2);
     }
+  }
+}
 
-    .subtitle {
-        font-family: var(--font-headings); 
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--festividades-color-gold);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 0 10px rgba(var(--festividades-color-gold-rgb), 0.7);
+/* --- 5. Presentaciones de Categoría ÚNICAS --- */
+
+/* Estilo 1: Decoración (Centrado Clásico) */
+.category-section.style-decoracion {
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 400;
+    color: var(--color-primary); /* Rojo */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Estilo 2: Iluminación (Intro con Imagen) */
+.category-section.style-iluminacion {
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 400;
+    /* Dorado con "brillo" */
+    color: var(--festividades-color-gold); 
+    text-shadow: 0 0 15px rgba(var(--festividades-color-gold-rgb), 0.5);
+    margin-bottom: 1rem;
+  }
+}
+
+/* Estilo 3: Regalos (Estilo "Listón") */
+.category-section.style-regalos {
+  /* Centramos el título */
+  text-align: center; 
+  
+  h2 {
+    font-family: var(--font-headings); /* Usamos la de headings para que quepa */
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text-light);
+    background-color: var(--color-primary); /* Fondo Rojo */
+    
+    /* Magia de listón */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    padding: 1rem 2.5rem;
+    position: relative;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    /* "Colas" del listón */
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      /* Color del "corte" (debe ser el fondo de la página) */
+      border-top-color: var(--color-bg); 
+      border-bottom-color: var(--color-bg);
     }
+    /* Cola izquierda */
+    &::before {
+      left: 0;
+      border-width: 1.2em 0 1.2em 1.2em; /* 1.2em es la mitad del padding */
+      border-left-color: var(--color-bg);
+      transform: translateY(-50%) translateX(-100%);
+    }
+    /* Cola derecha */
+    &::after {
+      right: 0;
+      border-width: 1.2em 1.2em 1.2em 0;
+      border-right-color: var(--color-bg);
+      transform: translateY(-50%) translateX(100%);
+    }
+  }
+  .section-subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem; /* Espacio extra por el listón */
+  }
+}
 
-    h1 {
-        font-family: var(--font-display); 
-        font-size: clamp(4rem, 12vw, 7rem); 
-        font-weight: 400;
-        color: var(--festividades-color-red);
-        text-shadow: 0 0 15px rgba(var(--festividades-color-red-rgb), 0.8),
-                     0 0 30px rgba(var(--festividades-color-red-rgb), 0.5);
-        margin: 0 0 1rem 0;
-        line-height: 1.1;
+/* Estilo 4: Cocina (Bordes Dobles) */
+.category-section.style-cocina {
+  h2 {
+    font-family: var(--font-headings);
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+    /* Doble borde elegante */
+    border-top: 1px solid rgba(var(--festividades-color-red-rgb), 0.3);
+    border-bottom: 1px solid rgba(var(--festividades-color-red-rgb), 0.3);
+    margin-bottom: 1rem;
+  }
+}
+
+/* --- 5B. Intro de Categoría con Imagen --- */
+.category-intro-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: apilado */
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  .category-intro-image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-medium);
+      object-fit: cover;
+    }
+  }
+}
+
+/* --- 6. Estilo de Producto 1: Featurette --- */
+/* (Basado en el de 'hogar.scss' pero adaptado) */
+.festive-featurette {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: apilado */
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  
+  .featurette-image {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-speed);
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-large);
+    }
+  }
+
+  .featurette-content {
+    h3 {
+      font-family: var(--font-headings);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+    
+    .featurette-tag {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--festividades-color-gold); /* Acento Dorado */
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     p {
-        font-size: 1.15rem;
-        color: var(--color-text-light);
-        max-width: 550px;
-        margin: 0 auto 2.5rem auto;
-        line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      margin: 1rem 0 1.5rem 0;
+
+      strong {
+        color: var(--color-text);
+        font-weight: 700;
+      }
     }
+  }
 
-    p.intro-text {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: var(--festividades-color-gold);
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
-    }
-}
-
-.snow-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAKdJREFUOI1jZGRgZEAFksm0/wOJoZhRjBQSZpr/jy7+M8IEs5ieMYz/D7aA8W82u8HBDoKZwQxmgAv/wYxNMMnEqv8Z4f8/s5me/w/FVL6BicmP0DSwYaAAmjMQeBBNGBiZ/jFjNKOBMUBIdA01gJkPYQaS6QZ4QDxYk8mAAmQ1AFgQzQ0sAYsYMnA01gJkPIBl8IADzQEVIMoFqEAJktoYADUiapsmbiKBAAAAAElFTkSuQmCC');
-    animation: snow 20s linear infinite;
-}
-
-@keyframes snow {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 1000px; }
-}
-
-/* --- 3. CONTENIDO PRINCIPAL --- */
-main.main-festividades {
-    /* El fondo ya está en .festive-icons-bg */
-}
-
-/* Títulos de Sección */
-.section-title {
-    font-family: var(--font-headings); 
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    text-align: center;
-    color: var(--festividades-color-red);
-    text-shadow: 0 0 5px rgba(var(--festividades-color-red-rgb), 0.3);
-    margin: 0 auto 1rem auto;
-}
-.section-title-gold {
-    @extend .section-title; 
-    color: var(--festividades-color-gold);
-    text-shadow: 0 0 5px rgba(var(--festividades-color-gold-rgb), 0.3);
-}
-.section-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-}
-
-/* Títulos para fondos "liquid glass" */
-.section-title-light {
-    @extend .section-title;
-    color: var(--color-text-light); /* CORRECCIÓN: Texto claro */
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
-.section-subtitle-light {
-    @extend .section-subtitle;
-    color: rgba(255, 255, 255, 0.9); /* CORRECCIÓN: Texto claro */
-    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 }
 
 
-/* --- 4. CALENDARIO DE ADVIENTO (Estilo tarjeta pequeña) --- */
-.advent-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Tarjetas un poco más grandes */
-    gap: 1.5rem;
-    position: relative; 
+/* --- 7. Estilo de Producto 2: Tarjeta-Regalo (Acordeón) --- */
+.product-grid-gifts {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: 1 columna */
+  gap: 1.5rem;
 }
 
-.advent-card {
-    position: relative;
-    border-radius: var(--border-radius);
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+.product-card-gift {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  border: 2px solid transparent; /* Borde para el estado 'open' */
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+
+  /* La parte visible */
+  .gift-preview {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
-    z-index: 5;
-    background-color: var(--color-surface);
-    box-shadow: var(--shadow-small);
-    border: 1px solid rgba(var(--festividades-color-gold-rgb), 0.3);
-    overflow: hidden;
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-medium);
-    }
+    .gift-image {
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: var(--color-bg);
+      margin-bottom: 1rem;
 
-    .advent-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; /* Alinea arriba */
-        text-align: left; /* Alinea a la izquierda */
-        padding: 1rem;
+      img {
         width: 100%;
         height: 100%;
-
-        img {
-            width: 100%;
-            height: 120px; /* Más altura para la imagen */
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--color-text);
-            margin: 0;
-            line-height: 1.3;
-        }
-        p {
-            font-size: 0.9rem; /* Un poco más grande */
-            color: var(--color-text-muted);
-            margin: 0.25rem 0 0 0;
-        }
-    }
-}
-
-
-/* --- 5. ESTILOS DE PRODUCTO (TIPO HOGAR) --- */
-.story-block {
-    padding: clamp(4rem, 10vw, 6rem) 0;
-    position: relative;
-    overflow: hidden; 
-}
-
-/* Fondos con "Liquid Glass" */
-.story-image-bg {
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; 
-    position: relative;
-
-    /* Overlay "Liquid Glass" */
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-color: rgba(255, 255, 255, 0.5); /* Overlay más claro */
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        z-index: 1;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
     }
 
-    .container {
-        position: relative;
-        z-index: 2;
+    .gift-content {
+      h3 {
+        font-family: var(--font-headings);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--color-text);
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+        /* Alto mínimo para 2 líneas */
+        min-height: calc(1.15rem * 1.4 * 2); 
+      }
+
+      .gift-toggle-btn {
+        font-family: var(--font-headings);
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-primary); /* Rojo */
+        cursor: pointer;
+        transition: color var(--transition-speed);
+        
+        &:hover {
+          color: var(--festividades-color-red-dark);
+        }
+      }
     }
-}
+  }
 
-.story-color-bg {
-    /* El fondo ya está en .festive-icons-bg */
-    color: var(--color-text);
-}
-
-/* Tarjeta de Producto (Estilo Hogar) */
-.product-featurette {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem; /* Menos gap */
-    align-items: center;
-    margin-bottom: 3rem;
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-small);
+  /* Los detalles ocultos */
+  .gift-details {
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 0 1.5rem;
 
-    &:hover {
-        box-shadow: var(--shadow-medium);
-        transform: translateY(-5px);
+    p {
+      font-family: var(--font-primary);
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
 
-    .featurette-image {
-        img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            display: block;
-        }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      
+      /* Botón más pequeño, como en hogar.scss */
+      .cta-button.small {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+      }
     }
-    .featurette-content {
-        padding: 2rem;
-        
-        h3 { 
-            font-size: 1.8rem; 
-            font-weight: 600; 
-            margin: 0.5rem 0 0.5rem 0; 
-            color: var(--color-text);
-        }
-        .featurette-tag {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--festividades-color-red); 
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 1.05rem; /* Letra más grande, como pediste */
-            line-height: 1.7;
-            margin: 1rem 0 0 0; 
-            color: var(--color-text-muted);
-        }
+  }
+
+  /* Estado Abierto/Activo */
+  &.is-open {
+    /* El borde dorado al "abrir" el regalo */
+    border-color: var(--festividades-color-gold); 
+    box-shadow: var(--shadow-medium);
+
+    .gift-details {
+      max-height: 1000px; /* Alto para permitir la expansión */
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      padding: 1.5rem;
+      padding-top: 0;
+      border-top: 1px solid rgba(var(--festividades-color-red-rgb), 0.2);
+      margin-top: -0.5rem;
     }
+  }
+
+  /* Hover (solo si no está abierta) */
+  &:not(.is-open):hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+
+    .gift-image img {
+      transform: scale(1.05);
+    }
+  }
 }
 
-/* Outro */
-.story-outro {
-    background-color: var(--color-surface);
-    text-align: center;
-    border-radius: var(--border-radius);
-    padding: 3rem;
-    margin: 3rem auto;
-    max-width: 1200px;
-    box-shadow: var(--shadow-small);
 
-    h2 { margin-top: 0; }
+/* --- 8. Media Queries (Responsividad) --- */
+
+@media (min-width: 600px) {
+  /* Grid de 2 columnas para tarjetas-regalo */
+  .product-grid-gifts {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
-/* --- 6. MEDIA QUERIES --- */
 @media (min-width: 768px) {
-    .product-featurette {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        
-        .featurette-content {
-            padding: 2.5rem;
-        }
+  /* Layouts de 2 columnas para Intros y Featurettes */
+  
+  .category-intro-wrapper {
+    grid-template-columns: 1fr 1fr;
+    
+    /* Layout alterno para la intro */
+    &.right-aligned {
+      .category-intro-text { order: 2; }
+      .category-intro-image { order: 1; }
     }
-    .product-featurette:nth-child(even) {
-        .featurette-image { order: 2; }
-        .featurette-content { order: 1; }
+  }
+  
+  .festive-featurette {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    
+    /* Layout alterno para el featurette */
+    &.alt-layout {
+      .featurette-image { order: 2; }
+      .featurette-content { order: 1; }
     }
+  }
 }
 
-
-/* --- 7. ESTILOS DEL MODAL (Quick View) --- */
-.theme-festividades .modal-quick-view {
-    
-    .modal-content {
-        background-color: var(--color-surface-transparent);
-        -webkit-backdrop-filter: blur(12px);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(var(--color-text-rgb), 0.1);
-        box-shadow: var(--shadow-large);
-        overflow: hidden;
-        
-        @media (max-width: 768px) {
-            max-height: 85vh;
-            width: 90%;
-        }
-    }
-
-    .modal-image {
-        background-color: rgba(255, 255, 255, 0.2); 
-    }
-
-    .modal-details {
-        padding: 2.5rem;
-        
-        @media (max-width: 768px) {
-            padding: 1.5rem;
-            max-height: 50vh; 
-            overflow-y: auto;
-        }
-
-        .modal-tag {
-            font-weight: 700;
-            color: var(--festividades-color-red);
-            background-color: rgba(var(--festividades-color-red-rgb), 0.1);
-            padding: 0.3em 0.8em;
-            border-radius: 99px;
-            font-size: 0.9rem;
-        }
-
-        h2 {
-            color: var(--color-text);
-            font-family: var(--font-headings);
-            font-size: 2.2rem;
-            margin: 1rem 0;
-        }
-
-        p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-    }
-
-    .modal-close-btn {
-        &:hover span {
-            background-color: var(--festividades-color-red);
-        }
-    }
+@media (min-width: 992px) {
+  /* Grid de 3 columnas para tarjetas-regalo en desktop */
+  .product-grid-gifts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

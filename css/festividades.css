@@ -1,431 +1,682 @@
 @charset "UTF-8";
-/* =========================================================
-   FESTIVIDADES.SCSS - Versión Definitiva 4.0
-   ========================================================= */
-/* --- 1. FONDO DE ÍCONOS ANIMADOS --- */
-@keyframes festive-float {
-  0% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-150vh) translateX(15vw) rotate(360deg);
-    opacity: 0;
-  }
+/* --- FUENTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap"); /* Fuente Gamer */
+/* --- VARIABLES CSS (EL NÚCLEO TEMÁTICO) --- */
+:root {
+  /* Tema Base / Default (colores pastel, moderno) */
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #F8FBFD;
+  --color-text: #334155;
+  --color-text-rgb: 51, 65, 85;
+  --color-text-muted: #64748B;
+  --color-accent: #6EE7B7;
+  --color-accent-hover: #34D399;
+  --color-primary-light: #A7F3D0;
+  --color-link: #4A90E2;
+  --card-accent-1: #A7F3D0;
+  --card-accent-2: #B799FF;
+  --card-accent-3: #FFB7B2;
+  --card-accent-4: #AEEEEE;
+  --header-height: 80px;
+  --nav-pill-bg: rgba(var(--color-text-rgb), 0.05);
+  --nav-pill-bg-hover: hsla(160, 60%, 80%, 0.6);
+  --nav-pill-border-radius: 999px;
+  --nav-font-size-desktop: 0.9rem;
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
 }
-.festive-icons-bg {
+
+/* --- TEMA: HOGAR --- */
+.theme-hogar {
+  --color-bg: #FDF9F6;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.4);
+  --color-surface-hover: #FFFDFB;
+  --color-text: #5A4E4E;
+  --color-text-rgb: 90, 78, 78;
+  --color-text-muted: #8A7F7F;
+  --color-accent: #FFD166;
+  --color-accent-hover: #FFBF00;
+  --color-primary-light: #FFECA3;
+  --color-link: #C07040;
+  --nav-pill-bg-hover: hsla(45, 100%, 85%, 0.6);
+}
+
+/* --- TEMA: TECNOLOGÍA --- */
+.theme-tecnologia {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.5);
+  --color-surface-hover: #FFFFFF;
+  --color-text: #2C3E50;
+  --color-text-rgb: 44, 62, 80;
+  --color-text-muted: #566573;
+  --color-accent: #0062FF;
+  --color-accent-hover: #004ECC;
+  --color-primary-light: #E6F0FF;
+  --color-link: #0062FF;
+  --nav-pill-bg-hover: hsla(217, 100%, 95%, 0.7);
+}
+
+/* --- TEMA: LIMPIEZA --- */
+.theme-limpieza {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #F0FDFB;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.6);
+  --color-surface-hover: #F0FBFD;
+  --color-text: #042F2E;
+  --color-text-rgb: 4, 47, 46;
+  --color-text-muted: #3D6463;
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-primary-light: #D1FAE5;
+  --color-link: #10B981;
+  --color-accent-secondary: #F59E0B;
+  --nav-pill-bg-hover: hsla(158, 80%, 90%, 0.7);
+}
+
+/* --- TEMA: DECORACIÓN --- */
+.theme-decoracion {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-bg: #FFFBF7;
+  --color-surface: #FFFFFF;
+  --color-surface-transparent: rgba(255, 255, 255, 0.5);
+  --color-surface-hover: #FFFBF7;
+  --color-text: #4E423F;
+  --color-text-rgb: 78, 66, 63;
+  --color-text-muted: #7A6C68;
+  --color-accent: #E57373;
+  --color-accent-hover: #D35D5D;
+  --color-primary-light: #FCEBEB;
+  --color-link: #E57373;
+  --color-accent-secondary: #D4AF37;
+  --nav-pill-bg-hover: hsla(0, 50%, 92%, 0.7);
+}
+
+/* --- ¡TEMA: GAMER (Corregido) --- */
+/* --- ¡TEMA: GAMER (Actualizado con todas las variables) --- */
+.theme-gamer {
+  --font-primary: "Open Sans", sans-serif;
+  --font-headings: "Chakra Petch", sans-serif; /* Fuente Gamer */
+  --font-display: "Chakra Petch", sans-serif; /* Fuente Gamer */
+  --color-bg: #0A0A10; /* Fondo base (fuera de los tabs) */
+  --color-surface: #1A1A2B; /* Superficie de tarjeta */
+  --color-surface-transparent: rgba(26, 26, 43, 0.7); /* Glassmorphism oscuro */
+  --color-surface-hover: #2A2A3F;
+  --color-text: #E0E0FF; /* Texto blanco/azulado */
+  --color-text-rgb: 224, 224, 255;
+  --color-text-muted: #8A8AAF; /* Texto gris/azulado */
+  /* Variables de acento globales (usadas por el hero y el modal) */
+  --color-accent: #00FFFF; /* Cian Eléctrico (Default) */
+  --color-accent-secondary: #FF00FF; /* Magenta Vibrante (Default) */
+  --color-link: #00FFFF;
+  --nav-pill-bg-hover: hsla(180, 100%, 50%, 0.2); /* Cian semi-transparente */
+  /* === ¡AQUÍ ESTÁN LAS VARIABLES QUE FALTABAN! === */
+  /* PC (Cian) */
+  --gamer-accent-pc: #00FFFF;
+  --gamer-accent-pc-rgb: 0, 255, 255;
+  --gamer-bg-pc: #0A101A; /* Fondo tintado Cian */
+  /* Periféricos (Magenta) */
+  --gamer-accent-perifericos: #FF00FF;
+  --gamer-accent-perifericos-rgb: 255, 0, 255;
+  --gamer-bg-perifericos: #100A1A; /* Fondo tintado Magenta */
+  /* Consolas (Verde) */
+  --gamer-accent-consolas: #00FF00;
+  --gamer-accent-consolas-rgb: 0, 255, 0;
+  --gamer-bg-consolas: #0A1A0A; /* Fondo tintado Verde */
+  /* Streaming (Naranja) */
+  --gamer-accent-streaming: #FF9900;
+  --gamer-accent-streaming-rgb: 255, 153, 0;
+  --gamer-bg-streaming: #1A100A; /* Fondo tintado Naranja */
+  /* VR (Morado) */
+  --gamer-accent-vr: #9900FF;
+  --gamer-accent-vr-rgb: 153, 0, 255;
+  --gamer-bg-vr: #100A1F; /* Fondo tintado Morado */
+  /* Variable para el glitch (puedes cambiarla si quieres) */
+  --gamer-accent-alt-glitch: var(--gamer-accent-perifericos);
+}
+
+/* --- Tema de Festividades (Navidad) --- */
+/* --- TEMA: FESTIVIDADES (NAVIDAD) --- */
+/* --- TEMA: FESTIVIDADES (Brillante y Mágico) --- */
+.theme-festividades {
+  /* Fondo degradado sutil (Blanco a Gris muy claro) */
+  --color-bg: linear-gradient(175deg, #fdfbfb 0%, #ebedee 100%);
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F0F0F0;
+  --color-surface-transparent: rgba(255, 255, 255, 0.7); /* "Liquid Glass" */
+  --color-text: #333333; /* Texto oscuro */
+  --color-text-muted: #666666;
+  --color-text-light: #F8F8F8; /* Para texto sobre el Hero oscuro */
+  /* Acentos Navideños */
+  --color-primary: #C1272D; /* Rojo vibrante */
+  --color-primary-dark: #9B1D21;
+  --color-secondary: #FFD700; /* Dorado brillante */
+  --color-secondary-dark: #CCAA00;
+  --festividades-color-red: var(--color-primary);
+  --festividades-color-red-rgb: 193, 39, 45;
+  --festividades-color-gold: var(--color-secondary);
+  --festividades-color-gold-rgb: 255, 215, 0;
+  --festividades-color-silver: #C0C0C0;
+  --festividades-color-silver-rgb: 192, 192, 192;
+  /* Imagen personalizable para el Hero */
+  --hero-bg-image: url("../img/festividades/navidad/portada.webp");
+}
+
+/* ---
+   ESTILOS DE FESTIVIDADES (NAVIDAD)
+   ---
+   Este archivo contiene los estilos para:
+   1. Efecto de Nieve
+   2. Hero Principal (con imagen de fondo de variables.scss)
+   3. Navegación Sticky de Categorías
+   4. Presentaciones de Categoría ÚNICAS (.style-decoracion, .style-iluminacion, etc.)
+   5. Introducción de Categoría con Imagen (.category-intro-wrapper)
+   6. Estilo de Producto 1: Featurette (.festive-featurette)
+   7. Estilo de Producto 2: Tarjeta-Regalo (.product-card-gift)
+--- */
+/* --- 1. General & Efecto de Nieve --- */
+body.theme-festividades {
+  /* Fondo de _variables.scss */
+  background: var(--color-bg);
+}
+
+.snowfall-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  pointer-events: none;
+  z-index: 9990; /* Alto, pero debajo del header (1000) y modal */
   overflow: hidden;
-  pointer-events: none; /* No interfiere con clics */
-  background: var(--color-bg); /* Aplica el fondo degradado aquí */
+  /* Usamos radial-gradients para crear los copos */
+  --snow-color: rgba(255, 255, 255, 0.7);
+  background-image: radial-gradient(circle, var(--snow-color) 1px, transparent 1px), radial-gradient(circle, var(--snow-color) 2px, transparent 2px);
+  background-size: 400px 400px, 500px 500px; /* Copos medianos */
+  background-position: 0 0, 0 0;
+  background-repeat: repeat;
+  animation: snowfall 15s linear infinite;
 }
 
-.festive-icons-bg span {
-  position: absolute;
-  bottom: -100px;
-  opacity: 0;
-  animation: festive-float 25s linear infinite;
-  font-size: 2rem;
-}
-.festive-icons-bg span:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-  color: var(--festividades-color-red);
-  content: "❆";
-}
-.festive-icons-bg span:nth-child(2) {
-  left: 20%;
-  animation-delay: 5s;
-  font-size: 1.5rem;
-  color: var(--festividades-color-gold);
-  content: "★";
-}
-.festive-icons-bg span:nth-child(3) {
-  left: 30%;
-  animation-delay: 12s;
-  color: var(--festividades-color-red);
-  content: "🔔";
-}
-.festive-icons-bg span:nth-child(4) {
-  left: 40%;
-  animation-delay: 17s;
-  font-size: 2.5rem;
-  color: var(--festividades-color-gold);
-  content: "❆";
-}
-.festive-icons-bg span:nth-child(5) {
-  left: 50%;
-  animation-delay: 3s;
-  color: var(--festividades-color-red);
-  content: "🎁";
-}
-.festive-icons-bg span:nth-child(6) {
-  left: 60%;
-  animation-delay: 8s;
-  font-size: 1.5rem;
-  color: var(--festividades-color-gold);
-  content: "★";
-}
-.festive-icons-bg span:nth-child(7) {
-  left: 70%;
-  animation-delay: 14s;
-  color: var(--festividades-color-red);
-  content: "🔔";
-}
-.festive-icons-bg span:nth-child(8) {
-  left: 80%;
-  animation-delay: 20s;
-  font-size: 2.5rem;
-  color: var(--festividades-color-gold);
-  content: "❆";
-}
-.festive-icons-bg span:nth-child(9) {
-  left: 90%;
-  animation-delay: 2s;
-  color: var(--festividades-color-red);
-  content: "🎁";
-}
-
-/* --- 2. HERO MÁGICO DE NAVIDAD --- */
-.christmas-hero {
-  position: relative;
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-text-light);
-  padding: 0 1.5rem;
-  overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), var(--hero-bg-image);
-  background-size: cover;
-  background-position: center;
-}
-.christmas-hero .hero-content {
-  position: relative;
-  z-index: 2;
-}
-.christmas-hero .subtitle {
-  font-family: var(--font-headings);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--festividades-color-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(var(--festividades-color-gold-rgb), 0.7);
-}
-.christmas-hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 7rem);
-  font-weight: 400;
-  color: var(--festividades-color-red);
-  text-shadow: 0 0 15px rgba(var(--festividades-color-red-rgb), 0.8), 0 0 30px rgba(var(--festividades-color-red-rgb), 0.5);
-  margin: 0 0 1rem 0;
-  line-height: 1.1;
-}
-.christmas-hero p {
-  font-size: 1.15rem;
-  color: var(--color-text-light);
-  max-width: 550px;
-  margin: 0 auto 2.5rem auto;
-  line-height: 1.7;
-}
-.christmas-hero p.intro-text {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--festividades-color-gold);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-.snow-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAKdJREFUOI1jZGRgZEAFksm0/wOJoZhRjBQSZpr/jy7+M8IEs5ieMYz/D7aA8W82u8HBDoKZwQxmgAv/wYxNMMnEqv8Z4f8/s5me/w/FVL6BicmP0DSwYaAAmjMQeBBNGBiZ/jFjNKOBMUBIdA01gJkPYQaS6QZ4QDxYk8mAAmQ1AFgQzQ0sAYsYMnA01gJkPIBl8IADzQEVIMoFqEAJktoYADUiapsmbiKBAAAAAElFTkSuQmCC");
-  animation: snow 20s linear infinite;
-}
-
-@keyframes snow {
+@keyframes snowfall {
   0% {
-    background-position: 0 0;
+    background-position: 0 0, 0 0;
   }
   100% {
-    background-position: 0 1000px;
+    /* Mover verticalmente a diferentes velocidades */
+    background-position: 0px 600px, 0px 400px;
   }
 }
-/* --- 3. CONTENIDO PRINCIPAL --- */
-main.main-festividades {
-  /* El fondo ya está en .festive-icons-bg */
-}
-
-/* Títulos de Sección */
-.section-title, .section-title-light, .section-title-gold {
-  font-family: var(--font-headings);
-  font-size: clamp(2rem, 5vw, 2.8rem);
+/* --- 2. Hero Principal --- */
+.festive-hero {
+  /* ¡AQUÍ SE USA TU IMAGEN DE FONDO! */
+  /* Esta variable --hero-bg-image la defines en _variables.scss */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), var(--hero-bg-image);
+  background-size: cover;
+  background-position: center 60%; /* Ajusta el centro de tu imagen */
+  background-attachment: fixed;
+  padding: clamp(6rem, 15vw, 10rem) 0;
   text-align: center;
-  color: var(--festividades-color-red);
-  text-shadow: 0 0 5px rgba(var(--festividades-color-red-rgb), 0.3);
-  margin: 0 auto 1rem auto;
+  position: relative;
+  margin-top: var(--header-height);
+  color: var(--color-text-light);
+  /* Máscara para difuminar el borde inferior */
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
-
-.section-title-gold {
+.festive-hero .hero-content {
+  position: relative;
+  z-index: 10;
+}
+.festive-hero h1 {
+  /* Fuente festiva de _variables.scss */
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-weight: 400;
+  /* Color dorado de _variables.scss */
   color: var(--festividades-color-gold);
-  text-shadow: 0 0 5px rgba(var(--festividades-color-gold-rgb), 0.3);
-}
-
-.section-subtitle, .section-subtitle-light {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-}
-
-/* Títulos para fondos "liquid glass" */
-.section-title-light {
-  color: var(--color-text-light); /* CORRECCIÓN: Texto claro */
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.section-subtitle-light {
-  color: rgba(255, 255, 255, 0.9); /* CORRECCIÓN: Texto claro */
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* --- 4. CALENDARIO DE ADVIENTO (Estilo tarjeta pequeña) --- */
-.advent-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Tarjetas un poco más grandes */
-  gap: 1.5rem;
-  position: relative;
-}
-
-.advent-card {
-  position: relative;
-  border-radius: var(--border-radius);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  cursor: pointer;
-  z-index: 5;
-  background-color: var(--color-surface);
-  box-shadow: var(--shadow-small);
-  border: 1px solid rgba(var(--festividades-color-gold-rgb), 0.3);
-  overflow: hidden;
-}
-.advent-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-medium);
-}
-.advent-card .advent-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Alinea arriba */
-  text-align: left; /* Alinea a la izquierda */
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-}
-.advent-card .advent-content img {
-  width: 100%;
-  height: 120px; /* Más altura para la imagen */
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
 }
-.advent-card .advent-content h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0;
-  line-height: 1.3;
-}
-.advent-card .advent-content p {
-  font-size: 0.9rem; /* Un poco más grande */
-  color: var(--color-text-muted);
-  margin: 0.25rem 0 0 0;
+.festive-hero .subtitle {
+  font-family: var(--font-headings);
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* --- 5. ESTILOS DE PRODUCTO (TIPO HOGAR) --- */
-.story-block {
-  padding: clamp(4rem, 10vw, 6rem) 0;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Fondos con "Liquid Glass" */
-.story-image-bg {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  position: relative;
-  /* Overlay "Liquid Glass" */
-}
-.story-image-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Overlay más claro */
+/* --- 3. Navegación Sticky de Categorías --- */
+.festive-nav-wrapper {
+  position: sticky;
+  /* Se pega justo debajo del header */
+  top: var(--header-height);
+  z-index: 500;
+  background-color: var(--color-surface-transparent);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  z-index: 1;
+  /* Usamos el color-rgb de _variables.scss para la transparencia */
+  border-bottom: 1px solid rgba(var(--festividades-color-red-rgb), 0.2);
+  box-shadow: var(--shadow-small);
 }
-.story-image-bg .container {
+.festive-nav-wrapper ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+.festive-nav-wrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  color: var(--color-text-muted);
+  border-bottom: 3px solid transparent;
+}
+.festive-nav-wrapper a svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: all var(--transition-speed);
+}
+.festive-nav-wrapper a span {
+  font-family: var(--font-headings);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.festive-nav-wrapper a:hover {
+  color: var(--color-primary); /* Rojo al pasar el mouse */
+  background-color: rgba(var(--festividades-color-red-rgb), 0.05);
+}
+.festive-nav-wrapper a.is-active {
+  color: var(--color-primary);
+  /* Una línea roja elegante para el item activo */
+  border-bottom-color: var(--color-primary);
+}
+
+/* --- 4. Layout General del Contenido --- */
+.festive-content {
+  padding-top: 4rem;
+}
+
+.category-section {
+  padding-bottom: 6rem;
+  /* Espacio para el ancla del sticky nav */
+  padding-top: 2rem;
+  margin-top: -2rem; /* Compensación del padding */
+  /* Estilo base para el subtítulo */
+  /* Divisor de productos */
+}
+.category-section .section-subtitle {
+  font-family: var(--font-headings);
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+.category-section .grid-divider {
+  font-family: var(--font-display); /* Fuente festiva */
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 5rem 0 2rem 0;
+  /* Líneas decorativas */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.category-section .grid-divider::before, .category-section .grid-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(var(--festividades-color-red-rgb), 0.2);
+}
+
+/* --- 5. Presentaciones de Categoría ÚNICAS --- */
+/* Estilo 1: Decoración (Centrado Clásico) */
+.category-section.style-decoracion h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  color: var(--color-primary); /* Rojo */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.category-section.style-decoracion .section-subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo 2: Iluminación (Intro con Imagen) */
+.category-section.style-iluminacion h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  /* Dorado con "brillo" */
+  color: var(--festividades-color-gold);
+  text-shadow: 0 0 15px rgba(var(--festividades-color-gold-rgb), 0.5);
+  margin-bottom: 1rem;
+}
+
+/* Estilo 3: Regalos (Estilo "Listón") */
+.category-section.style-regalos {
+  /* Centramos el título */
+  text-align: center;
+}
+.category-section.style-regalos h2 {
+  font-family: var(--font-headings); /* Usamos la de headings para que quepa */
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  background-color: var(--color-primary); /* Fondo Rojo */
+  /* Magia de listón */
+  display: inline-block; /* Para que el fondo se ajuste al texto */
+  padding: 1rem 2.5rem;
   position: relative;
-  z-index: 2;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  /* "Colas" del listón */
+  /* Cola izquierda */
+  /* Cola derecha */
+}
+.category-section.style-regalos h2::before, .category-section.style-regalos h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  /* Color del "corte" (debe ser el fondo de la página) */
+  border-top-color: var(--color-bg);
+  border-bottom-color: var(--color-bg);
+}
+.category-section.style-regalos h2::before {
+  left: 0;
+  border-width: 1.2em 0 1.2em 1.2em; /* 1.2em es la mitad del padding */
+  border-left-color: var(--color-bg);
+  transform: translateY(-50%) translateX(-100%);
+}
+.category-section.style-regalos h2::after {
+  right: 0;
+  border-width: 1.2em 1.2em 1.2em 0;
+  border-right-color: var(--color-bg);
+  transform: translateY(-50%) translateX(100%);
+}
+.category-section.style-regalos .section-subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem; /* Espacio extra por el listón */
 }
 
-.story-color-bg {
-  /* El fondo ya está en .festive-icons-bg */
-  color: var(--color-text);
+/* Estilo 4: Cocina (Bordes Dobles) */
+.category-section.style-cocina h2 {
+  font-family: var(--font-headings);
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem 0;
+  /* Doble borde elegante */
+  border-top: 1px solid rgba(var(--festividades-color-red-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--festividades-color-red-rgb), 0.3);
+  margin-bottom: 1rem;
 }
 
-/* Tarjeta de Producto (Estilo Hogar) */
-.product-featurette {
+/* --- 5B. Intro de Categoría con Imagen --- */
+.category-intro-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem; /* Menos gap */
+  grid-template-columns: 1fr; /* Mobile-first: apilado */
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.category-intro-wrapper .category-intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* --- 6. Estilo de Producto 1: Featurette --- */
+/* (Basado en el de 'hogar.scss' pero adaptado) */
+.festive-featurette {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: apilado */
+  gap: 2rem;
   align-items: center;
   margin-bottom: 3rem;
+}
+.festive-featurette .featurette-image {
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-small);
   overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.product-featurette:hover {
   box-shadow: var(--shadow-medium);
-  transform: translateY(-5px);
+  transition: all var(--transition-speed);
 }
-.product-featurette .featurette-image img {
+.festive-featurette .featurette-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
+  transition: transform 0.4s ease;
 }
-.product-featurette .featurette-content {
-  padding: 2rem;
+.festive-featurette .featurette-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-large);
 }
-.product-featurette .featurette-content h3 {
+.festive-featurette .featurette-content h3 {
+  font-family: var(--font-headings);
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0.5rem 0 0.5rem 0;
+  margin-bottom: 0.5rem;
   color: var(--color-text);
 }
-.product-featurette .featurette-content .featurette-tag {
+.festive-featurette .featurette-content .featurette-tag {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--festividades-color-red);
+  color: var(--festividades-color-gold); /* Acento Dorado */
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-.product-featurette .featurette-content p {
-  font-size: 1.05rem; /* Letra más grande, como pediste */
+.festive-featurette .featurette-content p {
+  font-size: 1.05rem;
   line-height: 1.7;
-  margin: 1rem 0 0 0;
   color: var(--color-text-muted);
+  margin: 1rem 0 1.5rem 0;
+}
+.festive-featurette .featurette-content p strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+.festive-featurette .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-/* Outro */
-.story-outro {
+/* --- 7. Estilo de Producto 2: Tarjeta-Regalo (Acordeón) --- */
+.product-grid-gifts {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: 1 columna */
+  gap: 1.5rem;
+}
+
+.product-card-gift {
   background-color: var(--color-surface);
-  text-align: center;
   border-radius: var(--border-radius);
-  padding: 3rem;
-  margin: 3rem auto;
-  max-width: 1200px;
   box-shadow: var(--shadow-small);
+  overflow: hidden;
+  border: 2px solid transparent; /* Borde para el estado 'open' */
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+  /* La parte visible */
+  /* Los detalles ocultos */
+  /* Estado Abierto/Activo */
+  /* Hover (solo si no está abierta) */
 }
-.story-outro h2 {
-  margin-top: 0;
+.product-card-gift .gift-preview {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.product-card-gift .gift-preview .gift-image {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  margin-bottom: 1rem;
+}
+.product-card-gift .gift-preview .gift-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card-gift .gift-preview .gift-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  /* Alto mínimo para 2 líneas */
+  min-height: 3.22rem;
+}
+.product-card-gift .gift-preview .gift-content .gift-toggle-btn {
+  font-family: var(--font-headings);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary); /* Rojo */
+  cursor: pointer;
+  transition: color var(--transition-speed);
+}
+.product-card-gift .gift-preview .gift-content .gift-toggle-btn:hover {
+  color: var(--festividades-color-red-dark);
+}
+.product-card-gift .gift-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 1.5rem;
+}
+.product-card-gift .gift-details p {
+  font-family: var(--font-primary);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.product-card-gift .gift-details .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  /* Botón más pequeño, como en hogar.scss */
+}
+.product-card-gift .gift-details .button-group .cta-button.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+}
+.product-card-gift.is-open {
+  /* El borde dorado al "abrir" el regalo */
+  border-color: var(--festividades-color-gold);
+  box-shadow: var(--shadow-medium);
+}
+.product-card-gift.is-open .gift-details {
+  max-height: 1000px; /* Alto para permitir la expansión */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  padding: 1.5rem;
+  padding-top: 0;
+  border-top: 1px solid rgba(var(--festividades-color-red-rgb), 0.2);
+  margin-top: -0.5rem;
+}
+.product-card-gift:not(.is-open):hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+.product-card-gift:not(.is-open):hover .gift-image img {
+  transform: scale(1.05);
 }
 
-/* --- 6. MEDIA QUERIES --- */
+/* --- 8. Media Queries (Responsividad) --- */
+@media (min-width: 600px) {
+  /* Grid de 2 columnas para tarjetas-regalo */
+  .product-grid-gifts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 768px) {
-  .product-featurette {
+  /* Layouts de 2 columnas para Intros y Featurettes */
+  .category-intro-wrapper {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    /* Layout alterno para la intro */
   }
-  .product-featurette .featurette-content {
-    padding: 2.5rem;
-  }
-  .product-featurette:nth-child(even) .featurette-image {
+  .category-intro-wrapper.right-aligned .category-intro-text {
     order: 2;
   }
-  .product-featurette:nth-child(even) .featurette-content {
+  .category-intro-wrapper.right-aligned .category-intro-image {
+    order: 1;
+  }
+  .festive-featurette {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    /* Layout alterno para el featurette */
+  }
+  .festive-featurette.alt-layout .featurette-image {
+    order: 2;
+  }
+  .festive-featurette.alt-layout .featurette-content {
     order: 1;
   }
 }
-/* --- 7. ESTILOS DEL MODAL (Quick View) --- */
-.theme-festividades .modal-quick-view .modal-content {
-  background-color: var(--color-surface-transparent);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(var(--color-text-rgb), 0.1);
-  box-shadow: var(--shadow-large);
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .theme-festividades .modal-quick-view .modal-content {
-    max-height: 85vh;
-    width: 90%;
+@media (min-width: 992px) {
+  /* Grid de 3 columnas para tarjetas-regalo en desktop */
+  .product-grid-gifts {
+    grid-template-columns: repeat(3, 1fr);
   }
-}
-.theme-festividades .modal-quick-view .modal-image {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.theme-festividades .modal-quick-view .modal-details {
-  padding: 2.5rem;
-}
-@media (max-width: 768px) {
-  .theme-festividades .modal-quick-view .modal-details {
-    padding: 1.5rem;
-    max-height: 50vh;
-    overflow-y: auto;
-  }
-}
-.theme-festividades .modal-quick-view .modal-details .modal-tag {
-  font-weight: 700;
-  color: var(--festividades-color-red);
-  background-color: rgba(var(--festividades-color-red-rgb), 0.1);
-  padding: 0.3em 0.8em;
-  border-radius: 99px;
-  font-size: 0.9rem;
-}
-.theme-festividades .modal-quick-view .modal-details h2 {
-  color: var(--color-text);
-  font-family: var(--font-headings);
-  font-size: 2.2rem;
-  margin: 1rem 0;
-}
-.theme-festividades .modal-quick-view .modal-details p {
-  color: var(--color-text-muted);
-  line-height: 1.7;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-.theme-festividades .modal-quick-view .modal-close-btn:hover span {
-  background-color: var(--festividades-color-red);
 }/*# sourceMappingURL=festividades.css.map */

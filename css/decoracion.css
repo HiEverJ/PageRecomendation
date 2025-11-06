@@ -176,7 +176,7 @@
   --festividades-color-silver: #C0C0C0;
   --festividades-color-silver-rgb: 192, 192, 192;
   /* Imagen personalizable para el Hero */
-  --hero-bg-image: url("../img/festividades/portada.webp");
+  --hero-bg-image: url("../img/festividades/navidad/portada.webp");
 }
 
 /* --- Override de Fondo Global --- */
