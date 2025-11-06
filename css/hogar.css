@@ -368,6 +368,9 @@ h2 {
   gap: 0.75rem;
 }
 
+/* ======================================================= */
+/* --- ¡AQUÍ COMIENZAN LOS AJUSTES! --- */
+/* ======================================================= */
 /* --- ESTILOS ACTUALIZADOS: Cuadrícula Pequeña Interactiva --- */
 .grid-divider {
   text-align: center;
@@ -414,10 +417,10 @@ h2 {
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-small);
+  /* AJUSTE: Overflow: hidden es clave para la expansión vertical */
   overflow: hidden;
-  /* --- CAMBIO: Transición más compleja --- */
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative; /* Para el panel de revelado */
+  position: relative;
   cursor: pointer;
   z-index: 5; /* Nivel base de las tarjetas */
 }
@@ -433,7 +436,9 @@ h2 {
 }
 .product-card-small .card-content {
   padding: 1.25rem;
-  transition: opacity 0.3s ease;
+  /* AJUSTE: Aseguramos que siempre sea visible */
+  opacity: 1;
+  visibility: visible;
 }
 .product-card-small .card-content h3 {
   font-size: 1.1rem;
@@ -450,60 +455,66 @@ h2 {
   text-transform: uppercase;
 }
 
-/* --- AÑADIDO: Panel de Descripción Oculto --- */
+/* --- AJUSTE: Panel de Descripción (Expansión Vertical) --- */
 .card-reveal-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.25rem;
-  background-color: var(--color-surface-hover);
-  /* Efecto "Glassmorphism" sutil */
-  background-color: var(--color-surface-transparent);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  /* Oculto por defecto */
+  /* 1. ELIMINAMOS position: absolute y el fondo glassmorphism */
+  /* 2. AÑADIMOS max-height para la animación */
+  max-height: 0;
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease-out;
-  border-top: 2px solid var(--color-accent);
+  overflow: hidden;
+  visibility: hidden; /* Ayuda a la accesibilidad */
+  /* 3. AÑADIMOS la transición */
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+  /* 4. Estilos del contenido (se mantienen) */
+  padding: 0 1.25rem; /* Solo padding lateral, el vertical se da con la expansión */
+  background-color: var(--color-surface); /* Fondo sólido */
+  /* AJUSTE: Botones en columna para que quepan */
 }
 .card-reveal-content p {
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: var(--color-text-muted);
   margin-bottom: 1rem;
   text-shadow: none;
+  line-height: 1.6;
+}
+.card-reveal-content p strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+.card-reveal-content .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  /* Espacio inferior al abrir */
+  margin-bottom: 1.25rem;
 }
 .card-reveal-content .cta-button.small {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
-/* --- AÑADIDO: Estilos de la Cuadrícula Activa --- */
-.product-grid-small.grid-is-active {
-  /* Cuando una tarjeta está activa, atenúa las demás */
-}
+/* --- AJUSTE: Estilos de la Cuadrícula Activa --- */
 .product-grid-small.grid-is-active .product-card-small:not(.is-active) {
-  transform: scale(0.9);
+  transform: scale(0.95); /* Atenuado más sutil */
   opacity: 0.5;
   filter: blur(2px);
   z-index: 4;
 }
 
 .product-card-small.is-active {
-  transform: scale(1.05); /* La tarjeta activa resalta */
+  transform: scale(1.03); /* Resaltado más sutil */
   box-shadow: var(--shadow-medium);
-  z-index: 10; /* Se pone por encima de todo */
-}
-.product-card-small.is-active .card-content {
-  opacity: 0; /* Oculta el contenido original */
-  visibility: hidden;
+  z-index: 10;
+  /* AJUSTE: Animamos el max-height */
 }
 .product-card-small.is-active .card-reveal-content {
-  opacity: 1; /* Muestra el contenido de revelado */
+  opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  max-height: 500px; /* Alto máximo para la expansión */
+  padding-top: 1rem; /* Espacio superior */
+  /* Línea sutil de separación */
+  border-top: 1px solid rgba(var(--color-text-rgb), 0.1);
 }
 
 /* Estilo de las tarjetas pequeñas sobre fondos de imagen */
@@ -511,6 +522,7 @@ h2 {
   background-color: rgba(255, 255, 255, 0.85);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+  /* AJUSTE: El contenido revelado ahora también necesita fondo */
 }
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .story-image-bg .product-card-small {
