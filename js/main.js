@@ -38,6 +38,12 @@
     const status = document.querySelector('#result-count');
     const empty = document.querySelector('#empty-results');
     const searchable = cards.map(card => normalize(card.dataset.search));
+    const selection = document.querySelector('#seleccion');
+    const chapters = Array.from(document.querySelectorAll('[data-chapter]')).map(section => ({
+      section, cards: Array.from(section.querySelectorAll('[data-product]')),
+      link: document.querySelector(`[data-chapter-link="${section.id}"]`),
+      count: section.querySelector('[data-chapter-count]')
+    }));
     const filter = () => {
       const words = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
       let count = 0;
@@ -50,6 +56,13 @@
       });
       status.textContent = `${count} ${count === 1 ? 'producto' : 'productos'} de ${cards.length}`;
       empty.hidden = count !== 0;
+      selection.classList.toggle('is-filtered', Boolean(words.length || category.value || store.value));
+      chapters.forEach(chapter => {
+        const visible = chapter.cards.filter(card => !card.hidden).length;
+        chapter.section.hidden = visible === 0;
+        if (chapter.link) chapter.link.hidden = visible === 0;
+        if (chapter.count) chapter.count.textContent = `${visible} ${visible === 1 ? 'idea' : 'ideas'}`;
+      });
     };
     form.addEventListener('submit', event => { event.preventDefault(); filter(); });
     let timer;

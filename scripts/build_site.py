@@ -5,12 +5,14 @@ No network, third-party packages, server or deployment is required.
 from pathlib import Path
 from html import escape
 import json
+from departments import get_season, DEPARTMENTS, hero as department_hero, chapters
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.recomiendatop.lat/'
 PRODUCTS = json.loads((ROOT / 'data/catalog.json').read_text(encoding='utf-8'))
+SEASON_KEY, SEASON = get_season(ROOT)
 LABELS = {'hogar':'Hogar', 'tecnologia':'Tecnología', 'limpieza':'Limpieza', 'hallazgos':'Hallazgos'}
-NAV = [('index.html','Inicio'), ('hogar.html','Hogar'), ('tecnologia.html','Tecnología'), ('limpieza.html','Limpieza'), ('decoracion.html','Decoración'), ('gamer.html','Gamer'), ('festividades.html','Regalos')]
+NAV = [('index.html','Inicio'), ('hogar.html','Hogar'), ('tecnologia.html','Tecnología'), ('limpieza.html','Limpieza'), ('decoracion.html','Decoración'), ('gamer.html','Gamer'), ('festividades.html',SEASON['label'])]
 e = escape
 
 def url(page):
@@ -20,14 +22,14 @@ def image(product, hero=False):
     loading = 'fetchpriority="high"' if hero else 'loading="lazy"'
     return f'<img src="{e(product["image"])}" alt="{e(product["title"])}" width="640" height="480" {loading} decoding="async">'
 
-def card(p, n, origin):
+def card(p, n, origin, level=3):
     stores = '|'.join(x['store'] for x in p['links'])
     search = ' '.join([p['title'],p['tag'],p['summary'],LABELS[p['category']]])
     permalink = '#' + p['id'] if origin == 'catalogo.html' else 'catalogo.html#' + p['id']
     shops = ''.join(f'<a class="shop" href="{e(x["url"])}" target="_blank" rel="sponsored noopener noreferrer" data-store="{e(x["store"])}" aria-label="Ver {e(p["title"])} en {e(x["store"])}; abre otra pestaña">{e(x["store"])} <span aria-hidden="true">↗</span></a>' for x in p['links'])
     return f'''<article class="product" id="{e(p['id'])}" data-product data-category="{p['category']}" data-stores="{e(stores)}" data-search="{e(search)}">
     <div class="product-image">{image(p)}<span class="product-number" aria-hidden="true">{n:02}</span></div>
-    <div class="product-body"><span class="eyebrow">{e(LABELS[p['category']])}</span><h3><a href="{e(permalink)}">{e(p['title'])}</a></h3>
+    <div class="product-body"><span class="eyebrow">{e(LABELS[p['category']])}</span><h{level}><a href="{e(permalink)}">{e(p['title'])}</a></h{level}>
     <p class="product-summary">{e(p['summary'])}</p>
     <details class="review"><summary>Antes de elegir<span class="sr-only">: {e(p['title'])}</span></summary><p>{e(p['check'])}</p></details>
     <div class="shops">{shops}</div><p class="product-note">Precio y disponibilidad en tienda · Abre otra pestaña</p></div></article>'''
@@ -42,8 +44,11 @@ def filters(items):
     <p id="result-count" class="results" role="status" aria-live="polite" aria-atomic="true">{len(items)} productos</p></form>'''
 
 def catalogue(items, origin, heading='La selección', interactive=True):
+    slug=origin.removesuffix('.html')
+    definitions=SEASON['chapters'] if slug=='festividades' else DEPARTMENTS.get(slug,{}).get('chapters')
+    layout=chapters(items,origin,card,definitions) if definitions else '<div class="grid">'+''.join(card(p,i+1,origin) for i,p in enumerate(items))+'</div>'
     return f'''<section id="seleccion" class="section wrap" aria-labelledby="selection-heading"><div class="section-head"><div><span class="eyebrow">Piezas con un propósito</span><h2 id="selection-heading">{e(heading)}</h2></div><p>Lee lo esencial, abre los detalles y decide si encaja contigo.</p></div>
-    {filters(items) if interactive else ''}<div class="grid">{''.join(card(p,i+1,origin) for i,p in enumerate(items))}</div>
+    {filters(items) if interactive else ''}{layout}
     <div id="empty-results" class="empty" hidden><h3>No encontramos coincidencias.</h3><p>Prueba otra palabra o usa «Limpiar filtros» para volver a ver la selección.</p></div></section>'''
 
 def guide(title, sections):
@@ -55,21 +60,28 @@ def shell(page, title, description, content, items=None, noindex=False):
     for f,label in NAV:
         current = 'aria-current="page"' if f == page else ''
         href = './' if f == 'index.html' else f
-        nav += f'<a href="{href}" {current}>{label}</a>'
+        seasonal = f'class="season-link" data-season="{SEASON_KEY}" aria-label="Temporada: {e(label)}"' if f=='festividades.html' else ''
+        decoration = f'<span aria-hidden="true">{SEASON["symbol"]}</span> ' if seasonal else ''
+        nav += f'<a href="{href}" {current} {seasonal}>{decoration}{label}</a>'
+    department=page.removesuffix('.html')
+    palette={'hogar':'#f6efe5','tecnologia':'#eef2f6','limpieza':'#edf5f2','decoracion':'#f4eee8','gamer':'#11131e','festividades':{'halloween':'#20172b','navidad':'#122f28','san-valentin':'#f8e9ec','entretiempo':'#f5ecd9'}[SEASON_KEY]}
+    theme_color=palette.get(department,'#f5f3ed')
     graph = [{ '@type':'WebSite','@id':BASE+'#website','url':BASE,'name':'Recomienda[Top]','inLanguage':'es-MX'},
              {'@type':'CollectionPage' if items else 'WebPage','@id':url(page)+'#page','url':url(page),'name':title,'description':description,'inLanguage':'es-MX','isPartOf':{'@id':BASE+'#website'}}]
     if page != 'index.html':
         graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Inicio','item':BASE},{'@type':'ListItem','position':2,'name':title.split(' | ')[0],'item':url(page)}]})
     if items:
-        graph.append({'@type':'ItemList','name':title.split(' | ')[0],'itemListElement':[{'@type':'ListItem','position':i+1,'name':p['title'],'url':url(page)+'#'+p['id']} for i,p in enumerate(items)]})
+        graph[1]['mainEntity']={'@id':url(page)+'#selection'}
+        graph.append({'@type':'ItemList','@id':url(page)+'#selection','numberOfItems':len(items),'name':title.split(' | ')[0],'itemListElement':[{'@type':'ListItem','position':i+1,'name':p['title'],'url':url(page)+'#'+p['id']} for i,p in enumerate(items)]})
+    extra_style='<link rel="stylesheet" href="css/departments.css">'
     schema = json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c')
     html = f'''<!doctype html>
 <html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}"><meta name="robots" content="{'noindex, follow' if noindex else 'index, follow, max-image-preview:large'}">
-<link rel="canonical" href="{url(page)}"><link rel="icon" href="img/favicon.png" type="image/png"><meta name="theme-color" content="#f5f3ed">
+<link rel="canonical" href="{url(page)}"><link rel="icon" href="img/favicon.png" type="image/png"><meta name="theme-color" content="{theme_color}">
 <meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><meta property="og:site_name" content="Recomienda[Top]"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{url(page)}"><meta property="og:image" content="{BASE}img/logo-recomiendatop.png"><meta property="og:image:alt" content="Recomienda Top"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{BASE}img/logo-recomiendatop.png">
-<link rel="stylesheet" href="css/site.css"><script src="js/main.js" defer></script><script type="application/ld+json">{schema}</script></head>
-<body><a class="skip" href="#contenido">Saltar al contenido</a><header class="header"><div class="wrap header-inner"><a class="brand" href="./" aria-label="Recomienda Top, inicio">Recomienda<span>[Top]</span></a><button id="menu-toggle" class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="true" hidden>Menú <span aria-hidden="true">☰</span></button><nav id="navigation" class="nav" aria-label="Principal">{nav}</nav></div></header>
+<link rel="stylesheet" href="css/site.css">{extra_style}<script src="js/main.js" defer></script><script type="application/ld+json">{schema}</script></head>
+<body data-department="{department}" data-season="{SEASON_KEY}"><a class="skip" href="#contenido">Saltar al contenido</a><header class="header"><div class="wrap header-inner"><a class="brand" href="./" aria-label="Recomienda Top, inicio">Recomienda<span>[Top]</span></a><button id="menu-toggle" class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="true" hidden>Menú <span aria-hidden="true">☰</span></button><nav id="navigation" class="nav" aria-label="Principal">{nav}</nav></div></header>
 <main id="contenido" tabindex="-1">{content}</main>
 <footer class="footer"><div class="wrap footer-inner"><div><a class="brand" href="./">Recomienda<span>[Top]</span></a><p>Ideas para elegir con más intención.<br>© 2026 Recomienda[Top].</p></div><nav class="footer-links" aria-label="Información"><a href="catalogo.html">Todo el catálogo</a><a href="criterio-editorial.html">Nuestro criterio y afiliación</a><a href="privacidad.html">Privacidad</a><button id="privacy-preferences" type="button" hidden>Preferencias de analítica</button></nav></div></footer>
 <section id="consent" class="consent" aria-labelledby="consent-title" hidden><h3 id="consent-title">Tú eliges qué compartir.</h3><p>Podemos cargar Google Tag Manager para medir visitas y clics hacia tiendas. Es opcional: puedes seguir explorando sin analítica. <a href="privacidad.html">Conoce los detalles</a>.</p><div class="consent-actions"><button type="button" data-consent="rejected">Sin analítica</button><button type="button" data-consent="accepted">Aceptar analítica</button></div><p id="consent-status" class="consent-status" role="status"></p></section>
@@ -87,8 +99,8 @@ def pick(*ids):
 
 home_items = pick('audifonos-nothing-ear-a-con-anc', 'soporte-ergonomico-plegable-de-aluminio-para-laptop', 'power-bank-ugreen-10-000mah-con-magsafe-20w') + pick('prensa-francesa-de-vidrio-y-acero-inoxidable-1-litro', 'carrito-organizador-multiusos-de-3-niveles', 'manta-de-tejido-waffle')
 hero_product=pick('audifonos-nothing-ear-a-con-anc')[0]
-categories=[('hogar','Hogar','Orden, cocina y pequeños rituales.'),('tecnologia','Tecnología','Dispositivos que encajan en tu día.'),('limpieza','Limpieza','Herramientas para cada superficie.'),('decoracion','Decoración','Texturas, luz y objetos con intención.'),('gamer','Gamer','Un escritorio para jugar y crear.'),('festividades','Regalos','Ideas para compartir en cualquier temporada.')]
-category_links=''.join(f'<a class="category-link" href="{slug}.html"><strong>{label}</strong><span aria-hidden="true">↗</span><small>{desc}</small></a>' for slug,label,desc in categories)
+categories=[('hogar','Hogar','Orden, cocina y pequeños rituales.'),('tecnologia','Tecnología','Dispositivos que encajan en tu día.'),('limpieza','Limpieza','Herramientas para cada superficie.'),('decoracion','Decoración','Texturas, luz y objetos con intención.'),('gamer','Gamer','Un escritorio para jugar y crear.'),('festividades','Temporada · '+SEASON['label'],SEASON['note'])]
+category_links=''.join(f'<a class="category-link" data-category="{slug}" href="{slug}.html"><strong>{label}</strong><span aria-hidden="true">↗</span><small>{desc}</small></a>' for slug,label,desc in categories)
 home=f'''<section class="hero wrap"><div class="hero-copy"><span class="eyebrow">El placer de elegir bien</span><h1>Menos ruido.<br>Mejores <em>hallazgos.</em></h1><p>Recomendaciones breves de productos para tu casa y tu día a día. Descubre qué mirar antes de comprar en Mercado Libre y AliExpress.</p><div class="hero-actions"><a class="button" href="catalogo.html">Explorar el catálogo <span aria-hidden="true">↗</span></a><a class="text-link" href="criterio-editorial.html">Conoce nuestro criterio</a></div></div><div class="hero-art">{image(hero_product,True)}<div class="art-label"><span class="art-index" aria-hidden="true">01 /</span><a href="catalogo.html#{hero_product['id']}">Un detalle para escuchar distinto<br><strong>Nothing Ear (a) →</strong></a></div></div></section>
 <div class="wrap trust-line"><span>Reseñas breves, sin rodeos</span><span>Lo útil y lo que debes revisar</span><span>Tú eliges dónde comprar</span></div>
 <section class="section wrap"><div class="section-head"><div><span class="eyebrow">Encuentra tu siguiente idea</span><h2>¿Por dónde empezamos?</h2></div><a class="text-link" href="catalogo.html">Ver todos los productos ↗</a></div><div class="category-links">{category_links}</div></section>{DISCLOSURE}
@@ -112,9 +124,21 @@ CONFIG = {
 }
 for slug,(heading,intro,items,guide_title,sections) in CONFIG.items():
     label=dict((x[0],x[1]) for x in categories)[slug]
-    content=f'<div class="wrap breadcrumb"><a href="./">Inicio</a> / {label}</div><section class="wrap category-hero"><span class="eyebrow">La selección / {label}</span><h1>{heading}</h1><p>{intro}</p><div class="hero-actions"><a class="button" href="#seleccion">Descubrir {len(items)} ideas ↓</a><a class="text-link" href="catalogo.html">Ver todo el catálogo</a></div></section>'
-    content+=guide(guide_title,sections)+DISCLOSURE+catalogue(items,slug+'.html')
-    shell(slug+'.html',f'{label}: recomendaciones y guía de compra | Recomienda[Top]',intro,content,items)
+    if slug=='festividades':
+        heading,intro=SEASON['heading'],SEASON['intro']
+        items=pick(*SEASON['products'])
+        guide_title='Celebra con intención.'
+        sections=[('El ambiente, a tu medida','Elige por lo que vas a hacer: una película, una cena o un regalo. Los productos pertenecen al catálogo habitual; no son artículos oficiales de la celebración.'),('Antes de preparar la escena','Confirma dimensiones, conexiones, cuidados y plazo de entrega. No coloques textiles junto a fuentes de calor ni uses iluminación en exteriores sin comprobar su protección.'),('Que tenga vida después','Prioriza objetos que sigan siendo útiles cuando termine la celebración. La ambientación puede cambiar sin empezar de cero cada año.')]
+        title,description=SEASON['title'],SEASON['description']
+    else:
+        title,description=DEPARTMENTS[slug]['title'],DEPARTMENTS[slug]['description']
+    content=f'<nav class="wrap breadcrumb" aria-label="Ruta de navegación"><a href="./">Inicio</a> / <span aria-current="page">{e(label)}</span></nav>'
+    content+=department_hero(slug,heading,intro,items,PRODUCTS,image,SEASON_KEY,SEASON)
+    content+=DISCLOSURE+catalogue(items,slug+'.html')+guide(guide_title,sections)
+    next_slug=categories[(next(i for i,c in enumerate(categories) if c[0]==slug)+1)%len(categories)][0]
+    next_label=next(c[1] for c in categories if c[0]==next_slug)
+    content+=f'<aside class="wrap department-next"><span class="eyebrow">Cambia de ambiente</span><a href="{next_slug}.html">Descubre {e(next_label)} <span aria-hidden="true">↗</span></a></aside>'
+    shell(slug+'.html',title,description,content,items)
 
 content='<section class="wrap category-hero"><span class="eyebrow">El catálogo</span><h1>Encuentra lo que<br>va contigo.</h1><p>Busca por nombre o idea de uso. Filtra por categoría y tienda, lee los detalles y compara la publicación antes de decidir.</p></section>'+DISCLOSURE+catalogue(PRODUCTS,'catalogo.html','Todos los hallazgos')
 shell('catalogo.html','Catálogo de productos y recomendaciones | Recomienda[Top]','Explora recomendaciones de hogar, tecnología y limpieza. Busca productos y filtra por Mercado Libre o AliExpress para comparar opciones.',content,PRODUCTS)

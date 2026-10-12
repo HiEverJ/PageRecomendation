@@ -1,0 +1,162 @@
+RECOMIENDA[TOP] — IDENTIDADES DE CATEGORÍA Y TEMPORADAS
+12 de octubre de 2026
+Proyecto: C:\Sources\PageRecomendation
+
+CAMBIO DE DIRECCIÓN
+Se conserva la base premium, la portada, el catálogo, las reseñas, los enlaces,
+los filtros y las preferencias de analítica. Cada categoría recibe su propia
+paleta, escena de entrada, distribución de productos y ritmo de secciones.
+No se reemplazaron los productos por una demostración ni se inventaron ofertas.
+
+IDENTIDAD POR DEPARTAMENTO
+Hogar: tonos arena y terracota, escena arqueada, composiciones amplias con
+imagen y texto, cuadrícula de tres y un segundo capítulo con imagen al otro lado.
+Tres capítulos: ambiente, organización y cocina.
+
+Tecnología: azul y blanco frío, trama geométrica, tipografía más precisa y
+módulos de distintos anchos. El bloque de casa conectada pasa a dos columnas.
+Tres capítulos: escritorio, casa conectada y dispositivos para llevar.
+
+Limpieza: blanco y verde agua, círculos suaves y fichas horizontales fáciles
+de recorrer; el capítulo central se presenta en pares. Cocina, rutina y baño.
+
+Decoración: arcilla y rosa mineral, imágenes en arcos, composición de galería,
+desfases verticales y una ficha panorámica entre grupos. Texturas, luz y objetos.
+
+Gamer: carbón con violeta y cian, líneas de neón discretas, escena de teclado,
+una ficha panorámica y pares de productos. Sin destellos, flashes ni animación
+continua. Se conservan superficies claras detrás de las fotografías para
+no oscurecer los productos ni cambiar artificialmente su apariencia.
+
+Los tonos cambian también en controles, guías, bordes y navegación del
+departamento. La marca y los patrones de uso siguen siendo reconocibles.
+
+TEMPORADA
+Regalos vuelve a ser una sección de temporada conservando festividades.html.
+El botón de navegación tiene forma, símbolo y colores propios en todas las páginas.
+La tarjeta de acceso en portada refleja la misma edición.
+
+Edición generada en esta revisión: HALLOWEEN.
+Paleta ciruela, naranja y ámbar; ilustración vectorial de luna, murciélagos y
+calabaza; presentación expresiva; capítulos de iluminación, cine y sobremesa.
+Se seleccionan 8 productos existentes adecuados para crear ambiente.
+No se presentan como productos oficiales o decoración temática inexistente.
+
+También se dejaron implementadas en las fuentes:
+- NAVIDAD: verde profundo, burdeos y dorado, árbol y regalos; 9 productos.
+- SAN VALENTÍN: rosa suave, vino, corazón y curvas; 8 productos.
+- ENTRETIEMPO: crema y cobre, motivo de regalo; 6 productos para ocasiones cotidianas.
+Cada edición tiene portada, introducción, selección, capítulos, título y descripción.
+Esas ediciones alternativas NO se ejecutaron ni se probaron durante este trabajo.
+
+CÓMO SE ELIGE LA EDICIÓN
+data/season.json contiene {"mode":"auto"}.
+Al ejecutar el generador, se evalúa la fecha de Ciudad de México (UTC-6):
+- 15 de enero a 14 de febrero: san-valentin.
+- 1 a 31 de octubre: halloween.
+- 1 de noviembre a 31 de diciembre: navidad.
+- Resto del año: entretiempo.
+
+Estas ventanas son decisiones editoriales configurables, no fechas legales
+ni afirmaciones de que todos esos días sean una festividad.
+Para una edición manual, cambiar mode a halloween, navidad, san-valentin o
+entretiempo y regenerar. Productos, textos, ilustraciones y ventanas se editan
+en scripts/departments.py. Los identificadores remiten al catálogo real.
+
+IMPORTANTE: es un sitio estático. No cambia de temporada solo porque cambie
+el reloj del visitante. Deben regenerarse los HTML y publicarse cuando el
+dueño lo autorice. Esto mantiene diseño, contenido y SEO coherentes y visibles
+sin JavaScript. No se creó una automatización ni un despliegue programado.
+
+FILTROS E INTERACCIONES
+- Los filtros siguen combinando búsqueda, categoría y tienda sobre los mismos
+  elementos de producto, sin copias de fichas ni IDs duplicados por la decoración.
+- Cada capítulo se oculta si no quedan coincidencias, igual que su enlace de acceso.
+- El contador global y los conteos de capítulo reflejan los elementos visibles.
+- Durante el filtrado se eliminan desfases y expansiones editoriales para que
+  una selección pequeña no deje huecos. Al limpiar se recupera la composición.
+- Los enlaces de las escenas iniciales llevan a una ficha real en la misma página.
+- Los capítulos tienen accesos internos y hay enlaces entre departamentos al final.
+- No se oculta contenido esperando un evento de scroll, un observador o una animación.
+- Se conserva details/summary, teclado, foco visible y movimiento reducido.
+- Se añadieron ajustes de una/dos columnas y eliminación de desfases en móvil.
+
+SEO INTERNO REVISADO Y REFINADO
+- Títulos y descripciones propios para cada intención: organización/cocina,
+  audio/escritorio, limpieza por superficies, decoración y setup gamer.
+- La edición estacional cambia juntos el título, descripción, Open Graph,
+  Twitter, encabezado visible y selección. No solo se recolorea la interfaz.
+- Se conserva la URL festividades.html: no se crean URLs temporales por fecha
+  ni versiones duplicadas para cada filtro o navegador.
+- Jerarquía de catálogo: h1 de página, h2 de selección, h3 de capítulo y h4 de ficha.
+- Breadcrumb visible semántico y enlaces internos HTML entre departamentos.
+- CollectionPage se vincula a su ItemList por mainEntity; el listado incluye
+  número de elementos y conserva el orden del contenido mostrado.
+- Canonical, robots y sitemap mantienen la misma base de dominio. El sitemap
+  no necesita nuevas URLs para estos cambios: las categorías conservan las suyas.
+- Salud y 404 conservan noindex; no se agregó metadata de precios o valoraciones.
+- Todos los productos están en HTML; filtros, guías y distribución no son
+  un requisito para que el buscador pueda leer las fichas.
+
+Esto mejora la organización y descripción del contenido; no confirma indexación,
+resultados enriquecidos ni aumento de tráfico. Sigue siendo necesario revisar
+Search Console, demanda real, consultas, CTR y calidad/evidencia de las reseñas.
+Las anclas de producto permiten navegar, pero NO crean páginas independientes
+indexables. Se mantiene esa decisión para no multiplicar reseñas demasiado breves.
+
+RENDIMIENTO Y ACCESIBILIDAD
+La nueva ambientación usa CSS y SVG integrado, sin librerías, video, fuentes
+externas, canvas ni fotografías de fondo grandes. Las imágenes de las escenas
+reutilizan productos existentes y no se contabilizan como fichas adicionales.
+No hay seguimiento de scroll ni descargas de catálogos adicionales.
+La nueva hoja departments.css se comparte y puede almacenarse en caché.
+Ilustraciones y ornamentos se marcan decorativos; los controles conservan nombres.
+No se midieron métricas de carga ni contrastes en pantalla. Las decisiones son
+de implementación, no resultados certificados.
+
+FUENTES ACTIVAS MODIFICADAS
+scripts/build_site.py
+js/main.js
+README.md
+
+FUENTES NUEVAS
+scripts/departments.py
+css/departments.css
+data/season.json
+AGENTS.md
+docs/IDENTIDADES-Y-TEMPORADAS.txt
+
+HTML REGENERADOS
+index.html, catalogo.html, hogar.html, tecnologia.html, limpieza.html,
+decoracion.html, gamer.html, festividades.html, criterio-editorial.html,
+privacidad.html, salud.html y 404.html.
+La navegación estacional compartida explica cambios también en páginas informativas.
+El catálogo de datos, los enlaces de tiendas y los estilos base no se modificaron.
+robots.txt y sitemap.xml se regeneraron con el mismo contenido.
+
+REGLAS PERSISTENTES
+Se añadieron las restricciones del propietario a AGENTS.md para futuras tareas:
+NO scripts de prueba, NO simulaciones o pruebas visuales/de pantalla,
+NO sandboxes ni entornos aislados, NO afirmar pruebas inexistentes,
+NO despliegue a producción sin autorización explícita.
+
+ALCANCE REAL DE ESTA ENTREGA
+Se leyeron fuentes y diferencias, se editaron archivos y se ejecutó el generador
+para escribir las páginas reales. No se ejecutaron pruebas ni se abrió un
+navegador, no hubo capturas, validación visual, servidor o entorno aislado.
+No se desplegó, no se hizo push y no se configuró Analytics/Search Console.
+La revisión manual en pantallas continúa reservada al dueño.
+
+PENDIENTES EXTERNOS QUE SIGUEN VIGENTES
+Identidad/contacto del responsable y aviso de privacidad integral; etiquetas
+reales del contenedor GTM; disponibilidad/variante/atribución de cada tienda;
+derechos de imágenes; DNS, HTTPS y redirecciones; estado 404 del hosting;
+evidencia de indexación/tráfico en Search Console y Analytics.
+
+REFERENCIAS DE GOOGLE CONSULTADAS
+Estructura y enlaces internos:
+https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure
+URLs, canonical y límites de los fragmentos:
+https://developers.google.com/search/docs/specialty/ecommerce/designing-a-url-structure-for-ecommerce-sites
+Títulos descriptivos:
+https://developers.google.com/search/docs/appearance/title-link
