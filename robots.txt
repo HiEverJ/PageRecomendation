@@ -1,6 +1,7 @@
-# Permite a todos los buscadores rastrear todo el sitio
 User-agent: *
 Allow: /
+Disallow: /docs/
+Disallow: /data/
+Disallow: /scripts/
 
-# Indica la ubicación de tu sitemap
 Sitemap: https://www.recomiendatop.lat/sitemap.xml

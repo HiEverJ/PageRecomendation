@@ -1,0 +1,2869 @@
+{
+  "decoracion": [
+    {
+      "title": "Fundas de Cojín de Lino Texturizado",
+      "image": "img/decor/prod-01.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Añade un toque rústico y elegante. Este set de dos fundas de lino lavado es increíblemente suave y viene en 15 colores tierra."
+      ],
+      "tag": "Textiles",
+      "ready": false
+    },
+    {
+      "title": "Manta de Punto Grueso (Chunky)",
+      "image": "img/decor/prod-02.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        },
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "La pieza de confort definitiva. Hecha a mano con lana merino sintética, es perfecta para acurrucarse en el sofá."
+      ],
+      "tag": "Confort",
+      "ready": false
+    },
+    {
+      "title": "Alfombra Estilo Bereber",
+      "image": "img/decor/prod-03.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Un clásico del diseño bohemio. Esta alfombra de pelo suave con patrones geométricos define y da calidez a tu sala de estar."
+      ],
+      "tag": "Suelos",
+      "ready": false
+    },
+    {
+      "title": "Cortinas Opacas con Textura de Lino",
+      "image": "img/decor/prod-10.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Bloquean la luz para un descanso perfecto y añaden una capa de textura sofisticada a tu habitación. Aislantes térmicas."
+      ],
+      "tag": "Ventanas",
+      "ready": false
+    },
+    {
+      "title": "Camino de Mesa Estilo Macramé",
+      "image": "img/decor/prod-11.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Añade un toque bohemio y artesanal a tu comedor. Hecho a mano con algodón natural, ideal para cenas especiales o uso diario."
+      ],
+      "tag": "Comedor",
+      "ready": false
+    },
+    {
+      "title": "Set de Toallas de Algodón Turco",
+      "image": "img/decor/prod-12.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Lujo y absorción. Estas toallas de algodón turco son ligeras, increíblemente suaves y se secan más rápido que las toallas convencionales."
+      ],
+      "tag": "Baño",
+      "ready": false
+    },
+    {
+      "title": "Cojín Decorativo de Nudo Esférico",
+      "image": "img/decor/prod-23.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una pieza de acento divertida y moderna. Este cojín escultural de terciopelo suave añade textura y un toque de color a cualquier silla o sofá."
+      ],
+      "tag": "Textiles",
+      "ready": false
+    },
+    {
+      "title": "Lámpara de Mesa \"Hongo\"",
+      "image": "img/decor/prod-04.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Un ícono del diseño de los 70 que vuelve con fuerza. Su luz suave y difusa crea un ambiente íntimo. Perfecta para burós."
+      ],
+      "tag": "Iluminación",
+      "ready": false
+    },
+    {
+      "title": "Velas Esculturales (Set de 3)",
+      "image": "img/decor/prod-05.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Decoración pura. Este set de velas con formas abstractas (burbuja, nudo, torso) añade un toque de arte a cualquier repisa."
+      ],
+      "tag": "Ambiente",
+      "ready": false
+    },
+    {
+      "title": "Guirnalda de Luces LED Cálidas",
+      "image": "img/decor/prod-06.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La forma más sencilla de añadir \"magia\". Úsalas en la cabecera, alrededor de un espejo o en frascos de vidrio."
+      ],
+      "tag": "Ambiente",
+      "ready": false
+    },
+    {
+      "title": "Lámpara de Pie Trípode de Madera",
+      "image": "img/decor/prod-13.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Diseño escandinavo que ilumina con estilo. Patas de madera natural y pantalla de tela de lino que suaviza la luz."
+      ],
+      "tag": "Iluminación",
+      "ready": false
+    },
+    {
+      "title": "Difusor de Aceites Esenciales (Cerámica)",
+      "image": "img/decor/prod-14.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Diseño minimalista en cerámica que parece una pieza de arte. Humidifica y aromatiza tu espacio con aceites esenciales."
+      ],
+      "tag": "Ambiente",
+      "ready": false
+    },
+    {
+      "title": "Luz de Neón LED Decorativa",
+      "image": "img/decor/prod-15.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Un toque de color y personalidad para tu pared. Más seguras y eficientes que el neón tradicional, perfectas para un rincón especial."
+      ],
+      "tag": "Iluminación",
+      "ready": false
+    },
+    {
+      "title": "Lámpara de Sal del Himalaya",
+      "image": "img/decor/prod-24.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Emite un cálido resplandor ámbar, creando una atmósfera instantáneamente relajante. Ideal para dormitorios o espacios de meditación."
+      ],
+      "tag": "Ambiente",
+      "ready": false
+    },
+    {
+      "title": "Espejo Redondo con Marco Fino",
+      "image": "img/decor/prod-07.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una pieza clave para entradas y baños. Este espejo de 60cm con marco de metal dorado (o negro) amplía visualmente el espacio."
+      ],
+      "tag": "Espejos",
+      "ready": false
+    },
+    {
+      "title": "Set de 3 Láminas Abstractas",
+      "image": "img/decor/prod-08.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Arte instantáneo. Un set de 3 pósters con diseños minimalistas y tonos neutros, listos para enmarcar y crear un punto focal."
+      ],
+      "tag": "Arte Mural",
+      "ready": false
+    },
+    {
+      "title": "Repisas Flotantes de Madera (Set de 3)",
+      "image": "img/decor/prod-09.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Exhibe tus tesoros. Set de 3 repisas invisibles de madera natural, perfectas para libros pequeños, plantas y fotos."
+      ],
+      "tag": "Almacenaje",
+      "ready": false
+    },
+    {
+      "title": "Reloj de Pared Minimalista sin Marco",
+      "image": "img/decor/prod-16.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una pieza funcional que es pura decoración. Diseño silencioso sin segundero, con manecillas de metal."
+      ],
+      "tag": "Mural",
+      "ready": false
+    },
+    {
+      "title": "Espejo de Cuerpo Completo Arqueado",
+      "image": "img/decor/prod-17.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Elegante y atemporal. Este espejo de pie con forma de arco es una pieza central para cualquier dormitorio o vestidor."
+      ],
+      "tag": "Espejos",
+      "ready": false
+    },
+    {
+      "title": "Colgador de Pared de Macramé Grande",
+      "image": "img/decor/prod-18.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Añade textura y un toque bohemio instantáneo sobre tu cama o sofá. Hecho a mano con algodón."
+      ],
+      "tag": "Arte Mural",
+      "ready": false
+    },
+    {
+      "title": "Estantería Esquinera de 5 Niveles",
+      "image": "img/decor/prod-25.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Aprovecha cada rincón. Esta estantería industrial de madera y metal transforma una esquina vacía en un punto de exhibición funcional."
+      ],
+      "tag": "Almacenaje",
+      "ready": false
+    },
+    {
+      "title": "Set de 3 Jarrones de Cerámica (Donut)",
+      "image": "img/decor/prod-19.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Diseño nórdico que es tendencia. Perfectos para flores secas (pampas) o como esculturas por sí solos."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Bandeja Decorativa de Metal Dorada",
+      "image": "img/decor/prod-20.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Un toque de glamour para tu mesa de centro o tocador. Úsala para organizar perfumes, llaves o velas."
+      ],
+      "tag": "Organización",
+      "ready": false
+    },
+    {
+      "title": "Plantas Colgantes Artificiales (Set de 2)",
+      "image": "img/decor/prod-21.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Verde todo el año sin mantenimiento. Este set de enredaderas artificiales de alta calidad se ve increíblemente real."
+      ],
+      "tag": "Verde",
+      "ready": false
+    },
+    {
+      "title": "Sujetalibros de Metal (Diseño Abstracto)",
+      "image": "img/decor/prod-22.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Organiza tus libros con piezas que son arte en sí mismas. Diseño geométrico y minimalista."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Cestas de Almacenamiento de Cuerda",
+      "image": "img/decor/prod-26.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Organización cálida. Perfectas para guardar mantas en la sala, juguetes en el cuarto de niños o toallas en el baño."
+      ],
+      "tag": "Organización",
+      "ready": false
+    },
+    {
+      "title": "Perchero de Pared de Madera y Metal",
+      "image": "img/decor/prod-27.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Combina funcionalidad y diseño para tu entrada. Ganchos robustos para abrigos, bolsos y llaves."
+      ],
+      "tag": "Organización",
+      "ready": false
+    },
+    {
+      "title": "Joyero de Vidrio y Latón",
+      "image": "img/decor/prod-28.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una vitrina elegante para tus piezas favoritas. Su diseño de vidrio y bordes dorados protege y exhibe tus joyas con estilo."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    }
+  ],
+  "festividades": [
+    {
+      "title": "Árbol de Navidad Frondoso (2.1m)",
+      "image": "https://placehold.co/600x450/9B1D21/ffffff?text=Árbol+de+Navidad",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        },
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El centro de todas las miradas. Este árbol de 2.1 metros cuenta con tecnología \"Feel Real\" y más de 1500 puntas, creando una apariencia ultra frondosa y natural. Su base de metal reforzada garantiza estabilidad.",
+        "¡El más vendido! Perfecto para salas de estar amplias. Fácil de armar."
+      ],
+      "tag": "El Centro de Todo",
+      "ready": false
+    },
+    {
+      "title": "Set de 100 Esferas (Rojo y Dorado)",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Set+Esferas",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        },
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Viste tu árbol con este completo set de 100 esferas. Incluye múltiples acabados (brillante, mate, glitter) y tamaños, todos en la paleta clásica de rojo y dorado. Hechas de plástico resistente a caídas."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Corona de Puerta Natural (50cm)",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Corona+Piñas",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "Da la bienvenida con estilo. Esta corona de 50cm está hecha con ramas artificiales de pino, piñas reales y frutos rojos. Es densa y su aspecto es increíblemente natural, ideal para puertas o chimeneas."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Villa Navideña Musical con Tren",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Villa+Navideña",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "La pieza central que tus hijos amarán. Esta villa detallada incluye una pista de patinaje con movimiento, un tren que rodea la villa, luces LED multicolor y 8 melodías navideñas clásicas."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Pie de Árbol Tejido (1.2m)",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Pie+de+Árbol",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El toque final para tu árbol. Este pie de árbol de 1.2 metros de diámetro tiene un lujoso tejido de punto grueso, similar al de una bufanda, en color blanco hueso. Oculta la base de metal y es el lugar perfecto para los regalos."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set 4 Figuras Cascanueces (30cm)",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Cascanueces",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "Un clásico que no pasa de moda. Set de 4 soldados cascanueces de madera, pintados a mano con detalles en rojo, azul, verde y dorado. Con 30cm de altura, son perfectos para repisas o la entrada."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Tren Eléctrico Clásico para Árbol",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Tren+Eléctrico",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "¡Todos a bordo! Este tren eléctrico clásico está diseñado para rodear la base de tu árbol. Incluye locomotora con luz y sonido de vapor, vagón de carbón y dos vagones de pasajeros. Fácil de ensamblar."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set 4 Medias Navideñas Tejidas",
+      "image": "https://placehold.co/400x400/c1272d/ffffff?text=Medias+Chimenea",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Listas para rellenar de sorpresas. Set de 4 medias de 45cm de largo, hechas de tejido de punto grueso en color rojo vino y blanco. Tienen un lazo resistente para colgarlas en la chimenea o escaleras."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Cortina de Luces LED Cascada (3x3m)",
+      "image": "https://placehold.co/600x450/ffd700/333333?text=Cascada+LED",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Transforma cualquier pared o ventana en una cascada de luz. Esta cortina de 3x3 metros cuenta con 300 LEDs en color blanco cálido. Incluye control remoto con 8 modos de iluminación (parpadeo, atenuación, etc.).",
+        "Perfecta para interiores y exteriores techados. Conexión USB."
+      ],
+      "tag": "Magia Pura",
+      "ready": false
+    },
+    {
+      "title": "Serie LED Clásica (1000 luces, 50m)",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Serie+Clásica",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La serie que no puede faltar. 50 metros de cable verde oscuro con 1000 micro-LEDs de color blanco cálido. Suficiente para rodear un árbol de 2.5 metros o decorar toda la fachada de tu casa."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set 12 Velas LED de Cera Real",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Velas+LED",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "La calidez de las velas sin el peligro del fuego. Este set de 12 velas está hecho de cera real y tiene una \"llama\" parpadeante con tecnología 3D que parece auténtica. Incluye control remoto y temporizador."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Proyector Láser de Copos de Nieve",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Proyector",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Crea una tormenta de nieve mágica en tu fachada. Este proyector resistente al agua (IP65) cubre hasta 50m² con un patrón dinámico de copos de nieve blancos en movimiento. Incluye estaca para jardín."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Red de Luces LED para Arbustos (2x3m)",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Red+Luces",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La forma más fácil de decorar arbustos y setos. Esta red de 2x3 metros se instala en segundos y proporciona una cobertura de luz uniforme. Con 8 modos de iluminación y resistente al agua."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Inflable de Santa en Trineo (2.5m)",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Inflable+Santa",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Una decoración espectacular para tu jardín. Este inflable de 2.5 metros de largo muestra a Santa en su trineo con dos renos. Se infla automáticamente en un minuto y tiene luces LED internas."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Luces de Carámbano (10m)",
+      "image": "https://placehold.co/400x400/ffd700/333333?text=Carámbanos",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El look clásico para el tejado. Tira de 10 metros de luces que simulan ser carámbanos de hielo. Conecta hasta 3 series juntas. Efecto \"goteo\" y luz blanca fría para un look invernal."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Manta Tejida de Punto Grueso (Chunky)",
+      "image": "https://placehold.co/600x450/c0c0c0/333333?text=Manta+Tejida",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El regalo de confort definitivo. Esta manta \"chunky\" está hecha a mano con lana merino sintética hipoalergénica. Es ultra suave, cálida y un acento de decoración lujoso para cualquier sofá o cama.",
+        "¡Un abrazo en forma de regalo! Disponible en 5 colores."
+      ],
+      "tag": "Puro Confort",
+      "ready": false
+    },
+    {
+      "title": "Set de Taza con Calentador Eléctrico",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Taza+Calentador",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Para el amante del café o té. Este set incluye una elegante taza de cerámica y una base eléctrica que mantiene la bebida a una temperatura perfecta (55°C) durante horas. Ideal para la oficina en casa."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Kit Premium de Cuidado de Barba",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Kit+Barba",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Un kit completo en estuche de lujo. Incluye shampoo para barba, aceite de sándalo, bálsamo, cepillo de cerdas de jabalí, peine de madera y tijeras de acero. Todo para una barba impecable."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Humidificador Difusor de Aromas",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Difusor+Aromas",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1BQcwSe",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Más que un simple humidificador, es una pieza central para el bienestar. Este difusor ultrasónico combina un elegante diseño tipo madera con la funcionalidad que necesitas: apagado automático y luz nocturna.",
+        "¡Aprovecha ahora! Añade tus esencias favoritas y combate el estrés."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Bata de Baño tipo Hotel (Unisex)",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Bata+de+Baño",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Regala una experiencia de spa. Esta bata de baño unisex está hecha de 100% algodón turco de alta densidad, ofreciendo máxima absorción y una suavidad incomparable. El lujo de un hotel 5 estrellas en casa."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set de 12 Bombas de Baño Artesanales",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Bombas+Baño",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "Un regalo para la relajación. Set de 12 bombas de baño efervescentes, hechas con manteca de karité y aceites esenciales. Cada una tiene un aroma diferente (lavanda, menta, naranja, etc.)."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Audífonos Inalámbricos (Cancelación de Ruido)",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Audífonos",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El regalo tech perfecto. Audífonos Bluetooth 5.3 con cancelación activa de ruido (ANC). Batería de hasta 40 horas de reproducción y estuche de carga rápida USB-C. Sonido inmersivo y diseño ergonómico."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Smartwatch Deportivo (Monitor de Salud)",
+      "image": "https://placehold.co/400x400/c0c0c0/333333?text=Smartwatch",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Para empezar el año con todo. Reloj inteligente con pantalla AMOLED, monitor de ritmo cardíaco 24/7, oxímetro (SpO2), y más de 100 modos deportivos. Batería de 14 días y resistencia al agua 5ATM."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Vajilla de Cerámica Esmaltada (16 pzs)",
+      "image": "https://placehold.co/600x450/9B1D21/ffffff?text=Vajilla+16pzs",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "Viste tu mesa con elegancia. Este set para 4 personas incluye platos trinche, platos de ensalada, tazones y tazas en un impactante color rojo esmaltado. Apta para lavavajillas y microondas.",
+        "¡El color de la Navidad! Un toque de color y calidad para tu cena."
+      ],
+      "tag": "Viste tu Mesa",
+      "ready": false
+    },
+    {
+      "title": "Set de Cubertería Dorada (24 pzs)",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Cubertería+Dorada",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        },
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "El toque de lujo que tu mesa necesita. Set de 24 piezas (para 6 personas) en acero inoxidable con acabado dorado mate. Diseño minimalista y elegante que combina con todo."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set 4 Copas de Vino de Cristal (Borde Dorado)",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Copas+Vino",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Brinda con estilo. Set de 4 copas de cristal de bohemia con un delicado borde dorado. Su diseño es atemporal y añade un toque de celebración instantáneo a cualquier bebida."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Tabla de Quesos Giratoria (con cuchillos)",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Tabla+Quesos",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Ideal para las botanas antes de la cena. Esta tabla de bambú tiene un diseño giratorio inteligente que revela un set completo de cuchillos y tenedores para quesos. Perfecta para presentar."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Set 12 Cortadores de Galletas Navideños",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Moldes+Galletas",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Para hornear recuerdos. Set de 12 cortadores de acero inoxidable con formas clásicas: jengibre, copo de nieve, árbol, bastón de dulce, etc. Vienen en una lata de metal para fácil guardado."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Delantal de Cocina Navideño (con gorro)",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Delantal",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Tienda"
+        }
+      ],
+      "paragraphs": [
+        "El uniforme oficial del chef de Navidad. Este set de delantal y gorro de chef tiene un divertido diseño de \"Ayudante de Santa\". Hecho de lino de algodón grueso, es resistente y festivo."
+      ],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "Batidora de Pedestal (Roja)",
+      "image": "https://placehold.co/400x400/9B1D21/ffffff?text=Batidora",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El regalo soñado para el repostero de la casa. Batidora de pedestal en color rojo festivo, con tazón de acero inoxidable de 5 litros, 10 velocidades y 3 accesorios (globo, pala, gancho)."
+      ],
+      "tag": "",
+      "ready": false
+    }
+  ],
+  "gamer": [
+    {
+      "title": "NVIDIA RTX 4080 Super",
+      "image": "img/gamer/prod-01.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El poder definitivo para 4K. Trazado de rayos de nueva generación, DLSS 3 y un rendimiento brutal para los juegos más exigentes."
+      ],
+      "tag": "Tarjetas Gráficas",
+      "ready": false
+    },
+    {
+      "title": "AMD Ryzen 7 7800X3D",
+      "image": "img/gamer/prod-02.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El rey del gaming. Gracias a su masiva 3D V-Cache, ofrece un rendimiento en juegos que supera a procesadores mucho más caros."
+      ],
+      "tag": "Procesadores",
+      "ready": false
+    },
+    {
+      "title": "Enfriamiento Líquido 360mm (Lian Li)",
+      "image": "img/gamer/prod-05.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Mantén tu CPU a raya con estilo. Tres ventiladores ARGB, un radiador de 360mm y un bloque de bomba con diseño de espejo infinito."
+      ],
+      "tag": "Refrigeración",
+      "ready": false
+    },
+    {
+      "title": "SSD NVMe 2TB Gen4 (Samsung 990 Pro)",
+      "image": "img/gamer/prod-03.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Tiempos de carga inexistentes. Con velocidades de lectura de hasta 7,450 MB/s, tu sistema operativo y juegos cargarán al instante."
+      ],
+      "tag": "Almacenamiento",
+      "ready": false
+    },
+    {
+      "title": "32GB DDR5 6000MHz CL30 (G.Skill)",
+      "image": "img/gamer/prod-04.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La memoria perfecta para Ryzen 7000. 32GB para multitarea pesada y perfiles EXPO de baja latencia para un rendimiento óptimo."
+      ],
+      "tag": "RAM",
+      "ready": false
+    },
+    {
+      "title": "PSU 1000W 80+ Platinum (Corsair)",
+      "image": "img/gamer/prod-22.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Energía limpia y estable para tu RTX 4080. Totalmente modular, con modo de ventilador Zero RPM y lista para ATX 3.0."
+      ],
+      "tag": "Fuentes de Poder",
+      "ready": false
+    },
+    {
+      "title": "Monitor QD-OLED 27\" 1440p 240Hz",
+      "image": "img/gamer/prod-06.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La ventaja competitiva. Negros perfectos, tiempo de respuesta de 0.03ms y una tasa de refresco ultra-rápida. La mejor calidad de imagen para eSports."
+      ],
+      "tag": "Monitores",
+      "ready": false
+    },
+    {
+      "title": "Ratón Inalámbrico Ultra-ligero (Logitech)",
+      "image": "img/gamer/prod-07.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Menos de 60 gramos. Sensor Hero 25K de alta precisión y tecnología Lightspeed sin latencia. Apunta más rápido, gana más."
+      ],
+      "tag": "Ratones",
+      "ready": false
+    },
+    {
+      "title": "Teclado Mecánico 65% (Razer)",
+      "image": "img/gamer/prod-08.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Formato compacto que ahorra espacio. Switches ópticos analógicos para una actuación variable y un sonido satisfactorio."
+      ],
+      "tag": "Teclados",
+      "ready": false
+    },
+    {
+      "title": "Audífonos Inalámbricos (Audeze Maxwell)",
+      "image": "img/gamer/prod-09.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Calidad de estudio para gaming. Drivers magnéticos planares para un detalle de audio sin igual. Micrófono con filtro de IA."
+      ],
+      "tag": "Audio",
+      "ready": false
+    },
+    {
+      "title": "Mousepad de Vidrio Templado (Skypad)",
+      "image": "img/gamer/prod-27.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Velocidad y precisión incomparables. Superficie de vidrio microtexturizado para un deslizamiento ultra-rápido y consistente."
+      ],
+      "tag": "Mousepads",
+      "ready": false
+    },
+    {
+      "title": "DAC/Amp Externo (Schiit Hel)",
+      "image": "img/gamer/prod-30.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Desbloquea el verdadero potencial de tus audífonos. Potencia masiva y un DAC de alta fidelidad que supera cualquier audio integrado."
+      ],
+      "tag": "Audio",
+      "ready": false
+    },
+    {
+      "title": "Silla Gamer Ergonómica (Secretlab)",
+      "image": "img/gamer/prod-10.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Soporte lumbar adaptativo y espuma curada en frío. Cuida tu espalda.",
+        "Soporte lumbar adaptativo, espuma curada en frío y materiales premium (tela o cuero sintético). Cuida tu espalda en sesiones largas."
+      ],
+      "tag": "Sillas",
+      "ready": false
+    },
+    {
+      "title": "Ratón MMO 12 Botones (Corsair)",
+      "image": "img/gamer/prod-26.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Domina tus habilidades. Panel lateral deslizable con 12 botones mecánicos.",
+        "Panel lateral deslizable con 12 botones mecánicos, sensor de 18,000 DPI y ergonomía total para largas sesiones de MMO o MOBA."
+      ],
+      "tag": "Ratones",
+      "ready": false
+    },
+    {
+      "title": "Teclado Custom 75% (Keychron)",
+      "image": "img/gamer/prod-28.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Cuerpo de aluminio CNC, \"hot-swap\", y gasket mount para un sonido \"thocky\".",
+        "El teclado de tus sueños. Cuerpo de aluminio CNC, \"hot-swap\" (cambia switches sin soldar), y gasket mount para un sonido \"thocky\" y suave."
+      ],
+      "tag": "Teclados",
+      "ready": false
+    },
+    {
+      "title": "Monitor 4K 144Hz (Gigabyte M32U)",
+      "image": "img/gamer/prod-29.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Lo mejor de ambos mundos. Resolución 4K para nitidez y 144Hz para fluidez.",
+        "Resolución 4K para una nitidez increíble y 144Hz para fluidez competitiva. Panel IPS de 32 pulgadas con KVM switch integrado."
+      ],
+      "tag": "Monitores",
+      "ready": false
+    },
+    {
+      "title": "PlayStation 5 Slim",
+      "image": "img/gamer/prod-11.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El nuevo diseño más delgado. Sumérgete en mundos 4K con tiempos de carga casi instantáneos y el control inmersivo DualSense."
+      ],
+      "tag": "Consolas",
+      "ready": false
+    },
+    {
+      "title": "Xbox Series X",
+      "image": "img/gamer/prod-12.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La consola más potente del mundo. 12 TFLOPS de poder, 4K nativo y el ecosistema de Game Pass con cientos de juegos."
+      ],
+      "tag": "Consolas",
+      "ready": false
+    },
+    {
+      "title": "Nintendo Switch OLED",
+      "image": "img/gamer/prod-13.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Juega en casa o en cualquier lugar. La pantalla OLED vibrante de 7 pulgadas hace que tus juegos favoritos cobren vida."
+      ],
+      "tag": "Consolas",
+      "ready": false
+    },
+    {
+      "title": "Steam Deck OLED",
+      "image": "img/gamer/prod-14.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Toda tu biblioteca de Steam en tus manos. Pantalla HDR OLED, mejor batería y ergonomía refinada para jugar en cualquier parte."
+      ],
+      "tag": "Portátil",
+      "ready": false
+    },
+    {
+      "title": "Control Xbox Elite Series 2",
+      "image": "img/gamer/prod-15.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El control definitivo. Sticks de tensión ajustable, palancas traseras intercambiables, topes de gatillo y agarre de goma."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Control PS5 DualSense Edge",
+      "image": "img/gamer/prod-31.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La versión pro del DualSense. Módulos de stick intercambiables, botones traseros, topes de gatillo ajustables y perfiles personalizables."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Expansión SSD 2TB para PS5",
+      "image": "img/gamer/prod-32.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Instala más juegos. Unidad NVMe Gen4 con disipador térmico.",
+        "Instala más juegos. Esta unidad NVMe Gen4 con disipador térmico integrado cumple o supera todos los requisitos de Sony."
+      ],
+      "tag": "Almacenamiento",
+      "ready": false
+    },
+    {
+      "title": "Tarjeta de Expansión 1TB para Xbox",
+      "image": "img/gamer/prod-33.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La única forma de expandir el almacenamiento de tu Xbox. \"Plug and play\".",
+        "La única forma de expandir el almacenamiento de tu Xbox Series X/S y jugar juegos optimizados directamente desde ella. \"Plug and play\"."
+      ],
+      "tag": "Almacenamiento",
+      "ready": false
+    },
+    {
+      "title": "ROG Ally (Z1 Extreme)",
+      "image": "img/gamer/prod-34.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una PC gamer de bolsillo con Windows 11. Pantalla 1080p de 120Hz.",
+        "Una PC gamer de bolsillo con Windows 11. Juega tus títulos de Steam, Game Pass y Epic en una pantalla 1080p de 120Hz."
+      ],
+      "tag": "Portátil",
+      "ready": false
+    },
+    {
+      "title": "Estación de Carga DualSense",
+      "image": "img/gamer/prod-35.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Carga dos controles simultáneamente sin usar los puertos de la consola.",
+        "Carga dos controles DualSense simultáneamente sin tener que conectarlos a la consola. Libera puertos USB y luce genial."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Micrófono USB (Shure MV7)",
+      "image": "img/gamer/prod-16.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Calidad de podcast profesional. Conectividad dual USB/XLR, patrón de voz cardioide y app de control para un sonido perfecto."
+      ],
+      "tag": "Micrófonos",
+      "ready": false
+    },
+    {
+      "title": "Webcam 4K (Logitech Brio)",
+      "image": "img/gamer/prod-17.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Tu mejor imagen. Sensor 4K HDR, campo de visión ajustable y rendimiento superior con poca luz para un stream impecable."
+      ],
+      "tag": "Cámaras",
+      "ready": false
+    },
+    {
+      "title": "Stream Deck (Elgato)",
+      "image": "img/gamer/prod-18.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Tu centro de producción. 15 teclas LCD personalizables para cambiar escenas, lanzar efectos, mutear el micro y más, con un solo toque."
+      ],
+      "tag": "Control",
+      "ready": false
+    },
+    {
+      "title": "Luz Anular LED (Elgato Ring Light)",
+      "image": "img/gamer/prod-19.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Iluminación profesional sin sombras. Luz difusa que no daña los ojos, temperatura de color ajustable y control por app."
+      ],
+      "tag": "Iluminación",
+      "ready": false
+    },
+    {
+      "title": "Capturadora 4K60 Pro (Elgato)",
+      "image": "img/gamer/prod-20.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Captura tu gameplay de PS5 o Xbox en 4K HDR sin latencia. La herramienta esencial para streams de consola de alta calidad."
+      ],
+      "tag": "Capturadora",
+      "ready": false
+    },
+    {
+      "title": "Cámara Mirrorless (Sony ZV-E10)",
+      "image": "img/gamer/prod-38.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El salto a la calidad profesional. Sensor APS-C grande para un fondo desenfocado (bokeh) y lentes intercambiables."
+      ],
+      "tag": "Cámaras",
+      "ready": false
+    },
+    {
+      "title": "Interfaz de Audio (Focusrite Scarlett)",
+      "image": "img/gamer/prod-36.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El estándar para conectar micrófonos XLR a tu PC. Preamplificadores limpios.",
+        "El estándar para conectar micrófonos XLR a tu PC. Preamplificadores limpios y potentes para un sonido de transmisión nítido."
+      ],
+      "tag": "Micrófonos",
+      "ready": false
+    },
+    {
+      "title": "Paneles de Luz LED (Govee Glide)",
+      "image": "img/gamer/prod-37.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Decora tu fondo. Paneles modulares RGBIC que se conectan.",
+        "Decora tu fondo. Paneles modulares RGBIC que se conectan para crear formas personalizadas. Se sincronizan con la música."
+      ],
+      "tag": "Iluminación",
+      "ready": false
+    },
+    {
+      "title": "Brazo de Micrófono (Rode PSA1)",
+      "image": "img/gamer/prod-39.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Mantén tu micrófono fuera de la vista pero siempre al alcance.",
+        "Mantén tu micrófono fuera de la vista pero siempre al alcance. Rotación de 360 grados y gestión de cables interna."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Pantalla Verde Plegable (Elgato)",
+      "image": "img/gamer/prod-40.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Fondo verde (chroma key) instantáneo. Se despliega fácilmente.",
+        "Fondo verde (chroma key) instantáneo. Se despliega fácilmente y se retrae en su estuche de aluminio. Cero arrugas."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Meta Quest 3",
+      "image": "img/gamer/prod-41.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "La nueva generación de Realidad Mixta. Sumérgete en VR o trae elementos virtuales a tu mundo real con sus cámaras a color."
+      ],
+      "tag": "VR",
+      "ready": false
+    },
+    {
+      "title": "PlayStation VR2",
+      "image": "img/gamer/prod-42.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "VR de nueva generación para PS5. Pantallas 4K HDR OLED, seguimiento ocular y retroalimentación háptica en el casco y controles."
+      ],
+      "tag": "VR",
+      "ready": false
+    },
+    {
+      "title": "Correa \"Elite\" para Quest 3 (BOBOVR)",
+      "image": "img/gamer/prod-43.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Mejora la comodidad y el tiempo de juego. Diseño de halo ergonómico y una batería intercambiable \"hot-swap\" en la parte trasera."
+      ],
+      "tag": "Accesorios VR",
+      "ready": false
+    },
+    {
+      "title": "Nanoleaf Lines (Kit de Inicio)",
+      "image": "img/gamer/prod-44.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Líneas de luz modulares que se conectan para crear diseños geométricos en tu pared. Sincronización con la pantalla (Screen Mirror)."
+      ],
+      "tag": "Decoración",
+      "ready": false
+    },
+    {
+      "title": "Volante y Pedales (Logitech G29)",
+      "image": "img/gamer/prod-45.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Siente cada curva. Volante de carreras con \"Force Feedback\" de doble motor, pedales de acero inoxidable y palanca de cambios."
+      ],
+      "tag": "Simulación",
+      "ready": false
+    },
+    {
+      "title": "Soporte para Audífonos con RGB",
+      "image": "img/gamer/prod-46.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Un lugar elegante para tus audífonos. Base de aluminio con iluminación RGB personalizable y hub USB integrado."
+      ],
+      "tag": "Organización",
+      "ready": false
+    },
+    {
+      "title": "Figuras Coleccionables (Funko Pop!)",
+      "image": "img/gamer/prod-47.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Muestra tu \"fandom\". Figuras de vinilo de tus personajes favoritos.",
+        "Muestra tu \"fandom\". Figuras de vinilo de tus personajes favoritos de videojuegos, películas y series."
+      ],
+      "tag": "Decoración",
+      "ready": false
+    },
+    {
+      "title": "Gafas para Luz Azul (Gunnar)",
+      "image": "img/gamer/prod-48.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Protege tus ojos en sesiones maratónicas. Lentes ámbar que bloquean la luz azul.",
+        "Protege tus ojos en sesiones maratónicas. Lentes ámbar que bloquean la luz azul de alta energía, reduciendo la fatiga visual."
+      ],
+      "tag": "Accesorios",
+      "ready": false
+    },
+    {
+      "title": "Escritorio Eléctrico (Standing Desk)",
+      "image": "img/gamer/prod-49.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Alterna entre estar sentado y de pie con solo presionar un botón.",
+        "Alterna entre estar sentado y de pie con solo presionar un botón. Motor dual silencioso y memoria de altura programable."
+      ],
+      "tag": "Muebles",
+      "ready": false
+    },
+    {
+      "title": "Gestión de Cables (Kit Completo)",
+      "image": "img/gamer/prod-50.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "El \"cable management\" es clave. Un kit para un setup 100% limpio.",
+        "El \"cable management\" es clave. Este kit incluye fundas trenzadas, cintas de velcro, y bases adhesivas para un setup 100% limpio."
+      ],
+      "tag": "Organización",
+      "ready": false
+    }
+  ],
+  "hogar": [
+    {
+      "title": "Humidificador Difusor de Aromas (Tipo Madera)",
+      "image": "img/hogar/productos/Humificador.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1BQcwSe",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Más que un simple humidificador, es una pieza central para tu bienestar. Este difusor ultrasónico combina un elegante \n                            diseño tipo madera con la funcionalidad que necesitas: apagado automático para tu seguridad y una luz nocturna suave para crear el ambiente perfecto.\n                            Añade tus esencias favoritas y combate el estrés del día.",
+        "¡Aprovecha ahora! Está disponible con un 12% de descuento por tiempo limitado. Haz clic y transforma tu hogar."
+      ],
+      "tag": "Aromaterapia",
+      "ready": true
+    },
+    {
+      "title": "Tu Santuario Personal: Lámpara de Sal del Himalaya",
+      "image": "img/hogar/productos/lamparasal.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1khMBev",
+          "label": "Ver en mercado libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4UyOeZ5",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Siente la calma al instante. Esta auténtica lámpara de Sal Rosa del Himalaya, esculpida a mano, es una pieza única que \n                            transformará tu espacio. Su luz ámbar cálida es famosa por crear una atmósfera de pura relajación y bienestar, perfecta para tu buró o rincón de lectura.",
+        "Con una elegante base de madera y un cristal natural de 2-3 kg, no es solo una lámpara, es el toque zen que tu hogar necesita para desconectar del estrés diario."
+      ],
+      "tag": "Iluminación",
+      "ready": true
+    },
+    {
+      "title": "Manta de Tejido Waffle",
+      "image": "img/hogar/productos/mantawaffle.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2MUzkfA",
+          "label": "Ver en Mercado libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4PHjORt",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Buscas la manta perfecta que no te acalore? Esta manta de algodón combina lo mejor de dos mundos: es increíblemente suave y refrescante, ideal para cualquier estación.\n                            Su textura tejida tipo waffle (\"gofre\") no solo le da un look moderno y elegante a tu sofá o cama, sino que también la hace ligera y transpirable. Es el toque de confort\n                            que necesitas sin el exceso de calor.",
+        "OFERTA: ¡Consíguela ahora con un 7% de descuento por tiempo limitado!"
+      ],
+      "tag": "Textiles",
+      "ready": true
+    },
+    {
+      "title": "Tu Hogar, 12 Aromas: Set de Velas de Soya",
+      "image": "img/hogar/productos/velassoya.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1hdVZUW",
+          "label": "Ver en Mercado libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4T3JBiL",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Por qué un solo aroma? Este set de 12 velas de cera de soya (18h de duración) transforma tu hogar. Vienen en latas decorativas, perfectas para regalar o ambientar cada rincón.",
+        "OFERTA IMPERDIBLE: ¡Es el momento perfecto! Llévate el set completo con un espectacular 50% de descuento."
+      ],
+      "tag": "Aromas",
+      "ready": true
+    },
+    {
+      "title": "Tira de Luces LED Cálidas",
+      "image": "img/hogar/productos/lucesled.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/261pFbm",
+          "label": "Ver en Mercado libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3yPHLK7",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Ilumina cualquier espacio (interior o exterior) con este pack de 2 tiras LED de 20 metros. \n                                Crean una atmósfera mágica en blanco cálido. Son USB, resistentes al agua (IP65) y tienen 8 modos de luz con control remoto.",
+        "OFERTA INCREÍBLE: ¡Aprovecha hoy un 56% de descuento!"
+      ],
+      "tag": "Iluminación",
+      "ready": true
+    },
+    {
+      "title": "Fundas de Cojín de Lino",
+      "image": "img/hogar/productos/fundascojin.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2z8WLnZ",
+          "label": "Ver en Mercado libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2wJBDi3",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Renueva tu sala al instante con este pack de 4 fundas de lino (45x45cm). Sus diseños geométricos y bohemios son de doble cara, \n                                dándote más opciones. Son prácticas, resistentes y aptas para lavadora.",
+        "OFERTA: ¡Llévate el set completo con un 28% de descuento!"
+      ],
+      "tag": "Textiles",
+      "ready": true
+    },
+    {
+      "title": "Fuente Zen de Escritorio con Cascada",
+      "image": "img/hogar/productos/jardinzen.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3ephGCb",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Convierte tu escritorio en un oasis de paz. Esta fuente \"Rocalla Zen\" con bonsái y bomba de agua crea un ambiente de calma instantáneo. \n                                El sonido relajante de la cascada es ideal para reducir el estrés.",
+        "OFERTA: ¡Llévate el set completo con un 28% de descuento!"
+      ],
+      "tag": "Decoración",
+      "ready": true
+    },
+    {
+      "title": "Set 6 Contenedores Herméticos de Vidrio",
+      "image": "img/hogar/productos/recipienteshermeticos.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2zHnvcF",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/2MjzBxd",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Deja el plástico. Este juego de 6 recipientes de vidrio (1.04L) es tu solución total: son herméticos (a prueba de fugas) y\n                             libres de BPA. Resisten todo: úsalos en el horno, microondas, lavavajillas y refrigerador. Ideales para guardar o calentar tu comida de forma segura."
+      ],
+      "tag": "Cocina y Despensa",
+      "ready": true
+    },
+    {
+      "title": "Carrito Organizador Multiusos de 3 Niveles",
+      "image": "img/hogar/productos/carrito_organizador.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1Crg4aP",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3uZEYNv",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿El desorden se apodera de tu espacio? Ponle fin con la solución de almacenamiento más vendida en organización. \n                            Este carrito de 3 niveles es el aliado perfecto para transformar el caos en calma, ideal para tu cocina, oficina, baño o tu zona de manualidades."
+      ],
+      "tag": "Multiuso",
+      "ready": true
+    },
+    {
+      "title": "Organizador Expandible para Sartenes y Ollas (10 Niveles)",
+      "image": "img/hogar/productos/org_sartenes.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4dxCjoT",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1NN8nkd",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado del ruido de sartenes y tapas cada vez que abres la alacena? Este organizador es \n                            la solución definitiva al caos en tu cocina. Su diseño inteligente y expandible te permite \n                            almacenar hasta 10 sartenes u ollas, ya sea de forma vertical u horizontal, adaptándose por \n                            completo a tu espacio. Fabricado en metal resistente (soporta hasta 20 kg), no solo maximiza tu alacena, sino que protege tus sartenes de rayones.",
+        "Es el momento de transformar tu cocina. Haz clic, dile adiós al desorden y redescubre el placer de tener todo en su lugar."
+      ],
+      "tag": "Cocina",
+      "ready": true
+    },
+    {
+      "title": "Cajas de Tela Plegables (Set de 6)",
+      "image": "img/hogar/productos/organizador_ropa.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2c2StEM",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2yCbW3d",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Ropa de otra temporada o edredones estorbando? Recupera tu clóset con este set de 6 bolsas organizadoras. \n                                Su gran tamaño te permite guardar todo. Al ser plegables y de tela no tejida, protegen tu ropa del polvo y se guardan fácil cuando no las usas.",
+        "OFERTA: ¡Aprovecha ahora y llévate el set completo con un 24% de descuento!"
+      ],
+      "tag": "Clóset",
+      "ready": true
+    },
+    {
+      "title": "Repisa Esquinera Flotante Minimalista",
+      "image": "img/hogar/productos/repisa_esquinera.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/24JtMY1",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¡Deja de desperdiciar esquinas! Esta repisa flotante de 5 niveles transforma ese rincón vacío en un punto focal. Su diseño minimalista en madera marrón oscuro es perfecto para exhibir tus libros o decoraciones favoritas con un toque moderno.",
+        "",
+        "OFERTA ESPECIAL: ¡Aprovecha un increíble 40% de descuento! Transforma tu espacio hoy."
+      ],
+      "tag": "Paredes",
+      "ready": true
+    },
+    {
+      "title": "Organizador de Zapatos para Puerta",
+      "image": "img/hogar/productos/organizador_zapatos.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2RF60PN",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Tus sneakers y zapatos merecen estar en el suelo? Dales un display de lujo con esta caja organizadora. Su diseño transparente con puerta magnética te permite ver y coger tus pares al instante. Es apilable, resistente y protege tu colección del polvo.",
+        "",
+        "OFERTA DE BIENVENIDA: ¡De $280.22 a solo $18.78! Es el momento de empezar a construir la colección que siempre quisiste."
+      ],
+      "tag": "Entrada",
+      "ready": true
+    },
+    {
+      "title": "Ganchos Adhesivos de Acero (Pack 6)",
+      "image": "img/hogar/productos/ganchos_baño.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2fxofLb",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3CEioHv",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Cuelga lo que quieras, ¡sin taladros! Este set de 6 ganchos (3 plateados y 3 negros) es la solución ideal para tu baño, cocina u hogar. Su adhesivo de alta potencia soporta hasta 10 kg y su acabado cromado en acero inoxidable resiste la humedad.",
+        "Organiza tus toallas, llaves o bolsos con estilo y practicidad. Haz clic y consigue la solución de organización más sencilla y elegante."
+      ],
+      "tag": "Multiuso",
+      "ready": true
+    },
+    {
+      "title": "Mini Aspiradora Inalámbrica de Escritorio",
+      "image": "img/hogar/productos/barredora_mesa.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2uH3BH5",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1Ts57wx",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado de migajas, polvo o restos de goma de borrar en tu escritorio? Esta mini aspiradora de mesa es la solución perfecta para mantener tu zona de trabajo o estudio impecable. Al ser inalámbrica y recargable, te da total libertad para limpiar teclados, escritorios y rincones difíciles sin enredos. Es potente, ahorra energía y su filtro reutilizable la hace muy práctica y ecológica.",
+        "Es la herramienta esencial para una limpieza rápida y eficiente. Haz clic y descubre la forma más fácil de mantener tu escritorio ordenado y libre de polvo."
+      ],
+      "tag": "Gadgets",
+      "ready": true
+    },
+    {
+      "title": "Prensa Francesa de Vidrio y Acero Inoxidable (1 Litro)",
+      "image": "img/hogar/productos/cafetera_francesa.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2K2buqK",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c45lBPWr",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Listo para el café perfecto? Eleva tu ritual matutino con esta elegante Prensa Francesa. Con una generosa capacidad de 1 Litro, es ideal para compartir o para tener lista tu dosis de energía. Su filtro de acero inoxidable de alta calidad garantiza una extracción pura, capturando todos los aceites y sabores del grano para una taza robusta y llena de cuerpo, muy superior al café de filtro.",
+        "Su diseño clásico en vidrio y acabados en negro no solo es funcional, sino que añade un toque de sofisticación a tu cocina. Es la forma más sencilla y auténtica de preparar un café de calidad barista en casa. Haz clic y redescubre el verdadero sabor de tus mañanas"
+      ],
+      "tag": "Café",
+      "ready": true
+    },
+    {
+      "title": "Set de 8 Tazas de Vidrio con Doble Pared (80ml)",
+      "image": "img/hogar/productos/tazas_aislamiento.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4Nb7Rc3",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/2QkRzjB",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Disfruta tu café como nunca antes. Este juego de 8 tazas de 80 ml está diseñado para la experiencia perfecta del espresso o macchiato. Su innovadora doble pared de vidrio (borosilicato) crea un elegante efecto \"flotante\" y un aislamiento térmico increíble: tu bebida se mantiene caliente por mucho más tiempo, mientras la taza permanece siempre cómoda y fría al tacto.",
+        "Además de ser visualmente impactantes, están hechas de vidrio de borosilicato resistente, por lo que son aptas para microondas y lavavajillas. Es el set perfecto para impresionar a tus invitados o para darte un lujo diario. Haz clic y eleva tu ritual del café."
+      ],
+      "tag": "Bebidas",
+      "ready": true
+    },
+    {
+      "title": "Set 12 Utensilios de Cocina (Silicona y Madera)",
+      "image": "img/hogar/productos/utensilios_silicona.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2mZdYfQ",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Renueva tu cocina con este completo set de 12 piezas. Sus puntas de silicona protegen tus ollas y sartenes de rayones, mientras que los mangos de madera le dan un toque elegante. Son resistentes al calor y aptos para lavavajillas.",
+        "El set esencial para cocinar con estilo y cuidar tu batería de cocina. ¡Haz clic y consigue el tuyo!"
+      ],
+      "tag": "Utensilios",
+      "ready": true
+    },
+    {
+      "title": "Set de 3 Tablas de Bambú para Picar",
+      "image": "img/hogar/productos/tabla_picar.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3GoYFjv",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1RET149",
+          "label": "Ver Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Actualiza tu cocina con este set de 3 tablas de bambú. Son naturalmente higiénicas, resistentes y cuidan el filo de tus cuchillos. Sus 3 tamaños distintos son perfectos para evitar la contaminación cruzada al picar carnes, verduras y frutas.",
+        "Es el set esencial para una cocina más limpia y sostenible. ¡Haz clic y consigue el tuyo!"
+      ],
+      "tag": "Preparación",
+      "ready": true
+    },
+    {
+      "title": "Batidora de Inmersión 4 en 1 (500W)",
+      "image": "img/hogar/productos/batidora_imersion.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/19tsZk9",
+          "label": "Ver en Mercado Libres"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4FIfqW7",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Por qué tener 4 aparatos si uno lo hace todo? Esta batidora de inmersión es tu solución total. Con un potente motor de 500W y 2 velocidades, tritura, licúa y bate. Es ideal para smoothies, salsas o papillas. Incluye un procesador (500ml), vaso (700ml) y un batidor.",
+        "Es el asistente de cocina perfecto. ¡Haz clic y descubre todo lo que puedes crear con el poder 4 en 1!"
+      ],
+      "tag": "Gadgets",
+      "ready": true
+    },
+    {
+      "title": "Especiero Giratorio de Acero Inoxidable (20 Frascos)",
+      "image": "img/hogar/productos/especiero_giratorio.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4NstxYF",
+          "label": "Ver AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/17aznpY",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado de buscar la especia correcta? Este especiero giratorio pone fin al desorden. Su base rotatoria de 360° te da acceso instantáneo a los 20 frascos de vidrio incluidos. Con una elegante estructura de acero inoxidable, organiza tu cocina, ahorra espacio y luce increíble.",
+        "Dale a tu cocina el toque de orden y elegancia que merece. ¡Haz clic y consíguelo!"
+      ],
+      "tag": "Organización",
+      "ready": true
+    }
+  ],
+  "index": [
+    {
+      "title": "Camiseta Oficial de Local México (Mundial 2026)",
+      "image": "img/Top4/playera_seleccion_mexico.png",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2jdDVuP",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Más que un jersey, es nuestra armadura. Siente la pasión de México con este diseño oficial Adidas, inspirado en nuestras raíces. Esta es la playera de la Selección en el Mundial 2026. Vístete de historia, apoya a nuestro equipo y sé parte de la leyenda."
+      ],
+      "tag": "",
+      "ready": true
+    },
+    {
+      "title": "Mini Refrigerador Skincare (6L) con Espejo y Luz LED",
+      "image": "img/Top4/refrigerador_skincare.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4WUHjC7",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/2UQZ36i",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Amas tu rutina de skincare? Este mini refri de 6 litros está diseñado específicamente para mantener tus sueros, cremas y mascarillas en la temperatura fría ideal, potenciando su efectividad y frescura !llévatelo con un 40% de descuento!"
+      ],
+      "tag": "",
+      "ready": true
+    },
+    {
+      "title": "Fuente Bebedero para Gatos (3L)",
+      "image": "img/Top4/fuente_gato.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2SPD6BW",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3i9qQoB",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Tu gato ignora su tazón, pero corre a la llave en cuanto la abres? Los gatos prefieren instintivamente el agua fresca y en movimiento. Esta fuente bebedero, solución definitiva para la hidratación de tu mascota ¡Llévatela con un 49% de descuento!."
+      ],
+      "tag": "",
+      "ready": true
+    },
+    {
+      "title": "Audífonos Nothing Ear (a) con ANC",
+      "image": "img/tecnologia/productos/nothing_ear.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1oLgVyW",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado del mismo diseño aburrido? Los Nothing Ear, rompen el molde con su icónico estilo transparente. Sumérgete en tu música con una potentísima Cancelación de Ruido Activa (ANC) que te aísla del mundo y disfruta de un sonido de Audio Hi-Res."
+      ],
+      "tag": "",
+      "ready": true
+    }
+  ],
+  "limpieza": [
+    {
+      "title": "Pack de 2 Limpiadores de Madera Pledge (Aerosol Limón)",
+      "image": "img/limpieza/productos/limpiador_grasa.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2NZtG66",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Este aerosol de cuidado especial no solo limpia el polvo, sino que nutre y protege tus superficies de madera, dejando un brillo natural y un aroma fresco a limón. Es la solución ideal para revitalizar mesas, sillas y puertas.",
+        "¡Haz clic y redescubre la calidez de tu madera!"
+      ],
+      "tag": "Esencial",
+      "ready": true
+    },
+    {
+      "title": "Limpiador de Acero Inoxidable",
+      "image": "img/limpieza/productos/limpiador_acero_inoxidable.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2CaP4kU",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Fórmula en spray que limpia, pule y protege en un solo paso. Crea una barrera protectora que repele el polvo y las huellas dactilares.",
+        ""
+      ],
+      "tag": "Acabados",
+      "ready": true
+    },
+    {
+      "title": "Limpiador de Lavavajillas Intensivo",
+      "image": "img/limpieza/productos/limpiador_lavavajillas.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2gw5crP",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "El limpiador Finish, de la marca #1 recomendada, ataca la raíz del problema: la grasa, la suciedad y el mal olor que se acumulan en las partes ocultas de tu lavavajillas, como filtros, tuberías y brazos rociadores. Su potente acción desengrasante disuelve la cal y los residuos que ni siquiera puedes ver.",
+        "¡Haz clic y dale a tu lavavajillas el mantenimiento profesional que merece!"
+      ],
+      "tag": "Electrodomésticos",
+      "ready": true
+    },
+    {
+      "title": "Guantes cocina",
+      "image": "img/limpieza/productos/guantes_cocinar.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1ArsASV",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Son ideales para marinar carne, manipular alimentos pegajosos o picar picantes sin preocupaciones. Su elegante color negro no solo luce profesional, sino que oculta las manchas, permitiéndote cocinar con total confianza y limpieza. ¡Aprovecha el espectacular 56% de descuento y llévate este paquete de 50 piezas!",
+        "¡Aprovecha el espectacular 56% de descuento y llévate este paquete de 50 piezas!"
+      ],
+      "tag": "Fregadero",
+      "ready": true
+    },
+    {
+      "title": "Rack Escurridor Plegable",
+      "image": "img/limpieza/productos/escurridor.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/28eQY4A",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c32tpMM7",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "u diseño inteligente \"sobre la tarja\" revoluciona tu espacio, permitiendo que todo el agua escurra directamente al fregadero, manteniendo tu cocina impecablemente seca y ordenada. Con capacidad para 10 platos, cubiertero y ganchos adicionales, es un centro de organización todo-en-uno que libera tu valiosa área de trabajo.",
+        "¡No dejes pasar esta oportunidad y llévatelo con un increíble 37% de descuento! Haz clic ahora y transforma tu espacio."
+      ],
+      "tag": "Organización",
+      "ready": true
+    },
+    {
+      "title": "Mini Aspiradora de Mano",
+      "image": "img/limpieza/productos/aspiradora_mano.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3f7Dhsn",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/33jdmam",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Esta mini aspiradora portátil es la solución definitiva para la limpieza de precisión. Al ser totalmente inalámbrica y ultra-ligera (solo 350g), te da la libertad de limpiar en segundos cualquier rincón de tu hogar, oficina o auto. Su gran ventaja es su doble función: no solo aspira con potencia, sino que también funciona como sopladora, perfecta para limpiar teclados o filtros.",
+        "¡No dejes pasar el 10% de descuento! Haz clic ahora y descubre la forma más rápida y fácil de mantener impecables tus espacios pequeños."
+      ],
+      "tag": "Detalle",
+      "ready": true
+    },
+    {
+      "title": "Kit de Limpieza Profesional Genix Tools (27 Piezas)",
+      "image": "img/limpieza/productos/kit_limpieza.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1253d1L",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "El arsenal definitivo para la limpieza profunda. Llega a cada rincón de tu casa y auto.",
+        "El set incluye un juego completo de cepillos que se montan en tu taladro, diseñados para desintegrar la suciedad más difícil en segundos. Es perfecto para los rines de tu coche, las juntas del baño, o la parrilla. Además, viene con cepillos de detalle, esponjas pulidoras y paños de microfibra para un acabado impecable.",
+        "¡No dejes pasar el espectacular 53% de descuento! Haz clic para ver todos los accesorios incluidos y transforma por completo tu forma de limpiar."
+      ],
+      "tag": "Multiusos",
+      "ready": true
+    },
+    {
+      "title": "Aspiradora Portátil Inalámbrica 2 en 1 (Slim Company)",
+      "image": "img/limpieza/productos/aspiradora_inalambrica.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2fr5Xo4",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Su diseño inalámbrico y ligero te da total libertad, mientras que su versatilidad 2 en 1 te permite pasar de limpiar pisos y alfombras a convertirla en una aspiradora de mano, perfecta para el coche, muebles y tapicería. Con 50W de potencia y una batería de 30 minutos (con carga rápida de 2h), es la herramienta ideal para mantener todo impecable sin esfuerzo.",
+        "¡No dejes pasar esta oportunidad y llévatela con un 28% de descuento! Haz clic ahora y descubre la verdadera limpieza sin cables."
+      ],
+      "tag": "Versátil",
+      "ready": true
+    },
+    {
+      "title": "Mopa a Vapor PurSteam de 1500W (Limpiador de Suelos)",
+      "image": "img/limpieza/productos/mopa_vapor.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1F4mFd6",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Utiliza el poder de 1500W para generar vapor desinfectante en solo 20 segundos, eliminando gérmenes usando únicamente agua. Es tu aliada perfecta para limpiar y proteger todo tipo de suelos, desde madera delicada hasta alfombras, gracias a su cabezal giratorio.",
+        "¡No dejes pasar el 18% de descuento! Haz clic ahora y descubre el poder de la limpieza a vapor."
+      ],
+      "tag": "Desinfección",
+      "ready": true
+    },
+    {
+      "title": "Cepillo de Limpieza Eléctrico Inalámbrico (Rotativo)",
+      "image": "img/limpieza/productos/cepillo_limpieza_rotativo.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2WH6gNz",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4SoVpwT",
+          "label": "AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Este cepillo de limpieza eléctrico es tu secreto para una limpieza profunda sin esfuerzo. Su potente motor rotativo hace todo el trabajo pesado por ti, desintegrando el sarro, el jabón pegado y la suciedad en segundos. Al ser inalámbrico y recargable por USB, te da total libertad para atacar cada rincón de la regadera, la estufa o incluso los rines de tu auto.",
+        "¡No dejes pasar esta oportunidad increíble y llévatelo con un espectacular 67% de descuento! Haz clic ahora y revoluciona tu rutina de limpieza."
+      ],
+      "tag": "Textiles",
+      "ready": true
+    },
+    {
+      "title": "Limpiador de Ventanas Magnético de Doble Cara (Ajustable)",
+      "image": "img/limpieza/productos/limpiador_magnetico_vidrio_ambos_lados.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3PgnKv9",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "Te permite limpiar el vidrio por fuera mientras tú estás seguro y cómodo por dentro. Su potente imán es ajustable (para grosores de 3 a 50mm), asegurando un agarre perfecto sin importar si es vidrio doble o sencillo. Además, cuenta con un sistema de almacenamiento de agua que aplica la solución de limpieza automáticamente.",
+        "¡Aprovecha esta increíble oportunidad y llévatelo con un espectacular 50% de descuento! Haz clic ahora y descubre la forma más inteligente y segura de limpiar."
+      ],
+      "tag": "Ventanas",
+      "ready": true
+    },
+    {
+      "title": "Cubo de Fregona con Separación de Agua (Limpia/Sucia)",
+      "image": "img/limpieza/productos/cubo_fregona_separador.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2tFQ6rb",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Su diseño asegura que la mopa de microfibra siempre se enjuague con agua limpia, mientras el agua sucia se aísla en un compartimento separado. El set incluye un mango de acero inoxidable resistente (1.28m) y un balde centrifugador para un escurrido perfecto sin esfuerzo.",
+        "¡No dejes pasar esta increíble oportunidad y llévatelo con un espectacular 55% de descuento! Haz clic ahora y descubre la diferencia de trapear siempre con agua limpia."
+      ],
+      "tag": "Intensivo",
+      "ready": true
+    },
+    {
+      "title": "Set 5 Pares de Zapatillas Trapeador (10 Piezas)",
+      "image": "img/limpieza/productos/zapatos_trapeador.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/14y9gTu",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¡Limpia el piso con solo caminar! La forma más divertida de atrapar el polvo.",
+        "Transforma la limpieza en una tarea fácil y hasta divertida. Este set incluye 10 fundas (5 pares) fabricadas con microfibra de chenille de alta absorción, un verdadero imán para el polvo, pelos y pelusas. Su diseño elástico te permite usarlas directamente sobre tus zapatos (¡o los de tus hijos!) para limpiar el piso con solo caminar, o adaptarlas a la cabeza de un trapeador.",
+        "¡No dejes pasar esta ingeniosa oferta y llévate el set con un 25% de descuento!"
+      ],
+      "tag": "Divertido",
+      "ready": true
+    },
+    {
+      "title": "Pack 10 Esponjas \"Borrador Mágico\" de Melamina",
+      "image": "img/limpieza/productos/borrador_magico.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3wYdMIf",
+          "label": "Ver en aliexpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1Y3We3u",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Borra manchas imposibles sin usar químicos. Solo añade agua.",
+        "Hechas de melamina, funcionan como un borrador ultra-fino que desintegra la suciedad más incrustada de múltiples superficies (paredes, vinil, cuero, plástico) usando solo agua. No necesitas jabón ni químicos agresivos y están diseñadas para una limpieza profunda sin dejar rayones.",
+        "¡No dejes pasar este increíble 50% de descuento y llévate el pack de 10! Haz clic y descubre el poder de la limpieza \"mágica\" a mitad de precio."
+      ],
+      "tag": "Paredes",
+      "ready": true
+    },
+    {
+      "title": "Kit de 2 Cepillos de Baño Higiénicos de Silicón (Base Adhesiva)",
+      "image": "img/limpieza/productos/kit_limpieza_inodoro_cepillo.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2Tbd956",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Sus cerdas están hechas de silicón flexible, lo que significa que no atrapan la suciedad, no guardan olores y se enjuagan perfectamente, durando mucho más que un cepillo común. Su diseño inteligente incluye una base empotrable (con adhesivo incluido) que se monta en la pared, ahorrando espacio y manteniendo el piso despejado.",
+        "¡Aprovecha ahora el 36% de descuento en este práctico set!"
+      ],
+      "tag": "Intensivo",
+      "ready": true
+    },
+    {
+      "title": "Purificador de Aire Portátil con Filtro HEPA (USB)",
+      "image": "img/limpieza/productos/purificador_aire.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c38lXEaP",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/2CiiE3L",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Equipado con un filtro HEPA y carbón activado, es experto en capturar polvo, polen, caspa de mascotas y humo, cubriendo áreas de hasta 50 m². Gracias a su alimentación USB y su funcionamiento ultra-silencioso (solo 36 dB), es perfecto para tu buró, escritorio u oficina.",
+        "¡No dejes pasar esta oportunidad increíble y llévatelo con un espectacular 54% de descuento!"
+      ],
+      "tag": "Tuberías",
+      "ready": true
+    },
+    {
+      "title": "Alfombrilla Antideslizante para Ducha (166 Ventosas)",
+      "image": "img/limpieza/productos/alfombrilla_baño.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3e557aF",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/2sb9Yi3",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Su diseño se ancla firmemente al suelo con 166 potentes ventosas, dándote una estabilidad total. Fabricada en material de alta calidad (resistente a grietas), su superficie texturizada \"tipo nube\" te da un suave masaje en los pies e incluye una zona de scrub (textura de masaje) para una limpieza completa.",
+        "¡No dejes pasar esta increíble oportunidad y llévatela con un espectacular 46% de descuento!"
+      ],
+      "tag": "Mamparas",
+      "ready": true
+    },
+    {
+      "title": "Despachador de Jabón Líquido de Pared (350ml)",
+      "image": "img/limpieza/productos/ispensador_jabon.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/249ojqM",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Este despachador de pared es la solución definitiva para el orden y la elegancia en tu baño. Con una capacidad de 350ml, te permite tener tu jabón líquido, gel antibacterial o shampoo siempre a la mano y sin desorden. Su diseño minimalista en color blanco se instala fácilmente en la pared, liberando espacio valioso y eliminando el caos visual.",
+        "¡No dejes pasar esta increíble oportunidad y llévatelo con un espectacular 50% de descuento! Haz clic ahora y dile adiós al desorden de botellas."
+      ],
+      "tag": "Higiénico",
+      "ready": true
+    },
+    {
+      "title": "Set Organizador de Baño 14 Pzs (Adhesivo)",
+      "image": "img/limpieza/productos/organizador_baño_estantes.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2bZJugY",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Es un paquete completo de 14 piezas fabricado en acero inoxidable resistente al agua y con un elegante acabado en negro. ¿Lo mejor? Se instala sin taladrar; su potente adhesivo soporta hasta 40 libras, ideal para todos tus shampoos, jabones, rastrillos y más, manteniendo todo en su lugar.",
+        "¡No dejes pasar esta oportunidad increíble y llévatelo con un espectacular 59% de descuento! Haz clic ahora y consigue el set líder en ventas para una ducha moderna y sin caos."
+      ],
+      "tag": "Organización",
+      "ready": true
+    },
+    {
+      "title": "Pastillas Limpiadoras Efervescentes",
+      "image": "img/limpieza/prod-15.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Limpian y desinfectan el tanque y la taza del inodoro sin necesidad de frotar.",
+        "Simplemente deja caer una pastilla en el tanque o la taza. Su acción efervescente elimina sarro, óxido y malos olores.",
+        ""
+      ],
+      "tag": "Mantenimiento",
+      "ready": false
+    },
+    {
+      "title": "Pastillas Limpiadoras de Lavadora",
+      "image": "img/limpieza/prod-25.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Mantén tu lavadora libre de residuos y malos olores. Ropa más limpia.",
+        "Elimina la acumulación de detergente y cal en el tambor y las tuberías. Usar una vez al mes para un mantenimiento óptimo.",
+        ""
+      ],
+      "tag": "Lavandería",
+      "ready": false
+    },
+    {
+      "title": "Pastillas Limpiadoras Multiusos",
+      "image": "img/limpieza/prod-22.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Disuelve una pastilla en agua para crear tu propio limpiador. Menos envases.",
+        "Reduce drásticamente el desperdicio de plástico. Cada pastilla se disuelve en tu propia botella reutilizable para crear un limpiador de superficies eficaz.",
+        ""
+      ],
+      "tag": "Eco-friendly",
+      "ready": false
+    },
+    {
+      "title": "Purificador de Aire HEPA Silencioso",
+      "image": "img/limpieza/prod-21.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Elimina alérgenos, polvo y olores, mejorando la calidad del aire interior.",
+        "Filtro HEPA verdadero H13 que captura el 99.97% de las partículas. Modo nocturno ultra silencioso y recordatorio de cambio de filtro.",
+        ""
+      ],
+      "tag": "Aire",
+      "ready": false
+    }
+  ],
+  "salud": [
+    {
+      "title": "Título del Producto Recomendado",
+      "image": "img/producto-placeholder.jpg",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Amazon"
+        }
+      ],
+      "paragraphs": [
+        "Una descripción breve que engancha y resalta el valor principal del producto."
+      ],
+      "tag": "Tecnología",
+      "ready": false
+    },
+    {
+      "title": "",
+      "image": "",
+      "links": [],
+      "paragraphs": [],
+      "tag": "",
+      "ready": false
+    },
+    {
+      "title": "",
+      "image": "",
+      "links": [],
+      "paragraphs": [],
+      "tag": "",
+      "ready": false
+    }
+  ],
+  "tecnologia": [
+    {
+      "title": "Monitor LG Ultra Wide Curvo 34\" (100Hz)",
+      "image": "img/tecnologia/productos/monitor_34.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2vrXqEy",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Sumérgete en la acción. Este monitor LG Ultra Wide curvo de 34\" te da un campo de visión inmersivo 21:9. Con 100Hz y resolución WQHD (3440x1440), disfrutarás de imágenes fluidas para multitarea o gaming. Incluye HDR 10 y tecnología anti parpadeo para cuidar tu vista.",
+        "OFERTA: ¡Es el momento de actualizar tu setup! Llévatelo con un 8% de descuento por tiempo limitado."
+      ],
+      "tag": "Escritorio",
+      "ready": true
+    },
+    {
+      "title": "Audífonos Sony WH-1000XM6 (Noise Cancelling)",
+      "image": "img/tecnologia/productos/audifonos_xm6.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1VmCzfi",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Buscas el silencio absoluto? Los Sony WH-1000XM6 son la leyenda de la cancelación de ruido. Sumérgete en tu música o llamadas sin distracciones. Son inalámbricos (Bluetooth), increíblemente cómodos (over-ear) y cuentan con asistentes de voz integrados.",
+        "Es la inversión definitiva en tu audio personal. Haz clic y experimenta el sonido de alta fidelidad."
+      ],
+      "tag": "Audio",
+      "ready": true
+    },
+    {
+      "title": "Bocina Amazon Echo Dot 5ta Gen (Alexa)",
+      "image": "img/tecnologia/productos/echo_dot.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2h1QsbU",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Lleva a Alexa a cualquier habitación. Esta Echo Dot 5ta Gen te permite controlar tu música, luces y más, solo con la voz. Ofrece un sonido nítido (15W) y cuenta con audio multi-room, Wi-Fi y Bluetooth.",
+        "OFERTA ESPECIAL: ¡No dejes pasar el 30% de descuento! Es el momento de hacer tu casa más inteligente."
+      ],
+      "tag": "Smart Home",
+      "ready": true
+    },
+    {
+      "title": "Teclado Mecánico 75% (Triple Conexión)",
+      "image": "img/tecnologia/productos/teclado_rgb.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2BdQyMq",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Libera tu escritorio. Este teclado mecánico 75% (85 teclas) es la mezcla perfecta de portabilidad y rendimiento. Sus switches Outemu Red Low Profile te dan una respuesta rápida y silenciosa, ideal para gaming o trabajo. Su mayor innovación es la triple conexión: úsalo vía Bluetooth, 2.4G (sin lag) o por cable USB-C. Es RGB, 100% en Español y resistente a salpicaduras.",
+        "Es el \"Más Vendido\" por una razón. ¡Consigue esta versatilidad total con un 30% de descuento!"
+      ],
+      "tag": "Periféricos",
+      "ready": true
+    },
+    {
+      "title": "Mouse Vertical Ergonómico Inalámbrico Delux",
+      "image": "img/tecnologia/productos/mouse_ergonomico.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1PfCHGq",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Sientes tensión en la muñeca tras horas en la PC? Este mouse vertical está diseñado científicamente para una postura natural, aliviando la fatiga. Sus clics silenciosos eliminan distracciones, mientras su conexión inalámbrica 2.4G (10m) y sus DPI ajustables (hasta 1600) te dan control total y un escritorio limpio.",
+        "Es la revolución ergonómica para tu productividad. ¡Consíguelo ahora con un increíble 48% de descuento!"
+      ],
+      "tag": "Periféricos",
+      "ready": true
+    },
+    {
+      "title": "Lámpara LED \"Suspendida\" con Carga Inalámbrica",
+      "image": "img/tecnologia/productos/lampara_colgante_cargador.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c43bIr8F",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1VmbbBJ",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Dale un toque futurista a tu escritorio. Esta lámpara LED no solo ilumina (con eficiencia A+), sino que se convierte en el centro de atención gracias a su increíble diseño \"suspendido\". Su base es una potente estación de carga inalámbrica para tu smartphone.",
+        "Es la pieza de conversación que tu setup necesita. ¡Aprovecha el 7% de descuento y llévatela hoy!"
+      ],
+      "tag": "Iluminación",
+      "ready": true
+    },
+    {
+      "title": "Hub USB-C 8 en 1 \"Docking Station\" (PD 100W)",
+      "image": "img/tecnologia/productos/hubUSB.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c4dosaDt",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1cj28CR",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Tu laptop tiene puertos limitados? Libera todo su potencial con esta docking station 8 en 1. Es la solución \"Más Vendida\" para conectar un monitor HDMI 4K, red Ethernet, USB 3.0 y lectores de tarjetas SD/Micro SD, todo mientras cargas tu equipo a máxima velocidad con Power Delivery de 100W.",
+        "Es el accesorio definitivo para tu productividad. ¡Consíguelo ahora con un increíble 43% de descuento!"
+      ],
+      "tag": "Conectividad",
+      "ready": true
+    },
+    {
+      "title": "Soporte Ergonómico Plegable de Aluminio para Laptop",
+      "image": "img/tecnologia/productos/soporte_laptop.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3pa6xOn",
+          "label": "Ver en AliExpress"
+        },
+        {
+          "url": "https://mercadolibre.com/sec/1ULSKSx",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Dolor de cuello por tu laptop? Este soporte \"Más Vendido\" es la solución ergonómica definitiva. Eleva tu pantalla (hasta 14.5 cm) y ofrece 6 ángulos ajustables para una postura perfecta. Su diseño abierto de aluminio es resistente, disipa el calor y al ser plegable (incluye funda), es ideal para llevarlo a todas partes.",
+        "Es una inversión esencial en tu salud y productividad. ¡Aprovecha ahora el 26% de descuento!"
+      ],
+      "tag": "Accesorios",
+      "ready": true
+    },
+    {
+      "title": "Webcam 4K Pro con Aro de Luz Integrado",
+      "image": "img/tecnologia/productos/camara_microfonos_4k.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2Hz3ruG",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Luce profesional en cada videollamada. Esta webcam 4K lleva tu imagen al siguiente nivel con una resolución ultra nítida (3840x2160). Su aro de luz integrado (con 3 tonos ajustables) te ilumina a la perfección, eliminando sombras. Además, incluye micrófono para una solución todo-en-uno en streaming o conferencias.",
+        "Es el upgrade que tu setup necesita. ¡Aprovecha ahora el 8% de descuento!"
+      ],
+      "tag": "Video Conferencia",
+      "ready": true
+    },
+    {
+      "title": "Tira de Luz Neón LED Inteligente RGBIC (5 Metros)",
+      "image": "img/tecnologia/productos/tiras_led_rgb_decoracion.webp",
+      "links": [
+        {
+          "url": "https://s.click.aliexpress.com/e/_c2xfVUJV",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Quieres una iluminación que vaya más allá de un solo color? Esta tira de neón LED lleva tu espacio al siguiente nivel con la avanzada tecnología RGBIC. A diferencia del RGB normal, te permite mostrar múltiples colores en un solo segmento, creando impresionantes efectos fluidos, degradados y animaciones dinámicas que hipnotizan. Es resistente al agua, ideal para exteriores o para darle un toque profesional a tu setup.",
+        "Aprovecha el Descuento de Bienvenida de AliExpress. ¡Haz clic y transforma tu espacio con iluminación premium!"
+      ],
+      "tag": "Iluminación",
+      "ready": true
+    },
+    {
+      "title": "Aspiradora Robot Lefant (Barre y Trapea) 2 en 1",
+      "image": "img/tecnologia/productos/aspiradora_ia_automatica.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1jHeBEm",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "Automatiza la limpieza total. Esta aspiradora robot Lefant es una solución 2 en 1: barre y trapea. Con 4.5 kPa de succión (ideal para pelo de mascotas) y filtro HEPA, deja tus pisos impecables. Es 100% inteligente: contrólala por app o con tu voz (Alexa/Google). Su diseño delgado (7.9cm) limpia bajo los muebles.",
+        "Es el momento de tener la casa limpia sin esfuerzo. ¡Aprovecha un increíble 54% de descuento!"
+      ],
+      "tag": "Limpieza",
+      "ready": true
+    },
+    {
+      "title": "Pack de 4 Enchufes Inteligentes (Smart Plug) Wi-Fi",
+      "image": "img/tecnologia/productos/enchufes_inteligentes.webp",
+      "links": [
+        {
+          "url": "#",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Quieres controlar tu casa con la voz sin gastar una fortuna? Este paquete de 4 enchufes inteligentes es la forma más fácil de empezar. Convierte cualquier aparato, desde una lámpara hasta tu cafetera, en un dispositivo smart. Al ser \"Más Vendido\", sabes que es una opción confiable. Simplemente conéctalos al Wi-Fi y usa la app o tu voz con Alexa, Google Home o Siri para encender y apagar lo que quieras, estés donde estés.",
+        "¡No dejes pasar este increíble 65% de descuento! Haz clic ahora y lleva la comodidad del futuro a tu casa hoy mismo."
+      ],
+      "tag": "Control",
+      "ready": false
+    },
+    {
+      "title": "Cámara de Vigilancia 360° TP-Link Tapo 2K (Más Vendida)",
+      "image": "img/tecnologia/productos/camra_vigilancia_2k.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1CNotc3",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Buscas tranquilidad total cuando no estás en casa? Esta cámara TP-Link Tapo, la \"Más Vendida\" en vigilancia, es tu solución definitiva. Te da un control visual completo con su movimiento motorizado de 360° (Pan/Tilt), eliminando cualquier punto ciego. Su nítida resolución 2K (3MP) te permite ver cada detalle con una claridad superior al Full HD, mientras que la visión nocturna avanzada cuida tu hogar 24/7.",
+        "Recibe alertas de movimiento al instante en tu smartphone y utiliza el audio bidireccional para comunicarte con tu familia o mascotas (o disuadir intrusos). Es compatible con Alexa y Google Home. Haz clic y consigue la cámara de seguridad líder en ventas."
+      ],
+      "tag": "Seguridad",
+      "ready": true
+    },
+    {
+      "title": "Timbre Inteligente \"Más Vendido\" con Cámara (Inalámbrico)",
+      "image": "img/tecnologia/productos/timbre_inteligente_camara.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2EJ2VKc",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Quieres saber quién está en tu puerta, estés donde estés? Este timbre inteligente \"Más Vendido\" es tu nuevo guardia de seguridad personal. Te permite ver, escuchar y hablar con tus visitas en tiempo real directamente desde tu smartphone gracias a su función de videollamada interactiva. Su cámara con visión nocturna clara y su diseño resistente al agua (inalámbrico) garantizan que nunca te pierdas un visitante, de día o de noche.",
+        "¡No dejes pasar este espectacular 66% de descuento! Haz clic ahora y ten el control total de tu puerta principal en la palma de tu mano."
+      ],
+      "tag": "Seguridad",
+      "ready": true
+    },
+    {
+      "title": "Cerradura Inteligente 5 en 1 con Huella Dactilar (49% OFF)",
+      "image": "img/tecnologia/productos/cerradura_inteligente.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2TNfBtU",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Sigues cargando llaves? Es hora de modernizar tu puerta con la máxima seguridad y conveniencia. Esta cerradura inteligente 5 en 1 te da control total: ábrela al instante con tu huella dactilar (almacena 100), usa un código numérico, tu smartphone (vía Bluetooth con la app Tuya), una tarjeta de proximidad o la llave física tradicional. Su acabado en acero inoxidable es duradero y elegante, ideal para tu puerta principal.",
+        "¡Aprovecha ahora y llévatela con un espectacular 49% de descuento! Haz clic y olvídate de las llaves para siempre"
+      ],
+      "tag": "Seguridad",
+      "ready": true
+    },
+    {
+      "title": "Audífonos Nothing Ear (a) con ANC",
+      "image": "img/tecnologia/productos/nothing_ear.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/1oLgVyW",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado del mismo diseño aburrido? Los Nothing Ear (a), segundos \"Más Vendidos\" en audífonos, rompen el molde con su icónico estilo transparente. Pero no son solo diseño: sumérgete en tu música con una potentísima Cancelación de Ruido Activa (ANC) de 45dB que te aísla del mundo y disfruta de un sonido de estudio gracias al Audio Hi-Res. Su batería total de 42.5 horas, la conexión dual (Bluetooth 5.3) y la resistencia al polvo/agua (IP55) los hacen perfectos para el día a día.",
+        "Es la oportunidad de tener diseño y tecnología de punta a un precio inmejorable. ¡No dejes pasar este increíble 48% de descuento! Haz clic y experimenta el sonido con un estilo único."
+      ],
+      "tag": "Audio",
+      "ready": true
+    },
+    {
+      "title": "Smartwatch Huawei Watch Fit 3 (Amoled)",
+      "image": "img/tecnologia/productos/huawei_watch.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2R4niSH",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Buscas un smartwatch que combine estilo, deporte y una batería que no te abandone? Este Huawei Watch Fit 3, uno de los \"Más Vendidos\", es tu elección ideal. Su espectacular pantalla AMOLED cuadrada de 1.82\" te ofrece una claridad y colores vibrantes sin igual. Olvídate del cargador por completo: su batería te da una increíble autonomía de hasta 10 días. Es el compañero de fitness definitivo, con GPS integrado para registrar tus rutas y resistencia al agua de 50m.",
+        "¡Es el momento de dar el salto! Aprovecha ahora y llévatelo con un 32% de descuento por tiempo limitado."
+      ],
+      "tag": "Salud & Fitness",
+      "ready": true
+    },
+    {
+      "title": "Power Bank Ugreen 10,000mAh con MagSafe (20W)",
+      "image": "img/tecnologia/productos/powerbank_ugreen_magsafe.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/21z7gE5",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado de cables que se enredan? Esta Power Bank \"Más Vendida\" de Ugreen es la solución de carga definitiva. Con 10,000mAh de capacidad, tiene energía de sobra para varios días, y su tecnología MagSafe se adhiere magnéticamente a tu iPhone (12 o superior) para una carga inalámbrica perfecta y sin esfuerzo. Además de ser magnética, su puerto USB-C de 20W ofrece carga ultra rápida para una amplia gama de dispositivos, incluyendo Samsung y Motorola.",
+        "No te vuelvas a quedar sin batería en el momento crucial. Haz clic y consigue esta solución de carga premium de una marca líder como Ugreen."
+      ],
+      "tag": "Energía",
+      "ready": true
+    },
+    {
+      "title": "Bocina Portátil Xiaomi SOUND POCKET (IP67)",
+      "image": "img/tecnologia/productos/xiaomi_bocina_SOUNDPOCKET.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2UsiBAb",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Buscas un sonido potente que te siga el ritmo a donde vayas? Esta bocina Xiaomi SOUND POCKET, una de las \"Más Vendidas\" en accesorios, es la definición de audio portátil. Su diseño ultra-compacto esconde una durabilidad extrema: con certificación IP67, es totalmente resistente al polvo y sumergible, ideal para la playa, la regadera o cualquier aventura. A pesar de su tamaño, ofrece 5W de potencia y una función clave: Emparejamiento TWS, que te permite conectar dos bocinas para un verdadero sonido estéreo.",
+        "Haz clic y descubre la calidad de sonido y la resistencia de Xiaomi en un tamaño que cabe en tu bolsillo."
+      ],
+      "tag": "Audio",
+      "ready": true
+    },
+    {
+      "title": "Mini Proyector Inteligente con Android y Wi-Fi (Soporta 1080p)",
+      "image": "img/tecnologia/productos/proyector_4k.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2wMZdDf",
+          "label": "Ver en Mercado Libre"
+        },
+        {
+          "url": "https://s.click.aliexpress.com/e/_c3fF71s3",
+          "label": "Ver en AliExpress"
+        }
+      ],
+      "paragraphs": [
+        "¿Tu televisor se siente pequeño? Transforma cualquier pared en un cine con este mini proyector inteligente. Su característica estrella es el sistema operativo Android integrado: olvídate de conectar laptops o sticks, solo necesitas Wi-Fi para ver tus apps de streaming favoritas. Combina una imagen brillante (8,000 lúmenes) que soporta Full HD 1080p con un diseño innovador que gira 180°, permitiéndote proyectar en la pared o incluso en el techo.",
+        "¡Aprovecha ahora el 34% de descuento! Haz clic y disfruta de películas en pantalla gigante donde quieras."
+      ],
+      "tag": "Entretenimiento",
+      "ready": true
+    },
+    {
+      "title": "Estación de Carga Magnética 3 en 1 (iPhone, AirPods, Apple Watch)",
+      "image": "img/tecnologia/productos/cargador_3in1_apple_magsafe.webp",
+      "links": [
+        {
+          "url": "https://mercadolibre.com/sec/2GW8oki",
+          "label": "Ver en Mercado Libre"
+        }
+      ],
+      "paragraphs": [
+        "¿Cansado de la maraña de cables en tu buró? Esta estación de carga 3 en 1 es la solución de elegancia y orden que necesita tu ecosistema Apple. Diseñada para cargar simultáneamente tu iPhone (magnéticamente), Apple Watch y AirPods en un solo lugar. Su diseño plegable y moderno la hace perfecta tanto para tu escritorio como para llevarla de viaje.",
+        "Simplifica tu vida y mantén tus dispositivos esenciales siempre al 100%. Con carga rápida de 15W y un solo cable USB-C, es el accesorio definitivo para cualquier usuario de Apple."
+      ],
+      "tag": "Energía",
+      "ready": true
+    }
+  ]
+}

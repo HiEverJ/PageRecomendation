@@ -1,0 +1,239 @@
+RECOMIENDA[TOP] — RENOVACIÓN DEL CATÁLOGO
+12 de octubre de 2026
+
+UBICACIÓN Y ALCANCE
+Proyecto real: C:\Sources\PageRecomendation
+Dominio declarado en CNAME: www.recomiendatop.lat
+Sitio estático de HTML, CSS y JavaScript, con imágenes locales.
+El repositorio no tenía modificaciones pendientes al comenzar.
+Se modificó directamente este proyecto. No se desplegó ni se hizo push.
+
+Se recuperó el contexto de “Mejorar página de recomendaciones” y de
+“Practicas locales”. La dirección toma de las plantillas la jerarquía
+editorial, el espacio en blanco, la sobriedad y los detalles de interacción,
+adaptados a descubrir productos y leer sin obstáculos.
+
+IMPORTANTE SOBRE EL ALCANCE DE LA REVISIÓN
+Se inspeccionaron las fuentes, la estructura de páginas, los artículos,
+las referencias a imágenes y tiendas, los controladores de interacción,
+las hojas de estilo y los archivos de SEO. Se generaron los nuevos HTML.
+NO se ejecutaron pruebas, scripts de prueba, pruebas visuales, capturas,
+navegadores, simulaciones de pantalla, servidores de prueba ni entornos
+aislados. La revisión del código y del diff no equivale a probar el sitio.
+No se afirma compatibilidad comprobada, accesibilidad certificada ni
+mejoras de velocidad medidas. La revisión manual en pantalla queda al dueño.
+
+HALLAZGOS CONCRETOS DEL CÓDIGO ANTERIOR
+- Salud era una página de ejemplo, con imagen inexistente y textos de relleno,
+  pero aparecía en el sitemap.
+- Decoración, gamer y festividades contenían numerosos productos sin destino
+  comercial: enlaces #, imágenes ausentes o imágenes de placehold.co.
+- Las descripciones y metadata alternaban Amazon, Mercado Libre y AliExpress,
+  aunque parte de los enlaces eran de ejemplo.
+- La portada mostraba precios y descuentos sin fecha de comprobación, además
+  de textos alternativos de imágenes que describían productos distintos.
+- El enlace de enchufes inteligentes tenía DOS atributos href, uno real y otro
+  #. Se recuperó el destino real conservado en el archivo original.
+- gamer.js referenciaba contentWrapper y body sin declararlas en ese archivo.
+- Algunas fichas se desplegaban al hacer clic sobre artículos no interactivos
+  o solo al pasar el cursor; los modales no gestionaban Escape ni foco.
+- El menú móvil no comunicaba su estado y dependía de JavaScript para mostrarse.
+- Había altura y recorte de contenido, cabecera fija y fondos pesados con
+  desplazamiento fijo; estos patrones podían complicar pantallas pequeñas.
+- Las fuentes se importaban tanto desde HTML como desde hojas compiladas;
+  el preconnect a fonts.gstatic estaba incompleto.
+- El pie contenía enlaces sin destino a aviso legal, privacidad, cookies y contacto.
+- No había canonical consistente. El sitemap usaba lastmod fijo de 2025.
+
+LO IMPLEMENTADO
+1. Una identidad editorial común: marfil, oliva y tinta oscura, titulares serif,
+   tarjetas con imágenes completas, bordes discretos, numeración y aire visual.
+   Se conserva la marca Recomienda[Top]. No se añadieron fuentes externas.
+
+2. Portada orientada al descubrimiento: presentación, acceso al catálogo,
+   seis categorías, selección inicial y explicación del criterio editorial.
+   No hay descuentos, precios antiguos, urgencia ficticia ni una falsa selección
+   “de la semana”. El usuario puede llegar al catálogo inmediatamente.
+
+3. Catálogo de 64 productos únicos: 21 de hogar, 21 de tecnología, 19 de
+   limpieza y 3 hallazgos de la portada. Nothing Ear (a), antes repetido, tiene
+   una sola ficha de catálogo. “Con imagen y enlace” NO significa que el
+   vendedor, el destino final o la disponibilidad hayan sido verificados.
+
+4. Reseñas reescritas individualmente con una idea de uso y un punto concreto
+   para revisar. Se retiraron afirmaciones de superioridad, descuentos sin
+   vigencia, promesas sanitarias y otras garantías sin evidencia propia.
+   Los nombres y especificaciones heredados siguen siendo referencias del
+   catálogo: el dueño debe confirmar la versión exacta con cada vendedor.
+
+5. Decoración, gamer y regalos ahora agrupan productos aprovechables del
+   catálogo. No se inventaron enlaces para rellenar las categorías antiguas.
+   Festividades conserva su URL y pasa a una selección de regalos útil todo
+   el año, con orientación para Navidad cuando corresponda.
+
+6. Se preservó el inventario original en docs/inventario-original.json, incluidas
+   las fichas que no se publican y sus descripciones/enlaces originales.
+   Hay 109 fichas con título pendientes de completar, además de dos artículos
+   vacíos en salud. El indicador ready del inventario es una captura previa:
+   el enchufe con href duplicado se recuperó después y sí está en el catálogo.
+   No uses ese archivo como fuente del sitio renovado: la fuente es data/catalog.json.
+
+7. Interacciones que aparecen y desaparecen: detalles nativos con summary,
+   menú móvil con estado, Escape, cierre exterior y control del foco.
+   Ya no es necesario pasar el cursor sobre una ficha para encontrar la tienda.
+   Cada enlace externo es independiente del control de despliegue.
+
+8. Búsqueda local insensible a acentos y mayúsculas, filtros combinables por
+   categoría y tienda, contador anunciado y estado vacío con recuperación.
+   Los controles se muestran solo cuando su comportamiento está inicializado.
+   Los enlaces catalogo.html#identificador llevan a una ficha y abren sus detalles.
+
+9. Sin JavaScript siguen disponibles navegación, reseñas desplegables nativas,
+   textos y enlaces de tiendas. No se descarga un catálogo desde una API para
+   que el buscador pueda leerlo: el contenido está en el HTML desde el inicio.
+
+10. Accesibilidad desde el código: enlace para saltar al contenido, encabezados,
+    etiquetas de campos, foco visible, aria-current, estados expandidos, controles
+    nativos, texto alternativo coherente y respeto al movimiento reducido.
+    Diseño en tres, dos o una columna, navegación adaptable y controles táctiles.
+    No se conserva un modal que pueda dejar al usuario atrapado sin foco.
+
+11. Menos dependencias activas: una hoja CSS compartida y un único JS diferido.
+    Las imágenes de tarjetas usan carga diferida y espacio reservado; el elemento
+    destacado de portada tiene prioridad. No se cargan los fondos de varios MB
+    ni importaciones de fuentes duplicadas del diseño anterior.
+    Los originales permanecen en el repositorio, pero las páginas nuevas no
+    enlazan a los estilos ni controladores antiguos. No se comprimieron imágenes.
+
+12. SEO técnico: títulos y descripciones por página, canonical basado en CNAME,
+    Open Graph, Twitter, idioma es-MX, WebSite, CollectionPage/WebPage,
+    BreadcrumbList e ItemList. Los datos estructurados describen contenido visible.
+    No se inventaron estrellas, precios, Review, AggregateRating ni resultados
+    enriquecidos de producto. No se crearon decenas de páginas de producto pobres;
+    las fichas tienen anclas dentro del catálogo y las categorías aportan guías.
+
+13. Sitemap de diez páginas informativas y de catálogo, sin fechas lastmod
+    inventadas. Salud y 404 tienen noindex y quedan fuera del sitemap.
+    robots permite el sitio y sus recursos; excluye del rastreo docs, data y
+    scripts para que el inventario interno no sea parte del contenido buscable.
+    Esa exclusión NO protege archivos ni sustituye un control de acceso.
+
+14. Página 404 con enlace de recuperación, página de criterio editorial y
+    afiliación, e información sobre privacidad y preferencias. No se inventó
+    un correo, una empresa responsable ni un formulario que simule enviar.
+
+15. Enlaces comerciales con sponsored, noopener y noreferrer; se avisa que
+    abren otra pestaña. Se conservan los enlaces reales del catálogo original.
+    Se advierte que las variantes de dos tiendas deben compararse antes de comprar.
+
+16. El contenedor existente GTM-W4BPKXL4 se conserva, pero su carga pasa a ser
+    opcional tras aceptación explícita. Sin JavaScript o sin aceptación no carga.
+    Las opciones aceptar/rechazar tienen presentación equivalente y se pueden
+    cambiar desde el pie. Retirar aceptación recarga para dejar de cargar etiquetas;
+    no borra por sí solo cookies previas ni datos ya enviados.
+    Se prepara affiliate_click con product_id, store y page_path en dataLayer,
+    solo tras aceptación. No se envían los términos del buscador.
+    No se configuró GA4 ni se confirma que reciba eventos.
+
+RAZONES PLAUSIBLES DEL BAJO TRÁFICO; NO CAUSAS DEMOSTRADAS
+El contenido de ejemplo, los enlaces sin destino, la ausencia de evidencia
+de uso, el texto promocional genérico, las páginas delgadas, las inconsistencias
+de metadata y las imágenes pesadas son debilidades presentes en las fuentes.
+Pueden perjudicar utilidad, confianza, descubrimiento o conversión. Este análisis
+no demuestra cuál de ellas explica las visitas históricas ni cuánto influye.
+
+No hay evidencia aquí para atribuir el problema al sufijo .lat. Tampoco se puede
+afirmar que un rediseño o un sitemap aumenten tráfico por sí solos.
+La consulta pública al dominio mediante la herramienta web no devolvió la página;
+ese fallo de consulta NO prueba una caída, un problema de DNS o falta de indexación.
+
+QUÉ REQUIERE CONFIGURACIÓN EXTERNA O EVIDENCIA
+Antes de publicar:
+- Confirmar identidad del responsable y canal real de contacto/privacidad.
+  Completar el aviso integral y describir las etiquetas, cookies y conservación
+  efectivamente configuradas. La página incluida explica el comportamiento del
+  código; no es una certificación legal ni una auditoría del contenedor remoto.
+- Revisar GTM-W4BPKXL4: etiquetas activas, duplicaciones, propiedad GA4 y política
+  de consentimiento. Crear el disparador affiliate_click y mapear sus parámetros
+  si se quiere medir esa interacción. No contar este evento como una venta.
+- Considerar que el cambio a analítica opcional modifica la cobertura de medición:
+  no comparar totales futuros con los anteriores como si la cobertura fuera igual.
+- Revisar destino final, publicación activa, modelo, variante, reputación del
+  vendedor, atribución de afiliado y condiciones del programa de cada enlace.
+  No se siguieron masivamente los enlaces acortados ni se verificaron las tiendas.
+- Confirmar derechos de uso de imágenes y marca. Se reutilizan los activos existentes.
+- Realizar la revisión manual en pantallas que el dueño reservó para sí mismo.
+- Autorizar expresamente el despliegue. No se realizó en este trabajo.
+
+En hosting/dominio:
+- Confirmar HTTPS, DNS y qué hostname es realmente el principal. Canonical y
+  sitemap usan www porque es lo que declara el CNAME actual. Si se elige sin www,
+  actualizar BASE en scripts/build_site.py, CNAME y redirecciones del proveedor.
+- Configurar redirecciones permanentes de HTTP y hostname alterno al principal;
+  definir la normalización /index.html -> / en el servidor, sin bucles.
+- Servir la página 404 con estado HTTP 404 real. Un archivo no garantiza el estado.
+- Configurar compresión y caché acordes al proceso de actualización. No aplicar
+  caché inmutable a CSS/JS sin versionar sus URLs.
+- Mantener fuentes, catálogo interno y documentación fuera de la carpeta pública
+  si no se desea publicarlos; robots no los hace privados.
+
+En Search Console:
+- Revisar propiedad del dominio, sitemaps e inspección de URLs representativas.
+- Separar “descubierta”, “rastreada”, “indexada” y canonical elegida por Google.
+- Comparar consultas, impresiones, clics, CTR y posición por página, país y dispositivo.
+- Revisar problemas de seguridad/acciones manuales y datos reales de experiencia.
+- Solicitar rastreo de páginas actualizadas únicamente tras publicación autorizada.
+
+En Analytics y negocio:
+- Separar sesiones orgánicas, lectura de fichas, clics a tiendas y ventas atribuidas.
+- Comparar periodos equivalentes y considerar estacionalidad.
+- No asumir que hubo una venta a partir de un clic: las comisiones se confirman
+  en los reportes de los programas de afiliación.
+- Para reseñas competitivas, aportar fotos y experiencia propias, mediciones,
+  autoría y revisiones verificables. La nueva estructura facilita ese trabajo;
+  no fabrica evidencia ni sustituye una estrategia editorial sostenida.
+
+ARCHIVOS MODIFICADOS (RUTAS RELATIVAS A C:\Sources\PageRecomendation)
+index.html
+hogar.html
+tecnologia.html
+limpieza.html
+decoracion.html
+gamer.html
+festividades.html
+salud.html
+js/main.js
+robots.txt
+sitemap.xml
+README.md
+
+ARCHIVOS NUEVOS
+catalogo.html
+criterio-editorial.html
+privacidad.html
+404.html
+css/site.css
+data/catalog.json
+scripts/build_site.py
+docs/inventario-original.json
+docs/NOTAS-DE-CAMBIO.txt
+
+MANTENIMIENTO
+Editar data/catalog.json para actualizar productos. Los campos summary y check
+contienen la reseña y el apartado “Antes de elegir”. Conservar id evita romper
+enlaces guardados a fichas. Editar scripts/build_site.py para textos de páginas,
+selecciones, estructura HTML y metadata. Ejecutarlo con Python vuelve a generar
+las páginas y archivos SEO: no hay instalación de paquetes ni servidor obligatorio.
+css/site.css y js/main.js son las fuentes activas de estilo e interacción.
+No editar solo un HTML generado si el cambio debe sobrevivir a otra generación.
+El generador es una herramienta de publicación estática, NO un script de prueba.
+
+REFERENCIAS TÉCNICAS CONSULTADAS
+Google, recomendaciones para reseñas útiles (evidencia, ventajas y limitaciones):
+https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews
+Google, canonical y coherencia de URLs:
+https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+Google, JavaScript e indexación:
+https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+Google, un sitemap no garantiza indexación ni posicionamiento:
+https://developers.google.com/search/help/crawling-index-faq
