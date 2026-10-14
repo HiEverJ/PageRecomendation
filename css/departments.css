@@ -151,3 +151,23 @@ body[data-department] .skip{color:var(--paper)}
 }
 @media(prefers-reduced-motion:reduce){[data-department] .department-object img,[data-department] .department-object:hover img{transform:none;transition:none}}
 @media(forced-colors:active){.department-scene,.product,.season-link{border:1px solid CanvasText}.scene-orbit,.scene-word{display:none}}
+
+/* Small line drawings: quiet chapter punctuation, never laid over products or controls. */
+.ink-mark{display:block;flex:0 0 86px;width:86px;height:86px;margin-left:auto;color:var(--accent);opacity:.66;pointer-events:none;user-select:none;transform:rotate(-5deg)}
+.ink-mark svg{display:block;width:100%;height:100%;overflow:visible}
+.ink-mark .ink-wash{fill:currentColor;fill-opacity:.09;stroke:none}
+.ink-mark-small{width:38px;height:38px;flex-basis:38px;margin:0;opacity:.8;transform:rotate(5deg)}
+.chapter-intro>div{min-width:0;flex:1}
+.chapter-2 .ink-mark{transform:rotate(7deg)}
+.ink-divider{display:flex;align-items:center;justify-content:center;gap:24px;padding:36px 0 0;max-width:340px;margin:0 auto}
+.ink-divider>span:not(.ink-mark){height:1px;flex:1;background:var(--line)}
+.category-link .ink-mark{justify-self:end;align-self:center;color:inherit}
+[data-department="gamer"] .ink-mark{color:#7ee1d3;opacity:.75;filter:drop-shadow(0 0 7px #7ee1d31a)}
+[data-department="tecnologia"] .ink-mark{transform:none}
+[data-department="decoracion"] .chapter-intro h3,[data-department="hogar"] .chapter-intro h3{font-style:italic}
+[data-department="festividades"] .chapter-intro::after{display:none}
+[data-department="festividades"] .ink-mark{opacity:.85;flex-basis:100px;width:100px;height:100px}
+[data-department="festividades"] .ink-divider .ink-mark{flex-basis:44px;width:44px;height:44px}
+.is-filtered .chapter-intro>.ink-mark,.is-filtered .ink-divider{display:none}
+@media(max-width:650px){.chapter-intro>.ink-mark{flex-basis:48px;width:48px;height:48px;opacity:.6}.chapter-intro{flex-wrap:wrap}.chapter-intro>div{flex-basis:calc(100% - 90px)}.chapter-intro>.ink-mark{margin-left:auto;margin-top:-6px}.ink-divider{padding-top:24px;max-width:220px}.category-link .ink-mark-small{width:30px;height:30px}.department-next{overflow-wrap:anywhere}}
+@media(forced-colors:active){.ink-mark,.ink-divider{display:none}}

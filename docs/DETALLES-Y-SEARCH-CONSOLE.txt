@@ -1,0 +1,121 @@
+RECOMIENDA[TOP] — DETALLES EDITORIALES Y SEARCH CONSOLE
+14 de octubre de 2026
+Proyecto real: C:\Sources\PageRecomendation
+
+IMPLEMENTADO
+Se extendió el lenguaje de las ilustraciones con pequeños dibujos vectoriales
+de línea. Se conservó la calabaza principal, las paletas, las distribuciones,
+las reseñas, los productos y sus enlaces.
+
+- Hogar: taza, casa y pequeños objetos de ambiente.
+- Tecnología: pantalla, circuitos y dispositivo portátil.
+- Limpieza: gota, destellos y hoja.
+- Decoración: jarrón, arco y lámpara.
+- Gamer: control, audífonos y trazos geométricos.
+- Halloween: calabaza, luna y murciélago.
+- Navidad: árbol, esfera y regalo.
+- San Valentín: corazón, sobre y flor.
+- Entretiempo: regalo y estrella.
+
+Los motivos aparecen en los accesos de portada, las introducciones de capítulos
+y un pequeño divisor al final de cada selección. Hogar y decoración reciben
+un acento tipográfico cursivo en los títulos de capítulo.
+
+Se emplean SVG estáticos, sin librerías, fuentes externas, animación continua
+ni imágenes descargadas. Los dibujos son decorativos, no reciben foco ni
+interceptan clics. Ocupan su propio espacio; no se superponen a productos.
+Se reducen en pantallas estrechas y se ocultan en colores forzados.
+Al filtrar, desaparecen los adornos de capítulos para priorizar los resultados.
+La fuente común de ilustraciones está en scripts/ornaments.py.
+
+ARCHIVOS
+Nuevo: scripts/ornaments.py.
+Editados: scripts/departments.py, scripts/build_site.py, css/departments.css.
+Regenerados con cambios: index.html, hogar.html, tecnologia.html, limpieza.html,
+decoracion.html, gamer.html y festividades.html.
+Nota nueva: docs/DETALLES-Y-SEARCH-CONSOLE.txt.
+El generador también escribe el resto de páginas y SEO sin cambios intencionados.
+No se modificaron data/catalog.json, enlaces comerciales ni js/main.js.
+
+LECTURA DE LA CAPTURA DE SEARCH CONSOLE
+Fuente: captura proporcionada por el propietario en este chat.
+Filtro visible: seis meses, tipo de búsqueda Web.
+Eje temporal visible: aproximadamente 11 de abril a 10 de octubre de 2026.
+No es una consulta actual a la cuenta. La captura no muestra las filas de
+Consultas ni Páginas, ni el informe de indexación.
+
+Cifras observadas:
+824 impresiones.
+3 clics.
+CTR medio: 0,4 % (3 / 824 equivale aproximadamente a 0,364 %, redondeado).
+Posición media: 40.
+
+Interpretación:
+1. Hay presencia en resultados de Google durante ese periodo. No es correcto
+   decir que Google nunca mostró el sitio. Esto tampoco demuestra que todas
+   las páginas estén indexadas.
+2. La exposición acumulada es pequeña: aproximadamente 137 impresiones al mes,
+   usando seis meses como división orientativa. No son visitantes únicos.
+3. Los tres clics corresponden a este informe de búsqueda Web, no al total de
+   visitas de todas las fuentes ni a compras o clics de afiliación.
+4. Posición 40 es una media agregada, no una posición fija para cada consulta
+   ni una prueba de que todas las páginas estén exactamente en una “página 4”.
+   Apunta a una presencia media alejada de las primeras posiciones.
+5. CTR 0,4 % es descriptivamente bajo, pero tres clics son una base muy pequeña.
+   No basta para culpar al título o a la descripción sin separar consulta,
+   página, posición y dispositivo. Un clic adicional llevaría el CTR a cerca
+   de 0,49 % con las mismas impresiones: la muestra es sensible a pocos cambios.
+6. Hay un pico visible de impresiones en agosto, sin crecimiento sostenido
+   evidente hasta el final. No se puede atribuir a una página, campaña,
+   actualización de Google o penalización a partir de esta gráfica.
+7. El rango visible termina antes de las modificaciones realizadas el 12 de
+   octubre. Esta captura NO mide el resultado del nuevo diseño ni del nuevo SEO.
+   Nosotros tampoco hemos desplegado esas modificaciones.
+
+HIPÓTESIS DE TRABAJO, NO DIAGNÓSTICO CONFIRMADO
+La combinación de pocas impresiones y posición media distante sugiere priorizar
+visibilidad y pertinencia para búsquedas concretas. No limitar el trabajo a
+embellecer títulos o añadir decoraciones. Los arreglos técnicos anteriores
+eliminaron debilidades del código, pero no prueban cuál explica el rendimiento.
+
+La captura no demuestra un problema por usar .lat, una penalización, fallo de
+Analytics o falta total de indexación. Tampoco permite evaluar conversiones.
+El consentimiento de Analytics del sitio y los datos de Search Console son
+mediciones distintas: no atribuir estas cifras al nuevo aviso de analítica.
+
+SIGUIENTE EVIDENCIA ÚTIL
+Cuando el propietario quiera continuar, solicitar exportación del informe de
+Rendimiento para los mismos seis meses, con Consultas y Páginas, y el informe
+de Indexación de páginas. No hace falta compartir contraseñas.
+
+Prioridades de análisis de esas tablas:
+- Separar búsquedas de marca de búsquedas de productos/necesidades.
+- Identificar consultas con impresiones y posiciones aproximadas 8–20 como
+  candidatas a mejorar, si existen y el volumen da contexto suficiente.
+- Para consultas más alejadas, estudiar si la página responde realmente a
+  esa intención antes de cambiar un título.
+- Relacionar cada consulta prioritaria con la página que aparece; revisar
+  si varias páginas compiten por la misma intención.
+- Desglosar países y dispositivos; no generalizar una media global a México.
+- Investigar qué consultas y páginas explican el pico de agosto.
+- Separar exclusiones esperadas (salud/404 con noindex) de páginas comerciales
+  que deberían aparecer y Google no indexa.
+
+Después de publicación autorizada, registrar la fecha y comparar periodos
+equivalentes por página y consulta cuando exista suficiente información.
+No prometer posiciones ni un plazo fijo de crecimiento. La renovación visual
+ayuda a la experiencia; no garantiza tráfico orgánico por sí sola.
+
+REFERENCIAS OFICIALES
+Definiciones de impresiones, clics, CTR y posición:
+https://support.google.com/webmasters/answer/7042828?hl=es
+Uso de dimensiones Consultas/Páginas en rendimiento:
+https://support.google.com/webmasters/answer/10268906?hl=es
+
+ALCANCE Y RESTRICCIONES
+Se revisaron fuentes y diferencias y se ejecutó el generador de HTML.
+Se analizó una captura que proporcionó el usuario; no se tomó ninguna captura
+ni se abrió un navegador para comprobar el sitio. No se realizaron pruebas,
+simulaciones visuales, scripts de prueba, sandboxes ni entornos aislados.
+No se desplegó a producción ni se publicaron cambios. Las temporadas alternativas
+quedan en las fuentes; no se generaron como pruebas ni se validaron visualmente.

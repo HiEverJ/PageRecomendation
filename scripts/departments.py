@@ -2,6 +2,7 @@
 from datetime import datetime, timezone, timedelta
 from html import escape as e
 import json
+from ornaments import ornament
 
 SEASONS = {
     'halloween': {
@@ -90,14 +91,17 @@ def hero(slug,heading,intro,items,products,image,season_key,season):
         art=f'<a class="department-object" href="#{e(p["id"])}" aria-label="Descubrir {e(p["title"])}">{image(p,True)}</a>'
     return f'''<section class="department-hero wrap"><div class="department-copy"><span class="eyebrow">{e(kicker)}</span><h1>{e(heading)}</h1><p>{e(intro)}</p><div class="hero-actions"><a class="button" href="#seleccion">Descubrir {len(items)} ideas ↓</a><a class="text-link" href="catalogo.html">Todo el catálogo</a></div></div><div class="department-scene"><span class="scene-word" aria-hidden="true">{e(word)}</span><div class="scene-orbit" aria-hidden="true"></div>{art}<span class="scene-caption">{e(mood)}</span></div></section>'''
 
-def chapters(items,origin,card,definitions):
+def chapters(items,origin,card,definitions,season_key="entretiempo"):
+    motif=season_key if origin=="festividades.html" else origin.removesuffix(".html")
     blocks=[];links=[];start=0
     for n,(size,title,description) in enumerate(definitions,1):
         rows=items[start:start+size];section_id='capitulo-'+str(n)
         if not rows:continue
         links.append(f'<a href="#{section_id}" data-chapter-link="{section_id}"><span>{n:02}</span> {e(title)}</a>')
+        drawing=ornament(motif,n-1)
+        tail=('<div class="ink-divider" aria-hidden="true"><span></span>'+ornament(motif,n,small=True)+'<span></span></div>') if n==len(definitions) else ''
         markup=''.join(card(p,start+i+1,origin,level=4) for i,p in enumerate(rows))
-        blocks.append(f'''<section class="product-chapter chapter-{n}" id="{section_id}" data-chapter aria-labelledby="{section_id}-title"><div class="chapter-intro"><span class="chapter-number" aria-hidden="true">{n:02}</span><div><span class="eyebrow">La selección / <span data-chapter-count>{len(rows)} ideas</span></span><h3 id="{section_id}-title">{e(title)}</h3><p>{e(description)}</p></div></div><div class="grid chapter-grid">{markup}</div></section>''')
+        blocks.append(f'''<section class="product-chapter chapter-{n}" id="{section_id}" data-chapter aria-labelledby="{section_id}-title"><div class="chapter-intro"><span class="chapter-number" aria-hidden="true">{n:02}</span><div><span class="eyebrow">La selección / <span data-chapter-count>{len(rows)} ideas</span></span><h3 id="{section_id}-title">{e(title)}</h3><p>{e(description)}</p></div>{drawing}</div><div class="grid chapter-grid">{markup}</div>{tail}</section>''')
         start+=size
     # New catalogue items are retained if the editor has not assigned a chapter yet.
     if start<len(items):

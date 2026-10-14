@@ -5,6 +5,7 @@ No network, third-party packages, server or deployment is required.
 from pathlib import Path
 from html import escape
 import json
+from ornaments import ornament
 from departments import get_season, DEPARTMENTS, hero as department_hero, chapters
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,7 +47,7 @@ def filters(items):
 def catalogue(items, origin, heading='La selección', interactive=True):
     slug=origin.removesuffix('.html')
     definitions=SEASON['chapters'] if slug=='festividades' else DEPARTMENTS.get(slug,{}).get('chapters')
-    layout=chapters(items,origin,card,definitions) if definitions else '<div class="grid">'+''.join(card(p,i+1,origin) for i,p in enumerate(items))+'</div>'
+    layout=chapters(items,origin,card,definitions,SEASON_KEY) if definitions else '<div class="grid">'+''.join(card(p,i+1,origin) for i,p in enumerate(items))+'</div>'
     return f'''<section id="seleccion" class="section wrap" aria-labelledby="selection-heading"><div class="section-head"><div><span class="eyebrow">Piezas con un propósito</span><h2 id="selection-heading">{e(heading)}</h2></div><p>Lee lo esencial, abre los detalles y decide si encaja contigo.</p></div>
     {filters(items) if interactive else ''}{layout}
     <div id="empty-results" class="empty" hidden><h3>No encontramos coincidencias.</h3><p>Prueba otra palabra o usa «Limpiar filtros» para volver a ver la selección.</p></div></section>'''
@@ -100,7 +101,7 @@ def pick(*ids):
 home_items = pick('audifonos-nothing-ear-a-con-anc', 'soporte-ergonomico-plegable-de-aluminio-para-laptop', 'power-bank-ugreen-10-000mah-con-magsafe-20w') + pick('prensa-francesa-de-vidrio-y-acero-inoxidable-1-litro', 'carrito-organizador-multiusos-de-3-niveles', 'manta-de-tejido-waffle')
 hero_product=pick('audifonos-nothing-ear-a-con-anc')[0]
 categories=[('hogar','Hogar','Orden, cocina y pequeños rituales.'),('tecnologia','Tecnología','Dispositivos que encajan en tu día.'),('limpieza','Limpieza','Herramientas para cada superficie.'),('decoracion','Decoración','Texturas, luz y objetos con intención.'),('gamer','Gamer','Un escritorio para jugar y crear.'),('festividades','Temporada · '+SEASON['label'],SEASON['note'])]
-category_links=''.join(f'<a class="category-link" data-category="{slug}" href="{slug}.html"><strong>{label}</strong><span aria-hidden="true">↗</span><small>{desc}</small></a>' for slug,label,desc in categories)
+category_links=''.join(f'<a class="category-link" data-category="{slug}" href="{slug}.html"><strong>{label}</strong>{ornament(SEASON_KEY if slug=="festividades" else slug,small=True)}<small>{desc}</small></a>' for slug,label,desc in categories)
 home=f'''<section class="hero wrap"><div class="hero-copy"><span class="eyebrow">El placer de elegir bien</span><h1>Menos ruido.<br>Mejores <em>hallazgos.</em></h1><p>Recomendaciones breves de productos para tu casa y tu día a día. Descubre qué mirar antes de comprar en Mercado Libre y AliExpress.</p><div class="hero-actions"><a class="button" href="catalogo.html">Explorar el catálogo <span aria-hidden="true">↗</span></a><a class="text-link" href="criterio-editorial.html">Conoce nuestro criterio</a></div></div><div class="hero-art">{image(hero_product,True)}<div class="art-label"><span class="art-index" aria-hidden="true">01 /</span><a href="catalogo.html#{hero_product['id']}">Un detalle para escuchar distinto<br><strong>Nothing Ear (a) →</strong></a></div></div></section>
 <div class="wrap trust-line"><span>Reseñas breves, sin rodeos</span><span>Lo útil y lo que debes revisar</span><span>Tú eliges dónde comprar</span></div>
 <section class="section wrap"><div class="section-head"><div><span class="eyebrow">Encuentra tu siguiente idea</span><h2>¿Por dónde empezamos?</h2></div><a class="text-link" href="catalogo.html">Ver todos los productos ↗</a></div><div class="category-links">{category_links}</div></section>{DISCLOSURE}
