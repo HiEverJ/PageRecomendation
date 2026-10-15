@@ -25,15 +25,16 @@ def image(product, hero=False):
 
 def card(p, n, origin, level=3):
     stores = '|'.join(x['store'] for x in p['links'])
-    search = ' '.join([p['title'],p['tag'],p['summary'],LABELS[p['category']]])
+    search = ' '.join([p['title'],p['tag'],p['summary'],LABELS[p['category']], *[x.get('search_code','') for x in p['links']]])
     permalink = '#' + p['id'] if origin == 'catalogo.html' else 'catalogo.html#' + p['id']
     shops = ''.join(f'<a class="shop" href="{e(x["url"])}" target="_blank" rel="sponsored noopener noreferrer" data-store="{e(x["store"])}" aria-label="Ver {e(p["title"])} en {e(x["store"])}; abre otra pestaña">{e(x["store"])} <span aria-hidden="true">↗</span></a>' for x in p['links'])
+    codes = ''.join(f'<p class="product-note">Código para buscar en {e(x["store"])}: <code>{e(x["search_code"])}</code></p>' for x in p['links'] if x.get('search_code'))
     return f'''<article class="product" id="{e(p['id'])}" data-product data-category="{p['category']}" data-stores="{e(stores)}" data-search="{e(search)}">
     <div class="product-image">{image(p)}<span class="product-number" aria-hidden="true">{n:02}</span></div>
     <div class="product-body"><span class="eyebrow">{e(LABELS[p['category']])}</span><h{level}><a href="{e(permalink)}">{e(p['title'])}</a></h{level}>
     <p class="product-summary">{e(p['summary'])}</p>
     <details class="review"><summary>Antes de elegir<span class="sr-only">: {e(p['title'])}</span></summary><p>{e(p['check'])}</p></details>
-    <div class="shops">{shops}</div><p class="product-note">Precio y disponibilidad en tienda · Abre otra pestaña</p></div></article>'''
+    <div class="shops">{shops}</div>{codes}<p class="product-note">Precio y disponibilidad en tienda · Abre otra pestaña</p></div></article>'''
 
 def filters(items):
     categories = list(dict.fromkeys(p['category'] for p in items))

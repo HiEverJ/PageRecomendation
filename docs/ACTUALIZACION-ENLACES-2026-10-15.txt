@@ -1,0 +1,39 @@
+ACTUALIZACIÓN DE ENLACES — 15 de octubre de 2026
+Proyecto: C:\Sources\PageRecomendation
+
+Lote de 20 productos de hogar solicitado por el propietario.
+Al comenzar, los archivos locales ya contenían prácticamente todas las
+actualizaciones, los códigos search_code, su presentación en las fichas y
+su inclusión en el buscador local. Se conservaron esos cambios existentes.
+La revisión del diff de datos mostró los destinos y códigos solicitados,
+salvo la ficha de contenedores, que retenía incorrectamente AliExpress.
+
+Corrección aplicada en esta intervención:
+Set 6 Contenedores Herméticos de Vidrio:
+- Mercado Libre: https://meli.la/21HRZyZ
+- Código de búsqueda: XKG9GF-EJDB
+- Eliminado AliExpress, conforme a la petición explícita del propietario.
+
+El lote conserva todos los enlaces de tiendas no mencionados para eliminación.
+Los códigos son códigos de búsqueda en Mercado Libre, no cupones de descuento.
+El código de tablas de bambú es XKG9GF-043H (decodificado del texto recibido).
+La batidora ya figura como 1000W y conserva el ID terminado en 500w para
+mantener los enlaces guardados. Código: XKG9GF-HEZ3.
+El mensaje suministra para ella la URL del catálogo, no un nuevo enlace comercial:
+se conserva https://mercadolibre.com/sec/19tsZk9 y su enlace previo de AliExpress.
+Pendiente: recibir un nuevo enlace de Mercado Libre si se desea sustituir ese destino.
+
+Se regeneraron las páginas desde el catálogo real para propagar los datos a
+portada, catálogo y selecciones en las que se reutiliza cada producto.
+Fuente corregida: data/catalog.json. Generador existente ejecutado:
+scripts/build_site.py. Nota: docs/ACTUALIZACION-ENLACES-2026-10-15.txt.
+No se modificaron las imágenes, reseñas ni diseño en esta intervención.
+
+No se abrieron los enlaces comerciales ni se comprobó su disponibilidad remota.
+No se ejecutaron pruebas, scripts de prueba, validaciones visuales, capturas,
+sandboxes ni entornos aislados. No se desplegó ni se hizo push.
+
+ACTUALIZACIÓN POSTERIOR: pendiente de la batidora resuelto por el propietario.
+Mercado Libre sustituido por https://meli.la/33jhAXF.
+Se conservan XKG9GF-HEZ3, AliExpress, título 1000W e ID anterior.
+Páginas regeneradas; sin pruebas ni despliegue.

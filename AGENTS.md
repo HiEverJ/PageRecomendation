@@ -23,3 +23,8 @@ Fuentes activas: data/catalog.json, data/season.json, scripts/build_site.py,
 scripts/departments.py, css/site.css, css/departments.css y js/main.js.
 Los HTML son generados: actualizar las fuentes y regenerarlos, no editar solo la salida.
 Documentar qué cambió y separar lo implementado de la configuración externa pendiente.
+
+Actualizaciones comerciales: modificar únicamente la tienda indicada por el dueño.
+Conservar enlaces de otras tiendas; eliminar enlaces solo por petición explícita.
+Mantener IDs de productos aunque cambie el título para preservar anclas existentes.
+Los códigos search_code pertenecen a su enlace de tienda; no son cupones de descuento.
